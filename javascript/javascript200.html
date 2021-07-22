@@ -815,6 +815,11 @@
             }
             document.write("<br>");
         }
+        //sample11
+        //11. for in문
+        {
+            
+        }
         //sample100 : 구구단 만들기
         {
             document.write("*** 100. 구구단 만들기***<br>");
@@ -872,6 +877,27 @@
                     for( let j=1; j<=10; j++ ){
                         table += "<td>"+ num +"</td>";
                         num --;
+                    }
+                    table += "</tr>";
+                }
+
+            table += "</table>";
+
+            document.write(table);
+            document.write("<br>");
+        }
+        //sample103 : 테이블 만들기3
+        //짝수만 나오게~
+        {
+            document.write("*** 테이블 - 짝수만나오게***<br>");
+            let num = 2;
+            let table = "<table>";
+
+            for(let i=2; i<=10; i++){
+                table += "<tr>"
+                    for( let j=2; j<=10; j++ ){
+                        table += "<td>"+ num +"</td>";
+                        num = num + 2;
                     }
                     table += "</tr>";
                 }
