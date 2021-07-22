@@ -247,10 +247,11 @@
         <li><a href="#sample8">08. do while문</a></li>
         <li><a href="#sample9">09. for문</a></li>
         <li><a href="#sample10">10. 중첩 for문</a></li>
-        <li><a href="#sample11">11. for in문</a></li>
-        <li><a href="#sample12">12. for of문</a></li>
-        <li><a href="#sample13">13. break문</a></li>
-        <li><a href="#sample14">14. continue문</a></li>
+        <li><a href="#sample11">11. forEach문</a></li>
+        <li><a href="#sample12">12. for in문</a></li>
+        <li><a href="#sample13">13. for of문</a></li>
+        <li><a href="#sample14">14. break문</a></li>
+        <li><a href="#sample15">15. continue문</a></li>
     </ul>
     <hr>
 
@@ -465,6 +466,25 @@
 </code></pre>
         </div>
     </div>
+    <!-- //smaple10-->
+    <!-- smaple11-->
+    <hr>
+    <div id="sample10" class="sample">
+        <h2>11. forEach문 <span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    document.write("*** 11. forEach문 ***");
+    for(var i=1; i&lt=5; i++){
+        document.write(i + ". 반복문(아이)이 실행되었습니다.");
+        for(var j=1; j&lt=5; j++){
+            document.write(j + ". 반복문(제이)이 실행되었습니다.");
+        }
+    }
+}
+</code></pre>
+        </div>
+    </div>
+    <!-- //smaple11-->
     <!-- //sample100-->
     <hr>
     <div id="sample100" class="sample">
@@ -818,7 +838,7 @@
         //sample11
         //11. for in문
         {
-            
+
         }
         //sample100 : 구구단 만들기
         {
@@ -845,6 +865,33 @@
                 }
             }
             document.write("<br>");
+        }
+            
+        
+        //for문을 이용해서 화면에 1부터 100까지 출력
+        {
+            for ( let i=1; i<=100; i++ ){
+                document.write(i,"<br>");
+            }
+        document.write("<br><br>");
+        }
+        //for문을 이용해서 화면에 1부터100까지 출력 (짝수만 출력)
+        {
+            for ( let i=1; i<=100; i++ ){
+                if( i % 2 == 0 ) {
+                    document.write(i,"<br>");
+                }
+            }
+            document.write("<br><br>");
+        }
+        //for문을 이용해서 화면에 1부터100까지 출력 (5의배수만 출력)
+        {
+            for ( let i=1; i<=100; i++ ){
+                if( i % 5 == 0 ) {
+                    document.write(i,"<br>");
+                }
+            }
+            document.write("<br><br>");
         }
         //sample101 : 테이블 만들기
         {
@@ -880,7 +927,7 @@
                     }
                     table += "</tr>";
                 }
-
+            
             table += "</table>";
 
             document.write(table);
@@ -888,25 +935,6 @@
         }
         //sample103 : 테이블 만들기3
         //짝수만 나오게~
-        {
-            document.write("*** 테이블 - 짝수만나오게***<br>");
-            let num = 2;
-            let table = "<table>";
-
-            for(let i=2; i<=10; i++){
-                table += "<tr>"
-                    for( let j=2; j<=10; j++ ){
-                        table += "<td>"+ num +"</td>";
-                        num = num + 2;
-                    }
-                    table += "</tr>";
-                }
-
-            table += "</table>";
-
-            document.write(table);
-            document.write("<br>");
-        }
 
         </script>
 </body>
