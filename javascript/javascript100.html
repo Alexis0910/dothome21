@@ -214,9 +214,12 @@
             content: "데이터 저장하기 :";
         }
         .ol2::before {
-            content: "데이터 실행하기 :";
+            content: "데이터 불러오기 :";
         }
         .ol3::before {
+            content: "데이터 실행하기 :";
+        }
+        .ol4::before {
             content: "데이터 제어하기 :";
         }
 
@@ -232,13 +235,16 @@
     <li><a href="javascript100.html">객체(object)</a></li>
 </ol>
 <ol class="ol2">
-    <li><a href="javascript300.html">함수(fuction)</a></li>
+    <li><a href="javascript500.html">데이터 불러오기</a></li>
 </ol>
 <ol class="ol3">
+    <li><a href="javascript300.html">함수(fuction)</a></li>
+</ol>
+<ol class="ol4">
     <li><a href="javascript200.html">조건문</a></li>
     <li><a href="javascript200.html">반복문</a></li>
 </ol>
-<ol class="ol4">
+<ol class="ol5">
     <li><a href="javascript400.html">알고리즘 연습</a></li>
 </ol>
     <h2 class="mt20">데이터 저장하기</h2>
@@ -271,7 +277,6 @@
     var y = 200;         //변수 y에 숫자 200을 저장시켜준것
     var z = "javascript";   //변수 z에 문자 javascrips를 저장
 
-    document.write("*** 01. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -293,7 +298,6 @@
     y = 400;
     z = "jquery";
 
-    document.write("*** 02. 변수 ***");
     document.write(x;
     document.write(y);
     document.write(z);
@@ -315,7 +319,6 @@
     y += 400;    //y = y + 400; 
     z += "jquery"; //z = z + "jquery";
 
-    document.write("*** 03. 변수 ***"");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -338,7 +341,6 @@
     //z = 500;    
     // const는 변경 불가능한 값
 
-    document.write("*** 03. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -357,8 +359,7 @@
     arr[0] = 100;             //첫번째 배열 저장소에 숫자 100을 저장한것
     arr[1] = 200;             //두번째 배열 저장소에 숫자 200을 저장한것
     arr[2] = "javascript";      //세번째 배열 저장소에 문자 javascripts 저장한것
-    
-    document.write("*** 05. 배열 ***");
+
     document.write(arr[0]);
     document.write(arr[1]);
     document.write(arr[2]);
@@ -374,8 +375,7 @@
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     const arr =  new Array(100, 200, "javascript");
-    
-    document.write("*** 06. 배열 ***");
+
     document.write(arr[0]);
     document.write(arr[1]);
     document.write(arr[2]);
@@ -395,8 +395,7 @@
     arr[0] = 100;
     arr[1] = 200;
     arr[2] = "javascript";
-    
-    document.write("*** 07. 배열 ***");
+
     document.write(arr[0]);
     document.write(arr[1]);
     document.write(arr[2]);
@@ -414,7 +413,6 @@
         <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, "javascript"]; //배열선언 끝.
 
-    document.write("*** 08. 배열 ***");
     document.write(arr[0]);
     document.write(arr[1]);
     document.write(arr[2]);
@@ -434,8 +432,7 @@
     obj[0] = 100;
     obj[1] = 200;
     obj[2] = "javascript";
-        
-    document.write("*** 09. 객체 ***");
+
     document.write(obj[0]);
     document.write(obj[1]);
     document.write(obj[2]);
@@ -453,8 +450,7 @@
     obj.a = 100;
     obj.b = 200;
     obj.c = "javascript";
-        
-    document.write("*** 10. 객체 ***");
+
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -471,8 +467,7 @@
     obj.a = 100;
     obj.b = 200;
     obj.c = "javascript";
-    
-    document.write("*** 11. 객체 ***");
+
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -487,7 +482,6 @@
                 <pre class="line-numbers"><code class="language-js">{
     const obj = {a:100, b:200, c:"javascript"};
 
-    document.write("*** 12. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -504,7 +498,7 @@
         {a:100, b:200},
         {c:"javascript"}
     ];
-    document.write("*** 13. 객체 ***");
+
     document.write(obj[0].a);
     document.write(obj[0].b);
     document.write(obj[1].c);
@@ -522,7 +516,7 @@
         b: [200, 300],
         c: "javascript"
     }
-    document.write("*** 14. 객체 ***");
+
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.b[0]);
@@ -543,7 +537,6 @@
 
     const obj = { a, b, c}
     
-    document.write("*** 15. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -572,7 +565,6 @@
         },        
     }       
     
-    document.write("*** 16. 객체 ***"");     
     document.write(obj.a);      
     document.write(obj.b);      
     document.write(obj.b[0]);       
