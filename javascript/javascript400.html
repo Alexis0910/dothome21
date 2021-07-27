@@ -228,6 +228,9 @@
         .ol5::before {
             content: "데이터 연습하기 :";
         }
+        .ol6::before {
+            content: "데이터 메서드 :";
+        }
     </style>
 </head>
 <body>
@@ -253,6 +256,13 @@
 </ol>
 <ol class="ol5">
     <li><a href="javascript400.html">알고리즘 연습</a></li>
+</ol>
+<ol class="ol6">
+    <li><a href="javascript601.html">배열 메서드</a></li>
+    <li><a href="javascript602.html">문자열 메서드</a></li>
+    <li><a href="javascript603.html">브라우저 메서드</a></li>
+    <li><a href="javascript604.html">날짜 메서드</a></li>
+    <li><a href="javascript605.html">이벤트 메서드</a></li>
 </ol>
     <h2 class="mt20">알고리즘</h2>
     
@@ -357,8 +367,6 @@
     <h2>06. 구구단 출력하기<span class="dot"></span></h2>
     <div class="code">
         <pre class="line-numbers"><code class="language-js">{
-    document.write("*** 100. 구구단 만들기***");
-
     for(var i=2; i&lt;=9; i++){
         for(var j=2; j&lt;=9; j++){
             var sum = i * j;
@@ -377,7 +385,6 @@
     <h2>07. 테이블 만들기1<span class="dot"></span></h2>
     <div class="code">
         <pre class="line-numbers"><code class="language-js">{
-    document.write("*** 1부터 100까지 테이블만들기***");
     let num = 1;
     let table = "&lt;table&gt;";
 
@@ -404,7 +411,6 @@
     <h2>08. 테이블 만들기2<span class="dot"></span></h2>
     <div class="code">
         <pre class="line-numbers"><code class="language-js">{
-    document.write("*** 1부터 100까지 테이블만들기***");
     let num = 1;
     let table = "&lt;table&gt;";
 
@@ -412,7 +418,7 @@
         table += "&lt;tr&gt;"
             for( let j=1; j&lt;=10; j++ ){
                 table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
-                num++; //num + num인 1+1을 한다는뜻
+                num--; 
             }
             table += "&lt;/tr&gt;";
     }
@@ -548,10 +554,10 @@
     }
     document.write("<br>");
 }
-//sample6
-//06.테이블 만들기1
+//sample67
+//067.테이블 만들기1
 {
-    document.write("*** 06. 1부터 100까지 테이블만들기*** <br>");
+    document.write("*** 07. 1부터 100까지 테이블만들기*** <br>");
     let num = 1;
     let table = "<table>";
 
@@ -569,10 +575,10 @@
     document.write(table);
     document.write("<br>");
 }
-//sample7
-//07.테이블 만들기2
+//sample8
+//08.테이블 만들기2
 {
-    document.write("*** 07. 100부터 1까지 테이블만들기*** <br>");
+    document.write("*** 08. 100부터 1까지 테이블만들기*** <br>");
     let num = 100;
     let table = "<table>";
 
@@ -590,10 +596,10 @@
     document.write(table);
     document.write("<br>");
 }
-//sample8
-//08.테이블 만들기3 - 짝수만
+//sample9
+//09.테이블 만들기3 - 짝수만
 {
-    document.write("*** 08. 테이블 만들기 (짝수만) *** <br>");
+    document.write("*** 09. 테이블 만들기 (짝수만) *** <br>");
     let num = 2;
     let table = "<table>";
 
@@ -611,6 +617,8 @@
     document.write(table);
     document.write("<br>");
 }
+
+
         </script>
 </body>
 
