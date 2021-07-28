@@ -113,11 +113,44 @@
         }
         document.write("<br><br>")
     }
-    //반복문
-    //for문 이용해서 구구단 5~8단만 출력하기
-    {
+
+
+    {   
         
+        const num = [100, 200, 300, 400, 500];
+        //배열 갯수룰 구하라.
+        document.write(num.length,"<br>");
+        //3번째 값만 출력
+        document.write(num[2],"<br>");
+        //for문이용해서 모든값 출력
+        for(let i=0; i<num.length; i++){
+            document.write(num[i]);
+        }
+        document.write("<br>")
+
+        //forEach문 이용해서 모든값출력
+        num.forEach(function(el){
+            document.write(el);
+        });
+        
+        document.write("<br>")
+        num.forEach((el)=>{
+            document.write(el)
+        });
+        document.write("<br>")
+        //for in문 이용해서 모든값
+        for(let i in num){
+            document.write(num[i]);
+        }
+        document.write("<br>")
+
+        //for of문 
+        for (let i of num){
+            document.write(i);
+        }
+        document.write("<br>")
     }
+    
     </script>
 </body>
 </html>
