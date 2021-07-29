@@ -123,7 +123,7 @@
                     <li>grid-row-gap 속성은 행과 행 사이의 간격(Line)을 정의</li>
                     <li>grid-row-start 속성은 특정 item을 표시하기 시작할 행을 지정합니다.</li>
                     <li>grid-template 속성은 grid-template-xxx의 단축 속성입니다.</li>
-                    <li>grid-template-areas 속성은 아이템의 위치를 설정합니다.</li>
+                    <li>grid-template-areas </li>
                     <li>grid-template-columns 속성은 가로 컬럼의 크기와 위치를 설정합니다.</li>
                     <li>grid-template-rows 속성은 그리드 행의 크기 조정 기능을 설정합니다.</li>
                     <li>hanging-punctuation 속성은 글씨의 시작 및 끝의 위치 정의합니다.</li>
