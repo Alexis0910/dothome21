@@ -477,7 +477,6 @@
     (function (){
         document.write("함수가 실행되었습니다.");
     })();
-}
 </code></pre>
     </div>
 </div>
@@ -783,15 +782,17 @@
 
 }
 //sample13
-//13. 즉시 실행 함수
+//13. 즉시실행 함수 : 함수의 충돌을 방지하기 위해서
 {
-    document.write("<br>*** 13. 즉시 실행 함수 ***<br>")
+    document.write("<br>*** 13. 즉시실행 함수 ***<br>");
+    // function func(){
+    //     document.write("함수가 실행되었습니다.<br>");
+    // }
+    // func();
 
-    //function func(){
-    //    document.write("함수가 실행되었습니다.<br>")
-    //}
-    //func();
-
+    (function (){
+        document.write("함수가 실행되었습니다.<br>");
+    })();
 }
 //sample14
 //14. 파라미터 함수
