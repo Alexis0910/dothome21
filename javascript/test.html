@@ -150,7 +150,83 @@
         }
         document.write("<br>")
     }
+    document.write("<br>***2021.08.05***<br>");
+    {
+        //for문 이용해서 데이터불러오기
+        const arr =[100, 200, 300, 400, 500];
+        
+        for(let i=0; i<arr.length; i++){
+            document.write(arr[i]);
+        }
+        document.write("<br>")
     
+        //forEach()이용해서 데이터출력
+        arr.forEach(function(el){
+            document.write(el)
+        });
+        document.write("<br>")
+        arr.forEach((el)=>{
+            document.write(el)
+        });
+        document.write("<br>")
+        arr.forEach(el => {
+            document.write(el)
+        });
+        document.write("<br>")
+        arr.forEach(el => document.write(el));
+
+        //for of문
+        document.write("<br>")
+        for(let el of arr){
+            document.write(el)
+        }
+        document.write("<br>")
+        for(let el of arr) document.write(el);
+        document.write("<br>")
+
+
+        //for in
+        for(let el in arr) document.write(el);
+        document.write("<br>")
+        for(let el in arr) document.write(arr[el]);
+        
+        document.write("<br>")
+        //배열안에서 300 찾은다음, 찾으면 출력
+        //const find = arr.find((element) => {element === 300;});
+        const find = arr.find(element => element === 300);
+        document.write(find);
+        
+    }
+
+    {   document.write("<br>")
+        //"함수가 실행되었습니다." funtion이용 출력.선언적
+        function func() {
+            document.write("1함수가 실행되었습니다.<br>");
+        }
+        func();
+
+        
+        //익명함수
+        const func2 = function() {
+            document.write("2함수가 실행되었습니다.<br>");
+        }
+        func2();
+        func2();
+        
+        //매개변수
+        function func3(str){
+            document.write(str);
+        }
+        func3("3함수가 실행되었습니다.<br>");
+
+        
+        //리턴값
+        function func4() {
+            const str = "4함수가 실행되었습니다.<br>";
+            return str;
+        }
+        document.write(func4());
+    }
     </script>
 </body>
 </html>
