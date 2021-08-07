@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>배열 포인터 처리</title>
+    <title>프로그래밍 언어별 특성</title>
     <style>
         .table {
             border: 1px solid #000;
@@ -25,15 +25,270 @@
 </head>
 
 <body>
-    <h2>애플리케이션 구현</h2><br>
+    <h2>문자처리 라이브러리</h2><br>
 
-    <h3>프로그램 설계</h3>
+    <h3>문자 문자열 입출력</h3>
+    <p data-ke-size="size18">
+        [1] 라이브러리<br>
+        • scanf (“%c",&ch), printf(“%c”, ch);<br>
+        • getc(); putc<br>
+        • _getch(); getche(); putch();<br>
+        • getchar(); putchar();<br>
+        <h4>getc() putc()</h4>
+        <div class="well">
+            int getc (FILE *stream );<br>
+            * 지정한 스트림으로 부터 문자 읽기<br>
+            * 입력문자 ASCII 코드 값을 리턴 , 오류 시는 EOF 리턴<br><br>
+            int putc (int ch, FILE *stream );<br>
+            * 지정한 스트림에 지정한 값을 출력<br>
+            * 정상 출력시 출력문자 리턴, 오류 시는 EOF리턴<BR>
+            </div>
+    <h4>_getch() _getche() _putch()</h4>
+    int_getch(void); int_getche (void); : 키보드로부터 입력되는 문자를 읽음, 입력 문자의 ASCII 코드를 리턴,버퍼를 사용하지 않는 입력<br>
+    int_putch (int ch); : 화면에 지정한 값을 출력,정상 출력 시 출력문자 리턴 , 오류 시 EOF 리턴<br>
+    </p>
 
+    
+    <h4>표준 라이브러리</h4>
     <ul>
-        <li>프로그램 개발 시 요구사항 분석 후 적절한 자료구조를 선택하는 것이 중요함</li>
-        <li>다양한 데이터 타입을 묶어서 처리할 필요가 있는 경우 적절한 자료구조는 구조체임</li>
+        <li>작업에 필요한 라이브러리 함수 검색</li>
+        <li>헤더파일과 함수 원형 파악</li>
+        <li>include 와 매개변수 기술</li>
+    </ul>
+
+    <h4>C표준 라이브러리</h4>
+<h5>*구조체는 포인터로 전달*</h5>
+    <pre class="line-numbers"><code class="language-js">
+/*
+sqrt example */
+#include < stdio.h > /* printf
+#include < math.h > /* sqrt
+
+int main ()
+{
+    double param , result;
+    param = 1024.0;
+    result = sqrt (param); 
+    printf("sqrt (%f) = %fn”, param ,
+result );
+    return 0;
+}
+</code></pre><br>
+<h4>Visual Studio에서 만들기</h4>
+<ul>
+    <li>정적 라이브러리 프로젝트로 생성</li>
+    <li>헤더파일과 소스코드를 작성</li>
+    <li>lib 빌드</li>
+</ul>
+<h4>DEV C++에서 만들기</h4>
+<ul>
+    <li>정적 라이브러리 프로젝트로 생성</li>
+    <li>헤더파일과 소스코드를 작성</li>
+    <li>오브젝트 파일 생성</li>
+    <li>.a 파일 생성</li>
+</ul>
+
+
+<h5>*바이트(Byte) 이상의 데이터는 포인터로 전달*</h5>
+    <pre class="line-numbers"><code class="language-js">
+void sub( double m1, double m2 )
+{
+    ……
+}
+int main()
+{
+    double im, si ;
+    ……
+    ……
+    sub( im, si );
+    ……
+}
+</code></pre><br>
+<h5>*여러 개의 매개변수를 구조체로 전달*</h5>
+    <pre class="line-numbers"><code class="language-js">
+struct test {
+    int a,b;
+    double c;
+};
+void sub( double o, double p, double q, double r, double s )
+{
+    ……
+}
+int main()
+{
+    double a,b,c,d,e;
+    struct test im;
+    ……
+    ……
+    sub( a,b,c,d,e);
+    ……
+}
+</code></pre><br>
+
+<h5>*연산의 최적화 - 실수 연산을 최소화(정수의 연산으로)*</h5>
+    <pre class="line-numbers"><code class="language-js">
+int main()
+{
+    double a=5.0, b=3.0, c;
+    double d=15.34, e=3.0, f;
+    c = a * b;
+    f = d * e;
+}
+int main()
+{
+    int p,q,r;
+    double a=5.0, b=3.0, c;
+    double d=15.34, e=3.0, f;
+    p = a;
+    q= b;
+    r = p * q;
+
+    p = d * 100; // 소수점 이하 2자리의 배정도
+    q = e * 100;
+    f = ( p * q )/100;
+}
+</code></pre><br>
+<h5>*안정성 확보를 통한 최적화 - const활용*</h5>
+    <pre class="line-numbers"><code class="language-js">
+void sub( const double m1, double m2 )
+{
+    m2 = 4.7
+}
+int main()
+{
+    double im, si ;
+    ……
+    ……
+    sub( im, si );
+    ……
+}
+</code></pre><br>
+
+<h3>디버거(Debugger)/h3>
+<p data-ke-size="size18">
+    디버깅을 수행하는 프로그램 : Visual Studio, Code Blocks<br>
+    대부분의 IDE는 디버거를 내장<br>
+</p>
+    <ul>
+        <li>변수값 추적</li>
+        <li>중단점 지정</li>
+        <li>모듈 단위 실행</li>
+        
     </ul><br>
-    <h3>헤더파일</h3>
+    <h4>Visual Studio Debugging</h4>
+    <p data-ke-size="size18">
+        디버깅 순서<BR>
+        1. 프로그램 오류가 발생한 곳이라고 의심되는 부분에 중단점을 설정하기<br>
+        2. ‘디버깅 시작’ 누르기<br>
+        3. 프로그램이 실행되다가 중단점을 만나면 그 부분에서 멈추기<br>
+        4. ‘F11’키로 한 줄씩 실행하면서 아래 ‘자동’창의 변수값 확인 및 오류 찾기<br>
+        5. ‘Shift + F5’로 디버깅을 종료하고 오류 수정하기<br>
+    </p>
+    <h4>DEV C++ Debugging</h4>
+        <div class="well">
+            디버깅 순서<BR>
+            * 프로그램 오류가 발생한 곳이라고 의심되는 부분에 중단점을 설정하기<br>
+            * [debug] 탭에서 ‘debug’를 클릭하기<br>
+            * 프로그램이 실행되다가 중단점을 만나면 그 부분에서 멈추기<br>
+            * ‘F7’키로 한 줄씩 실행하면서 변수값 확인 및 프로그램 실행 화면에서 오류 찾기<br>
+            * [Stop Execution] 버튼을 눌러 디버깅 종류 및 오류 수정<br>
+        </div><br>
+        <h4>Code Blocks Debugging</h4>
+
+            <div class="well">
+                * 프로그램 오류가 발생한 곳이라고 의심되는 부분에 중단점을 설정하기<br>
+                * [debug]탭에서 [start], [step into] 클릭하기<br>
+                * 로그램이 실행되다가 중단점을 만나면 그 부분에서 멈추기<br>
+                * ‘F7’키로 한 줄씩 실행하면서 프로그램이 실행된 화면에서 오류 찾기<br>
+                * 변수 추적은 [debug]의 [debugging windows]-[watches]를 열어서 확인<br>
+                * [stop debugging] 버튼을 눌러서 디버깅을 종료하고 오류를 수정<br>
+            </div><br>
+
+            <h3>컴퓨터 언어 종류</h3>
+            <h4>C</h4>
+            <p data-ke-size="size18">
+                1. 어셈블리어와 고급 언어의 장점을 가지고 있음 <br>
+                2. 작고 빠른 프로그램<br>
+                3. 뛰어난 이식성<br>
+                4. 컴파일러 언어<br>
+            </p>
+                <div class="well">
+                    특징 :<BR>
+                    * 하드웨어 제어<br>
+                    * 범용 프로그래밍<br>
+                    * 효율적 자료 관리 및 메모리 관리<br><br>
+                    주사용 분야 : <br>
+                    * 시스템 프로그램 운영체제 ,디버깅 S/W, 미들웨어 ) : 비트 조작 , 메모리 접근 , 형 변환<br>
+                    * 컴파일러, 유틸리티<br>
+                    * 응용 프로그램(게임, 워드프로세서, 오라클)<br>
+                </div><br>
+            <h4>C++</h4>
+            <p data-ke-size="size18">
+                1. 객체지향 언어로 C언어의 확장판 <br>
+                2. 다중 상속, 오버로드<br>
+                3. 컴파일러 언어 <br>
+
+            </p>
+                <div class="well">
+                    특징 :<BR>
+                    * 하드웨어 제어 + 객체지향 프로그래밍<br>
+                    * C언어 라이브러리를 상당수 사용 가능<br>
+                    * 효율적 자료 관리 및 메모리 관리<br><br>
+                    주사용 분야 : <br>
+                    * 게임 프로그램<br>
+                    * 빠른 처리가 필요한 응용프로그램<br>
+                    * 하드웨어 제어 프로그램<br>
+                </div><br>
+            <h4>C#</h4>
+            <p data-ke-size="size18">
+                1. 객체지향 언어(C언어의 기본문법 + C++의 객체 지향개념 + UI컴포넌트) <br>
+                2. .NET프레임워크에서 개발<br>
+                3. 이 기종간에 인터넷을 통한 자료 교환을 위해 개발<br>
+
+            </p>
+                <div class="well">
+                    특징 :<BR>
+                    * .NET프레임워크에서 동작하므로 운영체제에 독립적<br>
+                    * CRL(Common Runtime Library)를 지원<br>
+                    * 뛰어난 생산성<br><br>
+                    주사용 분야 : <br>
+                    * 웹 응용프로그램<br>
+                    * 네트워크 프로그램<br>
+                </div><br>
+            <h4>JAVA</h4>
+            <p data-ke-size="size18">
+                1. C++과 유사한나 모호하거나 복잡한 기능을 제거한 객체지향 프로그램 <br>
+                2. 모든 데이터는 객체를 통하여 처리<br>
+                3. 바이트 코드로 컴파일되기 때문에 자바를 지원하는 어떠한 플랫폼에서도 실행<br>
+
+            </p>
+                <div class="well">
+                    특징 :<BR>
+                    * 가상머신에서 동작하므로 운영체제에 독립적<br>
+                    * 다중 쓰레드 프로그램이 가능<br>
+                    * 뛰어난 호환성<br><br>
+                    주사용 분야 : <br>
+                    * 웹 응용프로그램<br>
+                    * 분산환경에 적합한 언어<br>
+                    * 휴대기기용 프로그램<br>
+                </div><br>
+                <h4>Pathon</h4>
+                <p data-ke-size="size18">
+                    1. 인간 친화적 언어로 익히기 쉬운 언어<br>
+                    2. 다른 언어와 혼합하여 개발 가능<br>
+
+                </p>
+                    <div class="well">
+                        특징 :<BR>
+                        * 개발 속도가 빠르고 간결<br>
+                        * 무료 소프트웨어<br>
+<br>
+                        주사용 분야 : <br>
+                        * C/C++과의 결합<br>
+                        * 웹 프로그래밍<br>
+                        * GUI 프로그래밍<br>
+                    </div><br>
+
     <pre class="line-numbers"><code class="language-js">
     #include <stdio.h>
     #define ST_NUM 20
