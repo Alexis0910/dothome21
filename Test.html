@@ -24,98 +24,186 @@
     </style>
 </head>
 <body>
-    <h2>도서관리 시스템 고도화(파일 처리)</h2>
+    <h2>게임 프로젝트</h2>
 <h3>프로그램 설계</h3>
-    <h4>고도화 내용</h4>
-    <p data-ke-size="size18">
-1) 도서 데이터를 텍스트 파일로 저장하여 관리<br>
-2) 유효성 검사기능 추가 <br>
-3) 프로그램 구현 시 처리대상 자료 : 도서명, 간격, 코드, 저자, 판매수량<br></p>
-<h4>기능 정의</h4>
+<p data-ke-size="size18">
+제목 : 숫자 야구 게임 <BR>
+요구사항:
 <ul>
-    <li>도서 입력</li>
-    <li>도서 출력</li>
-    <li>제목 검색</li>
-    <li>저자 검색(검색기능 키워드 검색)</li>
-    <li>출판연도별 목록 출력</li>
-    <li>베스트셀러 출력</li>
-    <li>데이터 파일로 입출력</li>
-</ul>
+    <li>정답을 찾는데 소요된 시간과 횟수 출력</li>
+    <li>랜덤함수를 이용하여 0~9 사이의 3 자리 정수 생성</li>
+    <li>사용자 입력은 0~999 사이의 정수로 입력</li>
+    <li>분할 컴파일이 가능하도록 다중 소스 파일 생성 </li>
+
+<h4>주요 기능 구현</h4>
 <div class="well">
-    *고도화방법*<br>
-    텍스트 파일 입출력 :<br>
-    스트림 생성 후 파일에 쓰기 / 읽기<br>
-    주사용 분야 : <br>
-    코드체계 / 빈 입력값 검사<br>
+* 컴퓨터 숫자 만들기 * <BR>
+시드함수 SRAND와 랜덤함수 RAND를 이용한 3개의 랜덤값 생성<br>
+rand() % 10<br><br>
+* 소요 시간 연산 * <BR>
+time함수를 이용하여 시작과 종료 시점의 시간을 추출<br>
+difftime함수를 이용하여 시간차를 추가 연산에 의해 출력<br><br>
+* 분할 컴파일 * <BR>
+사용자 정의 헤더파일 생성<br>
+배열 포인터를 함수의 매개변수로 전달<br>
 </div><br>
-<h3>코드 분석</h3>
-<ul>
-    <li>파일 입출력을 위해서는 먼저 입출력을 위한 스트림을 생성해야한다.</li>
-    <li>파일 스트림 생성 시 fopen 함수를 이용하고 모드를 함수의 인수로 젂달해야한다.</li>
-    <li>형식화된 파일 입출력은 fscanf 와 fprintf 를 이용하여 처리할 수 있다.</li>
-</ul>
-<h4>파일에 저장</h4>
+<h4>헤더 파일</h4>
+
 <pre class="line-numbers"><code class="language-js">
-void saveBooks(BOOK* mb, int cnt)
+#include <stdio.h>
+#include <stdlib.h>
+
+#define STRIKE 2
+#define BALL 1
+
+int* check(int*, int*);
+voidmakeUserNum (int);
+voidmakeComNum (int);
+int tm_secDiff (time_t , time_t);
+int tm_minDiff (time_t , time_t);
+</code></pre><br>
+
+<h4>랜덤값 생성</h4>
+
+<pre class="line-numbers"><code class="language-js">
+void makeComNum (int * com)
 {
-    FILE * fp;
     int i;
-    fp = fopen (“myBooks.txt” , “w+”);
-    if (fp == NULL) perror (“Error opening file”);
-    else {
-        fprintf(fp, “%d\n”, cnt);
-            for(i=0;i<cnt;i++){
-                fprintf(fp, “%s %s %s %d %d\n”,mb[i].bookCode, mb[i].bookTitle, mb[i].bookAuthor , mb[i].bookPrice , mb[i].bookSale);
-            }
-    fclose (fp);
+    srand(time(NULL));
+    for (i = 0; i < 3; i++)
+    {
+        com[i] = rand() % 10;
+        printf(“ %d ”, com[i]);
     }
 }
 </code></pre><br>
-<h4>유효성 검사</h4>
+<h4>소요시간 처리</h4>
+
 <pre class="line-numbers"><code class="language-js">
-while(1){
-    fflush(stdin);
-    printf(“책제목 : ”);
-    gets(mb[cnt].bookTitle);
-    if ( strlen(mb[cnt].bookTitle) > 0 )
-        break;
-    printf(“\n책제목을 입력하세요 ”);
+int tm_minDiff (time_t end, time_t start)
+{
+    double  d_diff;
+    d_diff = difftime (end,start);
+    returnd_diff / 60;
 }
-while(1){
-    fflush(stdin);
-    printf(“저자 : ”);
-    gets(mb[cnt].bookAuthor);
-    if ( strlen(mb[cnt].bookAuthor) > 0 )
-        break;
-    printf(“\n저자를 입력하세요 ”);
+inttm_secDiff time_t end, time_t start)
+{
+    int  tm_min;
+    double d_diff;
+    d_diff= difftime (end,start);
+    tm_min = d_diff / 60;
+    return d_diff --( tm_min *60 );
+}
+</code></pre><br>
+<ul>
+    <li>시간함수 관련 라이브러리를 이용하면 현재 시간 ,
+        시간차이 등을 간단하게 얻을 수 있음</li>
+    <li>랜덤값은 rand 함수를 이용하여 발생시킬 수 있음</li>
+    <li>rand 함수는 랜덤값을 발생시키지만 실제로는 항상
+        동일한 값을 발생시킴</li>
+    <li>다른 랜덤값 생성을 위하여 랜덤함 수 호출 전 srand
+        함수를 이용하여 다른 시드를 전달함</li>
+</ul>
+
+
+<h3>랜덤 함수</h3>
+<h4>랜덤값 발생</h4>
+
+<pre class="line-numbers"><code class="language-js">
+#include <stdio.h>
+#include <string.h>
+
+int main (void)
+{
+    int i;
+
+    for(i =0; i<4; i++)
+    {
+        printf("%d %d\n", i, rand() % 100);
+    }
+    return 0;
 }
 </code></pre><br>
 
+<h4>활용 예제</h4>
+<p data-ke-size="size18">
+1) 기능 : 학번에 따라 3개의 그룹으로 분류 <br>
+2) 요구사항 : 10명의 학생을 학번에 따라 랜덤하게 3개의 그룹으로 분류(rand() % 3)<br>
+<div class="well">
+    * 랜덤값을 생성하는 라이브러리 함수 : rand<br>
+    * rand함수는 실행 시 동일핚 랜덤값을 생성하므로 시드함수를 이용해야 함<br>
+    * •rand함수 사용 시 시드함수로 srand가 있음<br>
+    </div><br>
 
-<h4>선언 및 main 함수</h4>
+<h4>나이계산</h4>
 <pre class="line-numbers"><code class="language-js">
-BOOK* readBooks(BOOK* mb, int* cn)
+int calAge(int birth){
+    time_t timer;
+    struct tm *t;
+
+    timer = time(NULL);
+    
+    t = localtime(&timer);
+
+    return t->tm_year + 1900- birth;
+}
+</code></pre><br>
+>
+<h4>이전 데이터 파일 쓰기</h4>
+<pre class="line-numbers"><code class="language-js">
+void savePhones(PHONE* mp, int cnt)
+{ FILE * fp;
+    int i;
+    fp = fopen ("myPhones.bin" , "wb+");
+    if (fp == NULL) perror ("Error opening file");
+    else {
+        fwrite(&cnt, sizeof(int), 1, fp);
+            fwrite(mp, sizeof(PHONE), cnt, fp);
+    fclose (fp); }
+}
+</code></pre><br>
+<h4>이전 데이터 파일 읽기</h4>
+<pre class="line-numbers"><code class="language-js">
+PHONE* readPhones(PHONE* mp, int* cn)
 {
     FILE * fp;
     int i,cnt;
-    
-    fp = fopen (“myBooks.txt” , “r+”);
-    if (fp == NULL) perror (“Error opening file”);
+    cnt = *cn;
+    fp = fopen ("myPhones.bin" , "rb+");
+    if (fp == NULL) perror ("Error opening file");
     else {
-        fscanf(fp, “%d”,&cnt);
-        mb = (BOOK*)realloc(mb,sizeof(BOOK)*(cnt+1));
-            for(i=0;i<cnt;i++){
-        fscanf(fp, “%s %s %s %d %d”,mb[i].bookCode, mb[i].bookTitle, mb[i].bookAuthor , &mb[i].bookPrice , &mb[i].bookSale);
-        }
-
-    fclose (fp);
-    }
-
+        fread(&cnt, sizeof(int),1,fp);
+        mp = (PHONE*)realloc(mp,sizeof(PHONE)*(cnt+1));
+        fread(mp, sizeof(PHONE), cnt, fp);
+        fclose (fp);
+}
     *cn = cnt;
-    return mb;
+    return mp;
+}
+</code></pre><br>
+<h4>데이터 삭제</h4>
+<pre class="line-numbers"><code class="language-js">
+PHONE* deletePhone(PHONE* mp, int dn, int* cn) {
+    int i,cnt;
+    cnt = *cn;
+    for(i=dn;i<cnt-1;i++)
+            mp[i] = mp[i=1];
+    *cn = cnt-1;
+    return mp;
 }
 </code></pre><br>
 
+
+<h3>localtime</h3>
+<h3>asctime</h3>
+<ul>
+    <li>표준 출력 문장으로 많이 사용되는 함수 : printf ();</li>
+    <li>두 시간 사이의 차이를 구하는 함수 : difftime</li>
+    <li>현재 시스템의 시간을 구할 수 있는 함수 : time</li>
+    <li>초 단위 시간을 시간문자열로 변환하는 함수 : ctime</li>
+    <li>지역 시간을 구하는 함수 : localtime</li>
+    <li>tm 구조체를 문자열로 변환하는 함수 : asctime</li>
+</ul>
 
 <h4>rewind</h4>
 <h4>fprintf</h4>

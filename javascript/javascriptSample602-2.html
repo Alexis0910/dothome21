@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 속성 검색하기</title>
+    <title>CSS 속성 검색하기</title>
     <style>
         @font-face {
             font-family: 'GyeonggiBatang';
@@ -128,142 +128,28 @@
                 width: 100px;
             }
         }
+        .search-result {
+            padding: 20px;
+            font-family: 'GyeonggiBatang';
+            background-color: #bdd6e6;
+            margin: 20px;
+            border-radius: 40px;
+        }
     </style>
 </head>
 <body>
     <div id="wrap">
         <div class="board">
-            <span>속성 중에 첫 글자만 넣어주세요!!</span>
-            <h1>HTML 속성 검색하기</h1>
+            <span>CSS 속성을 넣어주세요</span>
+            <h1>CSS 속성 검색하기</h1>
             <div class ="search">
                 <label for="search-box">검색하기</label>
-                <input id="search-box" type="text">
+                <input id="search-box" class="search-input" type="text">
             </div>
-            <div class="list">
-                <ul>
-                    <li data-name="a" data-topic="에이">a : a 태그는 다른 페이지 이동을 설정합니다.</li>
-                    <li data-name="acronym" data-topic="애크러놈">acronym : acronym 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.</li>
-                    <li data-name="address" data-topic="어드레스">address : address 태그는 웹 페이지의 연락처 정보를 설정합니다.</li>
-                    <li data-name="applet" data-topic="애플릿">applet : applet 태그는 애플랫 요소를 설정합니다.</li>
-                    <li data-name="area" data-topic="에어리아">area : applet 태그는 애플랫 요소를 설정합니다</li>
-                    <li data-name="article" data-topic="아티클">article : article 태그는 사이트의 독립적인 컨텐츠 섹션을 설정합니다.</li>
-                    <li data-name="aside" data-topic="어사이드">aside : aside 태그는 주요 콘텐츠의 보조적 컨텐츠 섹션을 설정합니다.</li>
-                    <li data-name="audio" data-topic="오디오">audio : audio 태그는 오디오 파일을 설정합니다.</li>
-                    <li data-name="b" data-topic="비">b : b 그는 다른 텍스트와 구별 할 때 설정합니다.</li>
-                    <li data-name="base" data-topic="베이스">base : base 태그는 모든 문서의 기본이 되는 URL을 설정합니다.</li>
-                    <li data-name="basefont" data-topic="베이스프론트">basefont : basefont 태그는 문서의 기본 폰트, 사이즈, 종류를 설정합니다.</li>
-                    <li data-name="bdi" data-topic="비디아이">bdi : bdi 태그는 텍스트의 출력 방향 영역을 설정합니다.</li>
-                    <li data-name="bdo" data-topic="비디오">bdo : bdo 태그는 텍스트의 방향을 설정합니다.</li>
-                    <li data-name="blockquote" data-topic="블록쿼트">blockquote : blockquote 태그는 긴 문장의 인용문을 설정합니다.</li>
-                    <li data-name="blink" data-topic="블링크">blink : blink 태그는 텍스트를 깜박이게 설정합니다.</li>
-                    <li data-name="body" data-topic="바디">body : body 태그는 문서의 몸통을 나타내는 태그입니다.</li>
-                    <li data-name="br" data-topic="비알">br : br 태그는 텍스트 줄바꿈이 필요할 때 설정합니다.</li>
-                    <li data-name="button" data-topic="버튼">button : button 태그는 클릭 할 수 있는 버튼을 설정합니다.</li>
-                    <li data-name="canvas" data-topic="캔버스">canvas : anvas 태그는 비트맵 방식의 그림을 설정합니다.</li>
-                    <li data-name="caption" data-topic="캡션">caption : caption 태그는 표의 제목을 설정합니다.</li>
-                    <li data-name="center" data-topic="센터">center : center 태그는 텍스트를 가운데 정렬합니다.</li>
-                    <li data-name="cite" data-topic="사이트">cite : cite 태그는 저작물의 출처 표기를 설정합니다.</li>
-                    <li data-name="code" data-topic="코드">code : code 태그는 코드를 나타내는 텍스트를 설정합니다.</li>
-                    <li data-name="col" data-topic="콜">col : col 태그는 colgroup 요소에 속하는 각 열의 속성을 설정합니다.</li>
-                    <li data-name="colgroup" data-topic="콜그룹">colgroup : colgroup 태그는 표의 열을 묶는 그룹을 설정합니다.</li>
-                    <li data-name="data" data-topic="데이터">data : data 태그는 주어진 요소의 데이터 값을 설정합니다.</li>
-                    <li data-name="datalist" data-topic="데이터리스트">datalist : datalist 태그는 선택 목록과 자동 완성 기능을 설정합니다.</li>
-                    <li data-name="dd" data-topic="디디">dd : dd 태그는 설명 목록의 항목을 설정합니다.</li>
-                    <li data-name="del" data-topic="델">del : del 태그는 문서의 삭제된 텍스트를 설정합니다.</li>
-                    <li data-name="details" data-topic="디테일">details : details 태그는 접기/펼치기 목록을 설정합니다.</li>
-                    <li data-name="dfn" data-topic="디에프엔">dfn : dfn 태그는 용어를 정의할 때 설정합니다.</li>
-                    <li data-name="dialog" data-topic="다이알로그">dialog : 	dialog 태그는 팝업 정보을 설정합니다.</li>
-                    <li data-name="dir" data-topic="디아이알">dir : dir 태그는 파일 및 폴더의 디렉토리를 설정합니다.</li>
-                    <li data-name="div" data-topic="디아이브이">div : div 태그는 문서의 영역을 나누거나 그룹화 할 때 설정합니다.</li>
-                    <li data-name="dl" data-topic="디엘">dl : dl 태그는 설명 목록을 설정합니다.</li>
-                    <li data-name="dt" data-topic="디티">dt : dt 태그는 설명 목록 항목의 제목을 설정합니다.</li>
-                    <li data-name="em" data-topic="이엠">em : em 태그는 텍스트를 강조할 때 설정합니다.</li>
-                    <li data-name="embed" data-topic="이엠브드">embed : embed 태그는 외부 콘텐츠를 사용할 수 있도록 설정합니다.</li>
-                    <li data-name="fieldset" data-topic="필드셋">fieldset : fieldset 태그는 폼 컨트롤 요소의 내부 영역을 설정합니다.</li>
-                    <li data-name="figcaption" data-topic="피그캡션">figcaption : figcaption 태그는 figure 요소의 설명 또는 제목을 설정합니다.</li>
-                    <li data-name="figure" data-topic="피규어">figure : figure 태그는 인용, 도표, 사진, 코드 등의 독립적인 콘텐츠를 설정합니다.</li>
-                    <li data-name="font" data-topic="폰트">font : font 태그는 폰트의 크기, 색, 종류를 설정합니다.</li>
-                    <li data-name="footer" data-topic="푸터">footer : footer 태그는 사이트 관련 정보 및 관련 링크 콘텐츠 섹션을 설정합니다.</li>
-                    <li data-name="form" data-topic="폼">form : form 태그는 웹 서버에 정보를 제공하는 폼 컨트롤 유형을 설정합니다.</li>
-                    <li data-name="frame" data-topic="프레임">framet : frame 태그는 다른 HTML문서가 표시 될 수 있는 특정 영역을 설정합니다.</li>
-                    <li data-name="frameset" data-topic="프레임셋">frameset : frameset 태그는 레이아웃 구성을 위한 프레임을 설정합니다.</li>
-                    <li data-name="h1 ~ h6" data-topic="에이치">h1 ~ h6 : h1 ~ h6 태그는 섹션의 제목을 설정합니다.</li>
-                    <li data-name="head" data-topic="헤드">head : head 태그는 제목과 스크립트, 스타일 시트, 메타 정보 등을 제공합니다.</li>
-                    <li data-name="header" data-topic="헤더">header : header 태그는 사이트의 소개 및 메뉴 그룹을 나타내는 섹션을 설정합니다.</li>
-                    <li data-name="hgroup" data-topic="에이치그룹">hgroup : 	hgroup 태그는 제목 요소 그룹화를 설정합니다.</li>
-                    <li data-name="hr" data-topic="에이치알">hr : hr 태그는 단란 요소간의 주제별 구분을 설정합니다.</li>
-                    <li data-name="html" data-topic="에이치티엠엘">html : html 태그는 웹 문서의 최상위 요소 문서의 루트를 나타냅니다.</li>
-                    <li data-name="i" data-topic="아이">i : i 태그는 특별한 이유로 평범한 글자와 구분하기 위해 설정합니다.</li>
-                    <li data-name="iframe" data-topic="아이프레임">iframes : iframe 태그는 웹 문서에 다른 문서를 포함하는데 사용합니다.</li>
-                    <li data-name="img" data-topic="아이엠지">img : img 태그는 웹 문서에 이미지를 정의합니다.</li>
-                    <li data-name="input " data-topic="인풋">input : input 태그는 데이터를 입력할 수 있는 폼 컨트롤을 정의합니다.</li>
-                    <li data-name="ins" data-topic="인스">ins : ins 태그는 문서에 삽입된 텍스트를 설정합니다</li>
-                    <li data-name="kbd" data-topic="케이비디">kbd : kbd 태그는 키보드 입력요소를 나타내는 텍스트를 정의합니다.</li>
-                    <li data-name="keygen" data-topic="키겐">keygen : keygen 태그는 보안키를 생성하고 컨트롤합니다.</li>
-                    <li data-name="label" data-topic="라벨">label : label 태그는 해당 input 요소의 제목을 설정합니다.</li>
-                    <li data-name="legend" data-topic="레전드">legend :legend 태그는 sfieldset 요소 영역의 설명을 설정합니다.</li>
-                    <li data-name="li" data-topic="엘아이">li : li 태그는 목록의 항목을 나타내는 태그입니다.</li>
-                    <li data-name="link" data-topic="링크">link : link 태그는 외부 파일 연결 할 때 설정합니다.</li>
-                    <li data-name="main" data-topic="메인">main : main 태그는 문서의 주요 콘텐츠를 정의합니다.</li>
-                    <li data-name="map" data-topic="맵">map : map 태그는 이미지 맵을 정의합니다.</li>
-                    <li data-name="mark" data-topic="마크">mark : mark 태그는 참조용 표시를 정의합니다.</li>
-                    <li data-name="marquee" data-topic="말퀴">marqueet : marquee 태그는 텍스트의 스크롤과 움직임을 정의합니다.</li>
-                    <li data-name="menu" data-topic="메뉴">menu : menu 태그는 메뉴 리스트를 정의합니다.</li>
-                    <li data-name="menuitem" data-topic="메뉴아이템">menuitem : menuitem 그는 메뉴 리스트 항목을 정의합니다.</li>
-                    <li data-name="meta" data-topic="메타">meta : meta 태그는 웹 문서에 대한 정보를 제공합니다.</li>
-                    <li data-name="meter" data-topic="미터">meter : meter 태그는 범위를 측정하는 게이지 정보를 정의합니다..</li>
-                    <li data-name="nav" data-topic="네비">nav : nav 태그는 내부 페이지 및 외부 페이지에 대한 탐색 링크를 제공하는 페이지 섹션을 설정합니다</li>
-                    <li data-name="noframes" data-topic="노프레임">noframes : noframes 태그는 프레임이 지원되지 않을 경우 대체 메세지를 표시합니다.</li>
-                    <li data-name="noscript" data-topic="노스크립트">noscript : noscript 태그는 스크립트를 지원하지 않는 브라우저를 위한 대체 태그입니다..</li>
-                    <li data-name="object" data-topic="오브젝트">object : object 태그는 웹 문서에 포함된 멀티미디어 요소를 정의합니다.</li>
-                    <li data-name="ol" data-topic="오엘">ol : ol 태그는 순서가 있는 목록형 태그입니다.</li>
-                    <li data-name="optgroup" data-topic="오피티그룹">optgroup : optgroup 태그는 select 메뉴 option 리스트의 그룹화를 설정합니다</li>
-                    <li data-name="option" data-topic="옵션">option : option 태그는 select 요소의 항목을 정의합니다.</li>
-                    <li data-name="output" data-topic="아웃풋">output : output 태그는 사용자에 컨트롤에 따라 결과값을 계산으로 보여주는 요소입니다.</li>
-                    <li data-name="p " data-topic="피">p : p 태그는 단락을 나타냅니다.</li>
-                    <li data-name="param" data-topic="파람">param : param 태그는 object 태그의 매개변수를 정의합니다.</li>
-                    <li data-name="picture" data-topic="픽쳐">picture : picture 태그는 화면 크기에 따라 이미지를 정의합니다.</li>
-                    <li data-name="pre" data-topic="프레">pre : pre 태그는 마크업 소스를 화면 그대로 표현합니다.</li>
-                    <li data-name="progress" data-topic="프로그레스">progress : progress 태그는 작업의 진행 상태를 표시하는 바를 나타냅니다.</li>
-                    <li data-name="q" data-topic="큐">q : q 태그는 짧은 글을 인용할 때 사용합니다.</li>
-                    <li data-name="rp" data-topic="알피">rp : rp 태그는 루비 주석을 괄호로 표현하기 위해서 사용합니다.</li>
-                    <li data-name="rt" data-topic="알티">rt : rt 태그는 태그는 루비 문자의 상단 주석을 정의합니다.</li>
-                    <li data-name="rtc" data-topic="알티씨">rtc : rtc 태그는 루비 문자의 텍스트 영역을 정의합니다.</li>
-                    <li data-name="ruby" data-topic="루비">ruby : ruby 태그는 루비 문자를 정의합니다.</li>
-                    <li data-name="s" data-topic="에스">s : s 요소는 텍스트가 정확하지 않고, 관련성이 없는 내용을 표시하는데 사용합니다.</li>
-                    <li data-name="samp" data-topic="에스엠피">samp : samp 태그는 프로그램으로 출력된 결과물을 나타내는 텍스트 정의합니다.</li>
-                    <li data-name="script" data-topic="스크립트">script : script 태그는 스크립트 코드를 포함하거나 외부 스크립트를 연결할 수 있습니다.</li>
-                    <li data-name="section" data-topic="섹션">section : section 태그는 주제별 그룹의 콘텐츠 섹션을 정의합니다.</li>
-                    <li data-name="select" data-topic="셀렉트">select : select 태그는 선택 목록을 설정합니다.</li>
-                    <li data-name="small" data-topic="스몰">small : small 태그는 저작권, 면책조항, 주의사항, 법적 제한 사항, 주석표시에 사용합니다.</li>
-                    <li data-name="source" data-topic="소스">source : source 태그는 미디어 요소에 대한 소스를 지정하는데 사용합니다.</li>
-                    <li data-name="span" data-topic="스팬">span : span 태그는 인라인 요소 그룹화를 정의합니다.</li>
-                    <li data-name="strike" data-topic="스트라이크">strike : strike 태그는 취소선(수평선)을 표현합니다.</li>
-                    <li data-name="strong" data-topic="스트롱">strong : strong 태그는 텍스트의 중요성을 강조할 때 설정합니다./li>
-                    <li data-name="style" data-topic="스타일">style : style 태그는 웹 문서에 대한 스타일 정보를 정의합니다.</li>
-                    <li data-name="sub" data-topic="섭">sub : sub 태그는 텍스트 아래첨자를 정의합니다.</li>
-                    <li data-name="summary" data-topic="서머리">summary : summary 태그는 details 요소에 대한 요약 또는 제목을 정의합니다.</li>
-                    <li data-name="sup" data-topic="섭">sup : sup 태그는 텍스트 위첨자를 정의합니다.</li>
-                    <li data-name="svg" data-topic="에스브이지">svg : svg 태그는 벡터 방식의 그림을 정의합니다..</li>
-                    <li data-name="table" data-topic="테이블">table : table 태그는 표를 설정합니다.</li>
-                    <li data-name="tbody" data-topic="티바디">tbody : tbody 태그는 표의 본문 영역을 그룹화합니다</li>
-                    <li data-name="td" data-topic="티디">td : td 태그는 표의 열(셀)을 설정합니다..</li>
-                    <li data-name="template" data-topic="템플레이트">template : template 웹 문서에 사용하기 위한 템플렛을 정의합니다.</li>
-                    <li data-name="textarea" data-topic="텍스쳐">textarea : textarea 태그는 여러줄의 텍스트를 편집할 수 있는 컨트롤을 정의합니다.</li>
-                    <li data-name="tfoot" data-topic="티풋">tfoot : tfoot 태그는 표의 푸터를 그룹화합니다.</li>
-                    <li data-name="th" data-topic="티에이치">th : th 태그는 행이나 열에 타이틀을 설정합니다.</li>
-                    <li data-name="time" data-topic="타임">time : time 태그는 날짜와 시간을 정의합니다.</li>
-                    <li data-name="title" data-topic="타이틀">title : title 태그는 브라우저의 제목 또는 문서의 제목을 정의합니다.</li>
-                    <li data-name="tr" data-topic="티알">tr : tr 태그는 표의 행을 설정합니다.</li>
-                    <li data-name="track" data-topic="트랙">track : 	track 태그는 미디어 요소의 자막을 정의합니다.</li>
-                    <li data-name="tt" data-topic="티티">tt : tt 태그는 타자모양의 텍스트를 정의합니다.</li>
-                    <li data-name="u" data-topic="유">u : u 태그는 맞춤법이 틀린 단어를 표시할 때 정의합니다.</li>
-                    <li data-name="ul" data-topic="유엘">ul : ul 태그는 순서가 없는 목록형 태그를 정의합니다.</li>
-                    <li data-name="var" data-topic="발">var : var 태그는 수학적인 변수나 프로그램의 변수를 정의합니다</li>
-                    <li data-name="video" data-topic="비디오">video : video 태그는 미디어 영상을 정의합니다.</li>
-                    <li data-name="wbr" data-topic="더블유브이알">wbr : wbr 태그는 줄바꿈 할 위치를 정의할 때 사용합니다..</li>
-                </ul>
+
+            <div class="search-result">
             </div>
+
         </div>
         <div class="girl">
             <img src="img/search_girl.png" alt="">
@@ -274,40 +160,233 @@
     </div>
 
     <script>
-        const searchBox = document.querySelector("#search-box");
-        const cssList = document.querySelectorAll(".list ul li")
+        const cssProp = [
+            { name: "align-content", desc: "콘텐츠의 상하관계 정렬 상태를 정의합니다." },
+            { name: "align-items", desc: "콘텐츠 내부의 정렬 상태를 정의합니다." },
+            { name: "align-self", desc: "콘텐츠의 정렬 상태를 정의합니다." },
+            { name: "all", desc: "요소의 속성을 초기화 또는 상속을 설정합니다." },
+            { name: "animation", desc: "애니메이션을 정의합니다." },
+            { name: "animation-delay", desc: "요소가 로드된 후 애니메이션이 시작될 때 까지의 시간을 나타냅니다." },
+            { name: "animation-direction", desc: "애니메이션 움직임 방향을 설정합니다." },
+            { name: "animation-duration", desc: "애니메이션 움직임 시간을 설정합니다." },
+            { name: "animation-fill-mode", desc: "애니메이션이 끝난 후의 상태를 설정합니다." },
+            { name: "animation-iteration-count", desc: "애니메이션 반복 횟수 설정합니다." },
+            { name: "animation-name", desc: "애니메이션 keyframe 이름을 설정합니다." },
+            { name: "animation-play-state", desc: "애니메이션 진행상태를 설정합니다." },
+            { name: "animation-timing-function", desc: "움직임의 속도를 정의합니다." },
+            { name: "backface-visibility", desc: "요소의 뒷면을 정의합니다." },
+            { name: "background", desc: "배경 속성 값을 정의합니다." },
+            { name: "background-attachment", desc: "배경이미지의 고정여부를 설정하기 위한 속성입니다." },
+            { name: "background-blend-mode", desc: "배경이미지의 고정여부를 설정하기 위한 속성입니다." },
+            { name: "background-clip", desc: "배경이미지의 고정여부를 설정하기 위한 속성입니다." },
+            { name: "background-color", desc: "백그라운 색을 설정합니다." },
+            { name: "background-image", desc: "백그라운 색을 설정합니다." },
+            { name: "background-origin", desc: "백그라운 색을 설정합니다." },
+            { name: "background-position", desc: "백그라운 이미지의 위치 영역을 설정합니다." },
+            { name: "background-repeat", desc: "백그라운 이미지 반복여부를 설정합니다." },
+            { name: "background-size", desc: "백그라운드 이미지 사이즈를 설정합니다." },
+            { name: "border", desc: "테두리 속성을 설정합니다." },
+            { name: "border-bottom", desc: "테두리 아래쪽 테두리 속성을 설정합니다." },
+            { name: "border-bottom-color", desc: "테두리 아래쪽 색 속성을 설정합니다." },
+            { name: "border-bottom-left-radius", desc: "아래부분 왼쪽 모서리 굴곡을 설정합니다." },
+            { name: "border-bottom-right-radius", desc: "아래부분 오른쪽 모서리 굴곡을 설정합니다." },
+            { name: "border-bottom-style", desc: "아래쪽 테두리 스타일 속성을 설정합니다." },
+            { name: "border-bottom-width", desc: "아래쪽 테두리 두께 속성을 설정합니다." },
+            { name: "border-collapse", desc: "테이블의 테두리 분리여부를 정의합니다." },
+            { name: "border-color", desc: "테두리 색 속성을 설정합니다." },
+            { name: "border-image", desc: "테두리 이미지 속성을 설정합니다." },
+            { name: "border-image-outset", desc: "테두리 이미지 간격 속성을 설정합니다." },
+            { name: "border-image-repeat", desc: "테두리 이미지 반복 속성을 설정합니다." },
+            { name: "border-image-slice", desc: "테두리 이미지 크기 속성을 설정합니다." },
+            { name: "border-image-source", desc: "테두리 이미지 경로 속성을 설정합니다." },
+            { name: "border-image-width", desc: "테두리 이미지 두께 속성을 설정합니다." },
+            { name: "border-left", desc: "왼쪽 테두리 속성을 설정합니다." },
+            { name: "border-left-color", desc: "왼쪽 테두리 색 속성을 설정합니다." },
+            { name: "border-left-style", desc: "왼쪽 테두리 스타일 속성을 설정합니다." },
+            { name: "border-left-width", desc: "왼쪽 테두리 두께 속성을 설정합니다." },
+            { name: "border-radius", desc: "모서리 굴곡을 설정합니다." },
+            { name: "border-right", desc: "오른쪽 테두리 속성을 설정합니다." },
+            { name: "border-right-color", desc: "오른쪽 테두리 색 속성을 설정합니다." },
+            { name: "border-right-style", desc: "오른쪽 테두리 스타일 속성을 설정합니다." },
+            { name: "border-right-width", desc: "오른쪽 테두리 두께 속성을 설정합니다." },
+            { name: "border-spacing", desc: "테이블의 테두리 간격을 설정합니다." },
+            { name: "border-style", desc: "테두리 스타일 속성을 설정합니다." },
+            { name: "border-top", desc: "위쪽 테두리 속성을 설정합니다." },
+            { name: "border-top-color", desc: "위쪽 테두리 색 속성을 설정합니다." },
+            { name: "border-top-left-radius", desc: "윗부분 왼쪽 모서리 굴곡을 설정합니다." },
+            { name: "border-top-right-radiu", desc: "윗부분 오른쪽 모서리 굴곡을 설정합니다." },
+            { name: "border-top-style", desc: "위쪽 테두리 스타일 속성을 설정합니다." },
+            { name: "border-top-width ", desc: "위쪽 테두리 두께 속성을 설정합니다." },
+            { name: "border-width", desc: "테두리 두께 속성을 설정합니다." },
+            { name: "bottom", desc: "위치 요소의 아래쪽 속성을 설정합니다." },
+            { name: "box-decoration-break", desc: "컬럼 및 줄바꿈시 테두리와 패딩의 방식을 설정합니다." },
+            { name: "box-shadow", desc: "박스 요소의 그림자를 설정합니다." },
+            { name: "box-sizing", desc: "크기 및 높이 여부의 포함을 설정합니다." },
+            { name: "caption-side", desc: "caption의 위치를 설정합니다." },
+            { name: "caret-color", desc: "input의 커서 색을 정의합니다." },
+            { name: "clear", desc: "float 요소의 성질을 차단합니다." },
+            { name: "clip", desc: "절대 요소의 위치 값을 지정합니다." },
+            { name: "color", desc: "글씨 색을 설정합니다." },
+            { name: "column-count", desc: "컬럼의 수를 정의합니다." },
+            { name: "column-fill", desc: "열의 지정방법을 정의합니다." },
+            { name: "column-gap", desc: "열의 간격을 정의합니다." },
+            { name: "column-rule ", desc: "컬럼 라인의 가로값, 스타일, 컬러를 정의합니다." },
+            { name: "column-rule-color", desc: "컬럼의 라인 색을 정의합니다." },
+            { name: "column-rule-style", desc: "컬럼 라인의 스타일을 정의합니다." },
+            { name: "column-rule-width", desc: "컬럼 라인의 가로값을 정의합니다." },
+            { name: "column-span", desc: "열의 속성을 정의합니다." },
+            { name: "column-width", desc: "컬럼의 가로 값을 정의합니다." },
+            { name: "columns", desc: "열의 폭과 열의 수를 정의합니다." },
+            { name: "content", desc: "콘텐츠 내용을 설정합니다." },
+            { name: "counter-increment", desc: "콘텐츠의 순서 상태를 정의합니다." },
+            { name: "counter-reset", desc: "콘텐츠의 숫자를 초기화합니다." },
+            { name: "cursor", desc: "마우스 오버시 마우스 포인터를 정의합니다." },
+            { name: "direction", desc: "문장의 방향을 설정합니다." },
+            { name: "display", desc: "요소의 성질을 정의합니다." },
+            { name: "empty-cells", desc: "테이블의 빈요소의 속성을 설정합니다." },
+            { name: "filter", desc: "이미지의 비쥬얼 효과를 정의합니다." },
+            { name: "flex", desc: "콘텐츠의 성질을 flex로 정의합니다." },
+            { name: "flex-basis", desc: "요소의 기본 단위를 정의합니다." },
+            { name: "flex-direction", desc: "요소의 정렬 방향을 정의합니다." },
+            { name: "flex-flow", desc: "요소의 정렬 방향과 줄 속성을 설정합니다." },
+            { name: "flex-grow", desc: "요소의 크기를 숫자를 통해 정의합니다." },
+            { name: "flex-shrink", desc: "요소의 크기를 숫자를 통해 줄여줍니다." },
+            { name: "flex-wrap", desc: "요소의 줄 속성을 설정합니다." },
+            { name: "float", desc: "블록요소의 정렬 상태를 설정합니다." },
+            { name: "font", desc: "폰트에 관한 설정을 정의합니다." },
+            { name: "font-family", desc: "폰트 종류를 설정합니다." },
+            { name: "font-size", desc: "폰트 사이즈 속성을 설정합니다." },
+            { name: "font-size-adjust", desc: "소문자를 기준으로 폰트 크기를 설정합니다." },
+            { name: "font-stretch", desc: "폰트의 굵기를 정의합니다." },
+            { name: "font-style", desc: "폰트의 스타일을 정의합니다." },
+            { name: "font-variant", desc: "글꼴의 변형을 정의합니다." },
+            { name: "font-weight", desc: "폰트의 두께를 정의합니다." },
+            { name: "grid", desc: "그리드 레이아웃을 정의합니다." },
+            { name: "grid-area", desc: "grid-area   grid-area" },
+            { name: "grid-auto-columns", desc: "grid-auto-columns" },
+            { name: "grid-auto-flow", desc: "grid-auto-flow" },
+            { name: "grid-auto-rows", desc: "grid-auto-rows" },
+            { name: "grid-column", desc: "grid-column" },
+            { name: "grid-column-end", desc: "grid-column-end" },
+            { name: "grid-column-gap", desc: "grid-column-gap" },
+            { name: "grid-column-start", desc: "grid-column-start" },
+            { name: "grid-gap", desc: "grid-ga" },
+            { name: "grid-row", desc: "grid-row" },
+            { name: "grid-row-end", desc: "grid-row-en" },
+            { name: "grid-row-gap", desc: "grid-row-gap" },
+            { name: "grid-row-start", desc: "grid-row-start" },
+            { name: "grid-template", desc: "grid-template" },
+            { name: "grid-template-areas", desc: "grid-template-areas" },
+            { name: "grid-template-columns", desc: "grid-template-columns" },
+            { name: "grid-template-rows", desc: "grid-template-rows" },
+            { name: "hanging-punctuation", desc: "글씨의 시작 및 끝의 위치 정의합니다." },
+            { name: "height", desc: "콘텐츠 요소의 세로값을 설정합니다." },
+            { name: "hyphens", desc: "텍스트의 하이픈 영역을 설정합니다." },
+            { name: "isolation", desc: "stacking context을 설정합니다." },
+            { name: "justify-content", desc: "콘텐츠의 좌우 관계 정렬 상태를 정의합니다." },
+            { name: "left", desc: "위치 요소의 왼쪽 속성을 설정합니다." },
+            { name: "letter-spacing", desc: "글자 사이의 간격을 설정합니다." },
+            { name: "line-height", desc: "문장과 문장 사이의 간격을 설정합니다." },
+            { name: "list-style", desc: "목록 스타일 속성을 설정합니다." },
+            { name: "list-style-image", desc: "목록 마커의 이미지를 설정합니다." },
+            { name: "list-style-position", desc: "목록 마커의 위치 속성을 설정합니다." },
+            { name: "list-style-type", desc: "목록 마커의 유형을 설정합니다." },
+            { name: "margin", desc: "요소의 바같쪽 여백을 설정합니다." },
+            { name: "margin-bottom", desc: "요소의 아래 바같쪽 여백을 설정합니다." },
+            { name: "margin-left", desc: "요소의 왼쪽 바같쪽 여백을 설정합니다." },
+            { name: "margin-right", desc: "요소의 오른쪽 바같쪽 여백을 설정합니다." },
+            { name: "margin-top", desc: "요소의 위부분 바같쪽 여백을 설정합니다." },
+            { name: "max-height", desc: "요소의 최대 세로값을 설정합니다." },
+            { name: "max-width ", desc: "요소의 최대 가로 값을 설정합니다." },
+            { name: "min-height", desc: "요소의 최소 세로 값을 설정합니다." },
+            { name: "min-width", desc: "요소의 최소 가로 값을 설정합니다." },
+            { name: "mix-blend-mode", desc: "배경의 혼합 상태를 정의합니다." },
+            { name: "object-fit", desc: "&lt;img&gt;, &lt;vid&gt;o> 태그의 크기를 정의합니다." },
+            { name: "object-position", desc: "&lt;img&gt;, &lt;vid&gt;o> 태그의 위치를 정의합니다." },
+            { name: "opacity", desc: "요소의 투명도를 설정합니다." },
+            { name: "order", desc: "flex 콘텐츠의 순서를 정의합니다." },
+            { name: "outline", desc: "아웃라인의 색, 스타일, 두께를 정의합니다." },
+            { name: "outline-color", desc: "아웃라인의 색을 정의합니다." },
+            { name: "outline-offset", desc: "아웃라인의 간격을 정의합니다." },
+            { name: "outline-style", desc: "아웃라인 스타일을 정의합니다." },
+            { name: "outline-width", desc: "아웃라인의 두께를 정의합니다." },
+            { name: "overflow", desc: "지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다." },
+            { name: "overflow-x", desc: "X축을 기준으로 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다." },
+            { name: "overflow-y", desc: "Y축을 기준으로 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다." },
+            { name: "padding", desc: "요소의 안쪽 여백을 설정합니다." },
+            { name: "padding-bottom", desc: "요소의 아래쪽 여백을 설정합니다." },
+            { name: "padding-left", desc: "요소의 왼쪽 여백을 설정합니다." },
+            { name: "padding-right", desc: "요소의 오른쪽 여백을 설정합니다." },
+            { name: "padding-top", desc: "요소의 위쪽 여백을 설정합니다." },
+            { name: "page-break-after", desc: "페이지 인쇄시 분리에 관한 설정을 정의합니다." },
+            { name: "page-break-before", desc: "인쇄시 페이지 분리에 관한 설정을 정의합니다." },
+            { name: "page-break-inside", desc: "인쇄시 페이지 분리에 관한 설정을 정의합니다." },
+            { name: "perspective", desc: "3D를 표현할 때 원근점을 정의합니다." },
+            { name: "perspective-origin", desc: "3D를 표현할 때 원근점의 방향을 정의합니다." },
+            { name: "pointer-events", desc: "포인터 이벤트 반응을 정의합니다." },
+            { name: "position", desc: "요소의 위치를 설정합니다." },
+            { name: "quotes", desc: "인용 부호를 정의합니다." },
+            { name: "resize", desc: "요소의 사이즈를 정의합니다." },
+            { name: "right", desc: "위치 요소의 오른쪽 속성을 설정합니다." },
+            { name: "tab-size", desc: "글씨의 간격을 정의합니다." },
+            { name: "table-layout", desc: "표의 레이아웃 크기를 정의합니다." },
+            { name: "text-align", desc: "텍스트 정렬 방식을 설정합니다." },
+            { name: "text-align-last", desc: "문장의 마지막 텍스트 정렬 방식을 설정합니다." },
+            { name: "text-decoration", desc: "글자 라인 속성을 설정합니다." },
+            { name: "text-decoration-color ", desc: "글자 라인 색을 설정합니다." },
+            { name: "text-decoration-line", desc: "글자 라인 스타일을 설정합니다." },
+            { name: "text-decoration-style", desc: "글자 스타일을 정의합니다." },
+            { name: "text-indent", desc: "문단 들여쓰기 속성을 설정합니다." },
+            { name: "text-justify", desc: "텍스트의 간격을 정의합니다." },
+            { name: "text-overflow", desc: "문자열 영역 속성을 설정합니다." },
+            { name: "text-shadow", desc: "텍스트에 그림자를 설정합니다." },
+            { name: "text-transform", desc: "텍스트를 대문자나 소문자로 변경합니다." },
+            { name: "top", desc: "위치 요소의 위쪽 속성을 설정합니다." },
+            { name: "transform", desc: "요소의 움직임을 표현합니다." },
+            { name: "transform-origin", desc: "요소의 움직임 방향을 정의합니다." },
+            { name: "transform-style", desc: "요소의 움직임 스타일을 정의합니다." },
+            { name: "transition", desc: "요소의 움직임을 정의합니다." },
+            { name: "transition-delay", desc: "요소의 움직임 시간을 지연합니다." },
+            { name: "transition-duration", desc: "요소의 움직임 지속시간을 정의합니다." },
+            { name: "transition-property", desc: "transition의 적용 여부를 정의합니다." },
+            { name: "transition-timing-function", desc: "요소의 움직임 기능을 정의합니다." },
+            { name: "unicode-bidi", desc: "글자의 방향 속성을 설정합니다." },
+            { name: "user-select", desc: "요소의 텍스트를 선택할 지 정의합니다." },
+            { name: "vertical-align", desc: "텍스트의 상하 정렬 방식을 설정합니다." },
+            { name: "visibility", desc: "요소를 보이지 않게 정의합니다." },
+            { name: "white-space", desc: "줄바꿈, 공백, 줄 속성을 설정합니다." },
+            { name: "width", desc: "요소의 가로 값을 정의합니다." },
+            { name: "word-break", desc: "줄바꿈 속성을 설정합니다." },
+            { name: "word-spacing", desc: "단어 사이의 간격을 정의합니다." },
+            { name: "word-wrap", desc: "줄바꿈을 설정합니다." },
+            { name: "z-index", desc: "요소의 위치가 겹칠 경우 순서를 정의합니다." }
+        ];
         
-        // searchBox.addEventListener("keyup", function(){};)
-        searchBox.addEventListener("keyup", () => {    //키보드 이벤트
-            const searchWord = searchBox.value;        //사용자가 입력한 정보
+        const searchInput = document.querySelector(".search-input");
+        const searchResult = document.querySelector(".search-result");
 
+
+        searchInput.addEventListener("keyup",()=>{
+            const searchWord = searchInput.value; //사용자가 입력한 값
             //console.log(searchWord);
-
-            cssList.forEach((el) => {         //리스트의 갯수를 확인하기 위해서
-                //console.log(el);
-
-                const cssName = el.dataset.name;       //리스트에 name 속성값을 가져옮
-                const cssTopic = el.dataset.topic;  //리스트 topic 속성 값을 가져옮
-
-                //console.log(cssName);
-                //console.log(cssTopic);
-
-
-                // if ( searchWord.charAt(0) === cssName.charAt(0)) {
-                //     el.classList.remove("hide");   //element에 classlist를 추가해준것 새로배움 
-                // } else if ( searchWord.charAt(0) === cssTopic.charAt(0)) {
-                //     el.classList.remove("hide");
-                // } else {
-                //     el.classList.add("hide");
-                // } 
-
-                if ( searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssTopic.charAt(0)) {
-                    el.classList.remove("hide");   //element에 classlist를 추가해준것 새로배움 
-                } else  {
-                    el.classList.add("hide");
-                }
-            })
+            findDesc(searchWord);
         });
+
+        function findDesc(searchWord){
+            const findData = cssProp.find((el)=>{
+                return el.name === searchWord;   //사용자가 입력한 값, 데이터 값이 일치여부
+            });
+
+            //데이터가 없을때
+            if(findData == null){
+                searchResult.textContent = "해당 속성이 존재하지 않습니다."
+            } else {
+                searchResult.textContent = findData.desc; //데이터가 있으면 출력
+
+            }
+        }
+
+
 
     </script>
 </body>
