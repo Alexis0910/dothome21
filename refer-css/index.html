@@ -72,6 +72,14 @@
             border: 1px solid #000;
             margin-bottom: 300px; /*마진은 바깥쪽 여백 padding은 안쪽여백*/
         }
+        
+        .refer h3 a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .refer h3.active {
+            box-shadow: inset 0 5px 0 0px #00aa58;
+        }
         .refer h3 {
             display: inline-block; /*블록성질인데 인라인-블럭으로 바꿔준것 중요하다*/
             padding: 6px 30px;
@@ -115,6 +123,21 @@
         }
         .link li a:hover{
             background-color: #00DB72;
+        }
+        .page {
+            text-align: right;
+            margin-bottom: 3px;
+        }
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+        .page li a {
+            text-decoration: none;
+            color: #222;
+        }
+        .page li a:hover{
+            color: #00b45d;
         }
         @media (max-width: 1220px) {
             #contents {
@@ -166,11 +189,14 @@
     <!--// header-->
     <main id="contents">
         <h2>CSS <em>레퍼런스 북</em></h2>
-        <ul class="link">
-            <li><a href="../javascript/javascriptSample602-1.html">CSS 속성 첫 글자 검색하기</a></li>
+        <ul class="page">
+            <li><a href="../refer-html/index.html">HTML</a></li>
+            <li><a href="../refer-css/index.html">CSS</a></li>
+            <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
         </ul>
         <section class="refer">
-            <h3>Alphabet</h3>
+            <h3 class="active"><a href="index.html">Alphabet</a></h3>
+            <h3><a href="index2.html">Topics</a></h3>
             <table>
                 <colgroup>
                     <col style="width: 30%">
@@ -185,63 +211,59 @@
                 <tbody>
                     <tr>
                         <td>align-content</td>
-                        <td></td>
+                        <td>콘텐츠의 상하관계 정렬 상태를 정의합니다.</td>
                     </tr>
                     <tr>
                         <td>align-items</td>
-                        <td></td>
+                        <td>콘텐츠 내부의 정렬 상태를 정의합니다.</td>
                     </tr>
                     <tr>
                         <td>align-self</td>
-                        <td></td>
+                        <td>콘텐츠의 정렬 상태를 정의합니다.</td>
                     </tr>
                     <tr>
                         <td>all</td>
-                        <td></td>
+                        <td>콘텐츠의 정렬 상태를 정의합니다.</td>
                     </tr>
                     <tr>
                         <td>animation</td>
-                        <td></td>
+                        <td>애니메이션을 정의합니다.</td>
                     </tr>
                     <tr>
                         <td>animation-delay</td>
-                        <td></td>
+                        <td>요소가 로드된 후 애니메이션이 시작될 때 까지의 시간을 나타냅니다.</td>
                     </tr>
                     <tr>
                         <td>animation-direction</td>
-                        <td></td>
+                        <td>애니메이션 움직임 방향을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>animation-duration</td>
-                        <td></td>
+                        <td>애니메이션 움직임 시간을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>animation-fill-mode</td>
-                        <td></td>
+                        <td>애니메이션이 끝난 후의 상태를 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>animation-iteration-count</td>
-                        <td></td>
+                        <td>애니메이션 반복 횟수 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>animation-name</td>
-                        <td></td>
+                        <td>애니메이션 keyframe 이름을 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>animation-play-state</td>
-                        <td></td>
+                        <td>애니메이션 진행상태를 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>animation-timing-function</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>backdrop-filter</td>
-                        <td></td>
+                        <td>움직임의 속도를 정의합니다.</td>
                     </tr>
                     <tr>
                         <td>backface-visibility</td>
-                        <td></td>
+                        <td>요소의 뒷면을 정의합니다.</td>
                     </tr>
                     <tr>
                         <td>background</td>
