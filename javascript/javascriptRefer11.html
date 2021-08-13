@@ -191,15 +191,12 @@
 
         .view {
             padding: 20px;
+            overflow: hidden;
         }
 
         .view table {
             width: 100%;
             border: 1px solid #e6e6e6;
-            /*속기형 작성법 */
-            /* border-width: :1px;
-            border-style: solid;
-            border-color: #e6e6e6; */
             text-align: center;
             vertical-align: middle;
             border-collapse: collapse;
@@ -222,6 +219,8 @@
         .view table td {
             border: 1px solid #e6e6e6;
             padding: 13px 5px 11px 5px;
+            
+
         }
 
         .view table td.result {
@@ -284,9 +283,9 @@
             color: #fff;
             border-style: solid;
         }
-
-
-
+        .ol{
+            padding-left: 26px;
+        }
         @media(max-width: 800px) {
             body {
                 font-size: 13px;
@@ -295,12 +294,22 @@
                 text-align: center;
             }
             .view {
-                padding: 5px;
-                max-width: 800px;
-                overflow-x: scroll;
+                border-right: 1px solid #E6E6E6;
+                border-left: 1px solid #E6E6E6;
+                overflow: auto;
             }
-            .view th {
-                font-weight: normal;
+            .view table {
+                border-left: 0px;
+                border-right: 0px;
+            }
+            .view table th,
+            .view table td {
+                white-space: nowrap;
+                font-size: 13px;
+            }
+            .view table td.result {
+                color: #BDBDBD;
+                background: #F1F1F1;
             }
             .menu li a {
                 font-size: 12px;
@@ -327,9 +336,6 @@
 
             .sample pre {
                 font-size: 14px;
-            }
-            .view table td.result {
-                color: #000;
             }
         }
     </style>
