@@ -12,7 +12,7 @@
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-     @font-face {
+        @font-face {
             font-family: 'NEXON Lv1 Gothic OTF';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
             font-weight: normal;
@@ -39,7 +39,7 @@
         }
 
         h1 {
-            padding: 20px 0;
+            padding: 40px 0px 20px  ;
         }
 
         h1 a {
@@ -196,10 +196,6 @@
         .view table {
             width: 100%;
             border: 1px solid #e6e6e6;
-            /*속기형 작성법 */
-            /* border-width: :1px;
-            border-style: solid;
-            border-color: #e6e6e6; */
             text-align: center;
             vertical-align: middle;
             border-collapse: collapse;
@@ -285,6 +281,20 @@
             border-style: solid;
         }
         @media(max-width: 800px) {
+            body {
+                font-size: 13px;
+            }
+            h1 {
+                text-align: center;
+            }
+            .view {
+                padding: 5px;
+                max-width: 800px;
+                overflow-x: scroll;
+            }
+            .view th {
+                font-weight: normal;
+            }
             .menu li a {
                 font-size: 12px;
                 padding: 5px 20px;
@@ -300,7 +310,8 @@
 
             .sample h2 {
                 font-size: 14px;
-                padding: 12px 10px 10px;
+                padding: 7px 5px 5px;
+                font-weight: normal;
             }
 
             .sample h2 .dot {
@@ -310,7 +321,9 @@
             .sample pre {
                 font-size: 14px;
             }
-        }
+            .view table td.result {
+                color: #000;
+            }
     </style>
 </head>
 
@@ -1577,7 +1590,6 @@
             document.querySelector(".sample09_Q5").innerHTML = str5;
             document.querySelector(".sample09_M5").innerHTML = ".split(/&\?/)";
             document.querySelector(".sample09_R5").innerHTML = text5;
-            console.log(text5)
         }
         //sample10.
         // 문자열.padStart(전체길이(자릿수), 추가 문자열)
