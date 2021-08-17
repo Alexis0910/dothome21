@@ -189,7 +189,7 @@
                 display: none;
             }
             .sample pre {
-                line-height: 1.2 !important;
+                line-height: 1.2;
             }
             .sample code {
                 font-size: 13px;
@@ -530,12 +530,12 @@
     function funA(){
         document.write("함수A가 실행되었습니다.")
     }
-    function funB(str){
+    function callback(str){
         document.write("함수B가 실행되었습니다.")
         str();
         //funA();랑 같음
     }
-    funB(funA);
+    callback(funA);
 }
 </code></pre>
 </div>
@@ -630,7 +630,7 @@
     function func(num, name, job){
         document.write(num + ". 내 이름은 "+ name +"이며, 직업은 " + job + "이다.");
     }
-    
+
     func("1", "박소은", "웹 퍼블리셔");
     func("2", "Aleixs", "프론트엔드 개발자");
 }
@@ -1111,12 +1111,12 @@ document.write("<br>*** 17. 콜백 함수 ***<br>")
 function funA(){
     document.write("함수A가 실행되었습니다.<br>")
 }
-function funB(str){
+function callback(str){
     document.write("함수B가 실행되었습니다.<br>")
     str();
     //funA();랑 같음
 }
-funB(funA);
+callback(funA);
 }
 //sample18.
 //18. 콜백함수 : 반복문 
