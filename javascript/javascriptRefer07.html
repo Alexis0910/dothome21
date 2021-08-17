@@ -409,29 +409,29 @@
     const date = new Date();
     const year = date.getFullYear();
     document.querySelector(".sample01_R1").innerHTML = "지금은 "+ year +"년 입니다";
-  
+
     const month = date.getMonth() + 1;
     document.querySelector(".sample01_R2").innerHTML = "지금은 "+ month +"월 입니다";
-  
+
     const day = date.getDate();
     document.querySelector(".sample01_R3").innerHTML = "지금은 "+ day +"일 입니다";
-  
+
     const hour = date.getHours();
     document.querySelector(".sample01_R4").innerHTML = "지금은 "+ hour +"시 입니다";
-  
+
     const minutes = date.getMinutes();
     document.querySelector(".sample01_R5").innerHTML = "지금은 "+ minutes +"분 입니다";
-  
+
     const seconds = date.getSeconds();
     document.querySelector(".sample01_R6").innerHTML = "지금은 "+ seconds +"초 입니다";
-  
+
     const millisseconds = date.getMilliseconds();
     document.querySelector(".sample01_R7").innerHTML = "지금은 "+ millisseconds +"초 입니다";
-  
+
     const day = date.getDay();
     //0일요일 1월요일 2화요일 3수요일 4목요일 5금요일 6토요일
     const dayList = ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
-  
+
     document.querySelector(".sample01_R8").innerHTML = "지금은 "+ dayList[day] +" 입니다";
 }
 </code></pre>
@@ -441,7 +441,7 @@
             <!--sample02-->
             <hr>
             <div id="sample02" class="sample">
-                <h2>02. 날짜 메서드 : toLocaleDAteSring() : 월 불러오기<span class="dot"></span></h2>
+                <h2>02. 날짜 메서드 : toLocaleDateSring() : 월 불러오기<span class="dot"></span></h2>
                 <div class="view">
                     <table>
                         <colgroup>
@@ -484,13 +484,13 @@
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
     const date = new Date();
-  
+
     const locale = date.toLocaleString();
     document.querySelector(".sample02_R1").innerHTML = locale;
-  
+
     const localeDate = date.toLocaleDateString();
     document.querySelector(".sample02_R2").innerHTML = localeDate;
-  
+
     const localeTime = date.toLocaleTimeString();
     document.querySelector(".sample02_R3").innerHTML = localeTime;
 }
@@ -629,7 +629,6 @@
                     document.querySelector(".sample01_R8").innerHTML = "지금은 " + dayList[day] + " 입니다";
 
                 }
-
                 //sample02
                 //
                 {
