@@ -6,12 +6,6 @@
     position: relative;
     /* background-color: rgba(0,0,0,0.14);  */
 }
-.container h2 {
-    text-align: center;
-}
-.container p {
-    text-align: center;
-}
 .container-fluid {
     width: 96%;
     margin: 0 auto;
