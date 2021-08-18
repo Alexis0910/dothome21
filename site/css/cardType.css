@@ -24,12 +24,14 @@
     font-weight: 700;
     font-size: 48px;
     background: 7px;
+    text-align: center;
 }
 .cardType01 p {
     font-weight: 300;
     font-size: 26px;
     line-height: 1.28;
     margin: 10px 0 40px 0;
+    text-align: center;
 }
 /* float을 이용한 레이아웃 (익스플로어 10,9 맞춰야한다고하면 이거써야함 ㅠ)*/
 /* .card-wrap {
@@ -90,6 +92,7 @@
     
 }
 .card .card-keyword .site{
+    font-family: 'S-CoreDream';
     padding: 4px 17px ;
     font-size: 10px;
     font-weight: 200;
