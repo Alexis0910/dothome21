@@ -20,13 +20,13 @@
     font-family: 'S-CoreDream';
     padding: 60px 0;
 }
-.cardType01 h2 {
+.cardType01 .container h2 {
     font-weight: 700;
     font-size: 48px;
     background: 7px;
     text-align: center;
 }
-.cardType01 p {
+.cardType01 .container p {
     font-weight: 300;
     font-size: 26px;
     line-height: 1.28;
