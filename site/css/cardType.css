@@ -97,6 +97,8 @@ body {
 } */
 .cardType02 .card-wrap {
     display: flex;
+    
+
 }
 .cardType02 .card-wrap .card {
     width: 285px;
@@ -105,22 +107,24 @@ body {
     padding: 15px 15px 16px 14px;
     border-radius: 5px;
     border: solid 1px #e6e6e6;
+    box-sizing: border-box;
 }
-.cardType02 .card-wrap .card .card-img {}
 .cardType02 .card-wrap .card .card-title {
     display: block;
     font-size: 24px;
     font-weight: 500;
 }
 .cardType02 .card-wrap .card .card-desc {
-    display: block;
+    overflow: hidden;
+    display: -webkit-box; /* 벤터 프리픽스 */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .cardType02 .card-wrap .card .card-word {
-    width: 53px;
-    height: 21px;
-    margin: 4px 203px 0 0;
-    padding: 5px 16px 4px 17px;
-    border-radius: 50px;
+
+    margin: 6px 202px 0 1;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
     background-color: #000;
     display: inline-block;
     color: #fff;
