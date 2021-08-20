@@ -103,6 +103,10 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     border-radius: 5px;
     border: solid 1px #e6e6e6;
 }
+.cardType02 .card .card-img {
+    width: 255px;
+    height: 200px;
+}
 .cardType02 .card .card-title {
     display: block;
     margin: 0 50px 0 0;
@@ -157,6 +161,9 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     line-height: 1.28;
     position:absolute;
     right: 0; top: 180px;
+}
+.cardType03 .popular .red1 {
+    color: red;
 }
 .cardType03 .card-wrap {}
 .cardType03 .card-wrap ul {}
