@@ -12,7 +12,7 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
 }
 .cardType01 {
     font-family: 'GmarketSans';
-    padding: 60px 0;
+    padding: 100px 0;
 }
 .cardType01 h2 {
     font-weight: 500;
@@ -44,10 +44,8 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     justify-content: space-between;  
 }
 .cardType01 .card-wrap > div {
-    width: 387px;
+    width: 387px; 
 }
-.cardType01 .card {}
-.cardType01 .card .card-img {}
 .cardType01 .card .card-title {
     display: block;
     font-size: 32px;
@@ -207,6 +205,7 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     font-weight: 300;
     margin-top: 10px;
     display: -webkit-box; /* 벤터 프리픽스 */
+    overflow: hidden; 
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }

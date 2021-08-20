@@ -164,7 +164,7 @@
             padding: 13px 5px 11px 5px;
             border-bottom: 1px solid #e6e6e6;
             font-weight: normal;
-            white-space: nowrap;
+            text-overflow:clip;
         }
         .view table td.result {
             transition: all 0.3s;
@@ -1084,7 +1084,7 @@
     <div id="sample11" class="sample">
         <h2>11. 문자열 메서드 : encodeURI() / encodeURIComponent() / decodeURI() / decodeURIComponent(): 문자열을 인코딩 : 반환(문자열)<span class="dot"></span></h2>
         <div class="view">
-            <table>
+            <table style="word-break: break-all;">
                 <colgroup>
                     <col style="width: 4%;" />
                     <col style="width: 22%;" />
