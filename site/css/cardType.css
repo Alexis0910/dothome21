@@ -2,17 +2,17 @@
 
 /* cardType 01 */
 body {
-
+    background-color: #f3f3f3;
 }
+
 .cardType {
-    background-color: #fff;
-    
+margin: 100px 0;
+background-color: #fff;
+box-shadow: 0 0 50px rgba(0,0,0,0.1);
 }
 .cardType01 {
     font-family: 'GmarketSans';
     padding: 60px 0;
-    
-    
 }
 .cardType01 h2 {
     font-weight: 500;
@@ -76,11 +76,11 @@ body {
 
 .cardType02 {
     font-family: 'S-CoreDream';
+    padding: 100px 0;
 }
 .cardType02 h2{
     font-size: 50px;
     font-weight: 500;
-    margin: 100px 100px 18px 116px;
     padding: 0;
     text-align: center;
 
