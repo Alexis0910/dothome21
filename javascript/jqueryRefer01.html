@@ -519,26 +519,26 @@
                     </div>
                     <div class="code">
                         <pre class="line-numbers"><code class="language-js">{
-        $(".reset1").click(function(){
-            $(".view1 li").removeClass("red");
-        });
-        $(".btn1-1").click(function(){
-            $(".view1 .class").addClass("red");
-        });
-        $(".btn1-2").click(function(){
-            $(".view1 #id").addClass("red");
-        });
-        $(".btn1-3").click(function(){
-            $(".view1 li").addClass("red");
-        });
-        $(".btn1-4").click(function(){
-            $(".view1 .class, .view #id").addClass("red");
-        });
-        $(".btn1-5").click(function(){
-            $(".view1 *").addClass("red");
-        });
-    }    
-    </code></pre>
+    $(".reset1").click(function(){
+        $(".view1 li").removeClass("red");
+    });
+    $(".btn1-1").click(function(){
+        $(".view1 .class").addClass("red");
+    });
+    $(".btn1-2").click(function(){
+        $(".view1 #id").addClass("red");
+    });
+    $(".btn1-3").click(function(){
+        $(".view1 li").addClass("red");
+    });
+    $(".btn1-4").click(function(){
+        $(".view1 .class, .view #id").addClass("red");
+    });
+    $(".btn1-5").click(function(){
+        $(".view1 *").addClass("red");
+    });
+}    
+</code></pre>
                     </div>
                 </div>
                 <hr>
@@ -583,51 +583,51 @@
                     </div>
                     <div class="code">
                         <pre class="line-numbers"><code class="language-js">{
-        const jreset1 = document.querySelector(".jreset1");
-        const jbnt1_1 = document.querySelector(".jbtn1-1");
-        const jbnt1_2 = document.querySelector(".jbtn1-2");
-        const jbnt1_3 = document.querySelector(".jbtn1-3");
-    
-        jbnt1_1.addEventListener("click", function () {
-            document.querySelector(".j1_class").classList.add("red");
-        });
-    
-        jbnt1_2.addEventListener("click", function () {
-            // document.querySelector("#j1_id").classList.add("red");
-            document.getElementById("j1_id").classList.add("red");
-        });
-        jbnt1_3.addEventListener("click", function () {
-            //document.querySelectorAll(".jview1 li").classList.add("red");
-            //document.querySelector(".jview1 li").classList.add("red");
-            const liList = document.querySelectorAll(".jview1 li");
-            // for문
-            for (let i = 0; i &lt; liList.length; i++) {
-                liList[i].classList.add("red");
-            }
-        });
-        jreset1.addEventListener("click", function(){
-            const liList = document.querySelectorAll(".jview1 li");
-            for (let i = 0; i &lt; liList.length; i++) {
-                liList[i].classList.remove("red");
-            }
-        });
-            //forEach문.
-            // liList.forEach(function(el){
-            //     el.classList.add("red");
-            // })
-    
-            // for of 
-            // for(let el of liList ){
-            //     el.classList.add("red");
-            // }
-    
-            // for in문
-            // for(let el in liList){
-            //     // el.classList.add("red");
-            // liList[el].classList.add("red");
-            // }
-    }    
-    </code></pre>
+    const jreset1 = document.querySelector(".jreset1");
+    const jbnt1_1 = document.querySelector(".jbtn1-1");
+    const jbnt1_2 = document.querySelector(".jbtn1-2");
+    const jbnt1_3 = document.querySelector(".jbtn1-3");
+
+    jbnt1_1.addEventListener("click", function () {
+        document.querySelector(".j1_class").classList.add("red");
+    });
+
+    jbnt1_2.addEventListener("click", function () {
+        // document.querySelector("#j1_id").classList.add("red");
+        document.getElementById("j1_id").classList.add("red");
+    });
+    jbnt1_3.addEventListener("click", function () {
+        //document.querySelectorAll(".jview1 li").classList.add("red");
+        //document.querySelector(".jview1 li").classList.add("red");
+        const liList = document.querySelectorAll(".jview1 li");
+        // for문
+        for (let i = 0; i &lt; liList.length; i++) {
+            liList[i].classList.add("red");
+        }
+    });
+    jreset1.addEventListener("click", function(){
+        const liList = document.querySelectorAll(".jview1 li");
+        for (let i = 0; i &lt; liList.length; i++) {
+            liList[i].classList.remove("red");
+        }
+    });
+        //forEach문.
+        // liList.forEach(function(el){
+        //     el.classList.add("red");
+        // })
+
+        // for of 
+        // for(let el of liList ){
+        //     el.classList.add("red");
+        // }
+
+        // for in문
+        // for(let el in liList){
+        //     // el.classList.add("red");
+        // liList[el].classList.add("red");
+        // }
+}    
+</code></pre>
                     </div>
                 </div>
                 <hr>
@@ -699,23 +699,23 @@
                     </div>
                     <div class="code">
                         <pre class="line-numbers"><code class="language-js">{
-        $(".reset2").click(function(){
-            $(".s2 span").removeClass("blue");
-        })
-        $(".btn2-1").click(function(){
-            $(".s2 span").addClass("blue");
-        })
-        $(".btn2-2").click(function(){
-            $(".s2 > span").addClass("blue");
-        })
-        $(".btn2-3").click(function(){
-            $(".s2 .select + span").addClass("blue");
-        })
-        $(".btn2-4").click(function(){
-            $(".s2 .select ~ span").addClass("blue");
-        })
-    }    
-    </code></pre>
+    $(".reset2").click(function(){
+        $(".s2 span").removeClass("blue");
+    })
+    $(".btn2-1").click(function(){
+        $(".s2 span").addClass("blue");
+    })
+    $(".btn2-2").click(function(){
+        $(".s2 > span").addClass("blue");
+    })
+    $(".btn2-3").click(function(){
+        $(".s2 .select + span").addClass("blue");
+    })
+    $(".btn2-4").click(function(){
+        $(".s2 .select ~ span").addClass("blue");
+    })
+}    
+</code></pre>
                     </div>
                 </div>
                 <hr>
