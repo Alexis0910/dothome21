@@ -135,112 +135,77 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     text-transform: uppercase;
 }
 
-
 /* cardType03 */
+
 .cardType03 {
+    padding: 100px 0;
     font-family: 'NanumSquare';
-    padding: 96px 0 80px 0;
+    position: relative;
 }
 .cardType03 h2 {
     font-size: 50px;
     font-weight: 800;
-    text-align-last: left;
-    display: block;
 }
 .cardType03 p {
-    display: inline;
     font-size: 18px;
-    line-height: 1.8;
-    font-weight: bold;
-
+    font-weight: 400;
+    line-height: 1.28;
+    margin-bottom: 60px;
 }
-.cardType03 .new{
-    color: red;
-    float: right;
-    margin-right: 20px;
+.cardType03 .popular {
+    font-size: 18px;
+    line-height: 1.28;
+    position:absolute;
+    right: 0; top: 180px;
 }
-.cardType03 .pop {
-    float: right;
-}
-.cardType03 .card-wrap {
-    padding: 45px 0 0 0;
-}
-.cardType03 .card-wrap .red {
-    font-size: 14px;
-    line-height: 1.5;
-    display:inline-block;
-    font-weight: 800;
-    color: #fff;
-    padding: 4px 16px 3px;
-    border-radius: 20px;
-    background-color: #ff5151;
-    text-transform: uppercase;
-}
-.cardType03 .card-wrap .green {
-    font-size: 14px;
-    line-height: 1.5;
-    display:inline-block;
-    font-weight: 800;
-    color: #fff;
-    padding: 4px 16px 3px;
-    border-radius: 20px;
-    background-color: #11c865;
-    text-transform: uppercase;
-}
-.cardType03 .card-wrap .blue {
-    font-size: 14px;
-    line-height: 1.5;
-    display:inline-block;
-    font-weight: 800;
-    color: #fff;
-    padding: 4px 16px 3px;
-    border-radius: 20px;
-    background-color: #5465ff;
-    text-transform: uppercase;
-}
-.cardType03 .card-wrap .card{
-    overflow: hidden;
-    
-}
-
-.cardType03 .card-wrap .card .card-img {
-    display: block;
+.cardType03 .card-wrap {}
+.cardType03 .card-wrap ul {}
+.cardType03 .card-wrap .card {}
+.cardType03 .card-wrap .card .card-img{
     width: 285px;
     height: 185px;
-    flex-grow: 0;
-    margin: 0 19px 0 3px;
-    object-fit: contain;
-    border-radius: 10px;
-    float: left;
+    position: absolute;
 }
-.cardType03 .card-wrap .div-wrap {
-    height: 220px;
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px; 
+    margin-bottom: 50px;
+}
+.cardType03 .card-wrap .card .card-cate{
+    font-size: 14px;
+    font-weight: 800;
+    padding: 4px 14px 3px 15px;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.cardType03 .card-wrap .card .card-cate.red{
+    background: #FF5151;
+}
+.cardType03 .card-wrap .card .card-cate.blue{
+    background: #5465FF;
+}
+.cardType03 .card-wrap .card .card-cate.green{
+    background: #11C865;
+}
+.cardType03 .card-wrap .card .card-title{
     display: block;
-
-}
-.cardType03 .card-wrap .div-wrap .card-title {
-    font-size: 26px;
     font-weight: bold;
-    display: block;
-    margin: 10px;
-    
-    
+    font-size: 26px;
 }
-.cardType03 .card-wrap .div-wrap .card-desc {
-    height: 895px;
+.cardType03 .card-wrap .card .card-desc{
     font-size: 16px;
     line-height: 1.53;
-    margin: 14px 2px 17px 0px;
-    display: inline;
-    text-align: left;
-}
-    
-
-.cardType03 .card-wrap .div-wrap .card-date {
-    font-size: 14px;
-    line-height: 1.4;
     color: #555;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.cardType03 .card-wrap .card .card-date{
+    display: block;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
     text-decoration: underline;
-    position: relative;
-    margin: 16px 0 0 0;
+    margin-top: 10px;
 }
