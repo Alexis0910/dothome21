@@ -123,18 +123,8 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+.cardType02 .card .card-word .site,
 .cardType02 .card .card-word .coding{
-    font-size: 10px;
-    line-height: 1.5;
-    display:inline-block;
-    font-weight: 400;
-    color: #fff;
-    padding: 4px 16px 3px;
-    border-radius: 20px;
-    background-color: #000;
-    text-transform: uppercase;
-}
-.cardType02 .card .card-word .site {
     font-size: 10px;
     line-height: 1.5;
     display:inline-block;
