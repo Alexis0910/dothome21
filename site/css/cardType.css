@@ -154,10 +154,12 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     font-weight: bold;
 
 }
-.cardType03 .new {
+.cardType03 .new{
     color: red;
-    position: relative;
-
+    float: right;
+}
+.cardType03 .pop {
+    float : right;
 }
 .cardType03 .card-wrap {
     padding: 45px 0 0 0;
@@ -228,12 +230,16 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     font-size: 16px;
     line-height: 1.53;
     margin: 14px 2px 17px 19px;
-    
+    display: inline;
+    text-align: left;
 }
+    
+
 .cardType03 .card-wrap .div-wrap .card-date {
     font-size: 14px;
     line-height: 1.4;
     color: #555;
-    font-style: oblique;
-    float: left;
+    text-decoration: underline;
+    position: relative;
+    margin: 15px 682px 27px 20px;
 }
