@@ -72,8 +72,6 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     opacity: 0.5;
 }
 
-/*CARDTYPE 02*/
-
 /* cardType02 */
 
 .cardType02 {
@@ -127,6 +125,8 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     color: #fff;
     text-transform: uppercase;
 }
+
+
 /* cardType03 */
 
 .cardType03 {
