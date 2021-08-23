@@ -211,3 +211,115 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     text-decoration: underline;
     margin-top: 20px;
 }
+
+/* imgType01 */
+
+.imgType01 { 
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imgType01 h2 {
+    font-weight: bold;
+    font-size: 48px;
+    padding: 0;
+    margin: 0 0 50px 0;
+}
+.imgType01 .card-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap:20px
+}
+.imgType01 .card-wrap .card {
+    position: relative;
+}
+.imgType01 .card-wrap .card .card-exp {
+    position: absolute;
+    top:198px
+}
+.imgType01 .card-wrap .card .card-title {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 0;
+    margin: 30px;
+    color: white;
+    margin: 0 30px px 30px;
+
+}
+.imgType01 .card-wrap .card .card-desc {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    display: inline-block;
+    margin: 8px 183px 10px 30px;
+    overflow: hidden;
+    display: -webkit-box; 
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}
+.imgType01 .card-wrap .card .readmore {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 4px 6px;
+    margin: 0 30px 30px 30px 
+}
+
+/* imgType02 */
+.imgType02 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imgType02 h2 {
+    font-size: 48px;
+    color: #7e0000;
+    font-weight: 700;
+    margin: 0 0 42px 0;
+}
+.imgType02 .card-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+}
+.imgType02 .card-wrap .card {
+    position: relative;
+}
+.imgType02 .card-wrap .card .card-exp {
+    position: absolute;
+    width: 201px;
+    height: 201px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    border-radius: 201px;
+    top: 90px;
+    right: 90px;
+    bottom: 30px;
+    z-index: 2;
+}
+.imgType02 .card-wrap .card .card-title {
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+    position: absolute;
+    top:43px;
+
+
+}
+.imgType02 .card-wrap .card .readmore {
+    text-align: center;
+    display: inline-block;
+    line-height: 20px;
+    padding: 4px 11px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin: 20px 50px 0 29px;
+    position: absolute;
+    top:119px;
+    right:10px;
+
+}
