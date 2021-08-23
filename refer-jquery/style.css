@@ -328,6 +328,10 @@ hr {
     .table table td {
         white-space: nowrap;
     }
+    #wrap table th,
+    #wrap table td {
+            font-size: 14px;
+        }
 }
 
 .view2>div span {
