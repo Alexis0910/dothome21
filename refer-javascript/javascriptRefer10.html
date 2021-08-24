@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 
 </head>
-
 
 <body>
     <div id="wrap">
@@ -46,15 +46,180 @@
     <hr>
     <div class="list">
     <ol>
-        <li><a href="#sample01">요소</a></li>
+        <li><a href="#sample01">요소 객체 : 클래스 메서드 : .classList.add()</a></li>
+        <li><a href="#sample01">요소 객체 : 클래스 메서드 : .classList.remove()</a></li>
+        <li><a href="#sample01">요소 객체 : 클래스 메서드 : .classList.toggle()</a></li>
+        <li><a href="#sample01">요소 객체 : 클래스 메서드 : .classList.contians()</a></li>
         </ol>
-        </div>
+    </div>
+<hr>
+            <!-- sample01 -->
+            <div id="sample1" class="sample">
+                <h2>01. 속성 메서드 : addClass() / removeClass() <span class="dot"></span></h2>
+                <div class="view ex1">
+                    <div><img src="img/img01.jpg" alt="이미지1"></div>
+                    <div><img src="img/img02.jpg" alt="이미지1"></div>
+                    <div><img src="img/img03.jpg" alt="이미지1"></div>
+                    <div><img src="img/img04.jpg" alt="이미지1"></div>
+                    <div><img src="img/img05.jpg" alt="이미지1"></div>
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn1-1">클릭하면 모든 이미지에 클래스(active)를 추가합니다.</a>
+                    <a href="#c" class="btn1-2">클릭하면 모든 이미지에 클래스(active)를 삭제합니다.</a>
+                </div>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".btn1-1").addEventListener("click", function(){
+        document.querySelectorAll(".ex1 div").forEach((el) => {
+            el.classList.add("active");
+        });
+    });
+        
+    document.querySelector(".btn1-2").addEventListener("click", function(){
+        document.querySelectorAll(".ex1 div").forEach((el) => {
+            el.classList.remove("active");
+        })
+    });
+}
+</code></pre>
+                </div>
+            </div>
+            <hr>
+            <script>
+                // $(".btn1-1").click(function () {
+                //     $(".ex1 div").addClass("active");
+                // });
+
+                document.querySelector(".btn1-1").addEventListener("click", function(){
+                    document.querySelectorAll(".ex1 div").forEach((el) => {
+                        el.classList.add("active");
+                    });
+                });
+
+                // $(".btn1-2").click(function () {
+                //     $(".ex1 div").removeClass("active");
+                // });
+                document.querySelector(".btn1-2").addEventListener("click", function(){
+                    document.querySelectorAll(".ex1 div").forEach((el) => {
+                        el.classList.remove("active");
+                    })
+                });
+
+            </script>
+            <!-- sample01  -->
+            <!-- sample02 -->
+            <div id="sample2" class="sample">
+                <h2>02. 속성 메서드 : toggleClass() <span class="dot"></span></h2>
+                <div class="view ex2">
+                    <div><img src="img/img06.jpg" alt="이미지1"></div>
+                    <div><img src="img/img07.jpg" alt="이미지1"></div>
+                    <div><img src="img/img08.jpg" alt="이미지1"></div>
+                    <div><img src="img/img09.jpg" alt="이미지1"></div>
+                    <div><img src="img/img10.jpg" alt="이미지1"></div>
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn2-1">이미지를 클릭하면 클래스(active)를 추가/삭제 합니다.</a>
+                </div>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    document.querySelectorAll(".ex2 div").forEach((el) => {
+        el.addEventListener("click", function(){
+            document.querySelectorAll(".ex2 div").forEach((el) => {
+                el.classList.toggle("active");
+            });
+        });
+    });  
+    //클릭한 이미지만 선택
+    //화살표함수는 this값 인지 못함. function(){} 사용해야 한다.
+    document.querySelectorAll(".ex2 div").forEach((el) => {
+        el.addEventListener("click", function(){
+            this.classList.toggle("active");
+        });
+    });
+}
+</code></pre>
+                </div>
+            </div>
+            <hr>
+            <script>
+                // document.querySelectorAll(".ex2 div").forEach((el) => {
+                //     el.addEventListener("click", function(){
+                //         document.querySelectorAll(".ex2 div").forEach((el) => {
+                //             el.classList.toggle("active");
+                //         })
+                //     });
+                // });
 
 
+                //클릭한 이미지만 선택
+                // $(".ex2 div").click(function () {
+                //     $(this).toggleClass("active");
+                // });
+                //화살표함수는 this값 인지 못함. function(){} 사용해야 한다.
+                document.querySelectorAll(".ex2 div").forEach((el) => {
+                    el.addEventListener("click", function(){
+                        this.classList.toggle("active");
+                    });
+                });
+            </script>
+            <!-- sample02  -->
+            <!-- sample03 -->
+            <div id="sample03" class="sample">
+                <h2>03. .classList.contains()<span class="dot"></span></h2>
+                <div class="view ex3">
+                    <div class="active"><img src="img/img11.jpg" alt="이미지1"></div>
+                    <div><img src="img/img12.jpg" alt="이미지2"></div>
+                    <div><img src="img/img13.jpg" alt="이미지3"></div>
+                    <div class="active"><img src="img/img14.jpg" alt="이미지4"></div>
+                    <div><img src="img/img15.jpg" alt="이미지5"></div>
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn3-0">리셋</a>
+                    <a href="#c" class="btn3-1">클릭하면 .active 클래스를 찾은 후에 클래스를 제거합니다.</a>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".btn3-0").addEventListener("click", function(){
+        document.querySelector(".ex3 > div:nth-child(1)").classList.add("active");
+        document.querySelector(".ex3 > div:nth-child(4)").classList.add("active");
+    })
+
+    document.querySelector(".btn3-1").addEventListener("click", () => {
+        document.querySelectorAll(".ex3 > div").forEach( el => {
+            if( el.classList.contains("active")){
+                el.classList.remove("active");
+            }
+        })
+    })
+}
+</code></pre>   
+                </div>
+            </div>
+            <hr>
+            <script>
+                //리셋버튼을 클릭하면 첫번째, 네번째에 클래스 추가
+                document.querySelector(".btn3-0").addEventListener("click", function(){
+                    document.querySelector(".ex3 > div:nth-child(1)").classList.add("active");
+                    document.querySelector(".ex3 > div:nth-child(4)").classList.add("active");
+                })
+                // $(".btn3-0").click(function(){
+                //     $(".ex3 > div:nth-child(1)").addClass("active");
+                //     $(".ex3 > div:nth-child(4)").addClass("active");
+                // })
+                document.querySelector(".btn3-1").addEventListener("click", () => {
+                    document.querySelectorAll(".ex3 > div").forEach( el => {
+                        if( el.classList.contains("active")){
+                            el.classList.remove("active");
+                        }
+                    })
+                })
+            </script>
+            <!-- //sample03 -->
         
         </main>
         </div>
-    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+
 </body>
 
 </html>
