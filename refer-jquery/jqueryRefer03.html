@@ -7,6 +7,7 @@
     <title>jQuery Reference</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
@@ -591,7 +592,7 @@
                     $(".circle5").width("200").height("200");
                 });
             </script>
-            <!-- sample05  -->
+            <!-- //sample05  -->
             <!-- sample06 -->
             <style>
                 .ex6 {
@@ -613,12 +614,12 @@
                     margin: 10px;
                     border: 5px solid #C5C1FF;
                 }
-                .ex4 text6 {
+                .ex6 text6 {
                     margin-top: 20px;
                 }
             </style>
             <div id="sample06" class="sample">
-                <h2>06. offset(), position()<span class="dot"></span></h2>
+                <h2>06. offset() / position()<span class="dot"></span></h2>
                 <div class="view ex6">
                     <span class="circle circle6"></span>
                     <p class="text text6">여기는 텍스트 영역입니다.</p>
@@ -632,16 +633,16 @@
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
     $(".btn6-1").click(function(){
-        $(".text6").text("이 원의 x축 값은 " + $(".circle6").offset().left + "px 입니다.");
+        $(".text6").text("이 원의 x축 값은 " + parseInt($(".circle6").offset().left) + "px 입니다.");
     });
     $(".btn6-2").click(function(){
-        $(".text6").text("이 원의 y축 값은 " + $(".circle6").offset().top + "px 입니다.");
+        $(".text6").text("이 원의 y축 값은 " + parseInt($(".circle6").offset().top) + "px 입니다.");
     });
     $(".btn6-3").click(function(){
-        $(".text6").text("이 원의 x축 값은 " + $(".circle6").position().left + "px 입니다.");
+        $(".text6").text("이 원의 x축 값은 " + parseInt($(".circle6").position().left) + "px 입니다.");
     });
     $(".btn6-4").click(function(){
-        $(".text6").text("이 원의 y축 값은 " + $(".circle6").position().top + "px 입니다.");
+        $(".text6").text("이 원의 y축 값은 " + parseInt($(".circle6").position().top) + "px 입니다.");
     });
 }
 </code></pre>
@@ -649,20 +650,103 @@
             </div>
 
             <script>
+                //parseInt 는 소숫점자리를 다 반환해서 깔끔하게 정수로 만들어준다.
                 $(".btn6-1").click(function(){
-                    $(".text6").text("이 원의 x축 값은 " + $(".circle6").offset().left + "px 입니다.");
+                    $(".text6").text("이 원의 x축 값은 " + parseInt($(".circle6").offset().left) + "px 입니다.");
                 });
                 $(".btn6-2").click(function(){
-                    $(".text6").text("이 원의 y축 값은 " + $(".circle6").offset().top + "px 입니다.");
+                    $(".text6").text("이 원의 y축 값은 " + parseInt($(".circle6").offset().top) + "px 입니다.");
                 });
                 $(".btn6-3").click(function(){
-                    $(".text6").text("이 원의 x축 값은 " + $(".circle6").position().left + "px 입니다.");
+                    $(".text6").text("이 원의 x축 값은 " + parseInt($(".circle6").position().left) + "px 입니다.");
                 });
                 $(".btn6-4").click(function(){
-                    $(".text6").text("이 원의 y축 값은 " + $(".circle6").position().top + "px 입니다.");
+                    $(".text6").text("이 원의 y축 값은 " + parseInt($(".circle6").position().top) + "px 입니다.");
                 });
             </script>
+            <hr>
             <!-- sample06  -->
+            <!-- sample07 -->
+            <style>
+                .ex7 {
+                    min-height: 300px;
+                    position: relative;
+                }
+            
+                .ex7 .circle {
+                    position: absolute;
+                    left:50%;
+                    top: 50%;
+                    margin-top: -50px;
+                    margin-left: -50px;
+                    display: block;
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 50%;
+                    background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+                    padding: 10px;
+                    border: 5px solid #C5C1FF;
+                }
+                .ex7 text7 {
+                    margin-top: 20px;
+                }
+            </style>
+            <div id="sample07" class="sample">
+                <h2>07. offset() / position()<span class="dot"></span></h2>
+                <div class="view ex7">
+                    <span class="circle circle7"></span>
+                    <div class="text text7">
+                        <p class="text7-1">offset().left = <span>0</span></p>
+                        <p class="text7-2">offset().top = <span>0</span></p>
+                        <p class="text7-3">position().left = <span>0</span></p>
+                        <p class="text7-4">position().top = <span>0</span></p>
+                        <p class="text7-5"></p>
+                        
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn7-1">원을 드래그 하세요!</a>
+
+                </div>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    $(".circle7").draggable({
+        start: function(){
+            $(".text7-5").text("드래그가 시작되었습니다.");
+        },
+        drag: function(){
+            $(".text7-1 span").text( parseInt($(".circle7").offset().left) + "px");
+            $(".text7-2 span").text( parseInt($(".circle7").offset().top) + "px");
+            $(".text7-3 span").text( parseInt($(".circle7").position().left) + "px");
+            $(".text7-4 span").text( parseInt($(".circle7").position().top) + "px");
+        },
+        stop: function(){
+            $(".text7-5").text("드래그가 끝났습니다.");
+        }
+    });
+}
+</code></pre>
+                </div>
+            </div>
+            <script>
+                $(".circle7").draggable({
+                    start: function(){
+                        $(".text7-5").text("드래그가 시작되었습니다.");
+                    },
+                    drag: function(){
+                        $(".text7-1 span").text( parseInt($(".circle7").offset().left) + "px");
+                        $(".text7-2 span").text( parseInt($(".circle7").offset().top) + "px");
+                        $(".text7-3 span").text( parseInt($(".circle7").position().left) + "px");
+                        $(".text7-4 span").text( parseInt($(".circle7").position().top) + "px");
+                    },
+                    stop: function(){
+                        $(".text7-5").text("드래그가 끝났습니다.");
+                    }
+                });
+            
+            </script>
+            <hr>
+            <!-- sample07  -->
         </main>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
