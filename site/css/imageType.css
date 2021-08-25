@@ -2,88 +2,105 @@ body {
     background-color: #f3f3f3;
 }
 
-.cardType {
+.imageType {
 margin: 100px 0;
 background-color: #fff;
 box-shadow: 0 0 50px rgba(0,0,0,0.1);
 }
 
-/* imgType01 */
+/* imageType01 */
 
-.imgType01 { 
+.imageType01 { 
     font-family: 'GmarketSans';
     padding: 100px 0;
 }
-.imgType01 h2 {
-    font-weight: bold;
+.imageType01 h2 {
+    font-weight: 700;
     font-size: 48px;
     padding: 0;
     margin: 0 0 50px 0;
 }
-.imgType01 .card-wrap {
+/* .imageType01 .image-wrap {
     display: flex;
     justify-content: space-between;
     gap:20px
+} */
+.imageType01 .image-wrap {
+    overflow: hidden;
 }
-.imgType01 .card-wrap .card {
+.imageType01 .image {
+    float: left;
+    width: 590px;
+    height: 385px;
     position: relative;
 }
-.imgType01 .card-wrap .card .card-exp {
-    position: absolute;
-    top:198px
+.imageType01 .image:first-child {
+    margin-right: 20px;
 }
-.imgType01 .card-wrap .card .card-title {
+.imageType01 .image .image-cont {
+    position: absolute;
+    left: 30px;
+    bottom: 60px;
+    color: #fff;
+}
+.imageType01 .image .image-title {
     font-size: 30px;
     font-weight: 500;
     padding: 0;
-    margin: 30px;
-    color: white;
-    margin: 0 30px px 30px;
-
 }
-.imgType01 .card-wrap .card .card-desc {
+.imageType01 .image .image-desc {
     font-size: 14px;
-    color: #fff;
+    padding-right: 30%;
+    line-height: 1.4;
     font-weight: 300;
+    margin-top: 10px;
+    
     display: inline-block;
-    margin: 8px 183px 10px 30px;
     overflow: hidden;
     display: -webkit-box; 
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 
 }
-.imgType01 .card-wrap .card .readmore {
+.imageType01 .image .image-btn {
     color: #fff;
     font-size: 12px;
     font-weight: 300;
+    margin-top: 15px;
     display: inline-block;
     border: 1px solid #fff;
     border-radius: 5px;
-    padding: 4px 6px;
-    margin: 0 30px 30px 30px 
+    padding: 3px 6px;
+}
+.imageType01 .image .image-cont.s2 {
+    background-color: rgba(12, 7, 26, 0.582);
+    width: 400px;
+    padding:20px
+}
+.imageType01 .image .image-cont.s2 .image-desc {
+    padding-right: 0;;
 }
 
-/* imgType02 */
-.imgType02 {
+/* imageType02 */
+.imageType02 {
     font-family: 'GmarketSans';
     padding: 100px 0;
 }
-.imgType02 h2 {
+.imageType02 h2 {
     font-size: 48px;
     color: #7e0000;
     font-weight: 700;
     margin: 0 0 42px 0;
 }
-.imgType02 .card-wrap {
+.imageType02 .image-wrap {
     display: flex;
     justify-content: space-between;
     gap:20px;
 }
-.imgType02 .card-wrap .card {
+.imageType02 .image-wrap .image {
     position: relative;
 }
-.imgType02 .card-wrap .card .card-exp {
+.imageType02 .image-wrap .image .image-cont {
     position: absolute;
     width: 201px;
     height: 201px;
@@ -93,9 +110,9 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     top: 90px;
     right: 90px;
     bottom: 30px;
-    z-index: 2;
+    
 }
-.imgType02 .card-wrap .card .card-title {
+.imageType02 .image-wrap .image .image-title {
     font-weight: 700;
     font-size: 35px;
     text-align: center;
@@ -103,10 +120,8 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     display: inline-block;
     position: absolute;
     top:43px;
-
-
 }
-.imgType02 .card-wrap .card .readmore {
+.imageType02 .image-wrap .image .image-btn {
     text-align: center;
     display: inline-block;
     line-height: 20px;
@@ -119,51 +134,51 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     right:10px;
 }
 
-/* imgType03 */
-.imgType03 {
+/* imageType03 */
+.imageType03 {
     font-family:'GmarketSans';
     font-size: 14px;
     font-weight: 500;
     padding:94px 0 100px ;
 }
-.imgType03 h2 {
+.imageType03 h2 {
     font-weight: 700;
     font-size: 48px;
     padding: 0;
     margin: 0 0 42px 0;
 }
-.imgType03 .card-wrap {
+.imageType03 .image-wrap {
     display: grid;
     grid-template-columns: repeat(4,285px);
     grid-template-rows: 285px;
     gap:20px
 }
-.imgType03 .card-wrap .card:first-child {
+.imageType03 .image {
+    position: relative;
+}
+
+.imageType03 .image-wrap .image:first-child {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.imgType03 .card-wrap .card a {
-    position: relative;
-}
-.imgType03 .card-wrap .card .card-exp0 {
-    background: #3F0B0B;
-    opacity: 80%;
+.imageType03 .image-wrap .image .image-cont0 {
+    background: #3f0b0baf;
     width: 489px;
     height: 149px;
     position: absolute;
-    transform: translate(10%, -140%);
-
+    transform: translate(-110%, 260%);
+    display: inline-block;
 }
-.imgType03 .card-wrap .card .card-exp0 .card-title0 {
+.imageType03 .image-wrap .image .image-cont0 .image-title {
     font-size: 48px;
     font-weight: 500;
     margin: 14px 18px 0px 18px;
     color: #fff;
     display: inline-block;
 }
-.imgType03 .card-wrap .card .card-exp0 .card-desc {
+.imageType03 .image-wrap .image .image-cont0 .image-desc {
     color: #fff;
     font-size: 16px;
     margin: 0 20px 20px 20px;
@@ -173,17 +188,15 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     display: -webkit-box; 
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-
 }
 
-.imgType03 .card-wrap .card .card-exp {
-    background: #3F0B0B;
+.imageType03 .image-wrap .image .image-cont {
+    background: #3f0b0baf;
     height: 38px;
-    opacity: 80%;
     position: absolute;
     transform: translate(15%, -170%);
 }
-.imgType03 .card-wrap .card .card-exp .card-title {
+.imageType03 .image-wrap .image .image-cont .image-title {
     font-size: 26px;
     margin: 10px 8px 5px;
     padding: 0;
