@@ -254,128 +254,15 @@ hr {
     background-color: #e7f6fd;
     color: #3d90b7;
 }
-.btn {
-    padding: 20px; 
-    border: 1px solid #f2f2f2;
-    border-top: 0;
-}
-.btn a {
-    border: 1px solid #e6e6e6;
-    padding: 7px 25px;
+.result-btn {
+    margin-top: 10px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    background-color: rgb(46, 46, 46);
     display: inline-block;
-    border-radius: 40px;
-    margin: 4px 0;
-    color: #222;
-    transition: all 0.2s;
-}
-.btn a:hover {
-    background: #000;
     color: #fff;
-}    .ex1 {
-    display: flex;
-    justify-content: space-between;
 }
-
-.ex1>div {
-    width: 18%;
-    border: 4px dashed transparent;
-
-}
-
-.ex1>div.active {
-    border: 4px dashed #a51a3d;
-    background-color: #a51a3d;
-    border-radius: 5px;
-}
-
-.ex1>div.active img {
-    opacity: 0.5;
-}
-
-.ex1>div img {
-    width: 100%;
-    border-radius: 5px;
-    /* display: block;  그림에 여백 생겼을경우*/
-    vertical-align: top;
-}
-
-.ex2 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.ex2>div {
-    width: 18%;
-    border: 4px dashed transparent;
-}
-
-.ex2>div.active {
-    border: 4px dashed #a51a3d;
-    background-color: #a51a3d;
-    border-radius: 5px;
-}
-
-.ex2>div.active img {
-    opacity: 0.5;
-}
-
-.ex2>div img {
-    width: 100%;
-    border-radius: 5px;
-    /* display: block;  그림에 여백 생겼을경우*/
-    vertical-align: top;
-}
-
-.ex3 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.ex3>div {
-    width: 18%;
-    border: 4px dashed transparent;
-}
-
-.ex3>div.active {
-    border: 4px dashed #a51a3d;
-    background-color: #a51a3d;
-    border-radius: 5px;
-}
-
-.ex3>div.active img {
-    opacity: 0.5;
-}
-
-.ex3>div img {
-    width: 100%;
-    border-radius: 5px;
-    /* display: block;  그림에 여백 생겼을경우*/
-    vertical-align: top;
-}
-
-.ex4 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.ex4>div {
-    width: 18%;
-    border: 4px dashed transparent;
-}
-
-.ex4>div.active {
-    border: 4px dashed #a51a3d;
-    background-color: #a51a3d;
-    border-radius: 5px;
-}
-
-.ex4>div.active img {
-    opacity: 0.5;
-}
-
-.ex4>div img {
-    width: 100%;
-    border-radius: 5px;
-    /* display: block;  그림에 여백 생겼을경우*/
-    vertical-align: top;
+a {
+    color: inherit;
+    text-decoration: none;
 }
