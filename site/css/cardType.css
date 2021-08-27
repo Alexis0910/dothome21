@@ -229,9 +229,6 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     gap:20px;
     justify-content: space-between;
 }
-.cardType04 .card-wrap > div {
-    width: 385px;
-}
 .cardType04 .card-wrap .card {
     position: relative;
     
