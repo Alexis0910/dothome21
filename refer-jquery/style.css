@@ -48,14 +48,14 @@ hr {
 }
 
 .title {
-    border-top: 3px solid #c36aff;
-    border-bottom: 1px solid #c36aff;
+    border-top: 3px solid #eb538d;
+    border-bottom: 1px solid #eb538d;
     margin-bottom: 20px;
 }
 
 .title h1 a {
     font-family: 'TmonMonsori';
-    color: #c36aff;
+    color: #eb538d;
     font-size: 50px;
     display: inline-block;
     padding: 15px 0 12px;
@@ -68,25 +68,25 @@ hr {
 
 .menu li a {
     font-family: 'NEXON Lv1 Gothic OTF';
-    color: #c36aff;
-    border: 1px dashed #c36aff;
+    color: #eb538d;
+    border: 1px dashed #eb538d;
     padding: 10px 30px;
     display: inline-block;
     border-radius: 50px;
     font-size: 16px;
     margin: 4px 1px;
-    box-shadow: inset 0 0 0 #c36aff;
+    box-shadow: inset 0 0 0 #eb538d;
     transition: all 0.4s;
 }
 
 .menu li a:hover {
-    box-shadow: inset 0 -100px 0 #c36aff;
+    box-shadow: inset 0 -100px 0 #eb538d;
     color: #fff;
     border-style: solid;
 }
 
 .menu li.active a {
-    background: #c36aff;
+    background: #eb538d;
     color: #fff;
 }
 
@@ -114,7 +114,7 @@ hr {
 }
 
 .table table tr:nth-child(even) {
-    background-color: #fcf2fd;
+    background-color: #faf2f4;
 }
 
 .table table th {
@@ -141,7 +141,7 @@ hr {
 .sample h2 {
     position: relative;
     font-size: 16px;
-    background-color: #fcf2fd;
+    background-color: #faf2f4;
     padding: 15px;
     border-radius: 5px 5px 0 0;
     font-weight: normal;
