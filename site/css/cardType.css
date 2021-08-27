@@ -240,7 +240,7 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     position: absolute;
     /*left:41px;
     bottom: 454px;*/
-    transform: translate(15%,-600%);
+    transform: translate(15%,-620%);
     margin: 47px 23px 0 0;
 }
 .cardType04 .card-wrap .card .card-cont .card-tag{
@@ -254,5 +254,4 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     font-size: 24px;
     line-height: 1.4;
     color: #000;
-
 }
