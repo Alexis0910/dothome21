@@ -13,7 +13,40 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        
+    .result .result-btn{
+        display: inline-block;
+        font-size: 15px;
+        background-color:#e7f6fd;
+        padding: 8px 12px;
+        color: #000;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    .result .result-btn:hover {
+        cursor: pointer;
+    }
+    .result .showResult{
+        display: none;
+        color: #fff;
+        background-color: #272822;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+    } 
+    .result .showResult.active {
+        display: block;
+        font-size: 15px;
+        color: #fff;
+    }
+    @media(max-width:800px){
+        .result .result-btn,
+    .result .showResult.active {
+        font-size: 13px;
+    }
+    }
 
+    </style>
 
 </head>
 
@@ -585,11 +618,6 @@
             x = 300; //변수 x의값이 100에서 300으로 변경이 됨.
             y = 400;
             z = "jquery";
-            document.write("*** 02. 변수 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br><br>");
-
             document.querySelector("#sample02 .showResult").innerHTML = `${x}<br>${y}<br> ${z}`;
             document.querySelector("#sample02 .result-btn").addEventListener("click",function(){
                 document.querySelector("#sample02 .result .showResult").classList.toggle("active");
@@ -686,11 +714,6 @@
                 obj[1] = 200;
                 obj[2] = "javascript";
 
-                document.write("*** 09. 객체 ***<br>");
-                document.write(obj[0], "<br>");
-                document.write(obj[1], "<br>");
-                document.write(obj[2], "<br><br>");
-                
                 document.querySelector("#sample09 .showResult").innerHTML = `${obj[0]}<br> ${obj[1]}<br> ${obj[2]}`;
                 document.querySelector("#sample09 .result-btn").addEventListener("click",function(){
                     document.querySelector("#sample09 .result .showResult").classList.toggle("active");
@@ -749,11 +772,6 @@
                     c: "javascript"
                 }
             ];
-            document.write("*** 13. 객체 ***<br>");
-            document.write(obj[0].a, "<br>");
-            document.write(obj[0].b, "<br>");
-            document.write(obj[1].c, "<br><br>");
-
             document.querySelector("#sample13 .showResult").innerHTML = `${obj[0].a}<br> ${obj[0].b}<br> ${obj[1].c}`;
             document.querySelector("#sample13 .result-btn").addEventListener("click",function(){
                 document.querySelector("#sample13 .result .showResult").classList.toggle("active");
@@ -767,12 +785,13 @@
                 b: [200, 300],
                 c: "javascript"
             }
-            document.write("*** 14. 객체 ***<br>");
-            document.write(obj.a, "<br>");
-            document.write(obj.b, "<br>");
-            document.write(obj.b[0], "<br>");
-            document.write(obj.b[1], "<br>");
-            document.write(obj.c, "<br><br>");
+
+            document.querySelector("#sample14 .showResult").innerHTML = `${obj.a}<br> ${obj.b}<br>
+                ${obj.b[0]}<br>${obj.b[1]}<br>${obj.c}`;
+            document.querySelector("#sample14 .result-btn").addEventListener("click",function(){
+                document.querySelector("#sample14 .result .showResult").classList.toggle("active");
+            });
+
         }
         //sample15
         //15. 객체 : 데이터 저장소(키와 값) : 표현 방법7 : 객체 속에 변수
@@ -786,11 +805,10 @@
                 b,
                 c
             }
-
-            document.write("*** 15. 객체 ***<br>");
-            document.write(obj.a, "<br>");
-            document.write(obj.b, "<br>");
-            document.write(obj.c, "<br><br>");
+            document.querySelector("#sample15 .showResult").innerHTML = `${obj.a}<br> ${obj.b}<br> ${obj.c}`;
+            document.querySelector("#sample15 .result-btn").addEventListener("click",function(){
+                document.querySelector("#sample15 .result .showResult").classList.toggle("active");
+            });
         }
         //sample16
         //16. 객체 : 데이터 저장소(키와 값) : 표현 방법8 : 객체 속에 함수
@@ -800,33 +818,27 @@
                 b: [200, 300],
                 c: "javascript",
                 d: function () {
-                    document.write("자바스크립트가 실행되었습니다.<br>");
+                    document.querySelector("#sample16 .showResult").innerHTML += ("자바스크립트가 실행되었습니다.<br>");
                 },
                 e: function () {
-                    document.write(obj.c + "가 실행되었습니다.<br>");
+                    document.querySelector("#sample16 .showResult").innerHTML += (obj.c + "가 실행되었습니다.<br>");
                 },
                 f: function () {
-                    document.write(this.c + "가 실행되었습니다.<br>");
-                },
-
+                    document.querySelector("#sample16 .showResult").innerHTML += (this.c + "가 실행되었습니다.<br>");
+                }
             }
-            document.write("*** 16. 객체 ***<br>");
-            document.write(obj.a, "<br>");
-            document.write(obj.b, "<br>");
-            document.write(obj.b[0], "<br>");
-            document.write(obj.b[1], "<br>");
-            document.write(obj.c, "<br>");
+            document.querySelector("#sample16 .showResult").innerHTML = `${obj.a}<br> ${obj.b}<br> ${obj.b[0]} <br>${obj.b[1]}<br> ${obj.c}` + "<br>"
             obj.d();
-            "<br>"
             obj.e();
-            "<br>"
             obj.f();
-            "<br><br>"
+            document.querySelector("#sample16 .result-btn").addEventListener("click",function(){
+                document.querySelector("#sample16 .result .showResult").classList.toggle("active");
+            });
         }
         //sample17
         //17. 지역변수, 전역변수
         {
-            document.write("<br>*** 17. 변수의 종류 ***<br>");
+
 
             let x = 100; //전역변수
             let y = 200;
@@ -840,79 +852,53 @@
                 a = 400;  //전역변수 :let없이 a값 변경한거니까 전역임.
                 y = 500;  //이미 함수안에서 let y 선언해서 지역변수 y값이 200->500으로 변경
 
-                document.write("함수 안","<br>")
-                document.write(x,"<br>")
-                document.write(y,"<br>")
-                document.write(z,"<br>")
-                document.write(a,"<br><br>")
+                document.querySelector("#sample17 .showResult").innerHTML = `함수 안<br> ${x}<br> ${y}
+                <br> ${z}<br> ${a}`;
             }
             func();
-
-            document.write("함수밖","<br>")
-            document.write(x,"<br>")
-            document.write(y,"<br>")
-            document.write(z,"<br>")
-            document.write(a,"<br><br>")
-            
-            // //익명함수
-            // const func1 = function() {
-            //     let x = 100;
-            //     let y = 200;
-            //     let z = "javascript";
-
-            //     document.write(x,"<br>")
-            //     document.write(y,"<br>")
-            //     document.write(z,"<br><br>")
-            // }
-            // func1();
-            
-            // //매개변수 함수
-            // const func2 = function(x, y, z) {
-            //     document.write(x,"<br>")
-            //     document.write(y,"<br>")
-            //     document.write(z,"<br><br>")
-            // }
-            // func2(100, 200, "javascript");
-
-            // //리턴값 함수
-            // function func3(){
-            //     let x = "100<br>";
-            //     let y = "200<br>";
-            //     let z = "javascript<br>";
-            //     return x + y + z;
-            // }
-            // document.write(func3());
+            document.querySelector("#sample17 .showResult").innerHTML = `함수 밖<br> ${x}<br> ${y}
+                <br> ${z}<br> ${a}`;
+            document.querySelector("#sample17 .result-btn").addEventListener("click",function(){
+                document.querySelector("#sample17 .result .showResult").classList.toggle("active");
+            });
         }
+        
 
         //sample18
         //18 . 변수의 변환
         {
-            document.write("<br>*** 18. 변수의 변환 ***<br>");
-
             let x = 100;
             let y = "100";
 
-            document.write("x: " + x + " : " + typeof(x), "<br>");
-            document.write("y: " + y + " : " + typeof(y), "<br><br>");
+
+            document.querySelector("#sample18 .showResult").innerHTML += `x:  ${x}  :  ${typeof(x)} <br>`;
+            document.querySelector("#sample18 .showResult").innerHTML += `y:  ${y}  :  ${typeof(y)} <br>`;
 
             x = "" + x; //숫자100에 ""추가해서 문자로 형변환 한것
-            document.write("x: " + x + " : " + typeof(x), "<br>");
+            document.querySelector("#sample18 .showResult").innerHTML += `x:   ${x}  :   ${typeof(x)} <br>`;
 
             y = Number(y); //Number라는 메서드를 이용한 글자100를 숫자로 형변환
-            document.write("y: " + y + " : " + typeof(y), "<br><br>");
+
+            document.querySelector("#sample18 .showResult").innerHTML += `y:  ${y}  :  ${typeof(y)} <br>`;
 
             x = Number(x);
-            document.write("x: " + x + " : " + typeof(x), "<br>");
+            document.querySelector("#sample18 .showResult").innerHTML += `x:   ${x}  :   ${typeof(x)} <br>`;
+
 
             y = String(y);  //string메서드 이용해서 변환
-            document.write("y: " + y + " : " + typeof(y), "<br><br>");
+            document.querySelector("#sample18 .showResult").innerHTML += `y:  ${y}  :  ${typeof(y)} <br>`;
+
+            //document.querySelector("#sample18 .showResult").innerHTML = `함수 밖<br> ${x}<br> ${y}
+            //    <br> ${z}<br> ${a}`;
+            document.querySelector("#sample18 .result-btn").addEventListener("click",function(){
+                document.querySelector("#sample18 .result .showResult").classList.toggle("active");
+            });
         }
 
         //sample19
         //변수: 숫자(Number), 문자(String), 함수(function), 배열(Object), 
         //      객체(object), 불린(boolen), 특수값(null, undefined), 심볼(symbol)
         {
-            document.write("<br>*** 19. 변수의 유형 ***<br>");
 
             let num1 = 100;
             let str = "javascript"
@@ -924,15 +910,12 @@
             let und = undefined;  //값이 정이 되어 있지 않을 때
             let sym = Symbol();
 
-            document.write(typeof(num1), "<br>");
-            document.write(typeof(str), "<br>");
-            document.write(typeof(fun), "<br>");
-            document.write(typeof(arr), "<br>");
-            document.write(typeof(obj), "<br>");
-            document.write(typeof(boo), "<br>");
-            document.write(typeof(nul), "<br>");
-            document.write(typeof(und), "<br>");
-            document.write(typeof(sym), "<br>");
+            document.querySelector("#sample19 .showResult").innerHTML =
+                `${typeof(num1)}<br> ${typeof(str)}<br> ${typeof(fun)}<br>${typeof(arr)}<br> ${typeof(obj)}<br> ${typeof(boo)}<br>
+                ${typeof(nul)}<br> ${typeof(und)}<br> ${typeof(sym)}`;
+            document.querySelector("#sample19 .result-btn").addEventListener("click",function(){
+                document.querySelector("#sample19 .result .showResult").classList.toggle("active");
+            });
 
         }
 

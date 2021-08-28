@@ -35,6 +35,8 @@ ol {
 }
 a {
     text-decoration: none;
+    color: #000;
+
 }
 hr {
     margin: 5% 0;
@@ -203,7 +205,7 @@ hr {
     color: #3d90b7;
 }
 
-.result .result-btn{
+.result-btn{
     display: inline-block;
     font-size: 15px;
     background-color:#e7f6fd;
@@ -212,20 +214,18 @@ hr {
     margin-top: 10px;
     border-radius: 5px;
 }
-.result .result-btn:hover {
+.result-btn:hover {
     cursor: pointer;
 }
-.result .showResult{
+.showResult{
     display: none;
+}
+.showResult.show{
+    display: block;
     color: #fff;
     background-color: #272822;
     padding: 20px;
     border-radius: 0 0 5px 5px;
-} 
-.result .showResult.active {
-    display: block;
-    font-size: 15px;
-    color: #fff;
 }
 
 
@@ -292,8 +292,8 @@ hr {
         color: #bdbdbd;
         background: #f1f1f1;
     }
-    .result .result-btn,
-    .result .showResult.active {
+    .showResult.show,
+    .result-btn {
         font-size: 13px;
     }
 }
