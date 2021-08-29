@@ -25,7 +25,6 @@ body {
     padding: 2%;
     font-family: 'NEXON Lv1 Gothic OTF';
     line-height: 1.6;
-
 }
 ul {
     list-style: none;
@@ -86,8 +85,8 @@ hr {
     font-family: 'NEXON Lv1 Gothic OTF';
     font-size: 14px;
     line-height: 1.6;
-    color: #000;
-}
+    
+} 
 .page {
     font-family: 'NEXON Lv1 Gothic OTF';
     text-align: right;
@@ -96,13 +95,21 @@ hr {
 .page li {
     display: inline;
     list-style: none;
+    
 }
 .page li a {
     text-decoration: none;
     color: #037d88;
+
 }
 .page li a:hover{
     color: #222;
+}
+.sam {
+    background-color: #037d88;
+    color: #fff;
+    border-radius: 30px;
+    padding: 0 20px;
 }
 .sample {
     border-radius: 5px;
