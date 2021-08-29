@@ -88,6 +88,22 @@ hr {
     line-height: 1.6;
     color: #000;
 }
+.page {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    text-align: right;
+    margin-bottom: 3px;
+}
+.page li {
+    display: inline;
+    list-style: none;
+}
+.page li a {
+    text-decoration: none;
+    color: #037d88;
+}
+.page li a:hover{
+    color: #222;
+}
 .sample {
     border-radius: 5px;
     font-family: 'NEXON Lv1 Gothic OTF';

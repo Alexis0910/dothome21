@@ -98,8 +98,22 @@ hr {
     color: #000;
 }
 
-.table {}
-
+.page {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    text-align: right;
+    margin-bottom: 3px;
+}
+.page li {
+    display: inline;
+    list-style: none;
+}
+.page li a {
+    text-decoration: none;
+    color: #eb538d;
+}
+.page li a:hover{
+    color: #222;
+}
 .table table {
     width: 100%;
     border: 1px solid #ddd;
