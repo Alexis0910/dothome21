@@ -250,8 +250,31 @@ hr {
     padding: 20px;
     border-radius: 0 0 5px 5px;
 }
-
-
+.result h3 {
+    margin-top: 5px;
+}
+.result h3 a{
+    display: inline-block;
+    font-size: 15px;
+    background: #e7f6fd;
+    padding: 8px 12px;
+    color: #000;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.result div {
+    color: #fff;
+    background: #272822;
+    padding: 15px 20px;
+    border-radius: 0 4px 4px 4px;
+    display: none;
+}
+.result.show div {
+    display: block;
+}
+.result div span{
+    display: block;
+}
 @media (max-width: 800px){
     body {
         padding: 5%;

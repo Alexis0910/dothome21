@@ -91,18 +91,32 @@
 }
 </code></pre>
     </div>
-    <div class="result-btn btn1">결과보기</div>
-    <div class="showResult result1">
-        <p>100</p>
-        <p>200</p>
-        <p>300</p>
+    <!-- 선생님이 하신 방식 -->
+    
+    <div class="result show">
+        <h3><a href="#">결과보기</a></h3>
+        <div>
+            <span class="result1-1"></span>
+            <span class="result1-2"></span>
+            <span class="result1-3"></span>
+        </div>
     </div>
+    <!-- <div class="result-btn btn1">결과보기</div> -->
+    <!-- <div class="showResult result1"> -->
+        <!-- <p>100</p> -->
+        <!-- <p>200</p> -->
+        <!-- <p>300</p> -->
+    <!-- </div> -->
     <script>
-        document.querySelector(".btn1").addEventListener("click",function(){
-            document.querySelectorAll(".result1").forEach((el)=>{
-                el.classList.toggle("show")
+        //이것만 제이쿼리로 한번 변경해 보아라!!!!
+        document.querySelectorAll(".result h3").forEach(el =>{
+            el.addEventListener("click", function(e){
+                e.preventDefault();
+                this.parentNode.classList.toggle("show");
             });
-        })
+        });
+        
+        
     </script>
 </div>
 <!-- //sample1-->
@@ -904,16 +918,18 @@
     <script>
 //sample1
 //01. 변수 : 데이터 불러오기
-// {   //let 한줄로 축약
-//     let x = 100, y = 200, z = "javascript";
+ {   //let 한줄로 축약
+    let x = 100, y = 200, z = "javascript";
 
 //     document.write("***01. 변수 : 데이터 불러오기***<br>")
 //     document.write(x, "<br>");
 //     document.write(y, "<br>");
 //     document.write(z, "<br>");
 //     document.write("<br>");
-
-// }
+    document.querySelector(".result1-1").innerHTML= x;
+    document.querySelector(".result1-2").innerHTML= y;
+    document.querySelector(".result1-3").innerHTML= z;
+}
 // //sample2
 // //02. 상수 : 데이터 불러오기
 // {   //let 한줄로 축약
