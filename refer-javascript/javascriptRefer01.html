@@ -281,7 +281,7 @@
 
     <hr>
 
-    <div id="sample08" class="sample">
+<div id="sample08" class="sample">
         <h2>08. 배열 : 표현방법 4 <span class="dot"></span></h2>
         <div class="code"></div>
         <pre class="line-numbers"><code class="language-js">{
@@ -292,12 +292,12 @@
     document.write(arr[2]);
 }
 </code></pre>
-        </div>
+        
     <div class="result">
         <div class="result-btn">결과보기</div>
         <div class="showResult"></div>
     </div>
-    </div>
+</div>
 
 
     <hr>
@@ -523,7 +523,8 @@
         </div>
         <div class="result">
             <div class="result-btn">결과보기</div>
-            <div class="showResult"></div>
+            <div class="showResult 1"></div>
+            <div class="showResult 2"></div>
         </div>
     </div>
     <hr>
@@ -706,10 +707,10 @@
         {
             const arr = [100, 200, "javascript"]; //배열선언 끝.
 
-            //document.querySelector("#sample08 .showResult").innerHTML = `${arr[0]}<br> ${arr[1]}<br> ${arr[2]}`;
-            //document.querySelector("#sample08 .result-btn").addEventListener("click",function(){
-            //    document.querySelector("#sample08 .result .showResult").classList.toggle("active");
-            //});
+            document.querySelector("#sample08 .showResult").innerHTML = `${arr[0]}<br> ${arr[1]}<br> ${arr[2]}`;
+            document.querySelector("#sample08 .result-btn").addEventListener("click",function(){
+                document.querySelector("#sample08 .result .showResult").classList.toggle("active");
+            });
         }
 
         //sample9
@@ -859,15 +860,16 @@
                 a = 400;  //전역변수 :let없이 a값 변경한거니까 전역임.
                 y = 500;  //이미 함수안에서 let y 선언해서 지역변수 y값이 200->500으로 변경
 
+                //document.querySelector("#sample17 .showResult").innerHTML = `함수 안<br> ${x}<br> ${y}
+                //<br> ${z}<br> ${a}`;
+                }
+                func();
                 document.querySelector("#sample17 .showResult").innerHTML = `함수 안<br> ${x}<br> ${y}
-                <br> ${z}<br> ${a}`;
-            }
-            func();
-            document.querySelector("#sample17 .showResult").innerHTML = `함수 밖<br> ${x}<br> ${y}
-                <br> ${z}<br> ${a}`;
-            document.querySelector("#sample17 .result-btn").addEventListener("click",function(){
-                document.querySelector("#sample17 .result .showResult").classList.toggle("active");
-            });
+                <br> ${z}<br> ${a}<br>함수 밖<br> ${x}<br> ${y}
+                    <br> ${z}<br> ${a}`;
+                document.querySelector("#sample17 .result-btn").addEventListener("click",function(){
+                    document.querySelector("#sample17 .result .showResult").classList.toggle("active");
+                });
         }
         
 
