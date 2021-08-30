@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이미지형 카드타입 연습</title>
+    <title>슬라이드 유형 연습</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/fonts.css">
@@ -13,6 +13,90 @@
 
     <!-- Card Type CSS-->
     <link rel="stylesheet" href="css/sliderType.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <style>
+        .swiper {
+            width: 100%;
+            height: 600px;
+        }
+
+        .swiper-wrapper .swiper-slide:nth-child(1){
+            background-image: url(img/SLIDER-TYPE01.jpg);
+            /*내가 맞춰준 사이즈에 나오는거 cover, no-repeat, 그리고 center하기*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(2){
+            background-image: url(img/SLIDER-TYPE02.jpg);
+            /*내가 맞춰준 사이즈에 나오는거 cover, no-repeat, 그리고 center하기*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-wrapper .swiper-slide:nth-child(3){
+            background-image: url(img/SLIDER-TYPE03.jpg);
+            /*내가 맞춰준 사이즈에 나오는거 cover, no-repeat, 그리고 center하기*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+        .swiper-slide {
+            width: 1400px;
+            margin: 0 auto;
+        }
+        .swiper-slide em {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-top: 100px;
+            display: block;
+        }
+        .swiper-slide h3 {
+            font-family: 'GmarketSans';
+            font-size: 100px;
+            font-weight: 300;
+            line-height: 1.2;
+            /*왼쪽으로 들여쓰기 -px 오른쪽 들여쓰기 +px*/
+            text-indent: -8px;
+        
+        }
+        .swiper-slide p {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .swiper-slide .btn {
+            display: block;
+            padding-bottom: 100px;
+            margin-top: 260px;
+        }
+        /*width, height값 안먹힐때는 inline구조이니 block, inline-block 잘사용하자*/
+        .swiper-slide .btn a {
+            width: 200px;
+            height: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            font-family: 'NEXONLv2Gothic';
+            font-size: 16px;
+            font-weight: 500;
+            margin-right: 7px;
+        }
+        .swiper-slide .btn a.white{
+            background: #fff;
+            color: #000;
+        }
+        .swiper-slide .btn a.black{
+            background: #000;
+            color: #fff;
+        }
+    </style>
 
 </head>
 
@@ -20,7 +104,7 @@
     <!--slider Type01-->
     <section class="sliderType">
             <div class="sliderType01">
-                <div class="slider">
+                <!-- <div class="slider">
                     <div class="slider-inner">
                         <em>GENESIS</em>
                         <h3>G80 SPORT</h3>
@@ -48,12 +132,52 @@
                         <a href="#" class="stop">
                             <img src="img/arrow-stop.svg" alt="정지">
                         </a>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="slider"></div>
-                <div class="slider"></div>
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <em>GENESIS</em>
+                            <h3>G80 SPORT</h3>
+                            <p>당신이 만들어갈 새로운 이야기의 시작</p>
+                            <span class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">견적 내기</a>
+                            </span>
+                        </div>
+                        <div class="swiper-slide">
+
+                        </div>
+                        <div class="swiper-slide">
+
+                        </div>
+                    </div>
+                    <!--아래 닷 생겨서 옆으로 넘기는거-->
+                    <div class="swiper-pagination"></div>
+                    <!-- 화살표로 넘기는것-->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
             </div> 
     </section>
     <!--//slider Type01-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+            direction: 'horizontal',
+            //loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
     </body>
     </html> 

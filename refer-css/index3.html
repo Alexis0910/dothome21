@@ -350,19 +350,18 @@
         .box-wrap.background16>div>div {
             background-image: linear-gradient(to top, #E8198B 0%, #C7EAFD 100%);
         }
-        .view {
-        border-right: 1px solid #e6e6e6;
-        border-left: 1px solid #e6e6e6;
+
+        .table {
         overflow: auto;
         }
-        .view {
-            border-left: 0px;
-            border-right: 0px;
-        }
-        .view th,
-        .view td {
+    
+        .table table th {
+            font-weight: normal;
             white-space: nowrap;
-            font-size: 13px;
+        }
+    
+        .table table td {
+            white-space: nowrap;
         }
     }
     </style>
@@ -390,8 +389,8 @@
             <h4 class="black">transform</h4>
             <p class="desc">변환(Transform)은 요소의 좌표를 조작하여, 위치나 크기, 회전, 각도 등을 변경하는 속성입니다. 이동(translate), 확대(scale), 회전(skew), 기울기(skew), 행렬변환(matrix)가 있습니다.<br>Transform : none | martix() | translate() | translateX() | translatyY() | scale() | scaleX() | scaleY() | skew() | skewX() | skewY() | skew() | skewX() | skewY() | martix3d() | translate3d() | translateZ() | scale3d() | scaleZ() | skew3d() | skewZ() | perspective()</p>
 
-            <div id="sample01">
-                <table class="view">
+            <div class="table">
+                <table>
                     <colgroup>
                         <col style="width: 15%">
                         <col style="width: 25%">
