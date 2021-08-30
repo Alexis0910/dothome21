@@ -252,3 +252,93 @@ box-shadow: 0 0 50px rgba(0,0,0,0.1);
     line-height: 1.4;
     color: #000;
 }
+
+/* cardType05 */
+.cardType05 {
+    padding: 100px 0;
+    font-family: 'S-NanumSquare';
+}
+.cardType05 h2{
+    text-align: center;
+    padding: 0;
+    font-size: 35px;
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+.cardType05 p{
+    font-family: 'NanumBarunGothic';
+    font-size: 16px;
+    padding: 0;
+    margin: 0 0 81px 0;
+    font-weight: normal;
+    text-align: center;
+}
+.cardType05 .card-wrap{
+    display: grid;
+    gap:28px;
+    justify-content: space-between;
+    grid-template-columns: repeat(3,381px);
+    grid-template-rows: repeat(2,590px);
+
+}
+.cardType05 .card-wrap .card{
+    padding: 0;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    font-weight: normal;
+}
+.cardType05 .card img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: 0;
+
+}
+.cardType05 .card .card-cont{
+    padding: 35px 40px;
+}
+.cardType05 .card .card-cont .card-title{
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-size: 19px;
+    
+}
+.cardType05 .card .card-cont .card-new{
+    margin-left: 5px;
+    font-weight: 500;
+    font-family: 'S-CoreDream';
+    font-size: 11px;
+    padding: 2px 9px;
+    border-radius: 50px;
+    background-color: #e75a54;
+    color: #fff;
+
+}
+.cardType05 .card .card-cont .card-desc{
+    font-family: 'NanumBarunGothic';
+    color: #4a4a4a;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 14px 0;
+}
+.cardType05 .card .card-cont .card-buying{
+    font-size: 14px;
+    color: #fff;
+    background-color: #05d686;
+    padding: 7px 19px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 14px;
+}
+.cardType05 .card .card-cont .card-read{
+    font-size: 14px;
+    color: rgba(0,0,0,.6);
+    border: 1px solid #e3e3e3;
+    padding: 7px 19px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+
