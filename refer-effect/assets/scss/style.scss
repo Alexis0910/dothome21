@@ -153,12 +153,12 @@ $gradient6: linear-gradient(to bottom, #d299c2 0%,#fff08f 100%);
 //bg1~10번반복
 @for $i from 1 through 10 {
     .bg#{$i} {
-        background-image: url(../img/bg#{$i}@x2.jpg);
+        background-image: url(../img/bg#{$i}@X2.jpg);
     } 
 }
 @for $i from 11 through 20 {
     .bg#{$i} {
-        background-image: url(../img/bg#{$i}@x2.jpg);
+        background-image: url(../img/bg#{$i}@X2.jpg);
     } 
 }
 //main
