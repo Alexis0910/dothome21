@@ -350,17 +350,15 @@ img {
             transform: translate(-50%, -50%);
     font-size: 18vw;
   }
-  #nav {
-    position: absolute;
-    left: 52%;
-    top: 85%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    bottom: 30px;
+  #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
   }
   #nav li a {
     font-size: 13px;
-    width: 70px;
+    width: 60px;
     height: 30px;
     line-height: 30px;
   }

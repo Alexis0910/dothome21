@@ -42,12 +42,25 @@
     <!--//info-->
 </body>
 <script>
-$(".info.bottom button").click(function(){
-    $("#modal").removeClass().addClass("show");
-});
-$(".modal-cont button").click(function(){
-    $("#modal").addClass("hide");
-});
+    $(".info.bottom button").click(function(){
+        $("#modal").removeClass().addClass("show");
+        });
+    $(".modal-cont button").click(function(){
+        $("#modal").addClass("hide");
+    });
+    //자바스크립트 버전 ? ㅠㅡㅠ
+    document.querySelector(".info.bottom button").addEventListener("click", function(){
+        document.querySelectorA("#modal").forEach((el)=> {
+            el.clssList.remove("hide","show");
+            el.classList.add("show");
+        });
+    });
+    document.querySelector(".modal-cont button").addEventListener("click", function(){
+        document.querySelectorA("#modal").forEach((el)=> {
+            el.clssList.add("hide");
+        });
+    });
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
 
