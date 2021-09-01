@@ -8,72 +8,51 @@
 </head>
 <body>
     <script>
-
-        const obj = {
-            a:1000,
-            b:2000,
-            c:3000
-        };
-        //1000 2000 3000 6000 5000 4000 1 2 3 a b c 출력
-        document.write(obj.a);
-        document.write(obj.b);
-        document.write(obj.c);
-
-        document.write(obj.c + obj.b + obj.a);
-        document.write(obj.c + obj.b);
-        document.write(obj.c + obj.a);
+        //const num = [100, 200, 300, 400, 500];
+        //map
+        // num.map(el => {
+        //     document.write(el);
+        // })
+        // //펼침연산자
+        // document.write(...num);
         
-        document.write(obj.a/1000);
-        document.write(obj.b/1000);
-        document.write(obj.c/1000);
-
-        document.write(Object.keys(obj));
-
-        const obj2 = [
-            {a:1000},
-            {b:2000},
-            {c:3000}
-        ];
-
-        document.write(obj2[0].a);
-        document.write(obj2[1].b);
-        document.write(obj2[2].c);
+        // //for문
+        // for(let i=0; i<num.length; i++){
+            //     document.write(num[i]);
+            // }
+            // //forEach
+        // num.forEach((el, index, array)=>{
+        //     document.write(el,"<br>");
+        //     document.write(index,"<br>");
+        //     document.write(array,"<br>");
+        // })
         
-        document.write(obj2[0].a + obj2[1].b + obj2[2].c);
-        document.write(obj2[1].b + obj2[2].c);
-        document.write(obj2[0].a + obj2[2].c);
+        // const result1 = num.splice(2,1)
+        // document.write(num);
+        // const obj = [
+        //     {a:100},
+        //     {a:200},
+        //     {a:300}
+        // ];
+        // document.write(obj[0].a)
+        // document.write(obj[1].a)
+        // document.write(obj[2].a)
 
-        document.write(obj2[0].a/1000);
-        document.write(obj2[1].b/1000);
-        document.write(obj2[2].c/1000);
+        // obj.map(el => {
+        //     document.write(el.a)
+        // })
+        function func(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
 
-        document.write(Object.keys(obj2[0]));
-        document.write(Object.keys(obj2[1]));
-        document.write(Object.keys(obj2[2]));
-        
-
-
-        //1000 2000 3000 6000 5000 4000 1 2 3 a b c 출력
-
-        
-        const obj3 = [1000,2000,3000, "a", "b", "c"];
-        //1000 2000 3000 6000 5000 4000 1 2 3 a b c 출력
-        document.write(obj3[0]);
-        document.write(obj3[1]);
-        document.write(obj3[2]);
-
-        document.write(obj3[1] + obj3[2] + obj3[0]);
-        document.write(obj3[1] + obj3[2]);
-        document.write(obj3[2] + obj3[0]);
-
-        document.write(obj3[0]/1000);
-        document.write(obj3[1]/1000);
-        document.write(obj3[2]/1000);
-
-        document.write(obj3[3]);
-        document.write(obj3[4])
-        document.write(obj3[5])
-
-        </script>
+            this.result = function(){
+                document.write = (`${info(0)}내이름은 ${info(1)}이며 직업은 ${info(3)}입니다.`);
+            }
+        }
+        const info = new func("1", "웹쓰", "웹퍼블리셔")
+        // 1. 내이름은 웹쓰이며 직업은 웹 퍼블리셔 입니다.
+    
+    </script>
 </body>
-</html>
+</html> 

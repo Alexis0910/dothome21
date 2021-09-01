@@ -1,0 +1,261 @@
+@charset "UTF-8";
+/* 웹폰트 */
+@font-face {
+  font-family: 'NEXONLv1Gothic';
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv1Gothic';
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv1Gothic';
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv2Gothic';
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv2Gothic';
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv2Gothic';
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
+  font-style: normal;
+}
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/* 폰트 초기화*/
+body,
+button,
+input,
+select,
+table,
+textarea {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #222;
+  font-family: var(--fontNexon1M), AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
+}
+
+/* a링크 초기화 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 목록 초기화 ol이거나 ul일때*/
+ol,
+ul {
+  list-style: none;
+}
+
+/* 스타일 초기화*/
+strong {
+  font-weight: normal;
+}
+
+em {
+  font-style: normal;
+}
+
+img {
+  width: 100%;
+}
+
+.bg01 {
+  height: 100vh;
+  background-image: url(../img/bg01@X2.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #11e8bb;
+  /* Old browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(#11e8bb), to(#8200c9));
+  background: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
+}
+
+#main.game {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4facfe), to(#f8c5f8));
+  background: linear-gradient(to bottom, #4facfe 0%, #f8c5f8 100%);
+}
+
+#main.game #contents h1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4facfe), to(#f8c5f8));
+  background-image: linear-gradient(to bottom, #4facfe 0%, #f8c5f8 100%);
+}
+
+#main.menu {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dcb0ed), to(#85a887));
+  background: linear-gradient(to bottom, #dcb0ed 0%, #85a887 100%);
+}
+
+#main.menu #contents h1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dcb0ed), to(#85a887));
+  background-image: linear-gradient(to bottom, #dcb0ed 0%, #85a887 100%);
+}
+
+#main.mouse {
+  background: -webkit-gradient(linear, left top, left bottom, from(#243949), to(#517fa4));
+  background: linear-gradient(to bottom, #243949 0%, #517fa4 100%);
+}
+
+#main.mouse #contents h1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#243949), to(#517fa4));
+  background-image: linear-gradient(to bottom, #243949 0%, #517fa4 100%);
+}
+
+#main.parallax {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9d423), to(#e14fad));
+  background: linear-gradient(to bottom, #f9d423 0%, #e14fad 100%);
+}
+
+#main.parallax #contents h1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9d423), to(#e14fad));
+  background-image: linear-gradient(to bottom, #f9d423 0%, #e14fad 100%);
+}
+
+#main.slider {
+  background: -webkit-gradient(linear, left top, left bottom, from(#d299c2), to(#fff08f));
+  background: linear-gradient(to bottom, #d299c2 0%, #fff08f 100%);
+}
+
+#main.slider #contents h1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d299c2), to(#fff08f));
+  background-image: linear-gradient(to bottom, #d299c2 0%, #fff08f 100%);
+}
+
+#contents h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Six Caps", sans-serif;
+  font-size: 10vw;
+  white-space: nowrap;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8200C9), to(#b5d1ff));
+  background-image: linear-gradient(to bottom, #8200C9, #b5d1ff);
+}
+
+#nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 10px;
+  top: auto;
+}
+
+#nav li {
+  list-style: none;
+  display: inline;
+}
+
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+  margin: 4px;
+  font-family: "NEXONLv1Gothic";
+  -webkit-box-shadow: inset 0 0 0 #fff;
+          box-shadow: inset 0 0 0 #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#nav li a:hover {
+  -webkit-box-shadow: inset 0 -100px 0 #fff;
+          box-shadow: inset 0 -100px 0 #fff;
+  color: #6c4a70;
+}
+
+@media (max-width: 800px) {
+  #contents h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 30vw;
+  }
+}
