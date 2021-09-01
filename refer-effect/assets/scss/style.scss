@@ -279,6 +279,12 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
         }
     }
     #nav {
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -50%);
+        font-size: 18vw;
+
         ul{
             display: flex;
             gap:5px;

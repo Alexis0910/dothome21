@@ -350,6 +350,14 @@ img {
             transform: translate(-50%, -50%);
     font-size: 18vw;
   }
+  #nav {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 18vw;
+  }
   #nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
