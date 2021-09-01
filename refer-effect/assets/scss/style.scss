@@ -248,18 +248,18 @@ $gradient6: linear-gradient(to bottom, #d299c2 0%,#fff08f 100%);
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            font-size: 20vw;
+            font-size: 18vw;
         }
     }
     #nav {
         li {
             a{
-
                 font-size: 12px;
-                width: 60px;
+                width: 70px;
                 height: 30px;
                 line-height: 30px;
-                
+                bottom: 30px;
+                top: auto;
             }
         }
     }
