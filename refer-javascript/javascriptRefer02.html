@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -109,14 +111,17 @@
     <!-- </div> -->
     <script>
         //이것만 제이쿼리로 한번 변경해 보아라!!!!
-        document.querySelectorAll(".result h3").forEach(el =>{
-            el.addEventListener("click", function(e){
-                e.preventDefault();
-                this.parentNode.classList.toggle("show");
+        //document.querySelectorAll(".result h3").forEach(el =>{
+        //    el.addEventListener("click", function(e){
+        //        e.preventDefault();
+        //        this.parentNode.classList.toggle("show");
+        //    });
+        //});
+        $(".result h3").click(function(el){
+            el.add("click", function(el){
+                el.preventDefault();
+                $(this).parents.toggleClass("show");
             });
-        });
-        $(".result h3").click(function(){
-            
         });
         
         
@@ -1321,6 +1326,8 @@
 // //         document.write("<br><br>");
 // //     }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+
 </body>
 
 </html>
