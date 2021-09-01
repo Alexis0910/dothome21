@@ -272,15 +272,15 @@ img {
 }
 
 #main.slider {
-  background: -webkit-gradient(linear, left top, left bottom, from(#d299c2), to(#fff08f));
-  background: linear-gradient(to bottom, #d299c2 0%, #fff08f 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff08f), to(#d299c2));
+  background: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
 }
 
 #main.slider #contents h1 {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#d299c2), to(#fff08f));
-  background-image: linear-gradient(to bottom, #d299c2 0%, #fff08f 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff08f), to(#d299c2));
+  background-image: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
 }
 
 #contents h1 {
@@ -359,7 +359,7 @@ img {
     bottom: 30px;
   }
   #nav li a {
-    font-size: 12px;
+    font-size: 13px;
     width: 70px;
     height: 30px;
     line-height: 30px;
