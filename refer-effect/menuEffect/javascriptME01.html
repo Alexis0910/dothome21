@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <title>Menu Effect</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="bg bg3">
+<body class="bg bg15">
     <!-- info -->
     <div class="info">
         <h1>javascript Menu Effect01</h1>
@@ -28,6 +30,25 @@
     <div class="info bottom">
         <button>소스보기</button>
     </div>
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+            <h2>레이어 팝업</h2>
+            <p>Different color toners give different feelings，I uploaded two photos with two different color tones from the same photo. Which one do you prefer? I made a bet with my friend on an ice cream cone. I bet the dark.</p>
+            <button>닫기</button>
+            </div>
+        </div>
+    </div>
     <!--//info-->
 </body>
+<script>
+$(".info.bottom button").click(function(){
+    $("#modal").removeClass().addClass("show");
+});
+$(".modal-cont button").click(function(){
+    $("#modal").addClass("hide");
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+
 </html>
