@@ -462,12 +462,13 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
                 padding: 10px 10px 12px;
                 margin: 0 5px;
                 display: inline-block;
-            &.active {
-                border-top: 2px solid #667eea;
-                color: #4a5568;
-                font-weight: 700;
             }
-            }
+        &.active a{
+            border-top: 2px solid #667eea;
+            color: #4a5568;
+            font-weight: 700;
+
+        }
         }
     }
     .view-cont {

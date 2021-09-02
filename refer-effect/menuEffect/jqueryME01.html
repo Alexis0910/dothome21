@@ -267,7 +267,7 @@
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/jquery.min.js"></script>
     <script>
-        {
+
 
         
         const tabBtn = $(".tab-btn ul li");  //5개의 버튼을 변수에 할당
@@ -289,11 +289,11 @@
             tabCont.css("display","none"); //제이쿼리에서는 css를 이렇게도 사용가능하다.
             tabCont.eq(index).css("display","block"); //다시 none->block보이게하기
         });
-    }
+
         //code tab menu jQuery ver.
-    {
+
         
-        const viewTitle = $(".view-title ul li");
+        const viewTitle = $(".view-title li");
         const viewCont = $(".view-cont > div");
         
         viewTitle.click(function(){
@@ -305,7 +305,7 @@
             viewCont.css("display","none");
             viewCont.eq(index).css("display","block");
         });
-    }
+
         //code tab menu jQuery ver.
 </script>
 </html>

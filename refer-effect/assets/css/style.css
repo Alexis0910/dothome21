@@ -651,7 +651,7 @@ img {
   display: inline-block;
 }
 
-.code-view .view-title li a.active {
+.code-view .view-title li.active a {
   border-top: 2px solid #667eea;
   color: #4a5568;
   font-weight: 700;
