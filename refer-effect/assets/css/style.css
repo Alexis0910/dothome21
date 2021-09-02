@@ -659,7 +659,7 @@ img {
 
 .code-view .view-cont {
   background: #f8f8f8;
-  max-height: 500px;
+  height: 450px;
   overflow-y: scroll;
 }
 

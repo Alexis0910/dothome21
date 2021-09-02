@@ -472,7 +472,7 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
     }
     .view-cont {
         background: #f8f8f8; 
-        max-height: 500px;
+        height: 450px;
         overflow-y: scroll; //y세로로 500이 넘어가면 그 이상은 스크롤이 생겨라 뿅!
         > div{
             display: none;
