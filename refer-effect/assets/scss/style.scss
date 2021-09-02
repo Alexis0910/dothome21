@@ -373,7 +373,7 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
                 
             }
             button {
-                border: 1px solid #fff;
+                border: 1px solid #000;
                 background: #000;
                 border-radius: 20px;
                 color:#fff;
@@ -462,11 +462,23 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
                 padding: 10px 10px 12px;
                 margin: 0 5px;
                 display: inline-block;
-            }
-            &.active a {
+            &.active {
                 border-top: 2px solid #667eea;
                 color: #4a5568;
+                font-weight: 700;
             }
+            }
+        }
+    }
+    .view-cont {
+        background: #f8f8f8; 
+        max-height: 500px;
+        overflow-y: scroll; //y세로로 500이 넘어가면 그 이상은 스크롤이 생겨라 뿅!
+        > div{
+            display: none;
+        }
+        > div:nth-child(1) {
+            display: block;
         }
     }
 }
@@ -510,6 +522,28 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
                 line-height: 30px;
                 
             }
+        }
+    }
+    .info.right{
+            left: auto;
+            right: 0px;
+            top: 70px;
+    }
+    .code-view {
+        width: 90vw;
+        .view-cont {
+            
+        }
+    }
+    #tab-menu {
+        width: 90vw;
+        .tab-btn {
+                li {
+                    a {
+                        font-size: 10px;
+                    }
+                }
+            
         }
     }
 }

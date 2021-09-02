@@ -5,7 +5,9 @@
         hljs.highlightElement(el);
         });
     });
-    
+
+
+
     //Modal jQuery ver.
     //$(".info.bottom button").click(function(){
     //    $("#modal").removeClass().addClass("show");
@@ -22,3 +24,5 @@
     document.querySelector(".modal-cont button").addEventListener("click", function(){
         document.querySelector("#modal").classList.add("hide");
     });
+
+
