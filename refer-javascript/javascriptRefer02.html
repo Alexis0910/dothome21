@@ -110,19 +110,17 @@
         <!-- <p>300</p> -->
     <!-- </div> -->
     <script>
-        //이것만 제이쿼리로 한번 변경해 보아라!!!!
         //document.querySelectorAll(".result h3").forEach(el =>{
-        //    el.addEventListener("click", function(e){
-        //        e.preventDefault();
-        //        this.parentNode.classList.toggle("show");
-        //    });
-        //});
-        $(".result h3").click(function(el){
-            el.add("click", function(el){
-                el.preventDefault();
-                $(this).parents.toggleClass("show");
+            //    el.addEventListener("click", function(e){
+                //        e.preventDefault();
+                //        this.parentNode.classList.toggle("show");
+                //    });
+                //});
+            //제이쿼리로 한번 변경해 보아라!!!!
+            $(".result h3").click(function(e){
+                e.preventDefault();
+                $(this).parents().toggleClass("show");
             });
-        });
         
         
     </script>

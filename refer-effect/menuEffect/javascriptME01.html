@@ -9,7 +9,7 @@
     <title>Menu Effect</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
-</head>
+</head> 
 <body class="bg bg1">
     <!-- info -->
     <div class="info">
@@ -33,8 +33,16 @@
     <div id="modal">
         <div class="modal-bg">
             <div class="modal-cont">
-            <h2>레이어 팝업</h2>
-            <p>Different color toners give different feelings，I uploaded two photos with two different color tones from the same photo. Which one do you prefer? I made a bet with my friend on an ice cream cone. I bet the dark.</p>
+            <h2>팝업 스크립트</h2>
+<pre><code style="word-break:keep-all; font-family:'NEXONLv2Gothic';">
+    jQuery ver.
+        $(".info.bottom button").click(function(){
+        $("#modal").removeClass().addClass("show");
+    });
+    $(".modal-cont button").click(function(){
+        $("#modal").addClass("hide");
+    });
+</code></pre>
             <button>닫기</button>
             </div>
         </div>
@@ -48,13 +56,13 @@
     //$(".modal-cont button").click(function(){
     //    $("#modal").addClass("hide");
     //});
-    //자바스크립트 버전 ? ㅠㅡㅠ
+    //자바스크립트 버전 성공오옹
     document.querySelector(".info.bottom button").addEventListener("click", function(){
-        document.querySelector("#modal").clssList.remove("show","hide");
-        document.querySelector("#modal").clssList.add("show");
+        document.querySelector("#modal").classList.remove("show","hide");
+        document.querySelector("#modal").classList.add("show");
     });
     document.querySelector(".modal-cont button").addEventListener("click", function(){
-        document.querySelector("#modal").clssList.add("hide");
+        document.querySelector("#modal").classList.add("hide");
     });
 
 </script>
