@@ -342,19 +342,22 @@ img {
 }
 
 .info {
+  position: absolute;
+  left: 0;
+  top: 0;
   font-family: "NEXONLv1Gothic";
   color: #fff;
   padding: 20px;
 }
 
 .info.right {
-  position: absolute;
+  left: auto;
   right: 0px;
-  top: 0px;
 }
 
 .info.bottom {
-  position: absolute;
+  top: auto;
+  left: auto;
   bottom: 0;
   right: 0;
 }

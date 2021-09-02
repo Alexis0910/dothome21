@@ -271,17 +271,20 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
 
 //info
 .info {
+    position: absolute;
+    left: 0;
+    top: 0;
     font-family:$font-NEXON1;
     color: #fff;
     padding: 20px;
 
     &.right {
-        position: absolute;
+        left: auto;
         right: 0px;
-        top: 0px;
     }
     &.bottom {
-        position: absolute;
+        top: auto; //auto는 자동값 일수도 있지만, 위에서 0으로한것을 초기화시켜주는것이다.
+        left: auto; 
         bottom: 0;
         right: 0;
     }
