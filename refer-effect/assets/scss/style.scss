@@ -13,7 +13,7 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
     font-style: normal;
 }
-@font-face {
+@font-face { 
     font-family: 'NEXONLv1Gothic';
     font-weight: 700;
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
@@ -133,6 +133,14 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
     top: 0;
     position: absolute;
 }
+//agent 브라우저별로 컨트롤 다 가능
+.iphone main {
+    padding: 10px;
+}
+.android main {
+    padding: 10px;
+}
+
 //bg01
 .bg {
     position: relative;
@@ -541,7 +549,7 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
         .tab-btn {
                 li {
                     a {
-                        font-size: 10px;
+                        font-size: 11px;
                     }
                 }
             

@@ -114,6 +114,14 @@ img {
   width: 100%;
 }
 
+.iphone main {
+  padding: 10px;
+}
+
+.android main {
+  padding: 10px;
+}
+
 .bg {
   position: relative;
   height: 100vh;
@@ -712,6 +720,6 @@ img {
     width: 90vw;
   }
   #tab-menu .tab-btn li a {
-    font-size: 10px;
+    font-size: 11px;
   }
 }

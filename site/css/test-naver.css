@@ -1,0 +1,185 @@
+body {
+    background-image: url(../img/test-bg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat 50%;
+    font-family: 'NanumSquare';
+    color: #fff;
+}
+header {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+header .logoGif {
+    width: 30px; height: 30px;
+    background-image: url(../img/naverLogoGif.gif);
+    display: inline-block;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+header em {
+    font-family: 'GmarketSans';
+    line-height: 0.1;
+    font-size: 16px;
+    font-weight: 800;
+    display: inline-block;
+    position: absolute;
+    left: 80px;
+    top: 50px;
+}
+header span {
+    font-size: 18px;
+    align-items: center;
+    margin: 0 5px;
+    padding: 15px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+}
+header p {
+    font-size: 14px;
+    display: inline-block;
+    padding: 8px 20px;
+    border: solid 1px rgb(117, 117, 117);
+    border-radius: 20px;
+    text-align: right;
+    position: absolute;
+    right: 25px;
+    top: 30px;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+}
+.main {
+    padding: 155px 50px 50px 0;
+    text-align: left;
+}
+.main .mainTitle{
+    font-family: 'GmarketSans';
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1.2;
+    padding: 0;
+
+}
+.main .mainCont{
+    font-size: 44px;
+    font-weight: 700;
+    padding: 55px 0 25px;
+}
+.main .mainDesc{
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 44px;
+    margin-bottom: 50px;
+}
+
+.swiper {
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+    height: 410px;
+    overflow: hidden;
+    border-radius: 30px;
+    
+}
+.swiper-wrapper .swiper-slide:nth-child(1) {
+    background-image: url(../img/test-slider1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(2) {
+    background-image: url(../img/test-slider2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(3) {
+    background-image: url(../img/test-slider3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(4) {
+    background-image: url(../img/test-slider4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(5) {
+    background-image: url(../img/test-slider5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(6) {
+    background-image: url(../img/test-slider6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper{
+    
+    
+}
+.swiper-slide{}
+.swiper-slide .slider-inner{
+    padding: 50px 80px;
+}
+.swiper-slide .slider-inner em{
+    color: rgb(124, 124, 124);
+    font-size: 16px;
+    font-weight: 800;
+}
+.swiper-slide .slider-inner h3{
+    font-size: 35px;
+    margin: 10px 0;
+}
+.swiper-slide .slider-inner p{
+    font-size: 16px;
+    font-weight: 800;
+}
+.swiper-pagination{
+    position: absolute;
+    right: 0;
+}
+.swiper-button-next::after{
+    color: #fff;
+
+}
+.swiper-button-prev::after{
+    color: #fff;
+}
+.swiper-pagination {
+    position: absolute;
+    right: 80% !important;
+    bottom: 35px;
+}
+.swiper-pagination .swiper-pagination-bullet {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background-color: rgb(110, 110, 110);
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
