@@ -425,6 +425,7 @@ header p {
 }
 footer {
     text-align: center;
+    margin-bottom: 50px;
 
 }
 footer .copyright {
