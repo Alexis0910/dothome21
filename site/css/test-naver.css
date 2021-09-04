@@ -1,3 +1,9 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 body {
     background-image: url(../img/test-bg.png);
     background-size: cover;
@@ -7,6 +13,7 @@ body {
     color: #fff;
 }
 header {
+    
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
@@ -15,25 +22,30 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-    
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background: #232323c9;
 }
 header .logoGif {
     width: 30px; height: 30px;
-    background-image: url(../img/naverLogoGif.gif);
     display: inline-block;
     position: absolute;
+    cursor: pointer;
+    overflow: hidden;
     left: 40px;
-    top: 30px;
+    top: 35px;
 }
 header em {
     font-family: 'GmarketSans';
-    line-height: 0.1;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 900;
     display: inline-block;
     position: absolute;
     left: 80px;
-    top: 50px;
+    top: 35px;
+    line-height: 17px;
+    
 }
 header span {
     font-size: 18px;
@@ -52,12 +64,12 @@ header p {
     border-radius: 20px;
     text-align: right;
     position: absolute;
-    right: 25px;
+    right: 40px;
     top: 30px;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1024px;
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -70,7 +82,7 @@ header p {
 .main .mainTitle{
     font-family: 'GmarketSans';
     font-size: 70px;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.2;
     padding: 0;
 
@@ -86,9 +98,9 @@ header p {
     line-height: 44px;
     margin-bottom: 50px;
 }
-
+/*swiper*/
 .swiper {
-    position: relative;
+
     width: 100%;
     margin-top: 70px;
     height: 410px;
@@ -139,7 +151,7 @@ header p {
     width: 100%;
 }
 .swiper-wrapper{
-    
+    position: relative;
     
 }
 .swiper-slide{}
@@ -163,23 +175,280 @@ header p {
     position: absolute;
     right: 0;
 }
-.swiper-button-next::after{
-    color: #fff;
+.swiper-pagination {
+    position: absolute !important;
+    bottom: 52px;
+    left: 50px;
+    z-index: 1;
+    display: block;
+}
+.swiper-pagination-bullets {
 
 }
-.swiper-button-prev::after{
-    color: #fff;
-}
-.swiper-pagination {
-    position: absolute;
-    right: 80% !important;
-    bottom: 35px;
-}
 .swiper-pagination .swiper-pagination-bullet {
+    
     width: 7px; height: 7px;
     border-radius: 50%;
     background-color: rgb(110, 110, 110);
 }
 .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #fff;
+}
+/*main2*/
+.main2 {
+    font-family: 'Noto Sans KR';
+    gap: 32px;
+    display: grid;
+    grid-template-columns: repeat(2,496px);
+
+}
+.main2Title {
+    width: 496px;
+    height: 204px;
+    margin-bottom: 72px;
+    display: inline-block;
+}
+.main2Title strong{
+
+    font-size: 50px;
+    font-weight: 700;
+    color: #6d8bff;
+    line-height: 68px;
+    margin-bottom: 72px;
+    padding: 0;
+    letter-spacing: -1px;
+}
+
+.main2 .main2-1{
+    width: 496px;
+    height: 870px;
+    float: left;
+    background: #2F3133;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.main2 .main2-1 img{
+    transform: scale(1);
+    transition: opacity 0.4s,transform 0.45s;
+}
+.main2 .main2-1 img:hover{
+    transform: scale(1.1);
+}
+.main2 .main2-2{
+    width: 496px;
+    height: 570px;
+    background: #2F3133;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.main2 .main2-2 img{
+    transform: scale(1);
+    transition: opacity 0.4s,transform 0.45s;
+}
+.main2 .main2-2 img:hover{
+    transform: scale(1.2);
+
+}
+.main2 .main2-3{
+    width: 496px;
+    height: 541px;
+    background: #2F3133;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.main2 .main2-3 img{
+    display: inline-block;
+    margin-bottom: 0;
+    transform: scale(1);
+    transition: opacity 0.4s,transform 0.45s;
+}
+.main2 .main2-3 img:hover{
+    transform: scale(1.1);
+
+}
+.main2 .main2-inner {
+    padding: 50px 50px 0 50px;
+    letter-spacing: -1.06px;
+}
+.main2 .main2-inner em{
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff99;
+    
+}
+.main2 .main2-inner h3{
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: 10px;
+
+
+}
+.main2 .main2-inner p{
+    font-size: 16px;
+    color: #6d8bff;
+    margin-top: 18px;
+}
+
+/*main3*/
+.main3 {
+    margin: 150px 0;
+    font-family: 'Noto Sans KR';
+    overflow: hidden;
+
+}
+.main3 h2 {
+    font-size: 52px;
+    line-height: 68px;
+    font-weight: 700;
+    color: #5cf0c6;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 10px;
+}
+.main3-card {
+    display: grid;
+    grid-template-columns: repeat(2, 499px);
+    gap: 32px;
+}
+.main3-card .main3-inner{
+    padding: 40px 32px 0 50px;
+    letter-spacing: -1.06px;
+    float: left;
+}
+.main3-card .main3-inner em{
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff99;
+}
+.main3-card .main3-inner h3{
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: -1.06px;
+}
+.main3-card .main3-inner p:nth-first-child{
+    color: #d1ffe6;
+}
+.main3-card .main3-inner p{
+    margin-top: 24px;
+    font-size: 16px;
+    color: #5cf0c6;
+    font-weight: 500;
+}
+.main3-card .main3-1 {
+    width: 499px;
+    height: 466px;
+    display: inline-block;
+    background: #59D1AB;
+    border-radius: 20px;
+    margin-right: 23px;
+    overflow: hidden;
+}
+.main3-card .main3-1 img {
+    transform: scale(1);
+    transition: opacity 0.4s,transform 0.45s;
+}
+.main3-card .main3-1 img:hover {
+    transform: scale(1.1);
+}
+.main3-card .main3-2 {
+    width: 499px;
+    height: 466px;
+    display: inline-block;
+    background: #5470F8;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.main3-card .main3-2 img {
+    transform: scale(1);
+    transition: opacity 0.4s,transform 0.45s;
+}
+.main3-card .main3-2 img:hover {
+    transform: scale(1.1);
+}
+.main3-card .main3-3{
+    display: inline-block;
+    width: 1024px;
+    height: 328px;
+    background: #5644BA;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.main3-card .main3-3 img {
+    width: 604px;
+    align-content: center;
+    transform: scale(1);
+    transition: opacity 0.4s,transform 0.45s;
+
+}
+.main3-card .main3-3 img:hover{
+    transform: scale(1.1);
+}
+/*main4*/
+.main4 {
+    font-family: 'Noto Sans KR';
+    margin: 135px 0;
+    text-align: center;
+}
+.main4 h2 {
+    font-size: 34px;
+    margin: 0 0 30px;
+    font-weight: 500;
+}
+.main4 .search1 {
+    font-size: 22px;
+    background: #fff;
+    color: #000;
+    width: 340px;
+    border-radius: 41px;
+    display: inline-block;
+    line-height: 80px;
+    cursor: pointer;
+}
+.main4 .search1 em {
+    font-weight: 500;
+}
+.main4 .search2 {
+    font-size: 22px;
+    background: #4b65f7;
+    margin-left: 20px;
+    width: 340px;
+    border-radius: 41px;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 80px;
+    
+}
+.main4 .search2 em {
+    font-weight: 500;
+}
+footer {
+    text-align: center;
+
+}
+footer .copyright {
+    font-family: 'Noto Sans KR';
+    margin-top: 30px;
+    font-size: 12px;
+    color: #ffffff4d;
+    font-weight: 100;
+}
+footer .top {
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+    height: 54px;
+    text-align: center;
+
+}
+footer .login {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #999;
+    background: #323232;
+    display: inline-block;
+    padding: 5px 22px;
+    border-radius: 4px;
+    
 }
