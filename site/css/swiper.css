@@ -685,5 +685,5 @@ button.swiper-pagination-bullet {
     transform-origin: center bottom;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    overflow: hidden
+    overflow: hidden;
 }
