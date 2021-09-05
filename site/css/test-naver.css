@@ -9,7 +9,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     background-image: url(../img/test-bg.png);
     background-size: cover;
-    background-position: center center;
+    background-position:center top;
     background-repeat: repeat 50%;
     font-family: 'NanumSquare';
     color: #fff;
@@ -114,6 +114,7 @@ body {
     position: absolute;
 
 }
+
 .swiper-wrapper .swiper-slide:nth-child(1) {
     background-image: url(../img/test-slider1.png);
     background-size: cover;
@@ -175,6 +176,12 @@ body {
 .swiper-slide .slider-inner p{
     font-size: 16px;
     font-weight: 800;
+    display: inline-block;
+    margin-right: 8px;
+}
+.slider-inner img {
+    margin-top: 10px;
+    width: 18px; height: 13px;
 }
 .swiper-pagination{
     position: absolute;
@@ -276,10 +283,11 @@ body {
     overflow: hidden;
     
 }
+
 .main2 .main2-3 img{
-    justify-content: center;
+    
     margin-top: 20px;
-    width: 500px;
+
     transform: scale(1);
     transition: opacity 0.4s,transform 0.45s;
 }
@@ -308,8 +316,12 @@ body {
     font-size: 16px;
     color: #6d8bff;
     margin-top: 18px;
+    display: inline-block;
+    margin-right: 8px;
 }
-
+.main2-inner img{
+    width: 18px; height: 13px;
+}
 /*main3*/
 .main3 {
     padding: 150px 0;
@@ -353,14 +365,19 @@ body {
     font-weight: 500;
     letter-spacing: -1.06px;
 }
-.main3-card .main3-inner p:nth-first-child{
-    color: #d1ffe6;
+.main3-card .main3-inner p:nth-child(1){
+    color: #000;
 }
 .main3-card .main3-inner p{
     margin-top: 24px;
     font-size: 16px;
     color: #5cf0c6;
     font-weight: 500;
+    margin-right: 8px;
+    display: inline-block;
+}
+.main3-inner img{
+    width: 18px; height: 13px;
 }
 .main3-card .main3-1 {
     width: 499px;
@@ -371,12 +388,12 @@ body {
     margin-right: 23px;
     overflow: hidden;
 }
-.main3-card .main3-1 img {
-    margin-top: 42px;
+.main3-1 .img3{
+    margin-top: 40px;
     transform: scale(1);
     transition: opacity 0.4s,transform 0.45s;
 }
-.main3-card .main3-1 img:hover {
+.main3-card .main3-1 .img3:hover {
     transform: scale(1.1);
 }
 .main3-card .main3-2 {
@@ -388,12 +405,12 @@ body {
     overflow: hidden;
     position: relative;
 }
-.main3-card .main3-2 img {
+.main3-card .main3-2 .img3 {
     padding-bottom: 100px;
     transform: scale(1);
     transition: opacity 0.4s,transform 0.45s;
 }
-.main3-card .main3-2 img:hover {
+.main3-card .main3-2 .img3:hover {
     transform: scale(1.1);
 }
 .main3-card .main3-3{
@@ -405,7 +422,7 @@ body {
     overflow: hidden;
 
 }
-.main3-card .main3-3 img {
+.main3-card .main3-3 .img3 {
     width: 604px;
     padding-top: 85px;
     justify-content: center;
@@ -414,9 +431,10 @@ body {
     transition: opacity 0.4s,transform 0.45s;
 
 }
-.main3-card .main3-3 img:hover{
+.main3-card .main3-3 .img3:hover{
     transform: scale(1.1);
 }
+
 /*main4*/
 .main4 {
     background: #141414;
@@ -427,8 +445,7 @@ body {
     font-family: 'Noto Sans KR';
     padding: 135px 0;
     text-align: center;
-    background-position: 50% 50%;
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: repeat-x;
 
 }
@@ -478,6 +495,10 @@ footer .copyright {
     color: #ffffff4d;
     font-weight: 100;
 }
+.arrowgrey {
+    width: 18px; height: 13px;
+    display: inline-block;
+}
 footer .top {
     color: #666;
     font-size: 14px;
@@ -486,7 +507,7 @@ footer .top {
     text-align: center;
     padding-top: 20px;
     border-bottom: 1px solid #323232;
-
+    display: block;
 }
 footer .login {
     margin-top: 30px;
@@ -497,4 +518,13 @@ footer .login {
     padding: 5px 22px;
     border-radius: 4px;
     
+}
+.copyright {
+    margin-bottom: 10px;
+}
+footer span {
+    font-family: 'GmarketSans';
+    font-weight: 900;
+    color: #ffffff4d;
+    font-size: 15px;
 }
