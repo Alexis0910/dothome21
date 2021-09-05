@@ -365,8 +365,8 @@ body {
     font-weight: 500;
     letter-spacing: -1.06px;
 }
-.main3-card .main3-inner p:nth-child(1){
-    color: #000;
+.main3-card .main3-inner .bright{
+    color: #D1FFE6;
 }
 .main3-card .main3-inner p{
     margin-top: 24px;
@@ -441,17 +441,18 @@ body {
 }
 .main4 .main4Inner{
     box-sizing: border-box;
-    background-image: url(../img/test-bg.png ) ;
+    background-image: url(../img/naver-influence/main4.png ) ;
     font-family: 'Noto Sans KR';
     padding: 135px 0;
-    text-align: center;
-    background-size: cover;
+    background-position: 50% 50%;
+    background-size: auto 100%;
     background-repeat: repeat-x;
+    text-align: center;
 
 }
 .main4 h2 {
     font-size: 34px;
-    margin: 0 0 30px;
+    margin: 0 0 40px;
     font-weight: 500;
 }
 .main4 .search1 {
