@@ -784,6 +784,9 @@ img {
     gap: 4px;
     margin:0;
   }
+  #nav ul li{
+    height: 40px;
+  }
   #nav li a {
     font-size: 13px;
     width: 60px;
