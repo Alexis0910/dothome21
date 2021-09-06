@@ -267,7 +267,10 @@
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/jquery.min.js"></script>
     <script>
-
+        window.onload = function () {
+            modal();
+            agentCheck();
+        }
 
         
         const tabBtn = $(".tab-btn ul li");  //5개의 버튼을 변수에 할당
