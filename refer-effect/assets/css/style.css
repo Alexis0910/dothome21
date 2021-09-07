@@ -781,11 +781,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 4px;
-    margin:0;
-  }
-  #nav ul li{
-    height: 40px;
+    gap: 5px;
   }
   #nav li a {
     font-size: 13px;
@@ -1023,4 +1019,65 @@ img {
 .content-item:nth-child(9) .img {
   background: url(../img/bg9.jpg) no-repeat;
   background-size: cover;
+}
+
+.paraFooter {
+  padding: 200px 0;
+}
+
+.paraFooter h1 {
+  font-size: 8vw;
+  line-height: 1.2;
+  padding: 10vw 8vw 0 8vw;
+  text-transform: uppercase;
+  margin-bottom: 3vw;
+}
+
+.paraFooter em {
+  display: block;
+  font-family: 'Lato';
+  font-weight: 100;
+  padding-left: 18vw;
+}
+
+.paraFooter .footerinfo {
+  padding: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #000;
+  padding: 15px 20px;
+  margin-bottom: 2px;
+}
+
+.paraFooter .footerinfo h2 {
+  padding-right: 20px;
+}
+
+.paraFooter .footerinfo li {
+  display: inline;
+  list-style: none;
+}
+
+.paraFooter .footerinfo li a {
+  color: #fff;
+  border: 1px dashed #fff;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.paraFooter .footerinfo li.active a {
+  background: #fff;
+  color: #000;
 }

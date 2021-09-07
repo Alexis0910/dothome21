@@ -151,7 +151,30 @@
     <!-- main -->
     <!-- footer -->
     <footer class="paraFooter">
+        <footer id="footer">
+            <h1>Parallax <em>Scrolling</em></h1>
+            <div class="footerinfo">
+                <h2>자바스크립트</h2>
+                <ul>
+                    <li><a href="javascriptPE01.html">1</a></li>
+                    <li><a href="javascriptPE02.html">2</a></li>
+                    <li><a href="javascriptPE03.html">3</a></li>
+                    <li><a href="javascriptPE04.html">4</a></li>
+                    <li><a href="javascriptPE05.html">5</a></li>
+                </ul>
+            </div>
+            <div class="footerinfo">
+                <h2>제이쿼리</h2>
+                <ul> 
+                    <li class="active"><a href="jqueryPE01.html">1</a></li>
+                    <li><a href="jqueryPE02.html">2</a></li>
+                    <li><a href="jqueryPE03.html">3</a></li>
+                    <li><a href="jqueryPE04.html">4</a></li>
+                    <li><a href="jqueryPE05.html">5</a></li>
 
+                </ul>
+            </div>
+        </footer>
     </footer>
     <!-- //footer -->
 
@@ -503,7 +526,7 @@
         let offset9 = $("#section9").offset().top;
 
 
-        for(let i=1; i<10; i++) {
+        for(let i=1; i&lt;10; i++) {
             $(".offset"+i).text(parseInt($("#section"+i).offset().top) + "px");
         }
     });
@@ -540,48 +563,34 @@
             //첫번째 버튼에 불들어오기 를 해주는거야~!
             //siblings은 같은 paracont아래의 우리 형제들한테는 active 지워줘라 라고 한거야!
             //-2는 9번클릭하면 8에불들어오고 오차가 생겨서 오차범위 줄여주려고 한거야
-            //if( scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
-            //    $(".paranav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            //};
-            //if( scrollTop >= $(".paraCont > section").eq(1).offset().top -2){
-            //    $(".paranav ul li").eq(1).addClass("active").siblings().removeClass("active");
-            //}
-            //if( scrollTop >= $(".paraCont > section").eq(2).offset().top -2){
-            //    $(".paranav ul li").eq(2).addClass("active").siblings().removeClass("active");
-            //}
-            //if( scrollTop >= $(".paraCont > section").eq(3).offset().top -2){
-            //    $(".paranav ul li").eq(3).addClass("active").siblings().removeClass("active");
-            //}
-            //if( scrollTop >= $(".paraCont > section").eq(4).offset().top -2){
-            //    $(".paranav ul li").eq(4).addClass("active").siblings().removeClass("active");
-            //}
-            //if( scrollTop >= $(".paraCont > section").eq(5).offset().top -2){
-            //    $(".paranav ul li").eq(5).addClass("active").siblings().removeClass("active");
-            //}
-            //if( scrollTop >= $(".paraCont > section").eq(6).offset().top -2){
-            //    $(".paranav ul li").eq(6).addClass("active").siblings().removeClass("active");
-            //}
-            //if( scrollTop >= $(".paraCont > section").eq(7).offset().top -2){
-            //    $(".paranav ul li").eq(7).addClass("active").siblings().removeClass("active");
-            //}
-            //if( scrollTop >= $(".paraCont > section").eq(8).offset().top -2){
-            //    $(".paranav ul li").eq(8).addClass("active").siblings().removeClass("active");
-            //}
-
-
-            //for문
-            //for( let i = 0; i<9; i++){
-            //    if( scrollTop >= $(".content-item").eq(i).offset().top-2){
-            //        $(".paranav ul li").eq(i).addClass("active").siblings().removeClass("active");
-            //    }
-            //};
-            //each문 content-item자기자신이니까 this를쓰고 그래서 eq가 필요없던고야!!!
-            $(".content-item").each(function(index){
-                if( scrollTop >= $(this).offset().top-2){
-                    $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-            });
-
+            if( scrollTop >= $(".paraCont > section").eq(0).offset().top -2){
+                $(".paranav ul li").eq(0).addClass("active").siblings().removeClass("active");
+            };
+            if( scrollTop >= $(".paraCont > section").eq(1).offset().top -2){
+                $(".paranav ul li").eq(1).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(2).offset().top -2){
+                $(".paranav ul li").eq(2).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(3).offset().top -2){
+                $(".paranav ul li").eq(3).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(4).offset().top -2){
+                $(".paranav ul li").eq(4).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(5).offset().top -2){
+                $(".paranav ul li").eq(5).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(6).offset().top -2){
+                $(".paranav ul li").eq(6).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(7).offset().top -2){
+                $(".paranav ul li").eq(7).addClass("active").siblings().removeClass("active");
+            }
+            if( scrollTop >= $(".paraCont > section").eq(8).offset().top -2){
+                $(".paranav ul li").eq(8).addClass("active").siblings().removeClass("active");
+            }
+        
 
             $(".paraScroll span").text(parseInt(scrollTop));
             //각 섹션의 오프셋 값 변수선언
@@ -595,22 +604,22 @@
             let offset8 = $("#section8").offset().top;
             let offset9 = $("#section9").offset().top;
 
-            // info 값을 위에 class각각에 뿌려주기
-            //$(".offset1").text(parseInt($("#section1").offset().top) + "px");
-            //$(".offset2").text(parseInt($("#section2").offset().top) + "px");
-            //$(".offset3").text(parseInt($("#section3").offset().top) + "px");
-            //$(".offset4").text(parseInt($("#section4").offset().top) + "px");
-            //$(".offset5").text(parseInt($("#section5").offset().top) + "px");
-            //$(".offset6").text(parseInt($("#section6").offset().top) + "px");
-            //$(".offset7").text(parseInt($("#section7").offset().top) + "px");
-            //$(".offset8").text(parseInt($("#section8").offset().top) + "px");
-            //$(".offset9").text(parseInt($("#section9").offset().top) + "px");
-
+             //info 값을 위에 class각각에 뿌려주기
+            $(".offset1").text(parseInt($("#section1").offset().top) + "px");
+            $(".offset2").text(parseInt($("#section2").offset().top) + "px");
+            $(".offset3").text(parseInt($("#section3").offset().top) + "px");
+            $(".offset4").text(parseInt($("#section4").offset().top) + "px");
+            $(".offset5").text(parseInt($("#section5").offset().top) + "px");
+            $(".offset6").text(parseInt($("#section6").offset().top) + "px");
+            $(".offset7").text(parseInt($("#section7").offset().top) + "px");
+            $(".offset8").text(parseInt($("#section8").offset().top) + "px");
+            $(".offset9").text(parseInt($("#section9").offset().top) + "px");
+        })
             //for문
-            for(let i=1; i<10; i++) {
-                $(".offset"+i).text(parseInt($("#section"+i).offset().top) + "px");
-            }
-        });
+        //     for(let i=1; i<10; i++) {
+        //         $(".offset"+i).text(parseInt($("#section"+i).offset().top) + "px");
+        //     }
+        // });
 
         
         const viewTitle = $(".view-title li");
@@ -633,5 +642,6 @@
         $(".modal-cont button").click(function(){
             $("#paraModal").addClass("hide");
         });
+    
     </script>
 </html>
