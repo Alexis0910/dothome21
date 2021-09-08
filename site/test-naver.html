@@ -219,6 +219,19 @@
     </section>
     
 </body>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
 
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            //loop:true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
     </script>
 </html>
