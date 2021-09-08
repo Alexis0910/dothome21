@@ -18,8 +18,7 @@
             top: 50%;
             z-index: 1000;
             transform: translateY(-50%);
-            background: rgba(0,0,0,0.4);
-            padding: 20px 10px;
+            background: rgba(0,0,0,0.4); 
             border-radius: 30px;
         }
         .paraDot li {
@@ -191,7 +190,7 @@
                 <h2>자바스크립트</h2>
                 <ul>
                     <li><a href="javascriptPE01.html">1</a></li>
-                    <li><a href="javascriptPE02.html">2</a></li>
+                    <li class="active"><a href="javascriptPE02.html">2</a></li>
                     <li><a href="javascriptPE03.html">3</a></li>
                     <li><a href="javascriptPE04.html">4</a></li>
                     <li><a href="javascriptPE05.html">5</a></li>
@@ -201,7 +200,7 @@
                 <h2>제이쿼리</h2>
                 <ul> 
                     <li><a href="jqueryPE01.html">1</a></li>
-                    <li class="active"><a href="jqueryPE02.html">2</a></li>
+                    <li><a href="jqueryPE02.html">2</a></li>
                     <li><a href="jqueryPE03.html">3</a></li>
                     <li><a href="jqueryPE04.html">4</a></li>
                     <li><a href="jqueryPE05.html">5</a></li>
@@ -600,14 +599,14 @@
             //   });
             //   document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
             //
-
-            for( let i=1; i<10; i++){
-                if( scrollTop > document.getElementById("section"+i).offsetTop) {
-                document.querySelectorAll(".paraDot ul li").forEach((el) =>{
-                    el.classList.remove("active");
+            document.querySelectorAll('.paraDot ul li').forEach((li, idx) => {
+                if (scrollTop > document.getElementById('section' + (idx + 1)).offsetTop - 2) {
+                    document.querySelectorAll('.paraDot ul li').forEach(el => {
+                        el.classList.remove('active');
                 });
-                document.querySelector(".paraDot ul li:nth-child(i)").classList.add("active")
-                }};
+            document.querySelector('.paraDot ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+            }
+            });
             });
         
     </script>

@@ -287,12 +287,13 @@ Query OK, 0 rows affected (0.04 sec)
                     <div class="bs-callout bs-callout-info">
                         INSERT INTO 테이블 이름(필드명) VALUES(데이터)
                     </div>
-<pre class="language-js"><code>INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('soeunpark1211@naver', 'soeun', '1234', '1991-12-11', '111');
+<pre class="language-js"><code>INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) 
+    VALUES('soeunpark1211@naver', 'soeun', '1234', '1991-12-11', '111');
 </code></pre>
 
                     <h3 id="intro6-2" class="pt30">데이터 불러오기</h3>
                     <div class="bs-callout bs-callout-info">
-                        SELECT 필드명 FROM 테이블명 WHERE 조건
+                        SELECT * 필드명 FROM 테이블명 WHERE 조건
                     </div>
                     <H4>전체 데이터 불러오기</H4>
 <pre class="language-js"><code> SELECT * FROM member;

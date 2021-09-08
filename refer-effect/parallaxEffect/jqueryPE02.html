@@ -626,17 +626,17 @@
             //}
 
             //for문
-            //for(let i=0; i<$(".content-item").length; i++ ) {
-            //    if(scrollTop >= $(".content-item").eq(i).offset().top -2) {
-            //        $(".paraDot ul li").eq(i).addClass("active").siblings().removeClass("active");
-            //    }
-            //}
-            //each문
-            $(".content-item").each(function(index){
-                if( scrollTop >= $(this).offset().top -2) {
-                    $(".paraDot ul li").eq(index).addClass("active").siblings().removeClass("active");
+            for(let i=0; i<$(".content-item").length; i++ ) {
+                if(scrollTop >= $(".content-item").eq(i).offset().top -2) {
+                    $(".paraDot ul li").eq(i).addClass("active").siblings().removeClass("active");
                 }
-            });
+            }
+            //each문
+            //$(".content-item").each(function(index){
+            //    if( scrollTop >= $(this).offset().top -2) {
+            //        $(".paraDot ul li").eq(index).addClass("active").siblings().removeClass("active");
+            //    }
+            //});
         });
     </script>
 </html>
