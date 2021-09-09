@@ -157,6 +157,11 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
         background: rgba(0,0,0, 0.5);
         z-index: -1;
     }
+    &.blue {
+        &::before {
+            background: rgba(24, 25, 42, 0.7);
+        }
+    }
 }
 
 //bg1~10번반복
@@ -299,6 +304,11 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
         bottom: 0;
         right: 0;
     }
+    &.left {
+        top: auto;
+        left: 0;
+        bottom: 0;
+    }
     h1 {
         font-weight: 300;
         font-size: 20px;
@@ -306,6 +316,11 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
         border-bottom: 1px dashed #fff;
         display: inline-block;
         margin-bottom: 10px;
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
     }
     p{
         font-size: 16px;
@@ -334,8 +349,20 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%,#d299c2 100%);
                 color: #000;
             }
         }
-
     }
+    &.list {
+        background:rgba(0,0,0,0.4);
+        padding: 20px;
+        font-size: 12px;
+        z-index: 1000;
+        border-radius: 10px;
+        line-height: 1.8;
+        margin: 20px;
+
+        li {
+            display: block;
+        }
+    } 
     button {
         background: transparent;
         border: 1px solid #fff;

@@ -141,6 +141,10 @@ img {
   z-index: -1;
 }
 
+.bg.blue::before {
+  background: rgba(24, 25, 42, 0.7);
+}
+
 .bg1 {
   background-image: url(../img/bg1@X2.jpg);
 }
@@ -370,6 +374,12 @@ img {
   right: 0;
 }
 
+.info.left {
+  top: auto;
+  left: 0;
+  bottom: 0;
+}
+
 .info h1 {
   font-weight: 300;
   font-size: 20px;
@@ -377,6 +387,11 @@ img {
   border-bottom: 1px dashed #fff;
   display: inline-block;
   margin-bottom: 10px;
+}
+
+.info h1 a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .info p {
@@ -406,6 +421,20 @@ img {
 .info li.active a {
   background: #fff;
   color: #000;
+}
+
+.info.list {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  font-size: 12px;
+  z-index: 1000;
+  border-radius: 10px;
+  line-height: 1.8;
+  margin: 20px;
+}
+
+.info.list li {
+  display: block;
 }
 
 .info button {
