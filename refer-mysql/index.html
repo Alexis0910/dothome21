@@ -268,7 +268,7 @@ Query OK, 0 rows affected (0.04 sec)
                     <div class="bs-callout bs-callout-info">
                         ALTER TABLE 테이블명 MODIFY 수정할 필드명
                     </div>
-<pre class="language-js"><code>mysql> ALTER TABLE member ADD MODIFY youGender enum('m','w');
+<pre class="language-js"><code>mysql> ALTER TABLE member MODIFY youGender enum('m','w');
 Query OK, 0 rows affected (0.04 sec)
 </code></pre>
                     <h3 id="intro5-3" class="page-header">필드 삭제하기</h3>
@@ -289,6 +289,7 @@ Query OK, 0 rows affected (0.04 sec)
                     </div>
 <pre class="language-js"><code>INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) 
     VALUES('soeunpark1211@naver', 'soeun', '1234', '1991-12-11', '111');
+
 </code></pre>
 
                     <h3 id="intro6-2" class="pt30">데이터 불러오기</h3>
@@ -402,7 +403,156 @@ Query OK, 0 rows affected (0.04 sec)
 <pre class="language-js"><code>DELETE FROM member WHERE myMemberID IN(4,5,6);
 </code></pre>
 </div>
-                <!--//intro6-->
+            <!--//intro6-->
+            <!--intro7-->
+                    <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">테이블 Join</h2>
+                    <h3 id="intro7-1" class="page-header">Join문 사용하기</h3>
+
+<pre class="language-js"><code>create table myMember(
+    myMemberID int(10) unsigned auto_increment,
+    youID varchar(15) not null,
+    youName varchar(10) not null,
+    youPass varchar(30) not null,
+    youEmail varchar(30) not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myMemberID)
+) charset=utf8;
+
+create table myReview(
+    myReviewID int(10) unsigned auto_increment,
+    myMemberID int(10) unsigned,
+    youCont tinytext not null,
+    regTime int(11) not null,
+    PRIMARY KEY (myReviewID)
+) charset=utf8;
+
+mysql> show tables;
++------------------+
+| Tables_in_test01 |
++------------------+
+| mymember         |
+| myreview         |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc mymember;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youID      | varchar(15)      | NO   |     | NULL    |                |
+| youName    | varchar(10)      | NO   |     | NULL    |                |
+| youPass    | varchar(30)      | NO   |     | NULL    |                |
+| youEmail   | varchar(30)      | NO   |     | NULL    |                |
+| regTime    | int(30)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> desc myReview;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myReviewID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| myMemberID | int(10) unsigned | YES  |     | NULL    |                |
+| youCont    | tinytext         | NO   |     | NULL    |                |
+| regTime    | int(30)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES( 'soeunpark', '박소은', '1234', 'soeunpark@naver.com', '1212');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES( 'sdkh11', '이지영', '2345', 'sdkh11@naver.com', '1712');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES( 'bora0124', '김보라', '1234', 'bora0124@gmail.com', '0251');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES( 'leechae', '이채연', '2345', 'leechae@naver.com', '0712');
+INSERT INTO myMember(youID, youName, youPass, youEmail, regTime) VALUES( 'junghae', '정해영', '1234', 'junghae@gmail.com', '1135');
+
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('3', '사이즈가 너무 작게나왔어요.', '1902');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('1', '모자가 너무 예뻐요.', '0712');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('5', '살좀빼고 입어야겠어요 ㅠㅠ.', '1212');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('2', '환절기에 입기 딱이에요.', '0821');
+INSERT INTO myReview(myMemberID, youCont, regTime) VALUES('4', '오자마자 단추 떨어진거 실화?', '1212');
+
+mysql> SELECT * FROM myMember;
++------------+-----------+---------+---------+---------------------+---------+
+| myMemberID | youID     | youName | youPass | youEmail            | regTime |
++------------+-----------+---------+---------+---------------------+---------+
+|          1 | soeunpark | 박소은  | 1234    | soeunpark@naver.com |    1212 |
+|          2 | sdkh11    | 이지영  | 2345    | sdkh11@naver.com    |    1712 |
+|          3 | bora0124  | 김보라  | 1234    | bora0124@gmail.com  |     251 |
+|          4 | leechae   | 이채연  | 2345    | leechae@naver.com   |     712 |
+|          5 | junghae   | 정해영  | 1234    | junghae@gmail.com   |    1135 |
++------------+-----------+---------+---------+---------------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM myReview;
++------------+------------+------------------------------+---------+
+| myReviewID | myMemberID | youCont                      | regTime |
++------------+------------+------------------------------+---------+
+|          1 |          3 | 사이즈가 너무 작게나왔어요.   |    1902 |
+|          2 |          1 | 모자가 너무 예뻐요.          |     712 |
+|          3 |          5 | 살좀빼고 입어야겠어요 ㅠㅠ.   |    1212 |
+|          4 |          2 | 환절기에 입기 딱이에요.       |     821 |
+|          5 |          4 | 오자마자 단추 떨어진거 실화?  |    1212 |
++------------+------------+------------------------------+---------+
+5 rows in set (0.00 sec)
+</code></pre>
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 앨리어스 JOIN 연결할 테이블명 앨리어스 ON (조건문)
+                    </div>
+                    <h4>두개의 테이블 JOIN하기</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime 
+    FROM myMember m JOIN myReview r ON (m.myMemberID = r.myMemberID);
+//r.멤버ID와 m.멤버ID순서를 맞춰줌.
++---------+------------------------------+---------+
+| youName | youCont                      | regTime |
++---------+------------------------------+---------+
+| 김보라  | 사이즈가 너무 작게나왔어요.     |    1902 |
+| 박소은  | 모자가 너무 예뻐요.            |     712 |
+| 정해영  | 살좀빼고 입어야겠어요 ㅠㅠ.     |    1212 |
+| 이지영  | 환절기에 입기 딱이에요.         |     821 |
+| 이채연  | 오자마자 단추 떨어진거 실화?    |    1212 |
++---------+------------------------------+---------+
+5 rows in set (0.00 sec)
+</code></pre>
+                    <h4 class="pt20">필드명을 변경하여 표시하는 방법</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime AS reviewTime 
+    FROM myMember m JOIN myReview r ON (m.myMemberID = r.myMemberID);
++---------+------------------------------+------------+
+| youName | youCont                      | reviewTime |
++---------+------------------------------+------------+
+| 김보라  | 사이즈가 너무 작게나왔어요.     |       1902 |
+| 박소은  | 모자가 너무 예뻐요.            |        712 |
+| 정해영  | 살좀빼고 입어야겠어요 ㅠㅠ.     |       1212 |
+| 이지영  | 환절기에 입기 딱이에요.        |        821 |
+| 이채연  | 오자마자 단추 떨어진거 실화?    |       1212 |
++---------+------------------------------+------------+
+5 rows in set (0.00 sec)
+</code></pre>
+
+                    <h4 class="pt20">필드 내용이 없는 경우 표시하는 방법</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime 
+    FROM myMember m LEFT JOIN myReview r ON (m.myMemberID = r.myMemberID);
+//리뷰를 안쓴 사람도 NULL로 나오게끔 하기.
++---------+------------------------------+------------+
+| youName | youCont                      |  regTime   |
++---------+------------------------------+------------+
+| 김보라  | 사이즈가 너무 작게나왔어요.     |       1902 |
+| 박소은  | 모자가 너무 예뻐요.            |        712 |
+| 정해영  | 살좀빼고 입어야겠어요 ㅠㅠ.     |       1212 |
+| 이지영  | 환절기에 입기 딱이에요.        |        821 |
+| 이채연  | 오자마자 단추 떨어진거 실화?    |       1212 |
++---------+------------------------------+------------+
+//여기에 리뷰를 안쓴사람은 youCont, regTime이 NULL로 나온다.
+5 rows in set (0.01 sec)
+</code></pre>
+                    <h3 id="intro7-2" class="page-header"></h3>
+                    <div class="bs-callout bs-callout-info">
+                        
+                    </div>
+<pre class="language-js"><code>
+</code></pre>
+</div>
+            <!--//intro7-->
                 
     </div>
     </div>
@@ -442,6 +592,11 @@ Query OK, 0 rows affected (0.04 sec)
                             <li><a href="#intro6-2">데이터 불러오기</a></li>
                             <li><a href="#intro6-3">데이터 수정하기</a></li>
                             <li><a href="#intro6-4">데이터 삭제하기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#intro7">테이블 JOIN</a>
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#intro7-1">JOIN문 사용하기</a></li>
                         </ul>
                     </li>
                 </ul>
