@@ -14,35 +14,48 @@
 <body>
 
 <div id="skip">
-        <a href="#contents">컨텐츠 바로가기</a>
+        <a href="../pages/main.php">회원가입 바로가기</a>
         <a href="#footer">푸터 바로가기</a>
     </div>
     <!--//skip-->
     <header id="header">
-            <h1><a href="#">php<em>class</em></a></h1>
-            <nav>
-                <h2 class="ir_so">메인 메뉴</h2>
-                <ul>
-                    <li><a href="#">댓글</a></li>
-                    <li><a href="#">회원가입</a></li>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">게시판</a></li>
-                    <li><a href="#">블로그</a></li>
-                </ul>
-            </nav>
-            <div class="member">
-                <strong class="ir_so">회원 정보 영역</strong>
-                <a href="../login/login.php">로그인</a>
-                <a href="../login/join.php">회원가입</a>
-            </div>
-        </header>
-        <!--header-->
+        <?php
+            include "../include/header.php"; //헤더부분 php를 따로만들어서 header태그안에 연결만 시켜주기.
+        ?>
+    </header>
+    <!--//header-->
         <main id="contents">
-            contents
+            <section id="mainCont" class="gray">
+                <h2 class="ir_so">로그인 컨텐츠</h2>
+                <article class="content-article">
+                    <div class="member-form">
+                        <h3>로그인</h3>
+                        <form name="login" action="loginSave.php" method="POST"> 
+                            <fieldset>
+                                <legend class="ir_so">로그인 입력폼</legend>
+                                <div class="member-box">
+                                    <div>
+                                        <label for="youEmail">이메일</label>
+                                        <input type="email" name="youEmail" id="youEmail" class="input_write" placeholder="Sample@naver.com" autocomplete="off" autofocus>
+                                    </div>
+                                    <div>
+                                        <label for="youPass">비밀번호</label>
+                                        <input type="password" name="youPass" id="youPass" class="input_write" maxlength="20" placeholder="비밀번호를 적어주세요!" autocomplete="off">
+                                    </div>
+                            </fieldset>
+                            <button id="loginBtn" type="submit" class="btn_submit">로그인</button> <!--submit하면 위에 aciton주소로 넘어가게끔-->
+                        </form>
+
+                        <p class="info">* 새로오신 분들은 회원가입을 먼저 해주세요. <a href="join.php">회원가입</a></p>
+                    </div>
+                </article>
+            </section>
         </main>
         <!--contents-->
         <footer id="footer">
-            footer
+            <?php
+                include "../include/footer.php"; 
+            ?>
         </footer>
         <!--footer-->
 
