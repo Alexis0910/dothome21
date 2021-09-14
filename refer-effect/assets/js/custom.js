@@ -65,12 +65,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 //Modal jQuery ver.
+
 $(".info.bottom button").click(function(){
     $("#modal").removeClass().addClass("show");
     });
 $(".modal-cont button").click(function(){
     $("#modal").addClass("hide");
 });
+
 
 //Modal Javascript Ver.
 function modal(){
