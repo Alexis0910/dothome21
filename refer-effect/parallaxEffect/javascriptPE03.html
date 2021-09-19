@@ -23,10 +23,10 @@
             padding: 5px 20px;
 
         }
-        .paranav li.active a {
+        .paranav li.active a { 
             border-radius: 30px;
         }
-    </style>
+    </style> 
 </head> 
 <body class="parallax">
 
@@ -39,7 +39,7 @@
 
     <!--main -->
     <main>
-        <div class="paraScroll">scrollTop() : <span>0</span>px</div>
+        <div class="paraScroll">window.scrollY : <span>0</span>px</div>
 
         <!--//parascroll-->
 
@@ -510,58 +510,55 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        //제이쿼리버전
-        //$(".paranav ul li").click(function(e){
-        //    e.preventDefault();
-        //    let target = $(this);
-        //    let index = target.index();
-        //    let section = $(".content-item").eq(index);
-        //    let offset = section.offset().top;
-        //    $("html, body").animate({scrollTop: offset}, 600);
-        //}); 
 
         document.querySelectorAll(".paranav ul li").forEach((el)=>{
             el.addEventListener("click", function(e){
                 e.preventDefault();
-                let target = $(this);
+                let target = (".paranav ul li");
                 let index = target.index();
                 let section = (".content-item").forEach(function(index){});
                 let offset = section.screenTop;
                 ("html", "body").forEach(function(el){
-                    el.addEventListener("animate", screenTop)
+                    el.addEventListener(animate(screenTop:offset), 600)
                 });
             });
-
         });
 
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop();
 
-            //숨김 메뉴
-            //if( scrollTop > 0) {
-            //    $(".paranav").addClass("show");
-            //} else {
-            //    $(".paranav").removeClass("show");
-            //}
-            
-            //삼항연산자로 한줄로 써보기
-            //( scrollTop > 0 ) ? $(".paranav").addClass("show") : $(".paranav").removeClass("show");
-
-            //if문 생략으로 {}괄호 없애기
-            if( scrollTop > 0 ) $(".paranav").addClass("show");
-            else $(".paranav").removeClass("show");
-
-            
-            //출력용
-            $(".content-item").each(function(index, element){
-                if( scrollTop > $(this).offset().top -2){
-                    $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-            });
+        window.addEventListener("scroll", function(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
             //버튼용
-            $(".paraScroll span").text(parseInt(scrollTop));
-        });
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+
+            // //숨김메뉴
+            // document.querySelector(".paranav"){
+            //     if( scrollTop > 0) {
+            //         (".paranav").classList.add("show");
+            //     } else {
+            //         (".paranav").classList.remove("show");
+            //     }
+            // }
+
+            // //출력용
+            // document.querySelector(".content-item").forEach(function(index, element){
+            //     if( scrollTop > (this).offsetTop -2){
+            //         document.querySelectorAll(".paranav ul li").forEach(function(el, index){
+            //             index.classList.add("active");
+            //         });
+            //         document.querySelectorAll(".paranav").childNodes.forEach(function(index, element){
+            //             index.classList.remove("active");
+            //         });
+            //     }
+            // });
+
+
+        }); 
+
+
+
+
+
 
         //소스보기 버튼실행
         document.querySelector(".source span").addEventListener("click", function(){

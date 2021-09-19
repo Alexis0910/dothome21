@@ -496,7 +496,28 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">$(".paranav ul li").click(function(e){
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $(".content-item").eq(index);
+    let offset = section.offset().top;
+    $("html, body").animate({scrollTop: offset}, 600);
+});
+
+$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();
+    
+//출력용
+$(".content-item").each(function(index, element){
+    if( scrollTop > $(this).offset().top -2){
+        $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
+    }
+});
+
+//버튼용
+$(".paraScroll span").text(parseInt(scrollTop));
+});
 </code></pre>
                 </div>
                     </div>
