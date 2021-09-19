@@ -1,0 +1,272 @@
+/* skip 웹표준의 기본은 키보드만으로 메뉴에 다 들어갈수 있어야함*/
+#skip {
+    position: relative;
+    z-index: 10000;
+}
+#skip a {
+    position: absolute;
+    left: 0; top: -100px;
+    background: #000;
+    color: #fff;
+    padding: 20px 30px;
+    display: inline-block;
+}
+#skip a:active,
+#skip a:focus {
+    top: 0;
+}
+
+/* layout */
+#contents {}
+#mainCont {
+    padding-top: 80px;
+}
+
+#mainCont.gray {
+    background-color: #eee;
+}
+/* container같은 존재 */
+.content-article {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.flow-article {
+    width: 100%;
+    background: #f7f6ff;
+    padding: 100px 0;
+}
+
+
+/* header */
+#header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd;
+    box-sizing: border-box; 
+    background: #fff;
+    /* border-box 왼쪽 오른쪽 짤리는거 막아줌 */
+}
+#header h1{
+    text-transform: uppercase;
+    padding: 20px;
+}
+#header h1 a{
+    padding: 10px;
+    margin: 10px;
+}
+#header h1 em{
+    font-size: 16px;
+}
+#header nav li {
+    display: inline;
+}
+#header nav li a{
+    margin: 15px;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+#header .member{
+    padding: 20px;
+}
+#header .member a{
+    border: 1px solid #dddddd;
+    padding: 7px 20px 6px;
+    border-radius: 50px;
+    transition: background 0.3s, color 0.3s;
+}
+#header .member a:hover {
+    background: #000;
+    color: #fff;
+
+}
+/* member-form */
+.member-form {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid #dfdfdf;
+    background: #fff;
+    padding: 60px 40px;
+    box-sizing: border-box; /*패딩값을 width에 포함안시키고 700그대로하려면~!*/
+}
+.member-form h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.member-form h4 {
+    font-size: 16px;
+    text-decoration: underline;
+    margin-bottom: 14px;
+}
+.member-form .join-info {
+    margin-bottom: 20px;
+}
+.member-form .join-privacy {
+    background: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.member-form button {
+    font-size: 18px;
+}
+.member-form .info {
+    padding-top: 20px;
+    color: #666;
+}
+.member-form .info a{
+    text-decoration: underline;
+    color: #666;
+}
+/* join-box */
+.member-box {}
+.member-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+.member-box input {
+    margin-bottom: 30px;
+}
+
+
+/* section-comment */
+.section-comment {
+    text-align: center;
+}
+.section-comment h4{
+    font-size: 40px;
+}
+.section-comment p{
+    font-size: 18px;
+}
+.comment-form {
+    margin-top: 50px;
+}
+.comment-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.comment-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align-last: left;
+}
+.comment-list > div {
+    flex: 0 0 22%;
+    margin-bottom: 40px;
+}
+.comment-list > div p{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.comment-list > div p::after {
+    /*삼각형.화살표 만드는법 po:a하고 부모에게 po:r하고  ~*/
+    content:'';
+    position: absolute;
+    left: 10px;
+    bottom: -8px;
+    border-top: 10px solid #fff; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.comment-list > div img{
+    width: 30px;
+    border-radius: 50%;
+    padding-left: 5px;
+}
+.comment-list > div span{
+    vertical-align: 8px;
+    padding-left: 4px;
+}
+.comment-list > div span:last-child {
+    float: right;
+    font-size: 14px;
+    margin-top: 7px;
+    opacity: 0.6;
+}
+
+
+
+
+/* cardType 01 */
+.cardType01 {
+    font-family: 'GmarketSans';
+}
+.cardType01 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    background: 7px;
+}
+.cardType01 p {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+/* float을 이용한 레이아웃 (익스플로어 10,9 맞춰야한다고하면 이거써야함 ㅠ)*/
+/* .card-wrap {
+    overflow: hidden;
+}
+.card-wrap > div {
+    float: left;
+    width: 387px;
+    margin-right: 19px;
+}
+.card-wrap > div:last-child {
+    margin-right: 0;
+} */
+
+/* flex를 이용한 레이아웃 */
+.cardType01 .card-wrap {
+    display: flex;
+    justify-content: space-between;  
+}
+.cardType01 .card-wrap > div {
+    width: 32%; 
+    /*flex: 0 0 32%;
+    flex-shrink: 0;  줄이는거0 grow늘이는거0 basis 비율32% 해서 flex하나쓰면 됨
+    flex-grow: 0;
+    flex-basis: 32%; */
+}
+.cardType01 .card .card-title {
+    display: block;
+    margin:5px 0 0 ;
+    font-size: 32px;
+     /* 한 줄 효과 */
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cardType01 .card .card-desc {
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    margin:5px 0 0 ;
+     /* 두 줄 효과 */
+    overflow: hidden;
+    display: -webkit-box; /* 벤터 프리픽스 */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.cardType01 .card .card-keyword {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+/* footer */
+footer {
+    height: 500px;
+}
