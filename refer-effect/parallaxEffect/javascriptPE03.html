@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
         .paranav {
-            top: -200px;
+            top: -200px; 
             transition: top 0.4s ease;
         }
         .paranav.show {
@@ -494,7 +494,39 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript"> document.querySelectorAll(".paranav ul li a").forEach((li)=>{
+    li.addEventListener("click", e => {
+        e.preventDefault();
+        document.querySelector(li.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        })
+    });
+});
+
+window.addEventListener("scroll", function(){
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+    
+//출력용
+document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+
+//숨김메뉴
+
+if( scrollTop > 0) {
+    document.querySelector(".paranav").classList.add("show");
+} else {
+    document.querySelector(".paranav").classList.remove("show");
+}
+
+//버튼용
+document.querySelectorAll(".content-item").forEach((item, index) => {
+    if( scrollTop >= item.offsetTop ){
+        document.querySelectorAll(".paranav ul li").forEach(li => {
+            li.classList.remove("active");
+        })
+        document.querySelector(".paranav ul li:nth-child("+(index+1)+")").classList.add("active");
+        }
+    });
+}); 
 </code></pre>
                 </div>
                     </div>
@@ -511,48 +543,39 @@
     <script src="../assets/js/highlight.min.js"></script>
     <script>
 
-        document.querySelectorAll(".paranav ul li").forEach((el)=>{
-            el.addEventListener("click", function(e){
+        document.querySelectorAll(".paranav ul li a").forEach((li)=>{
+            li.addEventListener("click", e => {
                 e.preventDefault();
-                let target = (".paranav ul li");
-                let index = target.index();
-                let section = (".content-item").forEach(function(index){});
-                let offset = section.screenTop;
-                ("html", "body").forEach(function(el){
-                    el.addEventListener(animate(screenTop:offset), 600)
-                });
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
             });
         });
 
 
         window.addEventListener("scroll", function(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-            //버튼용
+            
+            //출력용
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-
-            // //숨김메뉴
-            // document.querySelector(".paranav"){
-            //     if( scrollTop > 0) {
-            //         (".paranav").classList.add("show");
-            //     } else {
-            //         (".paranav").classList.remove("show");
-            //     }
-            // }
-
-            // //출력용
-            // document.querySelector(".content-item").forEach(function(index, element){
-            //     if( scrollTop > (this).offsetTop -2){
-            //         document.querySelectorAll(".paranav ul li").forEach(function(el, index){
-            //             index.classList.add("active");
-            //         });
-            //         document.querySelectorAll(".paranav").childNodes.forEach(function(index, element){
-            //             index.classList.remove("active");
-            //         });
-            //     }
-            // });
-
-
+            
+            //숨김메뉴
+            
+            if( scrollTop > 0) {
+                document.querySelector(".paranav").classList.add("show");
+            } else {
+                document.querySelector(".paranav").classList.remove("show");
+            }
+            
+            //버튼용
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if( scrollTop >= item.offsetTop ){
+                    document.querySelectorAll(".paranav ul li").forEach(li => {
+                        li.classList.remove("active");
+                    })
+                    document.querySelector(".paranav ul li:nth-child("+(index+1)+")").classList.add("active");
+                }
+            });
         }); 
 
 
@@ -560,7 +583,7 @@
 
 
 
-        //소스보기 버튼실행
+        // //소스보기 버튼실행
         document.querySelector(".source span").addEventListener("click", function(){
         document.querySelector("#paraModal").classList.remove("hide");
         document.querySelector("#paraModal").classList.add("show");
