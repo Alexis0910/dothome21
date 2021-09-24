@@ -569,7 +569,7 @@ document.querySelectorAll(".content-item").forEach((item, index) => {
             
             //버튼용
             document.querySelectorAll(".content-item").forEach((item, index) => {
-                if( scrollTop >= item.offsetTop ){
+                if( scrollTop >= item.offsetTop -2 ){
                     document.querySelectorAll(".paranav ul li").forEach(li => {
                         li.classList.remove("active");
                     })
