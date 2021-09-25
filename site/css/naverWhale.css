@@ -46,7 +46,7 @@
     color : #15c5aa;
     
 }
-#header p{
+.headerInner p{
     font-size: 18px;
     color: #15c5aa;
     border: 1px solid #15c5aa;
@@ -55,7 +55,7 @@
     text-align: center;
     border-radius: 5px;
     line-height: 50px;
-    margin: 15px 120px 0;
+    margin: 0 70px 0;
     font-weight: 700;
     transition: all 0.2s;
 }
@@ -67,33 +67,52 @@
     width: 100%;
     height: 70px;
     background-color: #333;
-    color: #fff;
+    color: #838383;
     display: inline-block;
 }
 #nav .navInner{
-
     text-align: center;
     
 }
-#nav .navInner span{
+#nav .navInner .tab1{
     width: 270px;
     display: inline-block;
     font-size: 18px;
     padding: 20px 30px;
     background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check.png);
-    background-position: top 23px left;
+    background-position: top 25px left 95px;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    color: #05d6b4;
+    font-weight: bold;
+}
+#nav .navInner .tab2{
+    width: 270px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 20px 30px;
+    background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check_2.png);
+    background-position: bottom 28px left 90px;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-right: 1px solid rgb(133, 133, 133);
+    border-left: 1px solid rgb(133, 133, 133);
+
+}
+#nav .navInner .tab3{
+    width: 270px;
+    background-image: url(https://whale.naver.com/_resource/img/whywhale/top_check_2.png);
+    display: inline-block;
+    font-size: 18px;
+    padding: 20px 30px;
+    cursor: pointer;
+    background-position: bottom 28px left 90px;
     background-size: 20px auto;
     background-repeat: no-repeat;
 }
-#nav .navInner .tab1{
-    color: #05d6b4;
-    font-weight: bold;
 
-}
-#nav .navInner span:nth-child(2){
-    border-right: 1px solid rgb(133, 133, 133);
-    border-left: 1px solid rgb(133, 133, 133);
-}
 #banner {
     background: url(../../site/img/naver-influence/whale/banner.jpg) no-repeat;
     width: 100%;
@@ -241,33 +260,48 @@
 #cont3 .desc .pcMobile {
     margin-top: 0;
 }
-#cont4{}
+
 #cont4 .desc {
     padding-left: 64px;
-
 }
 #cont4 .cont .desc h1 {
     bottom: 15px;
-}
+}    
 #cont4 .cont .desc h1:before {
     background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_03.png) no-repeat top center;
 }
-
-#cont4 .cont .desc .pcMobile p span{
-    font-size: 16px;
-    color: #919191;
-} 
 #cont4 .desc span{
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    display: inline-block;
 }
 #cont4 .desc h4{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    display: block;
+    
+}
+#cont4 .desc em{
+    padding-right: 80px;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 16px;
+    color: #919191;
+    font-weight: 500;
 }
 #cont4 .desc .pcMobile {
     margin-top: 0;
     position: relative;
 }
-#cont4 .desc .pcMobile p{}
+#cont4 .desc .pcMobile .pc:first-child{
+    margin-right: 10px;
+}
+
+#cont4 .desc .pcMobile p span{
+    position: absolute;
+    top: 20px;
+    font-size: 16px;
+    color: #919191;
+}
 #cont5{
     background-color: #ecedf1;
 }
@@ -321,4 +355,150 @@
     margin: 0 auto;
 }
 
-#footer .footerInner {}
+#footer .footerInner {
+    color: #c0c0c0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.footerInner .desc {
+    padding: 15px 0;
+}
+.footerInner .desc span{
+    padding: 0 25px;
+    display: inline;
+    border-right: 1px solid #c0c0c0;
+}
+.footerInner .desc .Bnone {
+    border: hidden;
+}
+.footerInner .desc p{
+    display: inline-block;
+    padding: 0 15px 0 45px;
+    position: relative;
+    line-height: 43px;
+    height: 43px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    text-align: center;
+    left: 60px;
+}
+.footerInner .desc p:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(https://whale.naver.com/_resource/img/main/beta.svg)no-repeat;
+    width: 20px; height: 20px;
+    /* top: calc(50% -10px);
+    left: calc(50% -55px); */
+    top: 10px;
+    left: 15px;
+}
+
+@media (max-width: 700px){
+    #header{
+        height: 60px;
+    }
+    #header .headerInner {
+        padding: 0;
+    }
+    #header .headerInner .logo a{
+        width: 140px;
+        height: 55px;
+        margin: 0 0 0 20px;
+
+    }
+    #header .headerInner span{
+        display: none;
+    }
+    .headerInner p{
+        background: url(../img/naver-influence/whale/bar.svg) no-repeat;
+        color: #fff;
+        border: none;
+        margin: 0;
+        position: absolute;
+        right: -80px;
+        top: 20px;
+    }
+    #header p:hover{
+        background: url(../img/naver-influence/whale/bar.svg) no-repeat;
+        color: #fff;
+        border: none;
+    }
+    #nav{
+        text-align: center;
+        margin: 0 auto;
+        height: 50px;
+        display: flex;
+    }
+    #nav .navInner {
+        height: 50px;
+        display: flex;
+    }
+    #nav .navInner .tab1,
+    #nav .navInner .tab2,
+    #nav .navInner .tab3 {
+        font-size: 12px;
+        width: 150px;
+        align-items: center;
+        text-align: center;
+        background-position: bottom 24px left 53px;
+        background-size: 15px auto;
+        padding: 16px 25px;
+
+    }
+    #banner {
+        padding: 0;
+        background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg) no-repeat top right calc(50% - 35%);
+    }
+    #banner .banner {
+        margin: 0 40px;
+    }
+    #banner .container .banner h1{
+        font-size: 40px;
+        padding-top: 80px;
+    }
+    #banner .container .banner span{
+        font-size: 18px;
+    }
+    #banner .container p{
+        font-size: 24px;
+        display: inline-block;
+        background: #05d6b4;
+        border-radius: 40px;
+        color: #fff;
+        text-align: center;
+        padding: 0px 30px;
+    }
+    #banner .container p::after {
+        height: 60px;
+    }
+    #cont1{}
+    #cont1 {}
+    .cont .desc{
+        padding:  0 30px;
+    }
+    .cont{
+        padding: 80px 0;
+        display: flex;
+    }
+    .cont .desc {
+        
+    }
+    .cont .desc h1{
+        font-size: 32px;
+    }
+    .cont .desc h1:before {
+        width: 50px; height: 50px;
+    }
+
+    .cont .desc span{
+        font-size: 18px;
+        margin: 20px 0 40px ;
+    }
+    .cont .desc h4{
+        font-size: 16px;
+    }
+    .cont .box1 img {
+        display: block;
+    }
+}
