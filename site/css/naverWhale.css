@@ -400,7 +400,7 @@
     left: 15px;
 }
 
-@media (max-width: 600px){
+@media (max-width: 560px){
     .container {
         width: 90%;
         margin: 0 auto;
@@ -473,14 +473,14 @@
         margin: 0 30px;
     }
     #banner .container .banner h1{
-        font-size: 40px;
+        font-size: 32px;
         padding-top: 80px;
         /* display: -webkit-box; 
         -webkit-line-clamp: 3;
         -webkit-box-orient: horizontal; */
     }
     #banner .container .banner span{
-        font-size: 18px;
+        font-size: 16px;
         padding: 20px 0 50px 0;
 
     }
@@ -488,16 +488,17 @@
         display: block;
     }
     #banner .container p{
-        font-size: 24px;
+        font-size: 17px;
         display: inline-block;
         background: #05d6b4;
         border-radius: 40px;
         color: #fff;
         text-align: center;
-        padding: 0px 30px;
+        padding: 0px 25px;
     }
     #banner .container p::after {
-        height: 60px;
+        height: 55px;
+        width: 20px;
     }
 
     .cont{
@@ -519,11 +520,11 @@
     }
 
     .cont .desc span{
-        font-size: 18px;
-        margin: 20px 0 40px ;
+        font-size: 16px;
+        margin: 20px 0 30px ;
     }
     .cont .desc h4{
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
         padding-left: 25px;
     }
@@ -571,6 +572,11 @@
         font-size: 32px;
         padding-left: 0;
     }
+    #cont2 .desc h4,
+    #cont3 .desc h4,
+    #cont4 .desc h4 {
+        margin: 0;
+    }
     #cont6 {
         width: 100%;
         padding: 60px 0;
@@ -582,7 +588,7 @@
         display: block;
     }
     #cont6 .cont6 p{
-        font-size: 24px;
+        font-size: 16px;
         display: inline-block;
         background: #05d6b4;
         border-radius: 40px;
@@ -591,7 +597,7 @@
         padding: 0px 30px;
     }
     #cont6 .cont6 p::after {
-        width: 30px; height: 60px;
+        width: 25px; height: 50px;
         background-size: 100%;
         margin-left: 18px;
         vertical-align: middle;
@@ -609,12 +615,13 @@
         color: #c0c0c0;
         font-size: 12px;
         font-weight: 600;
-        padding: 40px 0;
+        padding: 0 0 40px 0;
     }
     .footerInner .desc {
-        padding: 15px 0;
+        padding: 30px 0;
         white-space:normal;
         position: relative;
+
     }
     .footerInner .desc span{
         padding: 0 25px;
@@ -622,12 +629,14 @@
         border-right: 1px solid #c0c0c0;
 
     }
+
     .footerInner .desc p {
         position: absolute;
         align-items: center;
         text-align: center;
         display: inline-block;
         margin: 30px 0;
+        left: 150px;
         
 
     }
