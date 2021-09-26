@@ -12,11 +12,17 @@
     font-family: 'NanumSquare';
 }
 #header{
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 90px;
     margin: 0;
     display: inline-block;
     vertical-align: middle;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 2px rgb(0,0,0,0.1);
+    z-index: 10;
+
 }
 #header .headerInner{
     width: 100%;
@@ -469,8 +475,15 @@
         padding: 0;
         background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg) no-repeat top right calc(50% - 35%);
     }
-    #banner .banner {
+    #banner .container {
+        display: block;
+        height: 100%;
         margin: 0 30px;
+        background: url(https://whale.naver.com/_resource/img/whywhale/top_object_tasking.png)no-repeat bottom right;
+        background-size: 80%;
+    }
+    #banner .banner {
+
     }
     #banner .container .banner h1{
         font-size: 32px;
