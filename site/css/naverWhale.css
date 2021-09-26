@@ -41,6 +41,7 @@
     font-weight: 800;
     padding: 10px 45px;
     transition: all 0.1s;
+
 }
 .headerInner span:hover {
     color : #15c5aa;
@@ -139,6 +140,9 @@
     display: block;
     
 }
+#banner .container .banner .mb_only {
+    display: none;
+}
 #banner .container p{
     font-size: 30px;
     display: inline-block;
@@ -204,11 +208,13 @@
     left: 0;
     content: "";
     width: 20px; height: 20px;
-
 }
 
-.cont .box1 img{
+.cont .box1 {
     width: 640px; height: 326px;
+}
+.cont .box1 img{
+    width: 100%;
 }
 .cont .pcMobile {
     margin-top: 30px;
@@ -309,6 +315,7 @@
     background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_04.png) no-repeat top center;
 }
 #cont6{
+    width: 100%;
     padding: 145px 0;
     text-align: center;
     align-items: center;
@@ -395,6 +402,11 @@
 }
 
 @media (max-width: 700px){
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        
+    }
     #header{
         height: 60px;
     }
@@ -441,7 +453,7 @@
         width: 150px;
         align-items: center;
         text-align: center;
-        background-position: bottom 24px left 53px;
+        background-position: bottom 20px left 50px;
         background-size: 15px auto;
         padding: 16px 25px;
 
@@ -451,14 +463,22 @@
         background: url(https://whale.naver.com/_resource/img/whywhale/top_tasking_bg_m.jpg) no-repeat top right calc(50% - 35%);
     }
     #banner .banner {
-        margin: 0 40px;
+        margin: 0 30px;
     }
     #banner .container .banner h1{
         font-size: 40px;
         padding-top: 80px;
+        /* display: -webkit-box; 
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: horizontal; */
     }
     #banner .container .banner span{
         font-size: 18px;
+        padding: 20px 0 50px 0;
+
+    }
+    #banner .container .banner .mb_only {
+        display: block;
     }
     #banner .container p{
         font-size: 24px;
@@ -474,14 +494,15 @@
     }
     #cont1{}
     #cont1 {}
-    .cont .desc{
-        padding:  0 30px;
-    }
+
     .cont{
         padding: 80px 0;
         display: flex;
+        flex-wrap: wrap;
     }
     .cont .desc {
+        padding:  0 30px;
+        display: block;
         
     }
     .cont .desc h1{
@@ -497,8 +518,55 @@
     }
     .cont .desc h4{
         font-size: 16px;
+        font-weight: normal;
+        padding-left: 25px;
+    }
+    .cont .desc h4::before {
+        background: url(https://whale.naver.com/_resource/img/whywhale/icon_function_detailgo.png) no-repeat top center;
+        position: absolute;
+        background-size: 80%;
+        
+    }
+    .cont .box1 {
+        display: block;
+        padding: 0 40px;
+        width: 300px;
     }
     .cont .box1 img {
+        width: 100%;
         display: block;
+        border-style: none;
+        vertical-align: middle;
+    }
+    .cont .pc,
+    .cont .mobile {
+        background-size: 100%;
+        width: 90px; height: 40px;
+    }
+
+    #cont6 {
+        width: 100%;
+        padding: 60px 0;
+    }
+    #cont6 .cont6 img{
+        margin: 0 auto;
+        max-width: 300px;
+        margin-bottom: 38px;
+        display: block;
+    }
+    #cont6 .cont6 p{
+        font-size: 24px;
+        display: inline-block;
+        background: #05d6b4;
+        border-radius: 40px;
+        color: #fff;
+        text-align: center;
+        padding: 0px 30px;
+    }
+    #cont6 .cont6 p::after {
+        width: 30px; height: 60px;
+        background-size: 100%;
+        margin-left: 18px;
+        vertical-align: middle;
     }
 }
