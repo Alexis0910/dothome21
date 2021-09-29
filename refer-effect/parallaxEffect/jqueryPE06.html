@@ -20,8 +20,8 @@
             top: -200px;
         }
         .paranav li a {
-            width: auto;
-            padding: 5px 20px;
+            padding: 5px;
+            width: 30px; height: 30px;
 
         }
         .paranav li.active a {
@@ -33,8 +33,8 @@
 
     <!--header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect04 - jQuery</a></h1>
-        <p>패랠랙스 스크롤링 효과 - 숨김메뉴2</p>
+        <h1><a href="index.html">Parallax Effect06 - jQuery</a></h1>
+        <p>패랠랙스 스크롤링 효과 - 이질감</p>
     </header>
     <!--//header -->
 
@@ -46,15 +46,15 @@
 
         <nav class="paranav">
             <ul>
-                <li class="active"><a href="#section1">메뉴1</a></li>
-                <li><a href="#section2">메뉴2</a></li>
-                <li><a href="#section3">메뉴3</a></li>
-                <li><a href="#section4">메뉴4</a></li>
-                <li><a href="#section5">메뉴5</a></li>
-                <li><a href="#section6">메뉴6</a></li>
-                <li><a href="#section7">메뉴7</a></li>
-                <li><a href="#section8">메뉴8</a></li>
-                <li><a href="#section9">메뉴9</a></li>
+                <li class="active"><a href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
             </ul>
         </nav>
         <!--//nav-->
@@ -176,9 +176,9 @@
                     <li><a href="jqueryPE01.html">1</a></li>
                     <li><a href="jqueryPE02.html">2</a></li>
                     <li><a href="jqueryPE03.html">3</a></li>
-                    <li class="active"><a href="jqueryPE04.html">4</a></li>
+                    <li><a href="jqueryPE04.html">4</a></li>
                     <li><a href="jqueryPE05.html">5</a></li>
-                    <li><a href="jqueryPE06.html">6</a></li>
+                    <li class="active"><a href="jqueryPE06.html">6</a></li>
                     <li><a href="jqueryPE07.html">7</a></li>
                     <li><a href="jqueryPE08.html">8</a></li>
                 </ul>
@@ -213,21 +213,112 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">&lt;!--//parascroll--&gt;
-&lt;nav class="paranav"&gt;
+<pre><code class="language-html">&lt;nav class="paranav"&gt;
     &lt;ul&gt;
-        &lt;li&gt;&lt;a href="#section1"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section2"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
-        &lt;li class="active"&gt;&lt;a href="#section3"&gt;메뉴3&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section4"&gt;메뉴4&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section5"&gt;메뉴5&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section6"&gt;메뉴6&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section7"&gt;메뉴7&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section8"&gt;메뉴8&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#section9"&gt;메뉴9&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;!--//nav--&gt;
+
+&lt;div class="paraCont"&gt;
+    &lt;section id="section1" class="content-item"&gt;
+        &lt;span class="num"&gt;01&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section01&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;높은 목표를 세우고, 스스로를 채찍질 한다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!--//section1--&gt;
+
+    &lt;section id="section2" class="content-item"&gt;
+        &lt;span class="num"&gt;02&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section02&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;얕은 사람은 행운을 믿으며, 강한 사람은 원인과 결과를 믿는다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!--//section2--&gt;
+
+    &lt;section id="section3" class="content-item"&gt;
+        &lt;span class="num"&gt;03&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section03&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;자신감은 전염된다. 자신감의 부족도 마찬가지다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!--//section3--&gt;
+
+    &lt;section id="section4" class="content-item"&gt;
+        &lt;span class="num"&gt;04&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section04&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;실수할 자유가 없는 자유란 가치가 없다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!--//section4--&gt;
+
+    &lt;section id="section5" class="content-item"&gt;
+        &lt;span class="num"&gt;05&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section05&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;작은 일에서 성장할 능력이 있는 사람에게 큰일이 주어진다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!--//section5--&gt;
+
+    &lt;section id="section6" class="content-item"&gt;
+        &lt;span class="num"&gt;06&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section06&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;나는 똑독한 것이 아니라 단지 문제를 더 오래 연구할 뿐이다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!--//section6--&gt;
+
+    &lt;section id="section7" class="content-item"&gt;
+        &lt;span class="num"&gt;07&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section07&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;죽는 일보다 고통 받는 일이 더 많은 용기를 필요로 한다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!--//section7--&gt;
+
+    &lt;section id="section8" class="content-item"&gt;
+        &lt;span class="num"&gt;08&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section08&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;생각하는 대로 살지 않으면 결국에는 사는 대로 생각하게 된다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!--//section8--&gt;
+
+    &lt;section id="section9" class="content-item"&gt;
+        &lt;span class="num"&gt;09&lt;/span&gt;
+        &lt;h2 class="title"&gt;Section09&lt;/h2&gt;
+        &lt;figure class="img-Wrap"&gt;
+            &lt;div class="img"&gt;&lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;p class="desc"&gt;인생의 위대한 목표는 지식이 아니라 행동이다.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;!--//section9--&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div class="css">
@@ -239,8 +330,8 @@
     top: -200px;
 }
 .paranav li a {
-    width: auto;
-    padding: 5px 20px;
+    padding: 5px;
+    width: 30px; height: 30px;
 
 }
 .paranav li.active a {
@@ -249,31 +340,32 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">let nowScrollTop;
-let lastScrollTop = 0;
+<pre><code class="language-javascript">$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();
 
-$(window).scroll(function(){
-    nowScrollTop = true;
+    //각 섹션의 오프셋탑값은 변하지않기때문에 내 스크롤값 - 섹션오프셋값을 빼면
+    //그 나머지값을 변수 offset에 설정하여 각 섹션에게 
+    //변수 오프셋만큼 움직여라~! 하는거지
 
-    setInterval(()=>{
-        if( nowScrollTop ){ //true가 들어갈때 한번 작동하고 갑자기 false로 변해, 
-            nowScrollTop = false;
-            hasScroll();
-        }
-    }, 1000); //1초에한번씩감지해서 한번씩 hasScroll를 실행시킨다. 근데 갑자기 true가 false로 변해, 그러니까 1번만 실행된다는거지
-});
+    //for문
+    //for(let i=1; i<10; i++){
+    //    let offset = scrollTop - $("#section"+i).offset().top;
+    //    $("#section"+i+" .desc").css({transform: "translateX("+offset+"px)"});
+    //}
 
-function hasScroll(){
-    let scrollTop = $(this).scrollTop();
+    //each문
+    $(".content-item").each(function(index){
+        let offset1 = (scrollTop - $(this).offset().top) * 0.1;
+        let offset2 = (scrollTop - $(this).offset().top) * 0.2;
 
-    if( scrollTop > lastScrollTop ){  //스크롤탑값이 라스트보다 크면, 파라네비를 숨겨라
-        $(".paranav").addClass("hide");
-    } else {
-        $(".paranav").removeClass("hide"); //스크롤탑값이 라스트보다 적으면, hide를 없애줘라 = 메뉴 나타나라
-    }
+        $(this).find(".img").css({transform: "translateY("+ offset2 +"px)"});
+        $(this).find(".desc").css({transform: "translateY("+ offset1 +"px)"});
     
-    lastScrollTop = scrollTop;
-}
+    //메뉴 
+    if( scrollTop > $(this).offset().top -2){
+        $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
+    }
+});
 </code></pre>
                 </div>
                     </div>
@@ -291,72 +383,68 @@ function hasScroll(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-
         $(".paranav ul li").click(function(e){
             e.preventDefault();
             let target = $(this);
             let index = target.index();
             let section = $(".content-item").eq(index);
             let offset = section.offset().top;
-            $("html, body").animate({scrollTop:offset}, 800, "easeInOutCirc"); //easeInOut이거쓰려면 위에jquery-ui있어야함.
+            $("html, body").animate({scrollTop: offset}, 600);
         });
-
-        /*내가 움직인 스크롤탑값이 현재값이 되고, 1초전에 내가 있던 스크롤탑값이 last값 변수로 지정하는거야.
-        1초전의 값이랑, 지금현재의 값이랑 비교를해서, 숫자가 커지면 스크롤다운한것, 숫자가 작아지면 스크롤업한것
-        스크롤다운 => 메뉴나타남 / 스크롤업 => 메뉴사라짐 */
-
-        //$(window).scroll(function(){
-        //    let scrollTop = $(this).scrollTop();
-        //    let lastScrollTop = 0; //일단 지금 스크롤탑, 라스트스크롤탑 2개를 만들어줘
-
-        //    if( scrollTop > lastScrollTop ) {  //스크롤탑값이 라스트보다 크면, 파라네비를 숨겨라
-        //        $(".paranav").addClass("hide");
-        //    } else {
-        //        $(".paranav").removeClass("hide"); //스크롤탑값이 라스트보다 적으면, hide를 없애줘라 = 메뉴 나타나라
-        //    }
-
-        //    lastScrollTop = scrollTop;  //라스트랑 현재랑 1초의 시간차를 줘야해! 
-
-        //    console.log("scrollTop : "+ scrollTop);
-        //    console.log("lastScrollTop : "+ lastScrollTop);
-        //});  이건 초 차이가 안나서 다른버전으로 만들어봐야해
-
-        let nowScrollTop;
-        let lastScrollTop = 0;
 
         $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
 
-            nowScrollTop = true;
+            //각 섹션의 오프셋탑값은 변하지않기때문에 내 스크롤값 - 섹션오프셋값을 빼면
+            //그 나머지값을 변수 offset에 설정하여 각 섹션에게 
+            //변수 오프셋만큼 움직여라~! 하는거지
+            //let offset1 = scrollTop - $("#section1").offset().top;
+            //let offset2 = scrollTop - $("#section2").offset().top;
+            //let offset3 = scrollTop - $("#section3").offset().top;
+            //let offset4 = scrollTop - $("#section4").offset().top;
+            //let offset5 = scrollTop - $("#section5").offset().top;
+            //let offset6 = scrollTop - $("#section6").offset().top;
+            //let offset7 = scrollTop - $("#section7").offset().top;
+            //let offset8 = scrollTop - $("#section8").offset().top;
+            //let offset9 = scrollTop - $("#section9").offset().top;
 
-            setInterval(()=>{
-                if( nowScrollTop ){ //true가 들어갈때 한번 작동하고 갑자기 false로 변해, 
-                    nowScrollTop = false;
-                    hasScroll();
-                }
-            }, 500); //1초에한번씩감지해서 한번씩 hasScroll를 실행시킨다. 근데 갑자기 true가 false로 변해, 그러니까 1번만 실행된다는거지
-        });
+            //console.log(offset1)
 
-        function hasScroll(){
-            let scrollTop = $(this).scrollTop();
+            //$("#section1").css({transform: "translateX("+offset1+"px)"});
+            //$("#section2").css({transform: "translateX("+offset2+"px)"});
+            //$("#section3").css({transform: "translateX("+offset3+"px)"});
+            //$("#section4").css({transform: "translateX("+offset4+"px)"});
+            //$("#section5").css({transform: "translateX("+offset5+"px)"});
+            //$("#section6").css({transform: "translateX("+offset6+"px)"});
+            //$("#section7").css({transform: "translateX("+offset7+"px)"});
+            //$("#section8").css({transform: "translateX("+offset8+"px)"});
+            //$("#section9").css({transform: "translateX("+offset9+"px)"});
 
-            if( scrollTop > lastScrollTop ){  //스크롤탑값이 라스트보다 크면, 파라네비를 숨겨라
-                $(".paranav").addClass("hide");
-            } else {
-                $(".paranav").removeClass("hide"); //스크롤탑값이 라스트보다 적으면, hide를 없애줘라 = 메뉴 나타나라
-            }
+            //for문
+            //for(let i=1; i<10; i++){
+            //    let offset = scrollTop - $("#section"+i).offset().top;
+            //    $("#section"+i+" .desc").css({transform: "translateX("+offset+"px)"});
+            //}
+
+            //each문
+            $(".content-item").each(function(index){
+                let offset1 = (scrollTop - $(this).offset().top) * 0.1;
+                let offset2 = (scrollTop - $(this).offset().top) * 0.2;
+
+                $(this).find(".img").css({transform: "translateY("+ offset2 +"px)"});
+                $(this).find(".desc").css({transform: "translateY("+ offset1 +"px)"});
             
-            lastScrollTop = scrollTop;
-
-            //출력용
-            $(".paraScroll span").text(parseInt(scrollTop));
-
-            //메뉴
-            $(".content-item").each(function(i){
-                if(scrollTop > $(".content-item").eq(i).offset().top -2){
-                    $(".paranav ul li").eq(i).addClass("active").siblings().removeClass("active");
+                //메뉴 
+                if( scrollTop > $(this).offset().top -2){
+                    $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
                 }
             });
-        }
+
+
+            
+            //출력용
+            $(".paraScroll span").text(scrollTop);
+        });
 
 
         /*소스보기*/

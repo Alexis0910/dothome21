@@ -27,70 +27,20 @@
         .paranav li.active a {
             border-radius: 30px;
         }
-        /* 한번에 나타나기 */
-        /* .content-item {
-            opacity: 0;
-            transition: all 1s;
-            transform : translateY(100px)
-
-        }
-        .content-item.show {
-            transform : translateY(0);
-            opacity: 1;
-        } */
-
-        /* 개별적으로 나타나기 */
-        .content-item .num {
-            opacity: 0 !important;
-            transform: translateY(200px);
-            transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item.show .num {
-            opacity: 0.07 !important;
-            transform: translateY(0);
-        }
-        .content-item .title {
-            opacity: 0;
-            transform: translateY(-100px);
-            transition: all 1s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
-
-        }
-        .content-item.show .title {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .content-item .img-Wrap {
-            opacity: 0;
-            transform: translateY(200px) rotate(30deg);
-            transition: all 1s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item.show .img-Wrap {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .content-item .desc {
-            opacity: 0;
-            transform: translateX(-200px);
-            transition: all 1s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
-        }
-        .content-item.show .desc {
-            opacity: 1;
-            transform: translateX(0);
-        }
     </style>
 </head> 
 <body class="parallax">
 
     <!--header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect05 - jQuery</a></h1>
-        <p>패랠랙스 스크롤링 효과 - 나타나기</p>
+        <h1><a href="index.html">Parallax Effect06 - javascript</a></h1>
+        <p>패랠랙스 스크롤링 효과 - 이질감</p>
     </header>
     <!--//header -->
 
     <!--main -->
     <main>
-        <div class="paraScroll">scrollTop() : <span>0</span>px</div>
+        <div class="paraScroll">window.scrollY : <span>0</span>px</div>
 
         <!--//parascroll-->
 
@@ -215,7 +165,7 @@
                     <li><a href="javascriptPE03.html">3</a></li>
                     <li><a href="javascriptPE04.html">4</a></li>
                     <li><a href="javascriptPE05.html">5</a></li>
-                    <li><a href="javascriptPE06.html">6</a></li>
+                    <li class="active"><a href="javascriptPE06.html">6</a></li>
                     <li><a href="javascriptPE07.html">7</a></li>
                     <li><a href="javascriptPE08.html">8</a></li>
                 </ul>
@@ -227,7 +177,7 @@
                     <li><a href="jqueryPE02.html">2</a></li>
                     <li><a href="jqueryPE03.html">3</a></li>
                     <li><a href="jqueryPE04.html">4</a></li>
-                    <li class="active"><a href="jqueryPE05.html">5</a></li>
+                    <li><a href="jqueryPE05.html">5</a></li>
                     <li><a href="jqueryPE06.html">6</a></li>
                     <li><a href="jqueryPE07.html">7</a></li>
                     <li><a href="jqueryPE08.html">8</a></li>
@@ -258,7 +208,7 @@
                         <ul>
                             <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">jQeury</a></li>
+                            <li><a href="#">javascript</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
@@ -387,119 +337,72 @@
 .paranav li.active a {
     border-radius: 30px;
 }
-/* 한번에 나타나기 */
-/* .content-item {
-    opacity: 0;
-    transition: all 1s;
-    transform : translateY(100px)
-
-}
-.content-item.show {
-    transform : translateY(0);
-    opacity: 1;
-} */
-
-/* 개별적으로 나타나기 */
-.content-item .num {
-    opacity: 0 !important;
-    transform: translateY(200px);
-    transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
-}
-.content-item.show .num {
-    opacity: 0.07 !important;
-    transform: translateY(0);
-}
-.content-item .title {
-    opacity: 0;
-    transform: translateY(-100px);
-    transition: all 1s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
-
-}
-.content-item.show .title {
-    opacity: 1;
-    transform: translateY(0);
-}
-.content-item .img-Wrap {
-    opacity: 0;
-    transform: translateY(200px) rotate(30deg);
-    transition: all 1s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
-}
-.content-item.show .img-Wrap {
-    opacity: 1;
-    transform: translateY(0);
-}
-.content-item .desc {
-    opacity: 0;
-    transform: translateX(-200px);
-    transition: all 1s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
-}
-.content-item.show .desc {
-    opacity: 1;
-    transform: translateX(0);
-}
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">$(".paranav ul li").click(function(e){
-    e.preventDefault();
-    let target = $(this);
-    let index = target.index();
-    let section = $(".content-item").eq(index);
-    let offset = section.offset().top;
-    $("html, body").animate({scrollTop: offset}, 600);
-});
+<pre><code class="language-javascript">const scrollMenu = function() {
+    document.querySelectorAll("paranav ul li a").forEach(li => {
+        li.addEventListener("click", e => {
+            e.preventDefault();
+            document.querySelector(li.getAttribute("href")).scrollIntoView({
+                behavior: "smooth" //제이쿼리에서 "easeInOutCirc"한거나 마찬가지
+            });
+        });
+    });
+}
+scrollMenu();
 
-$(window).scroll(function(){
-    let scrollTop = $(window).scrollTop() + $(window).height()/3; //슬라이드가 나타나는게 너무 느려서 속도빠르게하는거야
+const scrollProgress = function(){
+    let scrollTop = window.pageYOffset || document.documentElement.scollTop || window.scrollY ;
 
-    //if( scrollTop < $("#section1").offset().top ){
-    //    $("#section1").addClass("show");
-    //}
-    //if( scrollTop < $("#section2").offset().top ){
-    //    $("#section2").addClass("show");
-    //}
-    //if( scrollTop < $("#section3").offset().top ){
-    //    $("#section3").addClass("show");
-    //}
-    //if( scrollTop < $("#section4").offset().top ){
-    //    $("#section4").addClass("show");
-    //}
-    //if( scrollTop < $("#section5").offset().top ){
-    //    $("#section5").addClass("show");
-    //}
-    //if( scrollTop < $("#section6").offset().top ){
-    //    $("#section6").addClass("show");
-    //}
-    //if( scrollTop < $("#section7").offset().top ){
-    //    $("#section7").addClass("show");
-    //}
-    //if( scrollTop < $("#section8").offset().top ){
-    //    $("#section8").addClass("show");
-    //}
-    //if( scrollTop < $("#section9").offset().top ){
-    //    $("#section9").addClass("show");
-    //}
+    //let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+    //let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+    //let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+    //let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+    //let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+    //let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+    //let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+    //let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+    //let offset9 = scrollTop - document.getElementById("section9").offsetTop;
+    //
+    //document.getElementById("section1").style.transform = "translateX("+offset1+"px)";
+    //document.getElementById("section2").style.transform = "translateX("+offset2+"px)";
+    //document.getElementById("section3").style.transform = "translateX("+offset3+"px)";
+    //document.getElementById("section4").style.transform = "translateX("+offset4+"px)";
+    //document.getElementById("section5").style.transform = "translateX("+offset5+"px)";
+    //document.getElementById("section6").style.transform = "translateX("+offset6+"px)";
+    //document.getElementById("section7").style.transform = "translateX("+offset7+"px)";
+    //document.getElementById("section8").style.transform = "translateX("+offset8+"px)";
+    //document.getElementById("section9").style.transform = "translateX("+offset9+"px)";
 
     //for문
-    //for(let i=1; i<10; i++){
-    //    if( scrollTop < $("#section"+i).offset().top ){
-    //        $("#section"+i).addClass("show");
-    //    } else {
-    //        $("#section"+i).removeClass("show");
-    //    }
+    //for(let i=1; i<=9; i++){
+    //    let offset = scrollTop - document.getElementById("section"+i).offsetTop;
+    //    document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
     //}
 
-    //forEach문
-    $(".content-item").each(function(index){
-        if( scrollTop >= $(this).offset().top ){
-            $(this).addClass("show");
-            $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
+    //forEach
+    document.querySelectorAll(".content-item").forEach(item => {
+        let offset1 = (scrollTop - item.offsetTop) * 0.1;
+        let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+        item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
+        item.querySelector(".desc").style.transform = "translateX("+ -offset2+"px)";
+    });
+    //메뉴
+    document.querySelectorAll(".content-item").forEach((item, index) => {
+        if( scrollTop >= item.offsetTop ){
+            document.querySelectorAll(".paranav ul li").forEach((li)=>{
+                li.classList.remove("active");
+            });
+            document.querySelector(".paranav ul li:nth-child("+(index+1)+")").classList.add("active");
         }
     });
+    //출력
+    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop)
+}
 
-    //출력 
-    $(".paraScroll span").text(parseInt(scrollTop));
-});
+window.addEventListener("scroll", scrollProgress)
 </code></pre>
                 </div>
                     </div>
@@ -517,92 +420,102 @@ $(window).scroll(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        $(".paranav ul li").click(function(e){
-            e.preventDefault();
-            let target = $(this);
-            let index = target.index();
-            let section = $(".content-item").eq(index);
-            let offset = section.offset().top;
-            $("html, body").animate({scrollTop: offset}, 600);
-        });
 
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop() + $(window).height()/3; //슬라이드가 나타나는게 너무 느려서 속도빠르게하는거야
+        const scrollMenu = function() {
+            document.querySelectorAll("paranav ul li a").forEach(li => {
+                li.addEventListener("click", e => {
+                    e.preventDefault();
+                    document.querySelector(li.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth" //제이쿼리에서 "easeInOutCirc"한거나 마찬가지
+                    });
+                });
+            });
+        }
+        scrollMenu();
 
-            //if( scrollTop < $("#section1").offset().top ){
-            //    $("#section1").addClass("show");
-            //}
-            //if( scrollTop < $("#section2").offset().top ){
-            //    $("#section2").addClass("show");
-            //}
-            //if( scrollTop < $("#section3").offset().top ){
-            //    $("#section3").addClass("show");
-            //}
-            //if( scrollTop < $("#section4").offset().top ){
-            //    $("#section4").addClass("show");
-            //}
-            //if( scrollTop < $("#section5").offset().top ){
-            //    $("#section5").addClass("show");
-            //}
-            //if( scrollTop < $("#section6").offset().top ){
-            //    $("#section6").addClass("show");
-            //}
-            //if( scrollTop < $("#section7").offset().top ){
-            //    $("#section7").addClass("show");
-            //}
-            //if( scrollTop < $("#section8").offset().top ){
-            //    $("#section8").addClass("show");
-            //}
-            //if( scrollTop < $("#section9").offset().top ){
-            //    $("#section9").addClass("show");
-            //}
+        const scrollProgress = function(){
+            let scrollTop = window.pageYOffset || document.documentElement.scollTop || window.scrollY ;
+
+            //let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+            //let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+            //let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+            //let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+            //let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+            //let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+            //let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+            //let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+            //let offset9 = scrollTop - document.getElementById("section9").offsetTop;
+            //
+            //document.getElementById("section1").style.transform = "translateX("+offset1+"px)";
+            //document.getElementById("section2").style.transform = "translateX("+offset2+"px)";
+            //document.getElementById("section3").style.transform = "translateX("+offset3+"px)";
+            //document.getElementById("section4").style.transform = "translateX("+offset4+"px)";
+            //document.getElementById("section5").style.transform = "translateX("+offset5+"px)";
+            //document.getElementById("section6").style.transform = "translateX("+offset6+"px)";
+            //document.getElementById("section7").style.transform = "translateX("+offset7+"px)";
+            //document.getElementById("section8").style.transform = "translateX("+offset8+"px)";
+            //document.getElementById("section9").style.transform = "translateX("+offset9+"px)";
+            
 
             //for문
-            //for(let i=1; i<10; i++){
-            //    if( scrollTop < $("#section"+i).offset().top ){
-            //        $("#section"+i).addClass("show");
-            //    } else {
-            //        $("#section"+i).removeClass("show");
-            //    }
+            //for(let i=1; i<=9; i++){
+            //    let offset = scrollTop - document.getElementById("section"+i).offsetTop;
+            //    document.getElementById("section"+i).style.transform = "translateX("+offset+"px)";
             //}
 
-            //forEach문
-            $(".content-item").each(function(index){
-                if( scrollTop >= $(this).offset().top ){
-                    $(this).addClass("show");
-                    $(this).siblings().removeClass("show");
-                    $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            //forEach
+            document.querySelectorAll(".content-item").forEach(item => {
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+                item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
+                item.querySelector(".desc").style.transform = "translateX("+ -offset2+"px)";
+            });
+            //메뉴
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if( scrollTop >= item.offsetTop ){
+                    document.querySelectorAll(".paranav ul li").forEach((li)=>{
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paranav ul li:nth-child("+(index+1)+")").classList.add("active");
                 }
             });
 
-            //출력 
-            $(".paraScroll span").text(parseInt(scrollTop));
-        });
+            //출력
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop)
 
+        }
 
-
-
-        /*소스보기*/
-        const viewTitle = $(".view-title li");
-        const viewCont = $(".view-cont > div");
-        
-        viewTitle.click(function(){
-            let target = $(this);
-            viewTitle.removeClass("active");
-            target.addClass("active");
-            
-            let index = target.index();
-            viewCont.css("display","none");
-            viewCont.eq(index).css("display","block");
-        });
-        
-
-        $(".source span").click(function(){
-        $("#paraModal").removeClass().addClass("show");
-        });
-        $(".modal-cont button").click(function(){
-            $("#paraModal").addClass("hide");
-        });
+        window.addEventListener("scroll", scrollProgress)
     
+        
+
+
+        // //소스보기 버튼실행
+        document.querySelector(".source span").addEventListener("click", function(){
+        document.querySelector("#paraModal").classList.remove("hide");
+        document.querySelector("#paraModal").classList.add("show");
+        });
+        document.querySelector(".modal-cont button").addEventListener("click", function(){
+            document.querySelector("#paraModal").classList.add("hide");
+        });
+
+        //modal버튼 내 html css java 작동 
+        const viewTitle = document.querySelectorAll(".view-title li");
+        const viewCont = document.querySelectorAll(".view-cont > div");
+
+        viewTitle.forEach((element, index)=>{
+            element.addEventListener("click", function(){
+                viewTitle.forEach((el)=>{
+                    el.classList.remove("active");
+                });
+                element.classList.add("active");
+
+                viewCont.forEach((el)=>{
+                    el.style.display = "none";
+                });
+                viewCont[index].style.display = "block";
+            });
+        });
     </script>
 </html>
