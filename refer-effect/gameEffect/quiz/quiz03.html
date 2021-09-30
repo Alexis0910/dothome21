@@ -841,7 +841,6 @@
     updateQuiz();
 
     //정답 확인
-
     function answerQuiz(){
         for ( let i=0; i<questionAnswerSelect.length; i++ ){
             //선택한것이 checked되있는건데 이게 true임.
@@ -865,8 +864,6 @@
             }
         }
     }
-
-    
     answerQuiz();
     questionAnswerConfirm.addEventListener("click", answerQuiz); //위에 answerQuiz함수 사용하고 호출은 아래서.
     

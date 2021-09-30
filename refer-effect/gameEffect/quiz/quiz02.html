@@ -817,23 +817,23 @@
     const questionAnswerView = document.querySelectorAll(".question__answer__view");
 
     //문제 정보
-    const quizInfo = [
-        {
-            quizNum : 1, 
-            quizAsk : "왕이 궁에 돌아가기 싫을때 하는 말은?",
-            quizAnswer : "궁시렁궁시렁"
-        },
-        {
-            quizNum : 2, 
-            quizAsk : "가장 비싼 새는?",
-            quizAnswer : "백조"
-        },
-        {
-            quizNum : 3, 
-            quizAsk : "소녀가 강으로 여행가면?",
-            quizAnswer : "걸리버 여행"
-        }
-    ]
+const quizInfo = [
+    {
+        quizNum : 1, 
+        quizAsk : "왕이 궁에 돌아가기 싫을때 하는 말은?",
+        quizAnswer : "궁시렁궁시렁"
+    },
+    {
+        quizNum : 2, 
+        quizAsk : "가장 비싼 새는?",
+        quizAnswer : "백조"
+    },
+    {
+        quizNum : 3, 
+        quizAsk : "소녀가 강으로 여행가면?",
+        quizAnswer : "걸리버 여행"
+    }
+]
     //문제 출력
     //questionTitleNum[0].innerHTML = quizInfo[0].quizNum;
     //questionTitleNum[1].innerHTML = quizInfo[1].quizNum;
@@ -878,12 +878,12 @@
     //});
 
     questionAnswerConfirm.forEach((confirm,idx) => {
-            confirm.addEventListener('click',() => {
-                confirm.style.display = 'none';
-                questionAnswerView[idx].style.display = 'block';
-                document.querySelectorAll('.card')[idx].classList.add('good');
-            });
+        confirm.addEventListener('click',() => {
+            confirm.style.display = 'none';
+            questionAnswerView[idx].style.display = 'block';
+            document.querySelectorAll('.card')[idx].classList.add('good');
         });
+    });
     //메뉴
     document.querySelector(".ham").addEventListener("click", () => {
         document.querySelector("nav").classList.toggle("show");
