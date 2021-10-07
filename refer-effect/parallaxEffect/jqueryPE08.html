@@ -195,7 +195,7 @@
                 <figure class="img-Wrap reveal reveal-BTT">
                     <div class="img"></div>
                 </figure>
-                <p class="desc reveal reveal-BTT" data-delay="500"><span>실수할 자유가 없는 자유란 가치가 없다.s</span> </p>
+                <p class="desc reveal reveal-BTT" data-delay="500"><span>실수할 자유가 없는 자유란 가치가 없다.</span> </p>
             </section>
             <!--//section4-->
 
@@ -538,7 +538,24 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">//여러가지 효과를 시간차를 내서 주기
+$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();
+
+    $(".reveal").each(function(index){
+        if( scrollTop + $(window).height() >= $(this).offset().top ){
+            $(this).delay( $(this).data("delay") ).queue(function(){
+                $(this).addClass("show");
+            });
+        }
+        //메뉴 
+        if( scrollTop > $(this).offset().top -2){
+            $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        }
+    })
+    //출력용
+    $(".paraScroll span").text(parseInt(scrollTop));
+});
 </code></pre>
                 </div>
                     </div>
@@ -557,45 +574,34 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        // $(window).scroll(function(){
-        //     let scrollTop = $(this).scrollTop();
-
-        //     $(".reveal").each(function(){
-        //         if( scrollTop + $(window).height() >= $(this).offset().top ){
-        //             $(this).addClass("show");
-        //         }
-        //     });
-        // });
+        //$(window).scroll(function(){
+        //    let scrollTop = $(this).scrollTop()
+        //    $(".reveal").each(function(){
+        //        if( scrollTop + $(window).height() >= $(this).offset().top ){
+        //            $(this).addClass("show");
+        //        }
+        //    });
+        //});
 
         //여러가지 효과를 시간차를 내서 주기
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
 
-            $(".reveal").each(function(){
+            $(".reveal").each(function(index){
                 if( scrollTop + $(window).height() >= $(this).offset().top ){
                     $(this).delay( $(this).data("delay") ).queue(function(){
                         $(this).addClass("show");
                     });
-                };
-            });
-            
-            //메뉴 
-            if( scrollTop > $(this).offset().top -2){
-                $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
-            }
-
+                }
+                //메뉴 
+                if( scrollTop > $(this).offset().top -2){
+                    $(".paranav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                }
+            })
             //출력용
-            $(".paraScroll span").text(scrollTop);
+            $(".paraScroll span").text(parseInt(scrollTop));
         });
 
-        // $(".paranav ul li").click(function(e){
-        //     e.preventDefault();
-        //     let target = $(this);
-        //     let index = target.index();
-        //     let section = $(".content-item").eq(index);
-        //     let offset = section.offset().top;
-        //     $("html, body").animate({scrollTop: offset}, 600);
-        // });
 
 
         
