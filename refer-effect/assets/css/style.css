@@ -318,7 +318,7 @@ img {
 }
 
 #nav {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -335,9 +335,9 @@ img {
 #nav li a {
   color: #fff;
   text-decoration: none;
-  width: 100px;
-  height: 50px;
-  line-height: 50px;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
   border: 1px solid #fff;
   display: inline-block;
   border-radius: 50px;
