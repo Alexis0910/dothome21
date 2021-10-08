@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <title>Mouse Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.min.css">
+    <style>
+        .moveWrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%; height: 100vh;
+        }
+        .moveImage {
+            position: relative;
+        }
+        .moveImage .mImg{
+            width: 50vw;
+            height: 60vh;
+            overflow: hidden;
+            position: relative;
+            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+        }
+        .moveImage:hover .mImg {
+            transform: scale(1.025);
+        }
+        .moveImage .mImg img{
+            left: -5%; top: -5%;
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            /* 배경 cover같이 반응형으로 줄일때 이미지도 왜곡없이 줄어들어 */
+            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+
+        }
+        .moveImage .mText {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            text-align: center;
+            font-size: 1.3vw;
+            color: #fff;
+            font-family: 'NEXONLv1Gothic';
+            background: rgba(0,0,0,0.4);
+            padding: 1vw;
+            line-height: 1.6;
+            
+        }
+        .cursor {
+            position: absolute;
+            width: 20px; height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+</head> 
+<body class="bg bg17 blue"> 
+<!--contents -->
+    <main>
+        <div class="cursor"></div>
+        <div class="moveWrap">
+            <article class="moveImage">
+                <div class="mImg"><img src="../assets/img/bg17@X2.jpg" alt="이미지"></div>
+                <div class="mText">
+                    <p>It is kind of fun to do the impossible.</p>
+                    <p>불가능을 하는 것은 좀 재미있다.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+<!--// contents-->
+<!-- info -->
+    <div class="info">
+        <h1><a href="#">Mouse Effect05 - jQuery</a></h1>
+        <p>마우스 이펙트 - 마우스 방향에 따라 움직이기</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jqueryME01.html">1</a></li>
+            <li><a href="jqueryME02.html">2</a></li>
+            <li><a href="jqueryME03.html">3</a></li>
+            <li><a href="jqueryME04.html">4</a></li>
+            <li class="active"><a href="jqueryME05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info left list">
+        <ul>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+            <li>standardX : <span class="standardX">0</span></li>
+            <li>standardY : <span class="standardY">0</span></li>
+
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button>소스보기</button>
+    </div>
+<!-- //into-->
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">jquery</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">&lt;!--contents --&gt;
+&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;div class="moveWrap"&gt;
+        &lt;article class="moveImage"&gt;
+            &lt;div class="mImg"&gt;&lt;img src="../assets/img/bg7@X2.jpg" alt="이미지"&gt;&lt;/div&gt;
+            &lt;div class="mText"&gt;
+                &lt;p&gt;It is kind of fun to do the impossible.&lt;/p&gt;
+                &lt;p&gt;불가능을 하는 것은 좀 재미있다.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+&lt;!--// contents--&gt;
+&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;standardX : &lt;span class="standardX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;standardY : &lt;span class="standardY"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+</code></pre>
+        </div>
+                        <div class="css">
+<pre><code class="language-css">.moveWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100vh;
+}
+.moveImage {
+    position: relative;
+}
+.moveImage .mImg{
+    width: 50vw;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.moveImage:hover .mImg {
+    transform: scale(1.025);
+}
+.moveImage .mImg img{
+    left: -5%; top: -5%;
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    /* 배경 cover같이 반응형으로 줄일때 이미지도 왜곡없이 줄어들어 */
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+
+}
+.moveImage .mText {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    text-align: center;
+    font-size: 1.3vw;
+    color: #fff;
+    font-family: 'NEXONLv1Gothic';
+    background: rgba(0,0,0,0.4);
+    padding: 1vw;
+    line-height: 1.6;
+    
+}
+.cursor {
+    position: absolute;
+    width: 20px; height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+    user-select: none;
+    pointer-events: none;
+}
+</code></pre>
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript">$(".moveImage").mousemove(function(e){
+    gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10})
+    
+    pageY = e.pageY;
+    pageX = e.pageX;
+    //1. 좌표값을 가운데로 정렬
+    let standardX = $(window).width()/2 - pageX;
+    let standardY = $(window).height()/2 - pageY;
+
+    //2. img x축 -> 마우스값/20 /  y축 -> 마우스값/20
+    //이질감나게 움직이기
+    $(".mImg img").attr({"style" : "transform : translate(" + standardX/20 + "px," + standardY/20 +"px)" });
+
+
+    //출력
+    $(".pageX").text(pageX);
+    $(".pageY").text(pageY);
+    $(".standardX").text(standardX);
+    $(".standardY").text(standardY);
+});
+</code></pre>
+                </div>
+                    </div>
+                    </div>
+                    <button>닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//modal-->
+</body>
+    <!-- script -->
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
+    <script>
+        $(".moveImage").mousemove(function(e){
+            gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10})
+            
+            pageY = e.pageY;
+            pageX = e.pageX;
+            //1. 좌표값을 가운데로 정렬
+            let standardX = $(window).width()/2 - pageX;
+            let standardY = $(window).height()/2 - pageY;
+
+            //2. img x축 -> 마우스값/20 /  y축 -> 마우스값/20
+            //이질감나게 움직이기
+            $(".mImg img").attr({"style" : "transform : translate(" + standardX/20 + "px," + standardY/20 +"px)" });
+
+
+            //출력
+            $(".pageX").text(pageX);
+            $(".pageY").text(pageY);
+            $(".standardX").text(standardX);
+            $(".standardY").text(standardY);
+        });
+
+
+
+        //소스보기 버튼
+        const tabBtn = $(".tab-btn ul li");  //5개의 버튼을 변수에 할당
+        const tabCont = $(".tab-cont > div"); //5개의 컨텐츠를 변수에 할당
+        tabBtn.click(function(){
+            let target = $(this); //tabBtn 내가 클릭한 버튼
+            tabBtn.removeClass("active"); //버튼들 다 active를 지우기
+            target.addClass("active"); //그후 내가선택한 버튼만 active
+
+            let index = target.index();
+            tabCont.css("display","none"); //제이쿼리에서는 css를 이렇게도 사용가능하다.
+            tabCont.eq(index).css("display","block"); //다시 none->block보이게하기
+        });
+
+        //소스보기 내의 탭메뉴 클래스액티브
+        const viewTitle = $(".view-title li");
+        const viewCont = $(".view-cont > div");
+        
+        viewTitle.click(function(){
+            let target = $(this);
+            viewTitle.removeClass("active");
+            target.addClass("active");
+            
+            let index = target.index();
+            viewCont.css("display","none");
+            viewCont.eq(index).css("display","block");
+        });
+
+</script>
+</html>
