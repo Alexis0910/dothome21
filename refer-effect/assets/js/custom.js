@@ -83,6 +83,23 @@ function modal(){
     document.querySelector(".modal-cont button").addEventListener("click", function(){
         document.querySelector("#modal").classList.add("hide");
     });
+    //modal버튼 내 html css java 작동 
+    const viewTitle = document.querySelectorAll(".view-title li");
+    const viewCont = document.querySelectorAll(".view-cont > div");
+    
+        viewTitle.forEach((element, index)=>{
+        element.addEventListener("click", function(){
+            viewTitle.forEach((el)=>{
+                el.classList.remove("active");
+            });
+            element.classList.add("active");
+    
+            viewCont.forEach((el)=>{
+                el.style.display = "none";
+            });
+            viewCont[index].style.display = "block";
+        });
+        });
 }
 
 //pe modal

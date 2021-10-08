@@ -217,7 +217,29 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">ㄴ
+<pre><code class="language-javascript">function mouseMove(e){
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+    gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10})
+
+    //1. 좌표값을 가운데로 정렬
+    let standardX = window.innerWidth/2 - pageX;
+    let standardY = window.innerHeight/2 - pageY;
+
+
+    //이미지움직임
+    const move = document.querySelector(".mImg img");
+    move.style.transform = "translate(" + standardX/20 + "px," + standardY/20 +"px)";
+
+    //출력
+    document.querySelector(".pageX").textContent = pageX;
+    document.querySelector(".pageY").textContent = pageY;
+    document.querySelector(".standardX").textContent = standardX;
+    document.querySelector(".standardY").textContent = standardY;
+}
+
+document.addEventListener("mousemove", mouseMove)
 </code></pre>
                 </div>
                     </div>
@@ -235,6 +257,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 
     <script>
+
+        modal();
 
         function mouseMove(e){
             let pageX = e.pageX;
