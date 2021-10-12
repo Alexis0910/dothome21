@@ -65,13 +65,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 //Modal jQuery ver.
-
-$(".info.bottom button").click(function(){
-    $("#modal").removeClass().addClass("show");
+function modaljquery(){
+    $(".info.bottom button").click(function(){
+        $("#modal").removeClass().addClass("show");
+        });
+    $(".modal-cont button").click(function(){
+        $("#modal").addClass("hide");
     });
-$(".modal-cont button").click(function(){
-    $("#modal").addClass("hide");
-});
+}
+
 
 
 //Modal Javascript Ver.
@@ -121,5 +123,35 @@ function modalPEjavascript(){
     });
     document.querySelector(".modal-cont button").addEventListener("click", function(){
         document.querySelector("#paraModal").classList.add("hide");
+    });
+}
+
+//모달창내의 효과
+function modalJqueryInside(){
+    //소스보기 버튼
+    const tabBtn = $(".tab-btn ul li");  //5개의 버튼을 변수에 할당
+    const tabCont = $(".tab-cont > div"); //5개의 컨텐츠를 변수에 할당
+    tabBtn.click(function(){
+        let target = $(this); //tabBtn 내가 클릭한 버튼
+        tabBtn.removeClass("active"); //버튼들 다 active를 지우기
+        target.addClass("active"); //그후 내가선택한 버튼만 active
+    
+        let index = target.index();
+        tabCont.css("display","none"); //제이쿼리에서는 css를 이렇게도 사용가능하다.
+        tabCont.eq(index).css("display","block"); //다시 none->block보이게하기
+    });
+    
+    //소스보기 내의 탭메뉴 클래스액티브
+    const viewTitle = $(".view-title li");
+    const viewCont = $(".view-cont > div");
+    
+    viewTitle.click(function(){
+        let target = $(this);
+        viewTitle.removeClass("active");
+        target.addClass("active");
+        
+        let index = target.index();
+        viewCont.css("display","none");
+        viewCont.eq(index).css("display","block");
     });
 }
