@@ -605,27 +605,8 @@ $(window).scroll(function(){
 
 
         
-        // /*소스보기*/
-        const viewTitle = $(".view-title li");
-        const viewCont = $(".view-cont > div");
-        
-        viewTitle.click(function(){
-            let target = $(this);
-            viewTitle.removeClass("active");
-            target.addClass("active");
-
-            let index = target.index();
-            viewCont.css("display","none");
-            viewCont.eq(index).css("display","block");
-        });
-        
-
-        $(".source span").click(function(){
-        $("#paraModal").removeClass().addClass("show");
-        });
-        $(".modal-cont button").click(function(){
-            $("#paraModal").addClass("hide");
-        });
+        modalPEjquery();
+        modalJqueryInside();
     
     </script>
 </html>

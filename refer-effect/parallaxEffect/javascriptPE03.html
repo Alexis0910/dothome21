@@ -588,14 +588,8 @@ document.querySelectorAll(".content-item").forEach((item, index) => {
 
 
 
-        // //소스보기 버튼실행
-        document.querySelector(".source span").addEventListener("click", function(){
-        document.querySelector("#paraModal").classList.remove("hide");
-        document.querySelector("#paraModal").classList.add("show");
-        });
-        document.querySelector(".modal-cont button").addEventListener("click", function(){
-            document.querySelector("#paraModal").classList.add("hide");
-        });
+        modalPEjavascript();
+
 
         //modal버튼 내 html css java 작동 
         const viewTitle = document.querySelectorAll(".view-title li");

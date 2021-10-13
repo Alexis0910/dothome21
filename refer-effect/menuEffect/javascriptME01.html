@@ -240,13 +240,13 @@
 <pre><code class="language-javascript">const tabBtn = document.querySelectorAll(".tab-btn ul li");
     const tabCont = document.querySelectorAll(".tab-cont > div");
 
-    tabBtn.forEach((element, index)=>{ 
+    tabBtn.forEach((element, index)=>{ //tabBtn 다중선택에서 btn내가클릭한것
         element.addEventListener("click", function(){ 
             tabBtn.forEach((el)=>{
                 el.classList.remove("active");
+                this.classList.add("active");
             });
-            element.classList.add("active");
-
+            
             tabCont.forEach((el)=>{
                 el.style.display = "none";
             });
@@ -273,15 +273,15 @@
             //animate();
             agentCheck(); //호환성체크
         }
-        const tabBtn = document.querySelectorAll(".tab-btn ul li a");
+        const tabBtn = document.querySelectorAll(".tab-btn ul li");
         const tabCont = document.querySelectorAll(".tab-cont > div");
 
         tabBtn.forEach((element, index)=>{ //tabBtn 다중선택에서 btn내가클릭한것
             element.addEventListener("click", function(){ 
                 tabBtn.forEach((el)=>{
                     el.classList.remove("active");
+                    this.classList.add("active");
                 });
-                element.classList.add("active");
 
                 tabCont.forEach((el)=>{
                     el.style.display = "none";
