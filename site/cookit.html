@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOKIT</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/cookit.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="headerInner">
+                    <div class="logo">
+                        <img src="img/cookit/logo.jpg" alt="logo"> 
+                    </div>
+                    <div class="desc">
+                        <span>COOKIT소개</span>
+                        <span>COOKIT메뉴</span>
+                        <span>리뷰</span>
+                        <span>이벤트</span>
+                        <span>MY쿡킷</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav id="nav">
+            <div class="container">
+                <div class="navInner">
+                    <div class="slider-wrap">
+                        <div class="slider" data-name="이미지1"><img src="img/cookit/banner.jpg" alt="이미지1"></div>
+                        <div class="slider" data-name="이미지2"><img src="img/cookit/banner 1.png" alt="이미지2"></div>
+                        <div class="slider" data-name="이미지3"><img src="img/cookit/banner.jpg" alt="이미지3"></div>
+                        <div class="slider" data-name="이미지4"><img src="img/cookit/banner 1.png" alt="이미지4"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <article id="article">
+            <div class="container">
+                <div class="articleInner">
+                    <div class="left">
+                        <div class="desc">
+                            <h2>우리집도 COOKIT 배송이 되나요?</h2>
+                            <h4>배송이 가능한지 알려드려요.</h4>
+                            <p class="ping">배송지 검색</p>
+                        </div>
+                        <div class="img">
+                            <img src="img/cookit/pear.jpg" alt="배">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="desc">
+                            <h2>7월 30일(화)에 받을 수 있어요</h2>
+                            <h4>오전 7시까지 주문하시면 다음날 배송됩니다.</h4>
+                            <p class="time">63:28:32</p>
+                            <h5>남은시간</h5>
+                        </div>
+                        <div class="img">
+                            <img src="img/cookit/delivery.jpg" alt="배">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <section id="section">
+            <div class="container">
+                <div class="sectionInner">
+                    <div class="tab-btn">
+                        <ul>
+                            <li class="active"><a href="#"></a>실시간 베스트</li>
+                            <li><a href="#"></a>생생한 리뷰</li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont">
+                        <div class="best">
+                            <img src="img/cookit/01.jpg" alt="어복쟁반">
+                            <div class="desc">
+                                <h3>평양식 어복쟁반</h3>
+                                <h4>33,800원</h4>
+                                <p>/3인분</p>
+                            </div>
+                        </div>
+                        <div class="best">
+                            <img src="img/cookit/02.jpg" alt="새우주꾸미삼겹살">
+                            <div class="desc">
+                                <h3>새우주꾸미삼겹살</h3>
+                                <h4>29,800원</h4>
+                                <p>/3인분</p>
+                            </div>
+                        </div>
+                        <div class="best">
+                            <img src="img/cookit/03.jpg" alt="방풀나물 아귀찜">
+                            <div class="desc">
+                                <h3>방풀나물 아귀찜</h3>
+                                <h4>32,800원</h4>
+                                <p>/3인분</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container">
+                <div class="footerInner">
+                    <div class="logo">
+                        <img src="img/cookit/logoBlack.jpg" alt="logoBlack">
+                    </div>
+                    <div class="desc">
+                        <div class="white">
+                            <span>이용약관</span>
+                            <span>개인정보처리 방침</span>
+                            <span>법적고지</span>
+                            <span>사업자정보 확인</span>
+                        </div>
+                        <div class="grey">
+                            <span>씨제이제일제당(주)</span>
+                            <p>대표자:신현재</p><br>
+                            <span>주소:서울 중구 동호로 330 CJ제일제당 센터(우) 04560</span>
+                            <p>사업자등록번호: 104-86-09535</p><br>
+                            <span>통신판매업신고 중부 제 07767호</span>
+                            <p>개인정보보호책임자:류화정</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        
+        const navInner = $(".navInner");
+        const sliderWrap = $(".slider-wrap");
+        const slider = $(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+
+        setInterval(function(){
+            let nextIndex = (currentIndex + 1) % sliderCount;
+
+            slider.eq(currentIndex).fadeOut();
+            slider.eq(nextIndex).fadeIn();
+
+            currentIndex = nextIndex;
+
+
+        }, 2500);
+
+    </script>
+</html>

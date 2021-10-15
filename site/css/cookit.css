@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrap {
+    font-family: 'S-CoreDream';
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+#header {
+    width: 100%;
+    height: 100px;
+}
+.headerInner {
+    
+    display: flex;
+    justify-content: space-between;
+
+}
+.headerInner .logo{
+    margin-top: 30px;
+    cursor: pointer;
+
+
+}
+.headerInner .logo img{
+    width: 100px;
+}
+.headerInner .desc{
+    margin-top: 45px;
+
+}
+.headerInner span{
+    padding-left: 60px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.navInner {
+
+    display: flex;
+    justify-content: center;
+}
+.navInner .slider-wrap{
+    position: relative;
+    height: 390px;
+    width: 1000px;
+}
+.navInner .slider-wrap .slider img{
+    width: 100%;
+}
+.navInner .slider-wrap .slider{
+    position: absolute;
+    left: 0; top: 0;
+}
+
+
+#article {
+    margin-top: 25px;
+    width: 100%
+}
+.articleInner {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.articleInner .left{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    width: 48.5%;
+}
+.articleInner .right{
+    display: flex;
+    justify-content: space-between;
+    width: 48.5%;
+    background-color: #F2F2F2;
+
+
+}
+.articleInner .desc {
+    padding: 20px 20px;
+}
+.articleInner .desc h2{
+    font-size: 20px;
+    font-weight: 800;
+}
+.articleInner .desc h4{
+    margin: 10px 0;
+    font-size: 12px;
+    font-weight: 500
+}
+.articleInner .desc .ping{
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    
+}
+.articleInner .desc .ping:before {
+    content: '';
+    width: 18px; height: 18px;
+    background: url(../img/cookit/ping.png)no-repeat center;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+.articleInner .desc .time{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+}
+.articleInner .desc .time:before {
+    content: '';
+    width: 18px; height: 18px;
+    background: url(../img/cookit/time.png)no-repeat center;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+.articleInner .desc h5{
+    display: inline-block;
+    color: #474747;
+    font-size: 10px;
+    font-weight:400;
+}
+.articleInner .img{}
+.articleInner .img img{
+    width: 95px;
+    margin: 30px 25px 0 0 ;
+}
+#section {
+    width: 100%;
+}
+
+.sectionInner .tab-btn{
+    margin: 35px 0;
+    display: flex;
+    position: relative;
+
+}
+.sectionInner .tab-btn ul{
+    display: flex;
+    text-align: left;
+    
+}
+.sectionInner .tab-btn li{
+    font-size:25px;
+    font-weight: 800;
+    color: #9D9D9D;
+    padding-right: 40px;
+}
+.sectionInner .tab-btn li.active{
+    color: #000;
+    
+}
+.sectionInner .tab-btn li.active:after{
+    content: '';
+    width: 3px; height: 25px;
+    display: inline-block;
+    background-color: #000;
+    position: absolute;
+    left: 170px;
+    top:7px
+}
+.sectionInner .tab-cont{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.sectionInner .tab-cont .best{
+    width: 31.2%;
+}
+.sectionInner .tab-cont img{
+    width: 100%;
+}
+.tab-cont .desc{
+    margin-top: 10px;
+}
+.tab-cont .desc h3{
+    font-size: 13px;
+    font-weight: 600;
+}
+.tab-cont .desc h4{
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    display: inline-block;
+    letter-spacing: -1px;
+}
+.tab-cont .desc p{
+    display: inline-block;
+    color: #4E4E4E;
+    font-weight: 500;
+    position: relative;
+}
+.tab-cont .desc p:after {
+    content: '';
+    width: 40px; height: 40px;
+    background: url(../img/cookit/cart.jpg)no-repeat;
+    display: inline-block;
+    background-size: cover;
+    position: absolute;
+    top: -20px; 
+    left: 210px;
+}
+#footer {
+    background: #202020;
+    width: 100%;
+    height: 200px;
+}
+.footerInner{
+    display: flex;
+    justify-content: space-between;
+}
+.footerInner .logo{}
+.footerInner .logo img{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 180px
+}
+.footerInner .desc{
+    margin-top: 30px;
+    overflow: hidden;
+}
+.footerInner .desc .white{
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    
+}
+.footerInner .desc .white span{
+    padding: 0 25px;
+    position: relative;
+}
+.footerInner .desc .white span:after {
+    content: '';
+    width: 1px; height: 15px;
+    display: inline-block;
+    background-color: #474747;
+    position: absolute;
+    left: -4px;
+    top:2px
+}
+.footerInner .desc .white span:nth-child(1):after {
+    display: none;
+}
+.footerInner .desc .grey{
+    position: absolute;
+    margin-top: 25px;
+    color:#8B8B8B;
+    display: inline-block;
+    font-size: 11px;
+    margin-left: 23px;
+    font-weight: 400;
+}
+.footerInner .desc .grey span{
+    margin-top: 10px;
+    padding-right: 20px;
+    display: inline-block;
+}
+
+.footerInner .desc .grey p{
+    display: inline-block;
+    position: relative;
+
+}
+.footerInner .desc .grey p:after {
+    content: '';
+    width: 1px; height: 12px;
+    display: inline-block;
+    background-color: #474747;
+    position: absolute;
+    left: -12px;
+    top:2px
+}
