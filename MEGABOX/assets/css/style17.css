@@ -625,6 +625,9 @@
 .help article.help_box3{
     margin-right: 0;
 }
+.help article.help_box3 > div{
+    border: 0;
+}
 .help article h3 {
     font-size: 30px;
     font-weight: 500;
@@ -733,6 +736,42 @@
     display: block;
     padding-left: 120px;
 }
+/* 고객센터 */
+.service {
+    overflow: hidden;
+}
+.service li{
+    float: left;
+    width: 50%;
+    height: 193px;
+    box-sizing: border-box;
+    border: 1px solid #d7d7d7;
+    text-align: center;
+}
+.service li a span{
+    display: block;
+    width: 120px;
+    height: 10px;
+    margin: 20px auto 0 auto;
+    overflow: hidden;
+}
+.service li a strong{
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.service li:nth-child(1){
+    border-right: 0;
+    border-bottom: 0;
+}
+.service li:nth-child(2){
+    border-bottom: 0;
+}
+.service li:nth-child(3){
+    border-right: 0;
+}
+
 
 
 /* 미디어 쿼리 */
