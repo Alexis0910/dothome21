@@ -344,7 +344,7 @@
     margin: 0 auto;
 }
 .image-wrap.two {
-	background-color: rgb(203, 235, 215);
+	background-color: rgb(222 233 216);
 }
 .image-wrap .hover-wrap {
 	position: absolute;
@@ -386,7 +386,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #ffab23;
+	background: #60a19e;
 	color: #FFFFFF;
 	font-size: 25px;
 	font-weight: 300;
@@ -409,7 +409,7 @@
 	width: 100%;
 	height: 32px;
 	top: 50%;
-	color: #a92c76;
+	color: #f6ffa5;
 	font-size: 20px;
 	text-transform: uppercase;
 	line-height: 20px;
