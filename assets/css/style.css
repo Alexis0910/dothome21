@@ -223,7 +223,7 @@
 	font-family: 'Gaegu', cursive; font-size: 40px;
 }
 #contents_tit p a {
-	color:#2c94c4; 
+	color:#8fad91; 
 }
 
 
@@ -280,9 +280,9 @@
 }
 
 .gridly .webstandard a {
-	color: #157ed3;
+	color: #8fad91;
 	display: block;
-	border-bottom: 3px solid #a5d5fa;
+	border-bottom: 3px solid #ccdacd;
 	margin-right: 20px;
 } 
 .gridly .html5 a {
@@ -342,7 +342,9 @@
     display: block;
     margin: 0 auto;
 }
-
+.image-wrap.two {
+	background-color: rgb(203, 235, 215);
+}
 .image-wrap .hover-wrap {
 	position: absolute;
 	display: block;
@@ -377,14 +379,13 @@
 
 
 
-
 /* 도넛 */
 
 .image-wrap .hover-wrap .overlay-img-donut {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #f2a1d1;
+	background: #ffab23;
 	color: #FFFFFF;
 	font-size: 25px;
 	font-weight: 300;
