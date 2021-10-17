@@ -113,6 +113,7 @@
             <li><a href="javascriptSE03.html">3</a></li>
             <li><a href="javascriptSE04.html">4</a></li>
             <li class="active"><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptSE06.html">6</a></li>
         </ul>
         <ul>
             <li><a href="jquerySE01.html">1</a></li>
@@ -120,6 +121,7 @@
             <li><a href="jquerySE03.html">3</a></li>
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
+            <li><a href="jquerySE06.html">6</a></li>
         </ul>
     </div>
 
@@ -243,7 +245,57 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">//prev버튼을 누르면 왼쪽으로 800px next누르면 -800px(이미지width)만큼 움직이게 만들기
+const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = sliderWrap.querySelector(".slider-img");
+const sliderInner = sliderImg.querySelector(".slider-inner");
+const slider = sliderInner.querySelectorAll(".slider");
+const sliderBtn = sliderWrap.querySelector(".slider-btn");
+const sliderBtnPrev = sliderBtn.querySelector(".prev");
+const sliderBtnNext = sliderBtn.querySelector(".next");
+
+let sliderCount =  slider.length; //쿼리셀렉터All이기때문에 여러개라 length값을 뽑을수있는것
+let sliderWidth =  document.querySelector(".slider").offsetWidth;
+let currentIndex = 0;
+
+function gotoSlider(num){
+    //매개변수 num사용해서 gotoSLider 2이면 옆으로 1600px움직이고 -2이면 -1600px왼쪽으로 움직이는거지
+    //트랜지션(넘어가는 애니메이션)
+    sliderInner.style.transition = "all 300ms"
+    sliderInner.style.transform = "translateX("+ -sliderWidth *num +"px)";
+    currentIndex = num;
+};
+//
+function movePrev(){
+    let prevIndex = (currentIndex - 1) % sliderCount;
+    if( currentIndex == 0 ) prevIndex = sliderCount-1;
+    gotoSlider(prevIndex)
+    
+
+};
+function moveNext(){
+    let nextIndex = (currentIndex + 1) % sliderCount;
+    gotoSlider(nextIndex)
+
+};
+
+
+//function gotoSlider(num){
+//    sliderInner.style.transition = "all 300ms";
+//    sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
+//}
+
+//function movePrev(){
+//    currentIndex > 0 ? currentIndex-- : currentIndex = sliderCount-1;
+//    gotoSlider(currentIndex);
+//}
+//function moveNext(){
+//    currentIndex < sliderCount-1 ? currentIndex++ : currentIndex = 0;
+//    gotoSlider(currentIndex);
+//}
+//prev버튼누르면 movePrev함수가 실행되고 그안에서 gotoSLider함수가 다시 실행된다.
+sliderBtnPrev.addEventListener("click", movePrev);
+sliderBtnNext.addEventListener("click", moveNext);
 </code></pre>
                 </div>
                     </div>

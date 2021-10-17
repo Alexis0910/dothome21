@@ -96,6 +96,7 @@
             <li><a href="javascriptSE03.html">3</a></li>
             <li class="active"><a href="javascriptSE04.html">4</a></li>
             <li><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptSE06.html">6</a></li>
         </ul>
         <ul>
             <li><a href="jquerySE01.html">1</a></li>
@@ -103,6 +104,7 @@
             <li><a href="jquerySE03.html">3</a></li>
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
+            <li><a href="jquerySE06.html">6</a></li>
         </ul>
     </div>
 
@@ -206,7 +208,52 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">//sample1
+const sliderInner1 = document.querySelector(".slider-inner1");
+const slider1 = document.querySelector(".slider1");
+
+
+let currentIndex1 = 0;
+let sliderHeight = slider1.offsetHeight;
+
+sliderInner1.style.transition = "all 0.4s";
+sliderInner1.style.top = 0;
+//1에서 2로갈때 넘어가는 효과 안나와서 따로 전역으로 선언해준것임
+setInterval(()=>{
+    //슬라이드1
+    (currentIndex1 < 4) ? currentIndex1++ : currentIndex1 = 0;
+
+    let sliderPosition = currentIndex1 * -sliderHeight +"px";
+    sliderInner1.style.transition = "all 0.4s";
+    sliderInner1.style.top = sliderPosition;
+},2000);
+
+//sample2
+const sliderInner2 = document.querySelector(".slider-inner2");
+const slider2 = document.querySelector(".slider2");
+let sliderCount = document.querySelectorAll(".slider2").length;
+//length가 여기서는5
+
+let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
+sliderInner2.appendChild(sliderClone);
+//이미지5개 뒤에 1을 추가함으로서 count가 6이됨 5->1로 넘어감
+let currentIndex2 = 0;
+let sliderHeight2 = slider2.offsetHeight;
+
+setInterval(()=>{
+    //슬라이드2
+    currentIndex2++;
+    sliderInner2.style.transition = "all 0.4s"
+    sliderInner2.style.transform = "translateY("+ -sliderHeight2 * currentIndex2 +"px)";
+
+    if( currentIndex2 == sliderCount ){
+        setTimeout(()=>{
+            sliderInner2.style.transition = "0s";
+            sliderInner2.style.transform = "translateY(0)";
+        }, 400);
+        currentIndex2 = 0;
+    }
+}, 2000);
 </code></pre>
                 </div>
                     </div>
