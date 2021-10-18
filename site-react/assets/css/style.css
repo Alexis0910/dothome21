@@ -848,7 +848,7 @@ body {
           justify-content: space-between;
   font-family: "Playfair Display";
   border-bottom: 0.5px solid #2e2e2e;
-  z-index: 10;
+  z-index: 5;
 }
 
 #header .header__port {
@@ -902,8 +902,12 @@ body {
 
 #header .header__menu ul li a {
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
   margin: 1px;
+}
+
+#header .header__menu ul li a:hover {
+  color: #fff;
 }
 
 #header .header__ham {
@@ -965,6 +969,7 @@ body {
 }
 
 #footer div h4 {
+  color: #7a7a7a;
   font-weight: 100;
   text-transform: capitalize;
   padding: 6px;
@@ -1111,7 +1116,7 @@ body {
 }
 
 #mainCont .wave .desc h3 {
-  color: #3d3d3d;
+  color: #4b4b4b;
   font-family: "Playfair Display";
   font-size: 4vw;
 }
