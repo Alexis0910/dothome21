@@ -1067,11 +1067,11 @@ body {
 
 #mainCont .bird {
   position: absolute;
-  width: 50vw;
-  height: 50vw;
+  width: 48vw;
+  height: 48vw;
   border-radius: 50%;
-  top: 10vw;
-  left: 25vw;
+  top: 5vw;
+  left: 22vw;
   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
   transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
@@ -1149,7 +1149,7 @@ body {
   width: 33vw;
   height: 24vw;
   left: 48vw;
-  top: 26vw;
+  top: 23vw;
   background-color: #9da9a5;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1162,6 +1162,8 @@ body {
   background: url(../img/sea.jpg) no-repeat;
   background-size: cover;
   width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #mainCont .sea .img:hover {
@@ -1201,7 +1203,7 @@ body {
   content: '';
   width: 89px;
   height: 14px;
-  top: 8px;
+  top: 10px;
   background: url(../img/arrow.svg) no-repeat;
   background-size: cover;
 }
@@ -1224,7 +1226,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
-  top: 50vh;
+  top: 42vh;
   left: 4vh;
 }
 
