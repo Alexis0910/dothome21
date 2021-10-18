@@ -38,7 +38,7 @@
                     <div class="desc">
                         <h3>Alexis <br>P</h3>
                     </div>
-                    <div class="img"></div>
+                    <div class="wave_inner"><img src="assets/img/wave.jpg" alt="이미지"></div>
                 </div>
                 <div class="sea">
                     <div class="img"></div>
@@ -101,6 +101,9 @@
 
     const move = document.querySelector(".bird img");
     move.style.transform = "translate(" + standardX/20 + "px," + standardY/20 +"px)";
+
+    const move2 = document.querySelector(".wave_inner img");
+    move2.style.transform = "translate(" + standardY/40 + "px," + standardX/40 +"px)";
 
     }
     document.addEventListener("mousemove", mouseMove)
