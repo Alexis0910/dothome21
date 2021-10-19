@@ -10,10 +10,10 @@
     position: relative;
     .bird {
         position: absolute;
-        width: 48vw; 
-        height: 48vw;
+        width: 45vw; 
+        height: 45vw;
         border-radius: 50%;
-        top: 5vw;
+        top: 7vh;
         left: 22vw;
         transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
         overflow: hidden;
@@ -68,7 +68,7 @@
         width: 33vw;
         height: 24vw;
         left: 48vw;
-        top: 23vw;
+        top: 38vh;
         background-color: #9da9a5;
         justify-content: space-between;
         text-transform: uppercase;
@@ -129,8 +129,8 @@
         line-height: 1;
         display: flex;
         text-transform: uppercase;
-        top: 42vh;
-        left: 4vh;
+        top: 38vh;
+        left: 2vw;
     }
     
     br {
