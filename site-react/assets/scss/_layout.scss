@@ -29,6 +29,7 @@ body {
     font-family: $font-sub;
     border-bottom: 0.5px solid #2e2e2e ;
     z-index: 5;
+
     .header__port {
         flex: 0 0 30%;
         a {
@@ -58,14 +59,18 @@ body {
     .header__menu {
         text-align: right;
         flex: 0 0 30%;
+
         ul {
             margin-right: 20px;
+
             li{
                 display: inline;
+
                 a {
                     display: inline-block;
                     padding: 10px;
-                    margin: 1px;
+                    margin: 2px;
+
                     &:hover {
                         color: #fff;
                     }
