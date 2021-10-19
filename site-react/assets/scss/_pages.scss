@@ -6,6 +6,7 @@
 
 // #mainCont 
 
+/* main page*/
 #mainCont { 
     position: relative;
     .bird {
@@ -264,3 +265,265 @@
         }
     }
 }
+
+/* about page */
+#aboutBody{
+    background-color:#F0EEEB;
+    .about {
+        margin: 0;
+        padding: 0;
+
+        .container{
+            width: 1273px;
+            margin: 0 auto;
+
+            h2{
+                margin-top: 174px;
+                font-size: 144px;
+                font-family: $font-main;
+            }
+            .aboutCont1 {
+                font-size: 18px;
+                width: 100%;
+                margin-top: 263px;
+                font-family: $font-kor1;
+
+                .desc {
+                    margin-top: 62px;
+                    width: 66%;
+                    
+                    p {
+                        margin-bottom: 30px;
+                        line-height: 1.6;
+                    }
+                }
+            }
+            .aboutCont2 {
+                width: 100%;
+                margin-top: 282px;
+                font-family: $font-kor1;
+                display: flex;
+                justify-content: space-between;
+                font-size: 18px;
+
+
+                .img {
+                    width: 66%;
+                    margin-right: 3%;
+                }
+
+                .desc {
+                    width: 29%;
+                    
+                    p {
+                        margin-bottom: 30px;
+                        line-height: 1.6;
+
+                    }
+                }
+                
+            }
+            .aboutCont3 {
+                font-size: 18px;
+
+                width: 100%;
+                margin-top: 342px;
+                font-family: $font-kor1;
+                display: flex;
+                justify-content: space-between;
+                overflow: hidden;
+                .desc {
+                    float: left;
+                    width: 40%;
+                    
+                    p {
+                        margin-bottom: 30px;
+                        line-height: 1.6;
+
+                    }
+                }
+                
+                .img {
+                    display: inline-block;
+                    width: 55%;
+                    img {
+                        float: right;
+                        width: 100%;
+
+                    }
+
+                }
+
+            }
+
+        }
+    }
+    .aboutCont4 {
+        z-index: 1000;
+        text-align: center;
+        padding: 260px 0;
+        width: 100%;
+        margin-top: 263px;
+        background-color: #000;
+        color: #fff;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        
+        p{
+            font-size: 20px;
+        }
+        h3{
+            margin-top: 60px;
+            font-family: $font-main;
+            font-size: 144px;
+        }
+        span{
+            margin-top: 60px;
+            font-size: 20px;
+            padding:1vw 3vw;
+            border: 1px solid #fff;
+            border-radius: 3vw;
+            line-height: 1.8;
+            display: inline-block;
+        }
+    }
+    #footer {
+        opacity: 0;
+    }
+}
+@media(max-width:1100px){
+    #aboutBody{
+        .about {
+            .container{
+                width: 85%;
+                margin: 0 auto;
+                .aboutCont1 {
+                    font-size: 16px;
+                }
+                .aboutCont2 {
+                    font-size: 16px;
+                    margin-top: 250px;
+                    .desc {
+                        width: 35%;
+                        
+                    }
+                    
+                }
+                .aboutCont3 {
+                    width: 100%;
+                    margin-top: 342px;
+                    font-size: 16px;
+
+                    .desc {
+                        width: 40%;
+                        
+                        p {
+                            margin-bottom: 30px;
+                            line-height: 1.6;
+    
+                        }
+                    }
+                }
+            }
+        }
+        .aboutCont4 {
+            padding: 230px 0;
+            width: 100%;
+            margin-top: 263px;
+            color: #fff;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+            
+            p{
+                font-size: 18px;
+            }
+            h3{
+                margin-top: 60px;
+                font-family: $font-main;
+                font-size: 100px;
+            }
+            span{
+                margin-top: 60px;
+                font-size: 18px;
+                padding:1vw 3vw;
+                border: 1px solid #fff;
+                border-radius: 3vw;
+                line-height: 1.8;
+            }
+        }
+    }
+}
+@media(max-width:800px){
+    #aboutBody{
+        .about {
+            .container{
+                h2 {
+                    font-size: 100px;
+                }
+                .aboutCont1 {
+                    font-size: 14px;
+
+                    .desc {
+                        margin-top: 50px;
+                        width: 100%;
+                    }
+                }
+                .aboutCont2 {
+                    display: block;
+                    font-size: 14px;
+
+                    .img {
+                        width: 100%;
+                        
+                        img{
+                            height: 40%;
+                            background-size: cover;
+                        }
+                    }
+                    .desc {
+                        margin-top: 50px;
+                        width: 100%;
+
+                        
+                    }
+                    
+                }
+                .aboutCont3 {
+                    width: 100%;
+                    margin: 342px 0 200px;
+                    font-size: 14px;
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    .desc {
+                        width: 100%;
+                        margin-top: 50px;
+                        width: 100%;
+                        display: inline-block;
+
+                        
+                        p {
+                            margin-bottom: 30px;
+                            line-height: 1.6;
+                        }
+                    }
+                    .img {
+                        width: 100%;
+
+
+                    }
+                }
+            }
+        }
+        .aboutCont4 {
+            display: none;
+
+        }
+        #footer {
+            opacity: 1;
+        }
+    }
+}
+

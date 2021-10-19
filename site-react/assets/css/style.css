@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;800&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;800&family=Nunito:wght@200;300;400&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap");
 @font-face {
   font-family: 'saol';
@@ -822,14 +823,6 @@ img {
   padding-bottom: 200px;
 }
 
-body {
-  width: 100%;
-  height: 100vh;
-  background: url(../img/bg.jpg) no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
 #header {
   position: fixed;
   left: 0;
@@ -1066,6 +1059,7 @@ body {
   }
 }
 
+/* main page*/
 #mainCont {
   position: relative;
 }
@@ -1346,5 +1340,256 @@ body {
   }
   #mainCont br {
     display: none;
+  }
+}
+
+/* about page */
+#aboutBody {
+  background-color: #F0EEEB;
+}
+
+#aboutBody .about {
+  margin: 0;
+  padding: 0;
+}
+
+#aboutBody .about .container {
+  width: 1273px;
+  margin: 0 auto;
+}
+
+#aboutBody .about .container h2 {
+  margin-top: 174px;
+  font-size: 144px;
+  font-family: "saol";
+}
+
+#aboutBody .about .container .aboutCont1 {
+  font-size: 18px;
+  width: 100%;
+  margin-top: 263px;
+  font-family: "Chosunilbo_myungjo";
+}
+
+#aboutBody .about .container .aboutCont1 .desc {
+  margin-top: 62px;
+  width: 66%;
+}
+
+#aboutBody .about .container .aboutCont1 .desc p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+#aboutBody .about .container .aboutCont2 {
+  width: 100%;
+  margin-top: 282px;
+  font-family: "Chosunilbo_myungjo";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+}
+
+#aboutBody .about .container .aboutCont2 .img {
+  width: 66%;
+  margin-right: 3%;
+}
+
+#aboutBody .about .container .aboutCont2 .desc {
+  width: 29%;
+}
+
+#aboutBody .about .container .aboutCont2 .desc p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+#aboutBody .about .container .aboutCont3 {
+  font-size: 18px;
+  width: 100%;
+  margin-top: 342px;
+  font-family: "Chosunilbo_myungjo";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+#aboutBody .about .container .aboutCont3 .desc {
+  float: left;
+  width: 40%;
+}
+
+#aboutBody .about .container .aboutCont3 .desc p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+#aboutBody .about .container .aboutCont3 .img {
+  display: inline-block;
+  width: 55%;
+}
+
+#aboutBody .about .container .aboutCont3 .img img {
+  float: right;
+  width: 100%;
+}
+
+#aboutBody .aboutCont4 {
+  z-index: 1000;
+  text-align: center;
+  padding: 260px 0;
+  width: 100%;
+  margin-top: 263px;
+  background-color: #000;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+#aboutBody .aboutCont4 p {
+  font-size: 20px;
+}
+
+#aboutBody .aboutCont4 h3 {
+  margin-top: 60px;
+  font-family: "saol";
+  font-size: 144px;
+}
+
+#aboutBody .aboutCont4 span {
+  margin-top: 60px;
+  font-size: 20px;
+  padding: 1vw 3vw;
+  border: 1px solid #fff;
+  border-radius: 3vw;
+  line-height: 1.8;
+  display: inline-block;
+}
+
+#aboutBody #footer {
+  opacity: 0;
+}
+
+@media (max-width: 1100px) {
+  #aboutBody .about .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+  #aboutBody .about .container .aboutCont1 {
+    font-size: 16px;
+  }
+  #aboutBody .about .container .aboutCont2 {
+    font-size: 16px;
+    margin-top: 250px;
+  }
+  #aboutBody .about .container .aboutCont2 .desc {
+    width: 35%;
+  }
+  #aboutBody .about .container .aboutCont3 {
+    width: 100%;
+    margin-top: 342px;
+    font-size: 16px;
+  }
+  #aboutBody .about .container .aboutCont3 .desc {
+    width: 40%;
+  }
+  #aboutBody .about .container .aboutCont3 .desc p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  #aboutBody .aboutCont4 {
+    padding: 230px 0;
+    width: 100%;
+    margin-top: 263px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+  }
+  #aboutBody .aboutCont4 p {
+    font-size: 18px;
+  }
+  #aboutBody .aboutCont4 h3 {
+    margin-top: 60px;
+    font-family: "saol";
+    font-size: 100px;
+  }
+  #aboutBody .aboutCont4 span {
+    margin-top: 60px;
+    font-size: 18px;
+    padding: 1vw 3vw;
+    border: 1px solid #fff;
+    border-radius: 3vw;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 800px) {
+  #aboutBody .about .container h2 {
+    font-size: 100px;
+  }
+  #aboutBody .about .container .aboutCont1 {
+    font-size: 14px;
+  }
+  #aboutBody .about .container .aboutCont1 .desc {
+    margin-top: 50px;
+    width: 100%;
+  }
+  #aboutBody .about .container .aboutCont2 {
+    display: block;
+    font-size: 14px;
+  }
+  #aboutBody .about .container .aboutCont2 .img {
+    width: 100%;
+  }
+  #aboutBody .about .container .aboutCont2 .img img {
+    height: 40%;
+    background-size: cover;
+  }
+  #aboutBody .about .container .aboutCont2 .desc {
+    margin-top: 50px;
+    width: 100%;
+  }
+  #aboutBody .about .container .aboutCont3 {
+    width: 100%;
+    margin: 342px 0 200px;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #aboutBody .about .container .aboutCont3 .desc {
+    width: 100%;
+    margin-top: 50px;
+    width: 100%;
+    display: inline-block;
+  }
+  #aboutBody .about .container .aboutCont3 .desc p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  #aboutBody .about .container .aboutCont3 .img {
+    width: 100%;
+  }
+  #aboutBody .aboutCont4 {
+    display: none;
+  }
+  #aboutBody #footer {
+    opacity: 1;
   }
 }
