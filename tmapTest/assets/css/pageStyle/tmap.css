@@ -1,0 +1,205 @@
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+button,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+body {
+    padding-top: 60px;
+    max-width: 600px;
+  }
+  #map {
+      height: 500px;
+  }
+  .main {
+    position :absolute;
+    top:100px;
+    width: 100vw;
+    max-width: 600px;
+    height: 530px;
+    border: 1px gray solid;
+  }
+  
+  .main .main__header {
+    height: 30px;
+    margin-left:10px;
+    padding-top:4px;
+  }
+  
+  .main .main__map {  /* border: 1px gray solid; */
+    height: 500px;
+  }
+  
+  .main__map-empty {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .option-bar {
+    background-color: #ac8282;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    max-width: 600px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .option-bar .option-bar__column {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    flex: 1 1 auto;
+    border: 1px gray solid;
+  }
+  
+  .option-bar .option-bar__column .option-bar__column__checkbox {
+    position: absolute;
+    top: 15px;
+    padding-left: 0.7em;
+    text-align: left;
+  }
+  
+
+  button {
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    background-color: #e1edff;
+    border: none;
+  }
+  
+  input[type="checkbox"] {
+    width: 2em;
+    height: 2em;
+    font-size: 0.5em;
+  
+    position: relative;
+    top: 0.5em;
+}
+
