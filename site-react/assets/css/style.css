@@ -1060,11 +1060,19 @@ img {
 }
 
 /* main page*/
-#mainCont {
+#mainBody {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#mainBody #mainCont {
   position: relative;
 }
 
-#mainCont .bird {
+#mainBody #mainCont .bird {
   position: absolute;
   width: 45vw;
   height: 45vw;
@@ -1078,7 +1086,7 @@ img {
   overflow: hidden;
 }
 
-#mainCont .bird img {
+#mainBody #mainCont .bird img {
   left: -7%;
   top: -7%;
   position: absolute;
@@ -1092,7 +1100,7 @@ img {
   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84), -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
 }
 
-#mainCont .wave {
+#mainBody #mainCont .wave {
   padding: 5vw 1.5vw 1.5vw 1.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1104,18 +1112,18 @@ img {
   background-color: #ccc1ba;
 }
 
-#mainCont .wave .desc {
+#mainBody #mainCont .wave .desc {
   width: 35%;
   margin-right: 1.5vw;
 }
 
-#mainCont .wave .desc h3 {
+#mainBody #mainCont .wave .desc h3 {
   color: #4b4b4b;
   font-family: "Playfair Display";
   font-size: 4vw;
 }
 
-#mainCont .wave .wave_inner {
+#mainBody #mainCont .wave .wave_inner {
   position: relative;
   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
   transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
@@ -1126,7 +1134,7 @@ img {
   height: 29.5vw;
 }
 
-#mainCont .wave .wave_inner img {
+#mainBody #mainCont .wave .wave_inner img {
   margin-top: 8vw;
   position: absolute;
   width: 110%;
@@ -1139,7 +1147,7 @@ img {
   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84), -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
 }
 
-#mainCont .sea {
+#mainBody #mainCont .sea {
   padding: 1.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1157,7 +1165,7 @@ img {
   overflow: hidden;
 }
 
-#mainCont .sea .img {
+#mainBody #mainCont .sea .img {
   background: url(../img/sea.jpg) no-repeat;
   background-size: cover;
   width: 60%;
@@ -1165,38 +1173,38 @@ img {
      object-fit: cover;
 }
 
-#mainCont .sea .img:hover {
+#mainBody #mainCont .sea .img:hover {
   opacity: 0.8;
 }
 
-#mainCont .sea .desc {
+#mainBody #mainCont .sea .desc {
   width: 40%;
   font-family: "Nunito";
   margin-left: 1.5vw;
 }
 
-#mainCont .sea .desc .menu {
+#mainBody #mainCont .sea .desc .menu {
   color: #000;
   margin-bottom: 14vw;
   font-size: 1vw;
 }
 
-#mainCont .sea .desc .menu span {
+#mainBody #mainCont .sea .desc .menu span {
   display: block;
   text-align: right;
 }
 
-#mainCont .sea .desc .explore {
+#mainBody #mainCont .sea .desc .explore {
   display: inline-block;
 }
 
-#mainCont .sea .desc .explore span {
+#mainBody #mainCont .sea .desc .explore span {
   text-align: left;
   font-size: 1.2vw;
   position: relative;
 }
 
-#mainCont .sea .desc .explore span::after {
+#mainBody #mainCont .sea .desc .explore span::after {
   margin-left: 15px;
   position: absolute;
   content: '';
@@ -1207,7 +1215,7 @@ img {
   background-size: cover;
 }
 
-#mainCont .main__cont {
+#mainBody #mainCont .main__cont {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1229,7 +1237,7 @@ img {
   left: 2vw;
 }
 
-#mainCont br {
+#mainBody #mainCont br {
   display: none;
 }
 
