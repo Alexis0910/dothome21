@@ -8,25 +8,505 @@
     <title>Parallax Apple | Alexis</title>
     <style>
         @font-face {
+            font-family: 'saol';
+            src: url(../fonts/saol.woff2) format("woff2");
+            src: url(../fonts/saol.woff) format("woff2");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Chosunilbo_myungjo';
+            src: url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff) format("woff");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* devanagari */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pasEfOqeefkkbIxyyg.woff2) format("woff2");
+            unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pasEfOleefkkbIxyyg.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pasEfOreefkkbIx.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* devanagari */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDIxapCSOBg7S-QT7p4GM-aGW-rOq7s.woff2) format("woff2");
+            unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDIxapCSOBg7S-QT7p4JM-aGW-rOq7s.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDIxapCSOBg7S-QT7p4HM-aGW-rO.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* devanagari */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pb0EPOqeefkkbIxyyg.woff2) format("woff2");
+            unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pb0EPOleefkkbIxyyg.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pb0EPOreefkkbIx.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* devanagari */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pbYF_OqeefkkbIxyyg.woff2) format("woff2");
+            unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pbYF_OleefkkbIxyyg.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pbYF_OreefkkbIx.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* devanagari */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pa8FvOqeefkkbIxyyg.woff2) format("woff2");
+            unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pa8FvOleefkkbIxyyg.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/rajdhani/v10/LDI2apCSOBg7S-QT7pa8FvOreefkkbIx.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* cyrillic */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+
+        /* vietnamese */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 100;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 200;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 300;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 400;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 500;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 600;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 700;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 800;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'SCoreDream';
+            font-weight: 900;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
             font-family: 'NEXONLv1Gothic';
             font-weight: 300;
             src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
             font-style: normal;
         }
-        
+
         @font-face {
             font-family: 'NEXONLv1Gothic';
             font-weight: 400;
             src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
             font-style: normal;
         }
-        
+
         @font-face {
             font-family: 'NEXONLv1Gothic';
             font-weight: 700;
             src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
             font-style: normal;
         }
+
         @font-face {
             font-family: 'NEXONLv2Gothic';
             font-weight: 300;
@@ -96,7 +576,8 @@
 
         /* //scroll */
         #contents {}
-        #contents >div{
+
+        #contents>div {
             position: relative;
         }
 
@@ -108,7 +589,7 @@
             /* background: red; */
             height: 21000px;
             z-index: 2000;
-            
+
         }
 
         #section3 {
@@ -132,12 +613,14 @@
             width: 100%;
             vertical-align: top;
         }
+
         .fixed {
             position: fixed;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
         }
+
         .s1Text1 {
             font-size: 8vw;
             font-weight: 700;
@@ -148,25 +631,30 @@
             font-weight: 700;
             white-space: nowrap;
         }
+
         .s1Text3 {
             width: 100vw;
         }
+
         .s1Text3 img {
             height: 100vh;
             object-fit: cover;
 
         }
+
         .s1Text4 {
             width: 30vw;
             height: 30vw;
             background: #000;
             border-radius: 50vw;
         }
-        .s1Text4 span{
+
+        .s1Text4 span {
             font-size: 4vw;
             color: #fff;
             position: absolute;
-            left: 50%; top: 50%;
+            left: 50%;
+            top: 50%;
             transform: translate(-50%, -50%);
         }
 
@@ -184,19 +672,21 @@
         }
 
 
-        .s2Text2 > div {
+        .s2Text2>div {
             color: #fff;
             display: flex;
             justify-content: space-between;
             width: 55vw;
             opacity: 0;
         }
-        .s2Text2 > div h2 {
+
+        .s2Text2>div h2 {
             flex: 0 0 30%;
             font-size: 2vw;
             line-height: 1.4;
         }
-        .s2Text2 > div p {
+
+        .s2Text2>div p {
             flex: 0 0 60%;
             font-size: 1.1vw;
             line-height: 1.7;
@@ -209,31 +699,37 @@
             background: url(../assets/img/mockup/apple-pad-mokup.png)no-repeat;
             background-size: 100%;
             background-position: center top;
-            top:60%;
+            top: 60%;
 
         }
-        .s2Text3 .img-wrap{
+
+        .s2Text3 .img-wrap {
             position: relative;
-            width: 94%; height: 100%;
+            width: 94%;
+            height: 100%;
             margin: 3%;
             overflow: hidden;
             border-top-right-radius: 0.9vw;
             border-top-left-radius: 0.9vw;
         }
-        .s2Text3 .img-wrap > div {
+
+        .s2Text3 .img-wrap>div {
             position: absolute;
-            top:0;
+            top: 0;
             width: 100%;
             left: 100%;
         }
-        .s2Text3 .img-wrap > div:nth-child(1){
+
+        .s2Text3 .img-wrap>div:nth-child(1) {
             left: 0;
         }
-        .s2Text3 .img-wrap img {
-        }
-        .s2Text3 .img-wrap a{
+
+        .s2Text3 .img-wrap img {}
+
+        .s2Text3 .img-wrap a {
             position: absolute;
-            left: 50%; top: 50%;
+            left: 50%;
+            top: 50%;
             transform: translate(-50%, -50%);
             width: 10vw;
             height: 10vw;
@@ -244,235 +740,197 @@
             font-size: 2vw;
             text-align: center;
         }
+
     </style>
 </head>
 
 <body>
     <div class="scroll">0</div>
     <div id="contents">
-        <section id="section1"
-            data-0 = "display: block";
-            data-8000-end = "display: none";
-        >
-            <div class="s1Text1 fixed" 
-                data-0="transform: translate(-50%, -30%); opacity: 0;"
+        <section id="section1" data-0="display: block" ; data-8000-end="display: none" ;>
+            <div class="s1Text1 fixed" data-0="transform: translate(-50%, -30%); opacity: 0;"
                 data-500="transform: translate(-50%, -30%); opacity: 1;"
                 data-1000="transform: translate(-50%, -100%); opacity: 0;">안녕하세요!</div>
-            <div class="s1Text2 fixed"
-                data-1500="transform: translate(-50%, -30%); opacity: 0;"
+            <div class="s1Text2 fixed" data-1500="transform: translate(-50%, -30%); opacity: 0;"
                 data-2000="transform: translate(-50%, -30%); opacity: 1;"
                 data-2500="transform: translate(-50%, -50%); opacity: 1; font-size: 8vw;"
-                data-3500="transform: translate(-50%, -50%); opacity: 1; font-size: 0vw;"
-                >프론트앤드 개발자입니다.
+                data-3500="transform: translate(-50%, -50%); opacity: 1; font-size: 0vw;">프론트앤드 개발자입니다.
             </div>
-            <div class="s1Text3 fixed"
-                data-3200 = "width: 0vw"
-                data-4200 = "width: 100vw"  
-                data-10200 = "width: 100vw; display: block"  
-                data-10201 = "width: 100vw; display: none;"  
-            ><img src="../assets/img/waterblur.jpg" alt="이미지">
+            <div class="s1Text3 fixed" data-3200="width: 0vw" data-4200="width: 100vw"
+                data-10200="width: 100vw; display: block" data-10201="width: 100vw; display: none;"><img
+                    src="../assets/img/waterblur.jpg" alt="이미지">
             </div>
-            <div class="s1Text4 fixed"
-                data-3800 = "width: 0vw; height:0vw;"
-                data-4300 = "width: 40vw; height:40vw;" 
-                data-5500 = "width: 40vw; height:40vw;" 
-                data-6500 = "width: 250vw; height:250vw;" 
-                data-24500 = "width: 250vw; height:250vw;" 
-                data-26000 = "width: 0vw; height:0vw;" 
-            ><span 
-                data-4000 = "transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
-                data-4500 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
-                data-5500 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
-                data-6500 = "transform: translate(-50%, -50%) scale(0) rotate(0deg)"
-            
-            >Hello!</span>
+            <div class="s1Text4 fixed" data-3800="width: 0vw; height:0vw;" data-4300="width: 40vw; height:40vw;"
+                data-5500="width: 40vw; height:40vw;" data-6500="width: 250vw; height:250vw;"
+                data-24500="width: 250vw; height:250vw;" data-26000="width: 0vw; height:0vw;"><span
+                    data-4000="transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
+                    data-4500="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                    data-5500="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                    data-6500="transform: translate(-50%, -50%) scale(0) rotate(0deg)">Hello!</span>
             </div>
         </section>
         <!-- //section1 -->
         <section id="section2">
-            <div class="s2Text1 fixed"
-                data-7000 = "transform: translate(-50%, -50%) scale(1);  top:50%; opacity:0;"
-                data-8000 = "transform: translate(-50%, -50%) scale(1);  top:50%; opacity:1;"
-                data-9000 = "transform: translate(-50%, -50%) scale(0.7);  top:15%; opacity:1;"
-                data-23500 = "transform: translate(-50%, -50%) scale(0.7);  top:15%; opacity:1;"
-                data-24500 = "transform: translate(-50%, -50%) scale(1);  top:50%; opacity:1;"
-                data-26000 = "transform: translate(-50%, -50%) scale(0);  top:50%; opacity:1;"
-            >I've Been Working On Sites</div>
-            
-            
+            <div class="s2Text1 fixed" data-7000="transform: translate(-50%, -50%) scale(1);  top:50%; opacity:0;"
+                data-8000="transform: translate(-50%, -50%) scale(1);  top:50%; opacity:1;"
+                data-9000="transform: translate(-50%, -50%) scale(0.7);  top:15%; opacity:1;"
+                data-23500="transform: translate(-50%, -50%) scale(0.7);  top:15%; opacity:1;"
+                data-24500="transform: translate(-50%, -50%) scale(1);  top:50%; opacity:1;"
+                data-26000="transform: translate(-50%, -50%) scale(0);  top:50%; opacity:1;">I've Been Working On Sites
+            </div>
+
+
             <div class="s2Text2">
-                <div class="t1 fixed"
-                    data-9000 = "opacity:0; top:50%;"
-                    data-10000 = "opacity:1; top:30%;"
-                    data-11500 = "opacity:1; top:30%;"
-                    data-12500 = "opacity:0; top:50%;"
-                >
-                    <h2>웹표준을 준수한 <br>웹표준 사이트 제작</h2>    
+                <div class="t1 fixed" data-9000="opacity:0; top:50%;" data-10000="opacity:1; top:30%;"
+                    data-11500="opacity:1; top:30%;" data-12500="opacity:0; top:50%;">
+                    <h2>웹표준을 준수한 <br>웹표준 사이트 제작</h2>
                     <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다.
                         웹 표준에 필요한 인식의 용이성, 운용의 용의성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스 브라우징도 작업하였습니다.</p>
                 </div>
-                <div class="t2 fixed"
-                    data-12500 = "opacity:0; top:50%;"
-                    data-13500 = "opacity:1; top:30%;"
-                    data-15000 = "opacity:1; top:30%;"
-                    data-16000 = "opacity:0; top:50%;"
-                >
-                    <h2>반응형을 준수한 <br>웹표준 사이트 제작</h2>    
+                <div class="t2 fixed" data-12500="opacity:0; top:50%;" data-13500="opacity:1; top:30%;"
+                    data-15000="opacity:1; top:30%;" data-16000="opacity:0; top:50%;">
+                    <h2>반응형을 준수한 <br>웹표준 사이트 제작</h2>
                     <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다.
                         웹 표준에 필요한 인식의 용이성, 운용의 용의성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스 브라우징도 작업하였습니다.</p>
                 </div>
-                <div class="t3 fixed"
-                    data-16000 = "opacity:0; top:50%;"
-                    data-17000 = "opacity:1; top:30%;"
-                    data-18500 = "opacity:1; top:30%;"
-                    data-19500 = "opacity:0; top:50%;"
-                >
-                    <h2>영화 사이트<br>웹표준 사이트 제작</h2>    
+                <div class="t3 fixed" data-16000="opacity:0; top:50%;" data-17000="opacity:1; top:30%;"
+                    data-18500="opacity:1; top:30%;" data-19500="opacity:0; top:50%;">
+                    <h2>영화 사이트<br>웹표준 사이트 제작</h2>
                     <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다.
                         웹 표준에 필요한 인식의 용이성, 운용의 용의성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스 브라우징도 작업하였습니다.</p>
                 </div>
-                <div class="t4 fixed"
-                    data-19500 = "opacity:0; top:50%;"
-                    data-20500 = "opacity:1; top:30%;"
-                    data-22000 = "opacity:1; top:30%;"
-                    data-23000 = "opacity:0; top:50%;"
-                >
-                    <h2>PHP이용 사이트<br>웹표준 사이트 제작</h2>    
+                <div class="t4 fixed" data-19500="opacity:0; top:50%;" data-20500="opacity:1; top:30%;"
+                    data-22000="opacity:1; top:30%;" data-23000="opacity:0; top:50%;">
+                    <h2>PHP이용 사이트<br>웹표준 사이트 제작</h2>
                     <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다.
                         웹 표준에 필요한 인식의 용이성, 운용의 용의성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스 브라우징도 작업하였습니다.</p>
                 </div>
             </div>
 
-            <div class="s2Text3 fixed"
-                data-8000 = "top:210%; transform: translate(-50%, -50%) scale(2.4);"
-                data-9000 = "top:70%; transform: translate(-50%, -50%) scale(1);"
-                data-23000 = "top:70%; transform: translate(-50%, -50%) scale(1); opacity:1"
-                data-24000 = "top:70%; transform: translate(-50%, -50%) scale(1); opacity:0"
-
-            ><div class="img-wrap"
-                data-0= "display:block;"    
-                data-26000= "display:block;"    
-                data-26001= "display:none;"    
-            >
-                <!-- <div class="view">VIEW</div> -->
-                <div class="img1"
-                    data-11000 = "left:0%"    
-                    data-13000 = "left:-100%"    
-                >
-                    <img src="../assets/img/mockup/apple-site01.jpg" alt="이미지1"
-                    ><a href="">VIEW</a>
+            <div class="s2Text3 fixed" data-8000="top:210%; transform: translate(-50%, -50%) scale(2.4);"
+                data-9000="top:70%; transform: translate(-50%, -50%) scale(1);"
+                data-23000="top:70%; transform: translate(-50%, -50%) scale(1); opacity:1"
+                data-24000="top:70%; transform: translate(-50%, -50%) scale(1); opacity:0">
+                <div class="img-wrap" data-0="display:block;" data-26000="display:block;" data-26001="display:none;">
+                    <!-- <div class="view">VIEW</div> -->
+                    <div class="img1" data-11000="left:0%" data-13000="left:-100%">
+                        <img src="../assets/img/mockup/apple-site01.jpg" alt="이미지1"><a href="">VIEW</a>
+                    </div>
+                    <div class="img2" data-11000="left:100%" data-13000="left:0%" data-15000="left:0%"
+                        data-16000="left:-100%">
+                        <img src="../assets/img/mockup/apple-site02.jpg" alt="이미지2">
+                        <a href="">VIEW</a>
+                    </div>
+                    <div class="img3" data-15000="left:100%" data-16000="left:0%" data-18000="left:0%"
+                        data-19000="left:-100%">
+                        <img src="../assets/img/mockup/apple-site03.jpg" alt="이미지3">
+                        <a href="">VIEW</a>
+                    </div>
+                    <div class="img4" data-18000="left:100%" data-19000="left:0%">
+                        <img src="../assets/img/mockup/apple-site04.jpg" alt="이미지4">
+                        <a href="">VIEW</a>
+                    </div>
                 </div>
-                <div class="img2"
-                    data-11000 = "left:100%"    
-                    data-13000 = "left:0%"  
-                    data-15000 = "left:0%"  
-                    data-16000 = "left:-100%"  
-                >
-                    <img src="../assets/img/mockup/apple-site02.jpg" alt="이미지2" >
-                    <a href="">VIEW</a>
-                </div>
-                <div class="img3"
-                    data-15000 = "left:100%"    
-                    data-16000 = "left:0%"  
-                    data-18000 = "left:0%"  
-                    data-19000 = "left:-100%"  
-                >
-                    <img src="../assets/img/mockup/apple-site03.jpg" alt="이미지3" >
-                    <a href="">VIEW</a>
-                </div>
-                <div class="img4"
-                    data-18000 = "left:100%"    
-                    data-19000 = "left:0%"  
-                >
-                    <img src="../assets/img/mockup/apple-site04.jpg" alt="이미지4" >
-                    <a href="">VIEW</a>
-                </div>
-            </div>
         </section>
         <!-- //section2 -->
         <style>
-            #section3{
+            #section3 {
                 color: #fff;
-                background-color: rgb(68, 68, 68);
+                background-color: #da9cb3;
                 position: relative;
 
             }
-            .dot {
-                position: absolute;
-                width: 60vw;
-                height: 60vw;
-                background: #fff;
-                border-radius: 50%;
-                transform: translate(80%, -50%);
-            }
+
             .s3Text1 {
-                font-size: 9vw;
+                font-size: 8vw;
                 font-weight: 700;
                 font-family: 'NEXONLv1Gothic';
+                z-index: 10;
+
             }
-            .s3Text1 span {
+            .s3Text1 .notes {
+                /* margin: 0 auto; */
+                position: absolute;
+                left: -11vw;
+                top: -28vw;
+                width: 70vw;
+                height: 90vh;
+                background: url(../assets/img/pngegg.png) no-repeat;
+                background-size: cover;
+            }
+            .s3Text1 span{
                 display: inline-block;
+                padding: 0 1vw;
             }
             .s3Text1 .s1 {
             }
             .s3Text1 .s2 {
-
+                background-color: #fff;
+                font-family: 'Playfair Display';
+                color: #000;
             }
             .s3Text1 .s3 {
+            font-family: 'Chosunilbo_myungjo';
 
             }
+
             .s3Text1 .s4 {
-
+                background-color: #000;
+                
             }
-            .s3Text1 .s5 {
-            }  
-            .s3Text1 .s6 {
 
-            }
+            .s3Text1 .s5 {}
+
+            .s3Text1 .s6 {}
+            
+
         </style>
         <section id="section3">
-            <div class="dot"
-                data-25300="display:none;"
-                data-26500="display:block; transform: translate(70%, -50%) scale(1);"
-                data-27800="display:block; transform: translate(70%, -50%) scale(1);"
-                data-29000="display:block; transform: translate(60%, 100%) scale(0.4);"
-                data-30000="display:block; transform: translate(60%, 300%) scale(0.1);"
-            ></div>
+
             <div class="s3Text1 fixed"
-
             >
-                <span class="s1"
-                    data-28000="transform: translate(0vw, 20vw); display:none;"
-                    data-29000="transform: translate(0vw, 20vw); display:inline-block;"
-                    data-30000="transform: translate(0vw, 0vw); display:inline-block;"
-                >S</span>
-                <span class="s2"
-                data-28000="transform: translate(0vw, 20vw); display:none;"
-                data-29000="transform: translate(0vw, 20vw); display:inline-block;"
-                data-30000="transform: translate(0vw, 0vw); display:inline-block;"
-
-                >c</span>
-                <span class="s3"
-                data-28000="transform: translate(0vw, 20vw); display:none;"
-                data-29000="transform: translate(0vw, 20vw); display:inline-block;"
-                data-30000="transform: translate(0vw, 0vw); display:inline-block;"
-                >r</span>
-                <span class="s4"
-                data-28000="transform: translate(0vw, 20vw); display:none;"
-                data-29000="transform: translate(0vw, 20vw); display:inline-block;"
-                data-30000="transform: translate(0vw, 0vw); display:inline-block;"
-                >i</span>
-                <span class="s5"
-                data-28000="transform: translate(0vw, 20vw); display:none;"
-                data-29000="transform: translate(0vw, 20vw); display:inline-block;"
-                data-30000="transform: translate(0vw, 0vw); display:inline-block;"
-                >p</span>
-                <span class="s6"
-                data-28000="transform: translate(0vw, 20vw); display:none;"
-                data-29000="transform: translate(0vw, 20vw); display:inline-block;"
-                data-30000="transform: translate(0vw, 0vw); display:inline-block;"
-                >t</span>
+            <div class="notes"
+                data-27500="transform: translate(0vw, 20vw); opacity:0;"
+                data-29000="transform: translate(0vw, 0vw); opacity:1;"
+                data-33000="transform: translate(0vw, 0vw); opacity:1;">
             </div>
+                <span class="s1" 
+                    data-27500="transform: translate(0vw, 20vw) rotate(0deg); opacity:0; background-color:transparent;"
+                    data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1;  background-color:transparent; color:black;"
+                    data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1;  background-color:transparent; color:black;"
+                    data-30000="transform: translate(0vw, 0vw) rotate(-10deg); opacity:1; background-color:black; color:white;"
+                    >S</span>
+                <span class="s2" 
+                    data-27500="transform: translate(0vw, 20vw) rotate(0deg); opacity:0; background-color:transparent;"
+                    data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1; color:gray; background-color:transparent;"
+                    data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; color:gray; background-color:transparent;"
+                    data-30000="transform: translate(0vw, 0vw) rotate(10deg); opacity:1; background-color:white; color:black; border:1px solid black;"
+                    >c</span>
+                <span class="s3"
+                    data-27500="transform: translate(0vw, 20vw) rotate(0deg); opacity:0;  background-color:transparent;"
+                    data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1; color:white;  background-color:transparent;"
+                    data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; color:white;  background-color:transparent;"
+                    data-30000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; background-color:gray; color:white;"
+                    ">r</span>
+                <span class="s4" 
+                    data-27500="transform: translate(0vw, 20vw) rotate(0deg); opacity:0;"
+                    data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1; color:black;"
+                    data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; color:black;"
+                    data-30000="transform: translate(0vw, 0vw) rotate(10deg); opacity:1; background-color:black; color:white;"
+                    ">i</span>
+                <span class="s5" 
+                    data-27500="transform: translate(0vw, 20vw); opacity:0;"
+                    data-28500="transform: translate(0vw, 20vw); opacity:1;"
+                    data-29000="transform: translate(0vw, 0vw); opacity:1;
+                    ">p</span>
+                <span class="s6" 
+                    data-27500="transform: translate(0vw, 20vw); opacity:0;"
+                    data-28500="transform: translate(0vw, 20vw); opacity:1;"
+                    data-29000="transform: translate(0vw, 0vw); opacity:1;
+                    ">t</span>
+            </div>
+
+
         </section>
         <!-- //section3 -->
         <section id="section4">
@@ -497,7 +955,6 @@
             });
 
             let imgWidth = document.querySelector(".img1").clientWidth;
-
         </script>
 </body>
 
