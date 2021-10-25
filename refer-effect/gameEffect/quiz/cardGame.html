@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Effect - jQuery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        @font-face {
+            font-family: 'ONE-Mobile-POP';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'SBAggroB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'SBAggroL';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }@font-face {
+            font-family: 'SBAggroM';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            background: rgb(234, 235, 217);
+        }
+
+
+        /* audio */
+        .audio {
+            position: absolute;
+            right: 20px; top: 20px;
+        }
+        .audio .btn-sound{
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            line-height: 37px;
+            color: #fff;
+            border-radius: 50%;
+            width: 40px; height: 40px;
+            background: rgb(88, 109, 50);
+            cursor: pointer;
+        }
+        /* .off {
+            display: none;
+        } */
+
+        /* title */
+        .title {
+            position: absolute;
+            left: 20px; top:20px;
+        }
+        .title h1{
+            font-family: 'SBAggroB';
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        .score{
+            font-family: 'SBAggroL';
+            font-size: 30px;
+        }
+        .success {
+            display: none;
+        }
+        /* card */
+        .cardWrap {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px; 
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            perspective: 600px;
+            border: 6px solid rgb(20, 78, 56);
+            background-color: rgb(214, 250, 232);
+            padding: 1vw;
+            border-radius: 1vw;
+        }
+        .cardWrap .card{
+            width: 8vw;
+            height: 20vh;
+            border-radius: 0.4vw;
+            transform-style: preserve-3d;
+            transition: all 0.6s;
+            cursor: pointer;
+        }
+        .cardWrap .card > div {
+            position: absolute;
+            left: 0;   top: 0;
+            width: 100%;  height: 100%;
+            backface-visibility: hidden;
+            background-color: rgb(1, 155, 116);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 90%;
+
+        }
+        /* .cardWrap .card:hover{
+            transform: rotateY(-180deg);
+
+        } */
+        .cardWrap .card .front {
+            transform: rotateY(0deg);
+        }
+        .cardWrap .card .back {
+            transform: rotateY(-180deg);
+            background-color: rgb(94, 9, 9);
+
+        }
+        .cardWrap .card .front {
+            background-image: url(../../../assets/img/png-512/christmas-socks-512x512-1619928.png);
+        }
+        
+        .card[data-type=img1] .back{ background-image: url(../../../assets/img/png-512/coffin-512x512-1582093.png);}
+        .card[data-type=img2] .back{ background-image: url(../../../assets/img/png-512/danger-512x512-1582105.png);}
+        .card[data-type=img3] .back{ background-image: url(../../../assets/img/png-512/death-scythe-512x512-1582092.png);}
+        .card[data-type=img4] .back{ background-image: url(../../../assets/img/png-512/eye-with-blood-512x512-1582098.png);}
+        .card[data-type=img5] .back{ background-image: url(../../../assets/img/png-512/ghost-512x512-1582091.png);}
+        .card[data-type=img6] .back{ background-image: url(../../../assets/img/png-512/mummy-512x512-1582086.png);}
+        .card[data-type=img7] .back{ background-image: url(../../../assets/img/png-512/voodoo-doll-512x512-1582102.png);}
+        .card[data-type=img8] .back{ background-image: url(../../../assets/img/png-512/scary-night-512x512-1582083.png);}
+        .card[data-type=img9] .back{ background-image: url(../../../assets/img/png-512/scary-hand-512x512-1582106.png);}
+        .cardWrap .card .back {}
+    </style>
+</head>
+<body>
+    <main>
+        <article class="audio">
+            <span class="btn-sound">
+                <!-- <i class="fa fa-volume-up" aria-hidden="true"></i> -->
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+            </span>
+            <audio id="theme-song" src="../../assets/audio/Operatic 3 - Vibe Mountain.mp3" loop="loop"></audio>
+        </article>
+
+        <article class="title">
+            <h1>카드 뒤집기 게임</h1>
+            <div class="score">
+                <p class="truns">기회 : <span>5</span>회</p>
+                <p class="attempts">시도 : <span>0</span> </p>
+                <p class="wins">우승 : <span>0</span> </p>
+            </div>
+        </article>
+        <article class="success">
+            <h2 class="msg">Perpect!</h2>
+            <div class="score">
+                <p class="truns">기회 : <span>5</span> </p>
+                <p class="attempts">시도 : <span>0</span> </p>
+                <p class="wins">우승 : <span>0</span> </p>
+            </div>
+            <button class="class-continue">다시 도전하기</button>
+        </article>
+
+        <section class="cardWrap">
+            <div class="card" data-type="img1">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img1">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img2">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img2">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img3">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img3">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img4">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img4">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img5">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img5">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img6">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img6">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img7">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img7">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img8">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img8">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img9">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+            <div class="card" data-type="img9">
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+    <script>
+        const $btnSound = $(".btn-sound"),
+        $themeSong = $("#theme-song")[0],
+
+        dataType = "data-type",
+        selectedClass = "is-selected"
+
+        let sound = [
+            "../../assets/audio/match2.mp3",
+            "../../assets/audio/match.mp3",
+            "../../assets/audio/up.mp3",],  
+            soundMatch = new Audio(sound[0]),
+            soundNoMatch = new Audio(sound[1]),
+            soundSuccess = new Audio(sound[2]);
+
+        //audio 버튼을 클릭하면 꺼지고,.. 클릭하면 켜지고 내가한것! (i에게 on off 붙여놔서)
+        // $btnSound.on("click", function(){ 
+        //     $(".btn-sound .fa").toggleClass("on off");
+        // });
+
+        //샘이한것
+        $btnSound.on("click", function(){
+            $(this).toggleClass("is-playing")
+
+            if($(this).hasClass("is-playing")){
+                $themeSong.play();
+            } else {
+                $themeSong.pause();
+            }
+            $(this).find("i").toggleClass("fa-volume-up fa-volume-off");
+        });
+    </script>
+</body>
+</html>
