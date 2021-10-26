@@ -353,31 +353,31 @@
     <script>
 
 window.addEventListener("mousemove", function (e) {
-            const w = document.querySelector('.cursor').clientWidth / 2;
-            const y = document.querySelector('.cursor').clientHeight / 2;
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
+    const w = document.querySelector('.cursor').clientWidth / 2;
+    const y = document.querySelector('.cursor').clientHeight / 2;
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
 
-            const items = document.querySelectorAll(".item");
-            items.forEach((item, index) => {
-                // const itemX = item.offsetLeft + 25;
-                // const itemY = item.offsetTop + 25;
-                // const diffX = mouseX - itemX;
-                // const diffY = mouseY - itemY;
-                // const radians = Math.atan2(diffY, diffX);
-                // const angle = radians * 180 / Math.PI;
+    const items = document.querySelectorAll(".item");
+    items.forEach((item, index) => {
+        // const itemX = item.offsetLeft + 25;
+        // const itemY = item.offsetTop + 25;
+        // const diffX = mouseX - itemX;
+        // const diffY = mouseY - itemY;
+        // const radians = Math.atan2(diffY, diffX);
+        // const angle = radians * 180 / Math.PI;
 
-                // item.style.transform = "rotate("+angle+"deg)";
+        // item.style.transform = "rotate("+angle+"deg)";
 
-                const itemX = item.offsetLeft - mouseX;
-                const itemY = item.offsetTop - mouseY;
+        const itemX = item.offsetLeft - mouseX;
+        const itemY = item.offsetTop - mouseY;
 
-                const dist = Math.sqrt(itemX * itemX + itemY * itemY);
-                const score = Math.exp(dist * -0.003);
+        const dist = Math.sqrt(itemX * itemX + itemY * itemY);
+        const score = Math.exp(dist * -0.003);
 
-                item.style.transform = `scale(${score})`;
+        item.style.transform = `scale(${score})`;
 
-            });
+    });
 
 
             //커서
