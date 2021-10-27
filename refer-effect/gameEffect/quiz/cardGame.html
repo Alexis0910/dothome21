@@ -361,26 +361,26 @@
         //이미지들은 기본 false값인데 select가 되서 서로 두개가 맞으면 false를 true로 바꿔주는 작업을 합니다.
         
         
-//카드를 클릭하면  is-selected가 나타나게 표시해줄것임.
-$card.click(function(){
-//dataMatched == false이면 클릭한 카드에 is-selected 추가
-if($(this).attr(dataMatch) == "false"){
-    $(this).addClass(selectedClass);
-}
-
-let selectedCards = $("."+selectedClass);
-//만약에 카드1와 카드2가 가 같다면 (data-type이 같다면) dataMatched를 false에서 true로 변경
-if(selectedCards.length == 2){
-
-    //버그방지 is.disabled css에 이벤트 none해놧기때문에 
-    $cardWrap.addClass(playStop);
-    card1 = selectedCards.eq(0).attr(dataType);
-    card2 = selectedCards.eq(1).attr(dataType);
-
-    if( card1 == card2 ){
-        //만약 카드1과 카드2가 같으면 dataMatched를 -> true로 변경 / 음악재생(정답일때)
-        selectedCards.attr(dataMatch, true).removeClass(selectedClass);
-        $cardWrap.removeClass(playStop);
+        //카드를 클릭하면  is-selected가 나타나게 표시해줄것임.
+        $card.click(function(){
+        //dataMatched == false이면 클릭한 카드에 is-selected 추가
+        if($(this).attr(dataMatch) == "false"){
+            $(this).addClass(selectedClass);
+        }
+        
+        let selectedCards = $("."+selectedClass);
+        //만약에 카드1와 카드2가 가 같다면 (data-type이 같다면) dataMatched를 false에서 true로 변경
+        if(selectedCards.length == 2){
+        
+            //버그방지 is.disabled css에 이벤트 none해놧기때문에 
+            $cardWrap.addClass(playStop);
+            card1 = selectedCards.eq(0).attr(dataType);
+            card2 = selectedCards.eq(1).attr(dataType);
+        
+            if( card1 == card2 ){
+                //만약 카드1과 카드2가 같으면 dataMatched를 -> true로 변경 / 음악재생(정답일때)
+                selectedCards.attr(dataMatch, true).removeClass(selectedClass);
+                $cardWrap.removeClass(playStop);
 
 
         //성공 음악 재생 / 음악off때는 재생하면안됨.

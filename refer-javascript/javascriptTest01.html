@@ -219,9 +219,45 @@ console.log(solution(10, 50, 85))
     </div>
 
 
-
     <hr>
+    <div id="sample1" class="sample">
+        <h2>최솟값 구하기 <span class="dot"></span></h2>   
+        <p class="problem">Q : 7개의 수가 주어지면 그 숫자 중 가장 작은 수를 출력하는 프로그램을 작성하시오
+        </p> 
+        <div class="desc">
+            <dl>
+                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 입력 설명</dt>
+                <dd>7개의 수가 주어진다.</dd>
+                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 출력 설명</dt>
+                <dd>가장 작은 수를 출력한다.</dd>
+            </dl>
+        </div>
+        <div class="sam">
+            <dl>
+                <dt><i class="fa fa-keyboard-o" aria-hidden="true"></i> 입력 예제</dt>
+                <dd>5 3 7 11 2 15 17</dd>
+                <dt><i class="fa fa-sign-out" aria-hidden="true"></i> 출력 예제</dt>
+                <dd>2</dd>
+            </dl>
+        </div>
+        <div class="code">
+<pre class="line-number"><code class="language-js">let arr = [5, 3, 7, 11, 2, 15, 17];
+function solution2(num){
+    let answer;
+    let min = 5;
 
+    for (let i=0; i&lt;arr.length; i++){
+        if(arr[i] &lt; min){
+            min = arr[i];
+        } 
+    }
+    answer = min;
+    return answer;
+}
+console.log(solution2(arr));
+</code></pre>
+        </div>
+    </div>
 
 
 
@@ -247,7 +283,41 @@ console.log(solution(10, 50, 85))
             return answer;
         }
         solution(10, 50, 85);
-        console.log(solution(10, 50, 85);)
+        //console.log(solution(10, 50, 85);)
+
+
+        //2-1. 첫번째 방법 
+        let arr = [5, 3, 7, 11, 2, 15, 17];
+        // function solution2(num){
+        //     let answer;
+        //     let min = 5;
+
+        //     for (let i=0; i<arr.length; i++){
+        //         if(arr[i] < min){
+        //             min = arr[i];
+        //         } 
+        //     }
+        //     answer = min;
+        //     return answer;
+        // }
+        // console.log(solution2(arr));
+
+        //2-2 두번째방법 Math.min메서드 이용해서 뽑아내는것
+        // function solution2(){
+        //     let answer = Math.min(5, 3, 7, 11, 2, 15, 17);
+
+        //     return answer;
+        // }
+        // console.log(solution2());
+
+        //2-3 세번째방법
+        function solution3(arr3){
+            let answer = Math.min(...arr3);
+
+            return answer;
+        }
+        let arr3 = [5, 3, 7, 11, 2, 15, 17];
+        console.log(solution3(arr3));
     </script>
 </body>
 </html>
