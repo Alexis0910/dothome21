@@ -203,7 +203,26 @@
             </dl>
         </div>
         <div class="code">
-<pre class="line-number"><code class="language-js">
+<pre class="line-number"><code class="language-js">function solution(num){
+    let answer = [];  //배열을 만들어줘야 return하고 push할때 
+    let sum = 0;
+    let min = Number.MAX_SAFE_INTEGER; //최대정수값 나타내기
+
+    for( let x of arr){
+        if ( x % 2 === 1){
+            sum += x;
+
+            if( x &lt; min){
+                min = x;
+            }
+        }
+    }
+    answer.push(sum);
+    answer.push(min);
+    return answer;
+}
+let arr = [12, 77, 38, 41, 53, 92, 85];
+console.log(solution(arr))
 </code></pre>
         </div>
     </div>

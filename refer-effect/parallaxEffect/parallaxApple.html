@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Apple | Alexis</title>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     <style>
         @font-face {
             font-family: 'saol';
@@ -595,15 +596,15 @@
         }
 
         #section3 {
-            /* background: blue; */
+            background: #ffd4e4;
             height: 16000px;
             z-index: 3000;
 
         }
 
         #section4 {
-            /* background: blue; */
-            height: 13000px;
+            /* background-color: #000; */
+            height: 18000px;
             z-index: 4000;
 
         }
@@ -741,7 +742,7 @@
             width: 10vw;
             height: 10vw;
             border-radius: 50%;
-            background-color: rgba(65, 65, 65, 0.822);
+            /* background-color: rgba(65, 65, 65, 0.822); */
             color: #fff;
             line-height: 10vw;
             font-size: 2vw;
@@ -843,7 +844,7 @@
         <style>
             #section3 {
                 color: #fff;
-                background-color: #da9cb3;
+                background-color: #ffd4e4;
                 position: relative;
                 
             }
@@ -892,6 +893,7 @@
             .s3Text1 .s6 {}
             .s3Text2{
                 perspective: 500px;
+                z-index: 11;
 
             }
             .s3Text2 iframe{
@@ -914,7 +916,10 @@
             }
 
         </style>
-        <section id="section3">
+        <section id="section3"
+            data-34500="background-color: #da9cb3;"
+            data-34500="background-color: white;"
+        >
 
             <div class="s3Text1 fixed" 
                 data-27499 ="display:none"
@@ -1002,6 +1007,11 @@
         </section>
         <!-- //section3 -->
         <style>
+            #section4 {
+                background-color: #ffffff;
+                position: relative;
+                font-size: 15vw;
+            }
             .s4Text1 {}
             .s4Text1 > div{
                 width: 10vw; height: 10vw;
@@ -1027,16 +1037,53 @@
             .s4Text1 .circle6{
                 left: 10%; top:60%;
             }
-            .s4Text2 iframe {
-                
+            .bg {
+                /* background: linear-gradient(to bottom, black, gray); */
             }
+        
+            .s4Text2 {
+                text-align: center;
+                height: 90vh;
+                width: 90vw;
+                font-weight: 15vw;
+                color: rgb(255, 255, 255);
+                z-index: 100;
+            }
+            .s4Text2 p {
+                position: relative;
+                top:30%;
+            }
+            /* .s4Text2 .iframes {
+                position: relative;
+                overflow: hidden;
+
+            }
+            .s4Text2 .iframes > div {
+                position: absolute;
+                top:0;
+                width: 80vw;
+            } */
+
+            .s4Text2 .iframes .box1 {
+                border: 1px solid #fff;
+                box-shadow: 0 4px 4px -4px black;
+            }
+            .s4Text2 .iframes .box2 {
+                width: 70vw;
+                border: 1px solid #fff;
+                box-shadow: 0 4px 4px -4px black;
+            }
+            .results-type {
+                display: none !important;
+            }   
         </style>
         <section id="section4">
             <div class="s4Text1"
                 data-43999 ="display:none"
                 data-44000 ="display:block"
-                data-46000 ="display:block"
-                data-46001 ="display:none"
+                data-44500 ="display:block"
+                data-50000 ="display:none;"
+                
             >
                 <div class="circle1 fixed"
                     data-44000="width: 0vw; height:0vw;"
@@ -1063,14 +1110,50 @@
                     data-46000="width: 200vw; height:200vw;"
                 ></div>
             </div>
-            <div class="s4Text2d"
+            <div class="bg">
+
+            <div class="s4Text2 fixed"
+                
             >
-                <iframe height="300" style="width: 60%;" scrolling="no" title="Square Animation" src="https://codepen.io/alexis0910/embed/oNwNdOb?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                  See the Pen <a href="https://codepen.io/alexis0910/pen/oNwNdOb">
-                  Square Animation</a> by Alexis0910 (<a href="https://codepen.io/alexis0910">@alexis0910</a>)
-                  on <a href="https://codepen.io">CodePen</a>.
-                </iframe>
+                <p
+                    data-45000="opacity:0;"
+                    data-45500="opacity:1; color:white;"
+                    data-50000="opacity:1; color:black"
+                >animation</p>
+
+                <div class="iframes fixed"
+                    data-47000="transform:translate(-50%,200%);"
+                    data-48000="transform:translate(-50%,-50%);"
+                >
+
+                <div class="box1"
+                    data-47000 = "transform:translateX(300%);"
+                    data-48500 = "transform:translateX(0%);"
+                    data-49000 = "transform:translateX(0%);"
+                    data-50000 = "transform:translateX(-300%);"
+                >
+                    <p data-height="500" data-theme-id="24311" data-default-tab="result" data-slug-hash="mdwZEeq" data-user="alexis0910" data-embed-version="2" class="codepen">
+                        <span>See the Pen <a href="https://codepen.io/alexis0910/pen/mdwZEeq">
+                            Summer Dream</a> by Alexis0910 (<a href="https://codepen.io/alexis0910">@alexis0910</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                </div>
+                <div class="box2"
+                    data-50000 = "transform:translateX(300%);"
+                    data-50500 = "transform:translateX(0%);"
+                    data-5100 = "transform:translateX(0%);"
+                    data-52000 = "transform:translateX(-300%);"
+                >
+                <p data-height="500" data-theme-id="24311" data-default-tab="result" data-slug-hash="abdyPBw" data-user="isladjan" data-embed-version="2" class="codepen">
+                    <span>See the Pen <a href="https://codepen.io/isladjan/pen/abdyPBw">
+                        Parallax scroll animation</a> by isladjan (<a href="https://codepen.io/isladjan">@isladjan</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
             </div>
+                </div>
+            </div>
+        </div>
+
         </section>
         <!-- //section4 -->
         <section id="section5">
