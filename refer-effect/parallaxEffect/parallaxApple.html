@@ -558,7 +558,9 @@
         body {
             height: 20000px;
         }
-
+        iframe {
+            border: 0;
+        }
         /* //reset */
         .scroll {
             position: fixed;
@@ -594,12 +596,17 @@
 
         #section3 {
             /* background: blue; */
-            height: 13000px;
+            height: 16000px;
             z-index: 3000;
 
         }
 
-        #section4 {}
+        #section4 {
+            /* background: blue; */
+            height: 13000px;
+            z-index: 4000;
+
+        }
 
         #section5 {}
 
@@ -838,15 +845,13 @@
                 color: #fff;
                 background-color: #da9cb3;
                 position: relative;
-
+                
             }
-
             .s3Text1 {
                 font-size: 8vw;
                 font-weight: 700;
                 font-family: 'NEXONLv1Gothic';
                 z-index: 10;
-
             }
             .s3Text1 .notes {
                 /* margin: 0 auto; */
@@ -870,7 +875,8 @@
                 color: #000;
             }
             .s3Text1 .s3 {
-            font-family: 'Chosunilbo_myungjo';
+                color: gray;
+                font-family: 'Chosunilbo_myungjo';
 
             }
 
@@ -879,61 +885,192 @@
                 
             }
 
-            .s3Text1 .s5 {}
+            .s3Text1 .s5 {
+                background-color: transparent;
+            }
 
             .s3Text1 .s6 {}
-            
+            .s3Text2{
+                perspective: 500px;
+
+            }
+            .s3Text2 iframe{
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0,0,0);
+            }
+            .s3Text2 .i1 {
+                position: absolute;
+                top: 0; left:0;
+            }
+            .s3Text2 .i2 {
+                position: absolute;
+                top: 0; left:0;
+            }
+            .s3Text2 .i3 {
+                position: absolute;
+                top: 0; left:0;
+            }
 
         </style>
         <section id="section3">
 
-            <div class="s3Text1 fixed"
+            <div class="s3Text1 fixed" 
+                data-27499 ="display:none"
+                data-27500 ="display:block"
+                data-43000 ="display:block; opacity:1; "
+                data-43050 ="opacity:0;"
             >
-            <div class="notes"
+                <div class="notes"
                 data-27500="transform: translate(0vw, 20vw); opacity:0;"
                 data-29000="transform: translate(0vw, 0vw); opacity:1;"
-                data-33000="transform: translate(0vw, 0vw); opacity:1;">
+                data-33000="transform: translate(0vw, 0vw); opacity:1;"
+                data-34500="transform: translate(0vw, -100vw); opacity:1;"
+                data-35000="transform: translate(0vw, -200vw); opacity:1;"
+                >
             </div>
                 <span class="s1" 
                     data-27500="transform: translate(0vw, 20vw) rotate(0deg); opacity:0; background-color:transparent;"
                     data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1;  background-color:transparent; color:black;"
                     data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1;  background-color:transparent; color:black;"
                     data-30000="transform: translate(0vw, 0vw) rotate(-10deg); opacity:1; background-color:black; color:white;"
+                    data-34000="transform: translate(0vw, -21vw) rotate(0deg); opacity:1; background-color:black; color:white;"
                     >S</span>
                 <span class="s2" 
                     data-27500="transform: translate(0vw, 20vw) rotate(0deg); opacity:0; background-color:transparent;"
                     data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1; color:gray; background-color:transparent;"
                     data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; color:gray; background-color:transparent;"
                     data-30000="transform: translate(0vw, 0vw) rotate(10deg); opacity:1; background-color:white; color:black; border:1px solid black;"
+                    data-34000="transform: translate(0vw, -21vw) rotate(0deg); opacity:1; background-color:white; color:black; border:1px solid black;"
+                    
                     >c</span>
                 <span class="s3"
                     data-27500="transform: translate(0vw, 20vw) rotate(0deg); opacity:0;  background-color:transparent;"
-                    data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1; color:white;  background-color:transparent;"
-                    data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; color:white;  background-color:transparent;"
+                    data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1; color:gray;  background-color:transparent;"
+                    data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; color:gray;  background-color:transparent;"
                     data-30000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; background-color:gray; color:white;"
-                    ">r</span>
+                    data-34000="transform: translate(0vw, -21vw) rotate(0deg); opacity:1; background-color:gray; color:white;"
+                    >r</span>
                 <span class="s4" 
                     data-27500="transform: translate(0vw, 20vw) rotate(0deg); opacity:0;"
-                    data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1; color:black;"
-                    data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; color:black;"
+                    data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1; color:white;"
+                    data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1; color:white;"
                     data-30000="transform: translate(0vw, 0vw) rotate(10deg); opacity:1; background-color:black; color:white;"
-                    ">i</span>
+                    data-34000="transform: translate(0vw, -21vw) rotate(0deg); opacity:1; background-color:black; color:white;"
+                    >i</span>
                 <span class="s5" 
                     data-27500="transform: translate(0vw, 20vw); opacity:0;"
-                    data-28500="transform: translate(0vw, 20vw); opacity:1;"
-                    data-29000="transform: translate(0vw, 0vw); opacity:1;
-                    ">p</span>
+                    data-28500="transform: translate(0vw, 20vw); opacity:1background-color: transparent;"
+                    data-29000="transform: translate(0vw, 0vw); opacity:1;background-color: white;"
+                    data-30000="transform: translate(0vw, 0vw); opacity:1; border:1px solid gray;"
+                    data-34000="transform: translate(0vw, -21vw); opacity:1; border:1px solid gray; color:black;"
+                    >p</span>
                 <span class="s6" 
-                    data-27500="transform: translate(0vw, 20vw); opacity:0;"
-                    data-28500="transform: translate(0vw, 20vw); opacity:1;"
-                    data-29000="transform: translate(0vw, 0vw); opacity:1;
-                    ">t</span>
+                    data-27500="transform: translate(0vw, 20vw) rotate(0deg); opacity:0;"
+                    data-28500="transform: translate(0vw, 20vw) rotate(0deg); opacity:1;"
+                    data-29000="transform: translate(0vw, 0vw) rotate(0deg); opacity:1;"
+                    data-30000="transform: translate(0vw, 0vw) rotate(20deg); opacity:1; background-color:black;"
+                    data-34000="transform: translate(0vw, -21vw) rotate(0deg); opacity:1; background-color:black;"
+                    >t</span>
+            </div>
+            <div class="s3Text2 fixed">
+                <!-- <div class="il-text">
+                    <div class="il-text-desc">자바스크립트를 이용한 마우스 효과입니다.</div>
+                </div> -->
+                <iframe class="i1" src="../mouseEffect/javascriptME01.html" alt="mouse"
+                    data-35000="transform: translate3d(-80%, -50%, -10000px); opacity:0"
+                    data-37000="transform: translate3d(-80%, -50%, 0px);opacity:1"
+                    data-42500="transform: translate3d(-80%, -50%, 0px);opacity:1"
+                    data-43000="transform: translate3d(-80%, -50%, 1000px);opacity:0"
+                ></iframe>
+                <iframe class="i2" src="../parallaxEffect/javascriptPE01.html" alt="mouse"
+                    data-37000="transform: translate3d(-50%, -80%, -10000px); opacity:0"
+                    data-39000="transform: translate3d(-50%, -80%, 0px);opacity:1"
+                    data-42000="transform: translate3d(-50%, -80%, 0px);opacity:1"
+                    data-42500="transform: translate3d(-50%, -80%, 1000px);opacity:0"
+                ></iframe>
+                <iframe class="i2" src="../parallaxEffect/javascriptPE03.html" alt="mouse"
+                    data-39000="transform: translate3d(-30%, -40%, -10000px); opacity:0"
+                    data-40000="transform: translate3d(-30%, -40%, 0px);opacity:1"
+                    data-41000="transform: translate3d(-30%, -40%, 0px);opacity:1"
+                    data-42000="transform: translate3d(-30%, -40%, 1000px);opacity:0"
+                ></iframe>
             </div>
 
 
         </section>
         <!-- //section3 -->
+        <style>
+            .s4Text1 {}
+            .s4Text1 > div{
+                width: 10vw; height: 10vw;
+                background: #000;
+                border-radius: 50%;
+
+            }
+            .s4Text1 .circle1{
+                left: 50%; top:50%;
+            }
+            .s4Text1 .circle2{
+                left: 20%; top:20%;
+            }
+            .s4Text1 .circle3{
+                left: 60%; top:60%;
+            }
+            .s4Text1 .circle4{
+                left: 60%; top:90%;
+            }
+            .s4Text1 .circle5{
+                left: 80%; top:20%;
+            }
+            .s4Text1 .circle6{
+                left: 10%; top:60%;
+            }
+            .s4Text2 iframe {
+                
+            }
+        </style>
         <section id="section4">
+            <div class="s4Text1"
+                data-43999 ="display:none"
+                data-44000 ="display:block"
+                data-46000 ="display:block"
+                data-46001 ="display:none"
+            >
+                <div class="circle1 fixed"
+                    data-44000="width: 0vw; height:0vw;"
+                    data-46000="width: 200vw; height:200vw;"
+                ></div>
+                <div class="circle2 fixed"
+                    data-44500="width: 0vw; height:0vw;"
+                    data-46000="width: 200vw; height:200vw;"
+                ></div>
+                <div class="circle3 fixed"
+                    data-44100="width: 0vw; height:0vw;"
+                    data-46000="width: 200vw; height:200vw;"
+                ></div>
+                <div class="circle4 fixed"
+                    data-44150="width: 0vw; height:0vw;"
+                    data-46000="width: 200vw; height:200vw;"
+                ></div>
+                <div class="circle5 fixed"
+                    data-44200="width: 0vw; height:0vw;"
+                    data-46000="width: 200vw; height:200vw;"
+                ></div>
+                <div class="circle6 fixed"
+                    data-44250="width: 0vw; height:0vw;"
+                    data-46000="width: 200vw; height:200vw;"
+                ></div>
+            </div>
+            <div class="s4Text2d"
+            >
+                <iframe height="300" style="width: 60%;" scrolling="no" title="Square Animation" src="https://codepen.io/alexis0910/embed/oNwNdOb?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                  See the Pen <a href="https://codepen.io/alexis0910/pen/oNwNdOb">
+                  Square Animation</a> by Alexis0910 (<a href="https://codepen.io/alexis0910">@alexis0910</a>)
+                  on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
         </section>
         <!-- //section4 -->
         <section id="section5">
