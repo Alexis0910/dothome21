@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+#wrap{
+    font-family: 'NanumSquare';
+
+    overflow: hidden;
+}
+
+.container{
+    width: 1000px;
+}
+#aside {
+    margin-top: 100px;
+    height: 1180px;
+    width: 25%;
+    float: left;
+    margin-right: 2%;
+}
+#aside .logo {}
+#aside .logo img{
+    width: 150px;
+}
+#aside .asideMenu{}
+.asideMenu ul{
+    padding-top: 30px;
+}
+.asideMenu ul li{
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 900;
+    padding: 10px 0 10px 15px;
+}
+.asideMenu ul .active{
+    transition:all 0.3s ease-in-out;
+    color: #056BF1;
+}
+.asideMenu ul li ul{
+    display: none;
+    color: black;
+    padding: 20px 0;
+}
+.asideMenu ul li ul li{
+    font-size: 17px;
+    font-weight: 900;
+    border-bottom: 1px solid rgb(214, 214, 214);
+
+}
+
+#nav {
+    margin-top: 100px;
+    float: left;
+}
+.navInner {
+    height: 390px;
+    width: 730px;
+    justify-content: center;
+    overflow: hidden;
+}
+.navInner .slider-wrap{
+    position: relative;
+    width: 730px;
+    height: 1170px;
+    overflow: hidden;
+}
+.navInner .slider-wrap .slider img{
+    width: 100%;
+}
+.navInner .slider-wrap .slider{
+    height: 390px;
+    width: 730px;
+    position: relative;
+    float: left;
+}
+.slider-wrap .slider:nth-child(1){z-index: 3;}
+.slider-wrap .slider:nth-child(2){z-index: 2;}
+.slider-wrap .slider:nth-child(3){z-index: 1;}
+#cont1{
+    margin: 50px 0;
+    width: 73%;
+    float: left;
+}
+#cont1 .cont1Menu{
+    align-items: center;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 800;
+}
+.cont1Menu span{
+    color: #AFAFAF;
+}
+.cont1Menu span.active{
+    color: #000;
+}
+.cont1Menu .often{
+    position: relative;
+}
+.cont1Menu .often:after{
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 25px;
+    background: #000;
+    top: 2px;
+    left: 213px;
+}
+.cont1Menu .keywords{
+    padding-left: 50px;
+}
+
+
+#cont1 .desc1 .cont1desc{
+    margin-top: 50px;
+    width: 18%;
+    margin-right: 2%;
+}
+
+.cont1Wrap > div {
+    display: none;
+}
+.cont1Wrap > div:nth-child(1){
+    display: flex;
+}
+.desc1 .cont1desc p{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 900;
+    font-size:16px;
+}
+
+#cont1 .desc2 .cont1desc{
+    margin-top: 50px;
+    width: 18%;
+    margin-right: 2%;
+}
+.desc2 .cont1desc img{
+}
+.desc2 .cont1desc p{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 900;
+    font-size:16px;
+}
+#cont2{
+    overflow: hidden;
+    float: left;
+    width: 73%;
+    background-color: #F7F7F7;
+}
+#cont2 .cont2{
+    margin: 20px;
+    display: flex;
+}
+#cont2 .cont2 .desc{
+    text-align: center;
+    background-color: #fff;
+    width: 31.5%;
+    border: 1px solid #D1D8E0;
+    padding: 3% 2% 2% 2%;
+    box-sizing: border-box;
+    justify-content:space-between;
+    margin-right: 3%;
+}
+#cont2 .cont2 .desc:last-child{
+    margin-right: 0;
+}
+.cont2 .desc span{
+    position: relative;
+    display: block;
+    font-size: 23px;
+    font-weight: 900;
+}
+.cont2 .desc span:after {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 38px;
+    height: 38px;
+    background: url(../img/goverment/plus.jpg)no-repeat;
+    background-size: cover;
+    top:-10px;
+    left:150px
+}
+.cont2 .desc img{
+    width: 130px;
+    margin-bottom: 20px;
+}
+.cont2 .desc .content{
+    padding-bottom: 10px;
+}
+.cont2 .desc .content li{
+    font-size: 13px;
+    color: #5B5B5B;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 0;
+}
+#footer{
+    float: left;
+    width: 100%;
+    height: 110px;
+    background-color: #EDF2F8;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    overflow: hidden;
+
+}
+#footer .footerInner{
+    display: flex;
+    margin: 15px;
+}
+.footerInner .logo{
+    width: 9%;
+}
+.footerInner .logo img{
+    width: 65px;
+}
+.footerInner .desc {
+    margin-top: 10px;
+    display: block;
+    width: 70%;
+}
+.footerInner .desc span{
+    display: block;
+    font-weight: 600;
+    padding: 1px 0;
+}
+.footerInner .sns {
+    margin-top: 10px;
+
+    float: right;
+    width: 25%;
+}
+.footerInner .sns img{}
