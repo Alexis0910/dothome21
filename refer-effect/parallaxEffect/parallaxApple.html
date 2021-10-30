@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Apple | Alexis</title>
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     <style>
+        @import "compass/css3";
         @font-face {
             font-family: 'saol';
             src: url(../fonts/saol.woff2) format("woff2");
@@ -611,7 +613,7 @@
 
         #section5 {
             /* background-color: #000; */
-            height: 15000px;
+            height: 20000px;
             z-index: 5000;
         }
 
@@ -1202,6 +1204,7 @@
         <!-- //section4 -->
         <style>
             #section5 {
+                
                 background-color: rgb(0, 0, 0);
             }
             .s5Text1{
@@ -1215,18 +1218,225 @@
                 color: #fff;
             }
             .s5Text2 span {
-                font-size: 10vw;
-                text-align: center;
+
 
             }
             .s5Text2 p {
                 text-align: right;
-
                 font-family: 'Playfair Display';
                 letter-spacing: 2px;
-                font-size: 1.5vw;
+                font-size: 1.2vw;
                 padding: 0.5vw;
             }
+            .s5Text2 .box {
+                border: 1px solid #fff;
+                padding: 5vw;
+            }
+            .s5Text2 .desc {
+                margin-top: 1vw;
+                border: 1px solid #fff;
+                padding: 1vw;
+
+            }
+            .email {
+                position: relative;
+            }
+            .email:before{
+                content: '';
+                width: 1.5vw;
+                height: 1.5vw;
+                position: absolute;
+                background: url(../assets/img/email.png) no-repeat;
+                background-size: cover;
+                display: inline-block;
+                left: 16vw;
+                top:8px;
+
+            }
+            .insta {
+                position: relative;
+            }
+            .insta:before{
+                content: '';
+                width: 1.5vw;
+                height: 1.5vw;
+                position: absolute;
+                background: url(../assets/img/insta.png) no-repeat;
+                background-size: cover;
+                display: inline-block;
+                left: 24vw;
+                top:8px;
+
+            }
+            .glitch {
+                font-family: 'Varela', sans-serif;
+                font-size: 8vw;
+                text-align: center;
+                color: white;
+                position: relative;
+                margin: 0 auto;
+            }
+
+            @keyframes noise-anim {
+                0% {
+                clip: rect(9px, 9999px, 80px, 0);
+                }
+                5% {
+                clip: rect(42px, 9999px, 82px, 0);
+                }
+                10% {
+                clip: rect(54px, 9999px, 91px, 0);
+                }
+                15% {
+                clip: rect(34px, 9999px, 56px, 0);
+                }
+                20% {
+                clip: rect(81px, 9999px, 84px, 0);
+                }
+                25% {
+                clip: rect(100px, 9999px, 22px, 0);
+                }
+                30% {
+                clip: rect(39px, 9999px, 57px, 0);
+                }
+                35% {
+                clip: rect(40px, 9999px, 62px, 0);
+              }
+              40% {
+                clip: rect(44px, 9999px, 49px, 0);
+              }
+              45% {
+                clip: rect(29px, 9999px, 5px, 0);
+              }
+              50% {
+                clip: rect(37px, 9999px, 34px, 0);
+              }
+              55% {
+                clip: rect(24px, 9999px, 44px, 0);
+              }
+              60% {
+                clip: rect(66px, 9999px, 91px, 0);
+              }
+              65% {
+                clip: rect(30px, 9999px, 19px, 0);
+              }
+              70% {
+                clip: rect(57px, 9999px, 80px, 0);
+              }
+              75% {
+                clip: rect(15px, 9999px, 66px, 0);
+              }
+              80% {
+                clip: rect(80px, 9999px, 46px, 0);
+              }
+              85% {
+                clip: rect(3px, 9999px, 45px, 0);
+              }
+              90% {
+                clip: rect(7px, 9999px, 81px, 0);
+              }
+              95% {
+                clip: rect(72px, 9999px, 40px, 0);
+              }
+              100% {
+                clip: rect(67px, 9999px, 22px, 0);
+              }
+            }
+            .glitch:after {
+                width: 40vw;
+                height: 50vh;
+              content: attr(data-text);
+              position: absolute;
+              left: 2px;
+              text-shadow: -1px 0 red;
+              top: 1vw;
+              color: white;
+              background: black;
+              overflow: hidden;
+              clip: rect(0, 900px, 0, 0);
+              animation: noise-anim 2s infinite linear alternate-reverse;
+            }
+
+            @keyframes noise-anim-2 {
+              0% {
+                clip: rect(25px, 9999px, 28px, 0);
+              }
+              5% {
+                clip: rect(56px, 9999px, 16px, 0);
+              }
+              10% {
+                clip: rect(11px, 9999px, 90px, 0);
+              }
+              15% {
+                clip: rect(50px, 9999px, 7px, 0);
+              }
+              20% {
+                clip: rect(38px, 9999px, 76px, 0);
+              }
+              25% {
+                clip: rect(28px, 9999px, 59px, 0);
+              }
+              30% {
+                clip: rect(81px, 9999px, 74px, 0);
+              }
+              35% {
+                clip: rect(29px, 9999px, 84px, 0);
+              }
+              40% {
+                clip: rect(53px, 9999px, 83px, 0);
+              }
+              45% {
+                clip: rect(76px, 9999px, 29px, 0);
+              }
+              50% {
+                clip: rect(10px, 9999px, 16px, 0);
+              }
+              55% {
+                clip: rect(88px, 9999px, 23px, 0);
+              }
+              60% {
+                clip: rect(13px, 9999px, 10px, 0);
+              }
+              65% {
+                clip: rect(8px, 9999px, 35px, 0);
+              }
+              70% {
+                clip: rect(84px, 9999px, 13px, 0);
+              }
+              75% {
+                clip: rect(30px, 9999px, 22px, 0);
+              }
+              80% {
+                clip: rect(44px, 9999px, 81px, 0);
+              }
+              85% {
+                clip: rect(90px, 9999px, 9px, 0);
+              }
+              90% {
+                clip: rect(43px, 9999px, 59px, 0);
+              }
+              95% {
+                clip: rect(17px, 9999px, 31px, 0);
+              }
+              100% {
+                clip: rect(65px, 9999px, 77px, 0);
+              }
+            }
+            .glitch:before {
+            width: 40vw;
+            height: 50vh;
+              content: attr(data-text);
+              position: absolute;
+              left: -2px;
+              text-shadow: 3px 0 blue;
+              top: 0;
+              color: white;
+              background: black;
+              overflow: hidden;
+              clip: rect(0, 900px, 0, 0);
+              animation: noise-anim-2 3s infinite linear alternate-reverse;
+            }
+
         </style>
         <section id="section5"
             data-62999 = "display:none"
@@ -1254,10 +1464,21 @@
                     data-68000 = "transform: translateX(-300%)"
                 ></div>
             </div>
-            <div class="s5Text2 fixed">
-                <span>Contact me</span>
-                <p>soeunpark1211@naver.com</p>
-                <p>@alexis_soeun</p>
+            <div class="s5Text2 fixed"
+                data-68000 = "opacity:0"
+                data-68500 = "opacity:1"
+                data-68900 = "opacity:0"
+                data-71500 = "opacity:1"
+            >
+                <div class="box fixed">
+                    <span class="glitch"data-text="CONTACT ME">CONTACT ME</span>
+                    <div class="desc">
+                        <p class="email">soeunpark1211@naver.com</p>
+                        <p class="insta">@alexis_soeun</p>
+                    </div>
+
+                </div>
+
             </div>
         </section>
         <!-- //section5 -->
@@ -1267,7 +1488,8 @@
         <section id="section7">
         </section>
         <!-- //section7 -->
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
         <script>
             var s = skrollr.init();
