@@ -237,7 +237,7 @@
             font-family: 'DungGeunMo';
             font-size: 22px;
             cursor: pointer;
-            /* display: none; */
+            display: none;
         }
 
         .question__answer__next:active {
@@ -316,8 +316,8 @@
         }
         .question__answer__selects label.incorrect input + span{
             background-color: #ff7979;
-
         }
+
         .question__answer__selects label.incorrect  input + span:before{
             box-shadow: inset 0 0 0 10px #d60e0e;
 
@@ -374,7 +374,48 @@
             border-radius: 100px;
             cursor: pointer;
         }
+        .question__result {
+            padding: 70px 30px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%; height: 100%;
+            background: #ccc;
+            justify-content: center;
+            font-size: 24px;
+            text-align: center;
+            display: none;
+        }
+        .question__result.show {
+            display: block;
+        }
+        .question__result .score{
+            margin: 50px 0;
+        }
+        .question__result span {
+            color: #d60e0e;
+        }
+        .question__result .buttons{
+            text-decoration: none;
+        }
+        .question__restart{
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 1px solid #959595;
+            cursor: pointer;
+            font-family: 'DungGeunMo';
+            margin-top: 30px;
 
+
+        }
+        .question__result .buttons .quit{
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 1px solid #959595;
+            margin-top: 30px;
+            font-family: 'DungGeunMo';
+
+        }
 
         @media(max-width: 1200px) {
             .ham {
@@ -488,9 +529,20 @@
                 <button class="question__answer__next">다음 문제</button>
                 <!-- <div class="question__answer__view"></div>
                 <div class="question__answer__ex"></div> -->
+                <div class="question__answer__ex"></div>
             </div>
         </div>
         <div class="question__start active"><span>start</span></div>
+        <div class="question__result">
+            <div>🎈퀴즈를 완성하였습니다. 축하합니다!</div>
+            <div class="score">
+                <!-- 축하합니다. 당신은 <span>몇</span> 문제 중에 <span>몇</span> 개를 맞추었습니다.╰(*°▽°*)╯ -->
+            </div>
+            <div class="buttons">
+                <button class="question__restart">다시 도전하기</button>
+                <!-- <button class="quit">끝내기</button> -->
+            </div>
+        </div>
     </div>
 </body>
 <script>
@@ -542,11 +594,16 @@
     const questionLength = quizWrap.querySelector(".question__answer__count");
     const questionTimer = quizWrap.querySelector(".question__timer__sec");
     const questionTimerLine = quizWrap.querySelector(".question__timer__line");
+    const questionResult = quizWrap.querySelector(".question__result");
+    const questionResultScore = quizWrap.querySelector(".question__result .score");
+    const questionRestart = quizWrap.querySelector(".question__restart");
+    const questionAnswerEx =  document.querySelector(".question__answer__ex");
 
     let quizCount = 0;
     let quizNum = 1;
     let counter;
     let counterLine;
+    let userScore = 0;
 
 
     //시작 버튼 클릭
@@ -554,9 +611,29 @@
         questionStart.classList.remove("active");
         showQuestion(0);
         questionCount(1);
-        startTimer(3);
+        startTimer(15);
         startTimerLine(0);
     }
+
+    //다시 시작 버튼 클릭 Restart
+    questionRestart.onclick = () => {
+        questionResult.classList.remove("show");
+        //숫자들을 먼저 초기화 시켜준다음에 함수 실행시켜줘야한다. 순서 중요
+        quizCount = 0;
+        quizNum = 1;
+        userScore = 0;
+
+        showQuestion(0);
+        questionCount(1);
+        startTimer(15);
+        startTimerLine(0);
+        questionAnswerEx.innerHTML = '';
+
+    }
+
+
+
+
     // showQuestion(0);
     // questionCount(1);
     //문제 출력하기
@@ -607,10 +684,14 @@
         let userAnswer = answer.textContent.trim();   //위에 span사이의 띄어쓰기,줄바꿈 없애기
         let currentAnswer = quizInfo[quizCount].quizAnswer.trim();
         let allChoices  = questionSelect.children.length;
+        let iconYes = `<i class="fa fa-check-circle-o" aria-hidden="true"></i>`;
+        let iconNo = `<i class="fa fa-times-circle" aria-hidden="true"></i>`;
 
         if(userAnswer == currentAnswer){
             //클래스 추가 correct
             answer.parentNode.classList.add("correct"); //자식선택할땐 children, 부모는 parentNode
+            answer.insertAdjacentHTML("beforeend", iconYes);
+            userScore++;
         } else {
             //클래스 추가 incorrect
             answer.parentNode.classList.add("incorrect");
@@ -618,21 +699,43 @@
             for (let i=0; i<allChoices ; i++) {
                 if (questionSelect.children[i].querySelector(".choice").textContent == currentAnswer){
                     questionSelect.children[i].classList.add("correct");
+                    questionSelect.children[i].querySelector(".choice").insertAdjacentHTML("beforeend", iconYes);
                 }
             }
+            questionAnswerEx.innerHTML = quizInfo[quizCount].quizEx;
+            answer.insertAdjacentHTML("beforeend", iconNo);
         }
 
         //모든 문제 클래스 추가 disabled
         for ( let i=0; i<allChoices ; i++){
             questionSelect.children[i].classList.add("disabled")
         }
+        //시간 정지 * 버튼 표시
+        clearInterval(counter);
+        clearInterval(counterLine);
+        questionNext.classList.add("show");
     }
+
     //다음문제 클릭시 문제 넘어가기
     questionNext.onclick = () => {
-        quizCount++;
-        quizNum++;
-        showQuestion(quizCount);
-        questionCount(quizNum);
+        questionAnswerEx.innerHTML = '';
+        if(quizCount < quizInfo.length -1){
+            quizCount++;
+            quizNum++;
+            showQuestion(quizCount);
+            questionCount(quizNum);
+
+            questionNext.classList.remove("show");
+            clearInterval(counter);
+            clearInterval(counterLine);
+            startTimer(15);
+            startTimerLine(10);
+        } else {
+            clearInterval(counter);
+            clearInterval(counterLine);
+            showResult();
+        }
+
     }
 
     //문제 카운팅
@@ -686,6 +789,14 @@
         }, 10);
 
     }
+
+//결과 보여주기
+function showResult(){
+    questionResult.classList.add("show");
+
+    const scoreTag = `축하합니다. 당신은 <span>${quizInfo.length}</span> 문제 중에 <span>${userScore}</span> 개를 맞추었습니다.╰(*°▽°*)╯`;
+    questionResultScore.innerHTML = scoreTag;
+}
 </script>
 
 </html>
