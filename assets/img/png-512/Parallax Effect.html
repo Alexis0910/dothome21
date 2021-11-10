@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html# -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parallax Effect</title>
+
+    
+    
+
+    
+    <style>
+
+        .paranav {
+            top: 20px;
+            transition: top 0.4s ease;
+        }
+        .paranav.hide {
+            top: -200px;
+        }
+        .paranav li a {
+            padding: 5px;
+            width: 30px; height: 30px;
+
+        }
+        .paranav li.active a {
+            border-radius: 30px;
+        }
+        /* 한번에 나타나기 */
+        /* .content-item .desc {
+            opacity: 0;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
+        }
+        .content-item .desc.show {
+            opacity: 1;
+            transform: translateY(0) skewX(0);
+        } */
+
+        /* 한글자씩 나타나기 each문일때 */
+        /* 빈칸이 0으로 잡혀서 띄어쓰기가 안먹히니까 min-width를줘서 빈칸에 영역주기  */
+        /* .content-item .desc span{
+            opacity: 0;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
+            display: inline-block;
+            min-width: 1vw; 
+        }
+        .content-item .desc span.show{
+            opacity: 1;
+            transform: translateY(0) skewX(0);
+        } */
+        /* gsap 한글자씩 나타나기 */
+        .content-item .desc span{
+            opacity: 0;
+            display: inline-block;
+            min-width: 2vw;
+            transform: translateY(100px) rotate(90deg) scale(2);
+            
+        }
+    </style>
+<link rel="stylesheet" href="./Parallax Effect_files/style.css"><link rel="stylesheet" href="./Parallax Effect_files/highlight.min.css"><link href="./Parallax Effect_files/css2" rel="stylesheet"></head> 
+<body class="parallax">
+
+    <!--header -->
+    <header class="paraInfo">
+        <h1><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/index.html">Parallax Effect07 - javascript</a></h1>
+        <p>패랠랙스 스크롤링 효과 - 텍스트 효과</p>
+    </header>
+    <!--//header -->
+
+    <!--main -->
+    <main>
+        <div class="paraScroll">window.scrollY : <span>0</span>px</div>
+
+        <!--//parascroll-->
+
+        <nav class="paranav">
+            <ul>
+                <li class="active"><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#section1">s1</a></li>
+                <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#section2">s2</a></li>
+                <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#section3">s3</a></li>
+                <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#section4">s4</a></li>
+                <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#section5">s5</a></li>
+                <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#section6">s6</a></li>
+                <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#section7">s7</a></li>
+                <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#section8">s8</a></li>
+                <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#section9">s9</a></li>
+            </ul>
+        </nav>
+        <!--//nav-->
+
+        <div class="paraCont">
+            <section id="section1" class="content-item">
+                <span class="num">01</span>
+                <h2 class="title">Section01</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc split" aria-label="높은 목표를 세우고, 스스로를 채찍질 한다."><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">높</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">은</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">목</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">표</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">를</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">세</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">우</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">고</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">,</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">스</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">스</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">로</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">를</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">채</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">찍</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">질</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">한</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span></p>
+            </section>
+            <!--//section1-->
+
+            <section id="section2" class="content-item">
+                <span class="num">02</span>
+                <h2 class="title">Section02</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc split" aria-label="얕은 사람은 행운을 믿으며, 강한 사람은 원인과 결과를 믿는다."><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">얕</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">은</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">사</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">람</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">은</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">행</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">운</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">을</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">믿</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">으</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">며</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">,</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">강</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">한</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">사</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">람</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">은</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">원</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">인</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">과</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">결</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">과</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">를</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">믿</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span></p>
+            </section>
+            <!--//section2-->
+
+            <section id="section3" class="content-item">
+                <span class="num">03</span>
+                <h2 class="title">Section03</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc split" aria-label="자신감은 전염된다. 자신감의 부족도 마찬가지다."><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">자</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">신</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">감</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">은</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">전</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">염</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">된</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">자</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">신</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">감</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">의</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">부</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">족</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">도</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">마</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">찬</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">가</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">지</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span></p>
+            </section>
+            <!--//section3-->
+
+            <section id="section4" class="content-item">
+                <span class="num">04</span>
+                <h2 class="title">Section04</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc split" aria-label="실수할 자유가 없는 자유란 가치가 없다."><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">실</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">수</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">할</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">자</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">유</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">가</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">없</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">자</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">유</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">란</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">가</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">치</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">가</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">없</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span></p>
+            </section>
+            <!--//section4-->
+
+            <section id="section5" class="content-item">
+                <span class="num">05</span>
+                <h2 class="title">Section05</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc split" aria-label="작은 일에서 성장할 능력이 있는 사람에게 큰일이 주어진다."><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">작</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">은</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">일</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">에</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">서</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">성</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">장</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">할</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">능</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">력</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">이</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">있</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">사</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">람</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">에</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">게</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">큰</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">일</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">이</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">주</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">어</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">진</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span></p>
+            </section>
+            <!--//section5-->
+
+            <section id="section6" class="content-item">
+                <span class="num">06</span>
+                <h2 class="title">Section06</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc split" aria-label="나는 똑독한 것이 아니라 단지 문제를 더 오래 연구할 뿐이다."><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">나</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">똑</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">독</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">한</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">것</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">이</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">아</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">니</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">라</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">단</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">지</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">문</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">제</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">를</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">더</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">오</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">래</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">연</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">구</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">할</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">뿐</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">이</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span></p>
+            </section>
+            <!--//section6-->
+
+            <section id="section7" class="content-item">
+                <span class="num">07</span>
+                <h2 class="title">Section07</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc split" aria-label="죽는 일보다 고통 받는 일이 더 많은 용기를 필요로 한다."><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">죽</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">일</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">보</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">고</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">통</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">받</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">일</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">이</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">더</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">많</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">은</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">용</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">기</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">를</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">필</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">요</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">로</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">한</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span></p>
+            </section>
+            <!--//section7-->
+
+            <section id="section8" class="content-item">
+                <span class="num">08</span>
+                <h2 class="title">Section08</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc split" aria-label="생각하는 대로 살지 않으면 결국에는 사는 대로 생각하게 된다."><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">생</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">각</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">하</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">대</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">로</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">살</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">지</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">않</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">으</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">면</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">결</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">국</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">에</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">사</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">대</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">로</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">생</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">각</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">하</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">게</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">된</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span></p>
+            </section>
+            <!--//section8-->
+
+            <section id="section9" class="content-item">
+                <span class="num">09</span>
+                <h2 class="title">Section09</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc split" aria-label="인생의 위대한 목표는 지식이 아니라 행동이다."><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">인</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">생</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">의</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">위</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">대</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">한</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">목</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">표</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">는</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">지</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">식</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">이</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">아</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">니</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">라</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;"> </span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">행</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">동</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">이</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">다</span><span aria-hidden="true" class="show" style="transform: translate(0px, 0px); opacity: 1;">.</span></p>
+            </section>
+            <!--//section9-->
+        </div>
+        <!--// contents-->
+    </main>
+    <!-- main -->
+    <!-- footer -->
+    <footer class="paraFooter">
+        <footer id="footer">
+            <h1>Parallax <em>Scrolling</em></h1>
+            <div class="footerinfo">
+                <h2>자바스크립트</h2>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE01.html">1</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE02.html">2</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE03.html">3</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE04.html">4</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE05.html">5</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE06.html">6</a></li>
+                    <li class="active"><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html">7</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE08.html">8</a></li>
+                </ul>
+            </div>
+            <div class="footerinfo">
+                <h2>제이쿼리</h2>
+                <ul> 
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/jqueryPE01.html">1</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/jqueryPE02.html">2</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/jqueryPE03.html">3</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/jqueryPE04.html">4</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/jqueryPE05.html">5</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/jqueryPE06.html">6</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/jqueryPE07.html">7</a></li>
+                    <li><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/jqueryPE08.html">8</a></li>
+                </ul>
+            </div>
+        </footer>
+    </footer>
+    <!-- //footer -->
+
+    <!-- source-->
+    <div class="source">
+        <span>소스 보기</span>
+    </div>
+    <!-- //source-->
+    <!-- modal -->
+    <div id="paraModal" class="show hide">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#">HTML</a></li>
+                            <li class=""><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#">CSS</a></li>
+                            <li class="active"><a href="http://127.0.0.1:5500/refer-effect/parallaxEffect/javascriptPE07.html#">javascript</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html" style="display: none;">
+<pre><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"paranav"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section1"</span>&gt;</span>s1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section2"</span>&gt;</span>s2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section3"</span>&gt;</span>s3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section4"</span>&gt;</span>s4<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section5"</span>&gt;</span>s5<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section6"</span>&gt;</span>s6<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section7"</span>&gt;</span>s7<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section8"</span>&gt;</span>s8<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#section9"</span>&gt;</span>s9<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+<span class="hljs-comment">&lt;!--//nav--&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"paraCont"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>01<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Section01<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-Wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"desc"</span>&gt;</span>높은 목표를 세우고, 스스로를 채찍질 한다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--//section1--&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>02<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Section02<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-Wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"desc"</span>&gt;</span>얕은 사람은 행운을 믿으며, 강한 사람은 원인과 결과를 믿는다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--//section2--&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>03<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Section03<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-Wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"desc"</span>&gt;</span>자신감은 전염된다. 자신감의 부족도 마찬가지다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--//section3--&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>04<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Section04<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-Wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"desc"</span>&gt;</span>실수할 자유가 없는 자유란 가치가 없다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--//section4--&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section5"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>05<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Section05<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-Wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"desc"</span>&gt;</span>작은 일에서 성장할 능력이 있는 사람에게 큰일이 주어진다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--//section5--&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section6"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>06<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Section06<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-Wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"desc"</span>&gt;</span>나는 똑독한 것이 아니라 단지 문제를 더 오래 연구할 뿐이다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--//section6--&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section7"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>07<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Section07<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-Wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"desc"</span>&gt;</span>죽는 일보다 고통 받는 일이 더 많은 용기를 필요로 한다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--//section7--&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section8"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>08<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Section08<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-Wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"desc"</span>&gt;</span>생각하는 대로 살지 않으면 결국에는 사는 대로 생각하게 된다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--//section8--&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"section9"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"num"</span>&gt;</span>09<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>&gt;</span>Section09<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-Wrap"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"desc"</span>&gt;</span>인생의 위대한 목표는 지식이 아니라 행동이다.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--//section9--&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+                        </div>
+                        <div class="css" style="display: none;">
+<pre><code class="language-css hljs"><span class="hljs-selector-class">.paranav</span> {
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">transition</span>: top <span class="hljs-number">0.4s</span> ease;
+}
+<span class="hljs-selector-class">.paranav</span><span class="hljs-selector-class">.hide</span> {
+    <span class="hljs-attribute">top</span>: -<span class="hljs-number">200px</span>;
+}
+<span class="hljs-selector-class">.paranav</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">30px</span>; <span class="hljs-attribute">height</span>: <span class="hljs-number">30px</span>;
+
+}
+<span class="hljs-selector-class">.paranav</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.active</span> <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">30px</span>;
+}
+<span class="hljs-comment">/* 한번에 나타나기 */</span>
+<span class="hljs-comment">/* .content-item .desc {
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .desc.show {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+} */</span>
+
+<span class="hljs-comment">/* 한글자씩 나타나기 each문일때 */</span>
+<span class="hljs-comment">/* 빈칸이 0으로 잡혀서 띄어쓰기가 안먹히니까 min-width를줘서 빈칸에 영역주기  */</span>
+<span class="hljs-comment">/* .content-item .desc span{
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+    display: inline-block;
+    min-width: 1vw; 
+}
+.content-item .desc span.show{
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+} */</span>
+<span class="hljs-comment">/* gsap 한글자씩 나타나기 */</span>
+<span class="hljs-selector-class">.content-item</span> <span class="hljs-selector-class">.desc</span> <span class="hljs-selector-tag">span</span>{
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">min-width</span>: <span class="hljs-number">2vw</span>;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(<span class="hljs-number">100px</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">90deg</span>) <span class="hljs-built_in">scale</span>(<span class="hljs-number">2</span>);
+}
+</code></pre>
+                        </div>
+                        <div class="javascript" style="display: block;">
+<pre><code class="language-javascript hljs"><span class="hljs-comment">//desc에 .split을 직접 붙여주는것으로 다중 글자쪼개기</span>
+<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">".split"</span>).<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">el</span>=&gt;</span>{
+    <span class="hljs-keyword">let</span> text = el.<span class="hljs-property">innerText</span>;
+    <span class="hljs-keyword">let</span> split = text.<span class="hljs-title function_">split</span>(<span class="hljs-string">''</span>).<span class="hljs-title function_">join</span>(<span class="hljs-string">""</span>);
+        split = <span class="hljs-string">""</span> + split + <span class="hljs-string">""</span>;
+
+    el.<span class="hljs-property">innerHTML</span> = split;
+    el.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">"aria-label"</span>, text);    
+});
+
+<span class="hljs-comment">//스크롤 이펙트</span>
+<span class="hljs-variable language_">window</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">"scroll"</span>, <span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">let</span> scrollTop = <span class="hljs-variable language_">window</span>.<span class="hljs-property">pageYoffset</span> || <span class="hljs-variable language_">document</span>.<span class="hljs-property">documentElement</span>.<span class="hljs-property">scrollTop</span> || <span class="hljs-variable language_">window</span>.<span class="hljs-property">scrollY</span>;
+    <span class="hljs-comment">//세가지를 다 쓰기 귀찮을때는 ? babel을 사용하라(SCSS처럼 컴파일해야한다). or Typescript(string, number까지 세세하게)</span>
+    <span class="hljs-comment">//if( scrollTop &gt;= document.getElementById("section1").offsetTop - window.innerHeight/2 ){</span>
+    <span class="hljs-comment">//    document.querySelectorAll("#section1 .split span").forEach((elem, index)=&gt;{</span>
+    <span class="hljs-comment">//        setTimeout(()=&gt;{</span>
+    <span class="hljs-comment">//            elem.classList.add("show");</span>
+    <span class="hljs-comment">//        }, 50 * index); </span>
+    <span class="hljs-comment">//    });</span>
+    <span class="hljs-comment">//}</span>
+
+    <span class="hljs-comment">//forEach문</span>
+    <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">".content-item"</span>).<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span>{
+        <span class="hljs-keyword">if</span>( scrollTop &gt;= item.<span class="hljs-property">offsetTop</span> - (<span class="hljs-variable language_">window</span>.<span class="hljs-property">innerHeight</span>/<span class="hljs-number">2</span>) ){
+            <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">".split span"</span>).<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">elem, index</span>)=&gt;</span>{
+                <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">()=&gt;</span>{
+                    elem.<span class="hljs-property">classList</span>.<span class="hljs-title function_">add</span>(<span class="hljs-string">"show"</span>);
+                }, <span class="hljs-number">50</span> * index); 
+            })
+        };
+    });
+
+    <span class="hljs-comment">//for문</span>
+    <span class="hljs-comment">//let count = document.querySelectorAll(".content-item").length;</span>
+        <span class="hljs-comment">//for(let j=1; j&lt;= count; j++){</span>
+        <span class="hljs-comment">//    if( scrollTop &gt;= document.getElementById("section"+j).offsetTop - window.innerHeight/2 ){</span>
+        <span class="hljs-comment">//        document.querySelectorAll("#section"+j+" .split span").forEach((elem, index)=&gt;{</span>
+        <span class="hljs-comment">//            setTimeout(()=&gt;{</span>
+        <span class="hljs-comment">//                elem.classList.add("show");</span>
+        <span class="hljs-comment">//            }, 50 * index); </span>
+        <span class="hljs-comment">//        });</span>
+        <span class="hljs-comment">//    }</span>
+        <span class="hljs-comment">//}</span>
+
+    <span class="hljs-comment">//gsap문</span>
+    <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">'.content-item'</span>).<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">el,idx</span>)=&gt;</span>{
+        <span class="hljs-keyword">if</span>(scrollTop &gt;= el.<span class="hljs-property">offsetTop</span>){
+            gsap.<span class="hljs-title function_">to</span>(el.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">".desc span"</span>),{
+                <span class="hljs-attr">duration</span>: <span class="hljs-number">.5</span>,
+                <span class="hljs-attr">opacity</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-attr">stagger</span>: <span class="hljs-number">.05</span>,
+                <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-attr">scale</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-attr">ease</span>: <span class="hljs-string">"power2.out"</span>,
+                <span class="hljs-attr">rotation</span>: <span class="hljs-number">0</span>,
+            });
+        }
+    });
+}
+</code></pre>
+                </div>
+                    </div>
+                    </div>
+                    <button>닫기</button>
+                </div>
+            </div>
+        </div>
+    
+    <!--//modal-->
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+    <!-- script -->
+
+    <script src="./Parallax Effect_files/gsap.min.js.다운로드"></script>
+    <script src="./Parallax Effect_files/custom.js.다운로드"></script>
+    <script src="./Parallax Effect_files/highlight.min.js.다운로드"></script>
+    <script>
+        //글씨 쪼개기
+        //let text = document.querySelector("#section1 .desc").innerText;
+        //let split = text.split('').join("</span><span>");
+        //    split = "<span>" + split + "</span>";
+        //document.querySelector("#section1 .desc").innerHTML = split;
+
+        //desc에 .split을 직접 붙여주는것으로 다중 글자쪼개기
+        document.querySelectorAll(".split").forEach(el=>{
+            let text = el.innerText;
+            let split = text.split('').join("</span><span aria-hidden='true'>");
+                split = "<span aria-hidden='true'>" + split + "</span>";
+
+            el.innerHTML = split;
+            el.setAttribute("aria-label", text);    
+        });
+
+        //스크롤 이펙트
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYoffset || document.documentElement.scrollTop || window.scrollY;
+            //세가지를 다 쓰기 귀찮을때는 ? babel을 사용하라(SCSS처럼 컴파일해야한다). or Typescript(string, number까지 세세하게)
+            //if( scrollTop >= document.getElementById("section1").offsetTop - window.innerHeight/2 ){
+            //    document.querySelectorAll("#section1 .split span").forEach((elem, index)=>{
+            //        setTimeout(()=>{
+            //            elem.classList.add("show");
+            //        }, 50 * index); 
+            //    });
+            //}
+
+            //forEach문
+            document.querySelectorAll(".content-item").forEach((item) =>{
+                if( scrollTop >= item.offsetTop - (window.innerHeight/2) ){
+                    document.querySelectorAll(".split span").forEach((elem, index)=>{
+                        setTimeout(()=>{
+                            elem.classList.add("show");
+                        }, 50 * index); 
+                    })
+                };
+            });
+
+            //for문
+            //let count = document.querySelectorAll(".content-item").length;
+                //for(let j=1; j<= count; j++){
+                //    if( scrollTop >= document.getElementById("section"+j).offsetTop - window.innerHeight/2 ){
+                //        document.querySelectorAll("#section"+j+" .split span").forEach((elem, index)=>{
+                //            setTimeout(()=>{
+                //                elem.classList.add("show");
+                //            }, 50 * index); 
+                //        });
+                //    }
+                //}
+
+            //gsap문
+            document.querySelectorAll('.content-item').forEach((el,idx)=>{
+                if(scrollTop >= el.offsetTop){
+                    gsap.to(el.querySelectorAll(".desc span"),{
+                        duration: .5,
+                        opacity: 1,
+                        stagger: .05,
+                        y: 0,
+                        scale: 1,
+                        ease: "power2.out",
+                        rotation: 0,
+                    });
+                }
+            });
+
+
+            //출력
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+
+            //메뉴
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if( scrollTop >= item.offsetTop ){
+                    document.querySelectorAll(".paranav ul li").forEach((li)=>{
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paranav ul li:nth-child("+(index+1)+")").classList.add("active");
+                }
+            });
+        });
+
+
+
+
+
+
+        
+        // //소스보기 버튼실행
+        document.querySelector(".source span").addEventListener("click", function(){
+        document.querySelector("#paraModal").classList.remove("hide");
+        document.querySelector("#paraModal").classList.add("show");
+        });
+        document.querySelector(".modal-cont button").addEventListener("click", function(){
+            document.querySelector("#paraModal").classList.add("hide");
+        });
+
+        //modal버튼 내 html css java 작동 
+        const viewTitle = document.querySelectorAll(".view-title li");
+        const viewCont = document.querySelectorAll(".view-cont > div");
+
+        viewTitle.forEach((element, index)=>{
+            element.addEventListener("click", function(){
+                viewTitle.forEach((el)=>{
+                    el.classList.remove("active");
+                });
+                element.classList.add("active");
+
+                viewCont.forEach((el)=>{
+                    el.style.display = "none";
+                });
+                viewCont[index].style.display = "block";
+            });
+        });
+    </script>
+</body></html>
