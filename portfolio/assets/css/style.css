@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    width: 100%;
+    backgroun: url(/assets);
+    background-size: contain;
+    color: #1f3d4d;
+}
+.container {
+    max-width: 72%;
+    margin: 0 auto;
+}
+#header{
+    border: 1px solid #000;
+    max-height: 110px;
+    display: fixed;
+    z-index: 1;
+}
+#header .headerInner{
+    display: flex;
+    justify-content: space-between;
+}
+.headerInner .fade{}
+.headerInner .fade span{}
+.headerInner .fade span{}
+.headerInner .fade span div{
+    display: inline;
+    font-family: 'Eros Romano';
+    font-size: 40px;
+    letter-spacing: -3px;
+}
+.headerInner .fade .mr {
+    margin-right: 15px;
+}
+.headerInner #nav{}
+.headerInner #nav .fixed{}
+.headerInner #nav .fixed span{
+    display: inline-block;
+    margin-top:20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 30px;
+} 
+.headerInner .hamburger{
+    display: none;
+}
+.headerInner .hamburger span{}
+#main{}
+#main .title{
+    margin-top: 100px;
+}
+#main .title h1{
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+#main .title h1 strong{
+    padding: 0;
+    display: inline-block;
+}
+#main .title h1 .middle{
+    display: inline-block;
+    text-align:center;
+}
+#main .title h1 .right{
+    padding: 0;
+    display: inline-block;
+    text-align: right;
+}
+#main .title h1 strong span{
+    padding: 0;
+    margin: 0;
+    font-family: 'Eros Romano';
+    font-size: 330px;
+    line-height: 0.7;
+    letter-spacing: 8.25px;
+}
+#section1{}
+#section2{}
+#section3{}

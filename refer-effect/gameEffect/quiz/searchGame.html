@@ -319,10 +319,8 @@
                 let answer = item.trim().toLowerCase();
                 answers[answer] = false;
             });
-
             // console.log(answers);
         };
-
         //오답체크
         function missAnswers(){
             quizAnswers.forEach(function(item){
@@ -361,28 +359,22 @@
 
         //게임 끝났을 때 
         function endQuiz(){
-            
             // alert("게임 끝!");
             //시간 정지
             clearInterval(timeInterval);
             //음악 정지
             $themeSong.pause();
-
             //정답체크 비활성화 true까지 값을 줘야지 잠긴다
             $startInput.attr("disabled", "true");
-
             //오답 보여주기
             missAnswers();
-
             //메세지 출력
             //게임이 끝났습니다. 당신은 몇 문제중에 몇개를 맞추었습니다. 당신의 점수는 몇점입니다.
             // $msg.css('display', 'block');
             let point = Math.round((score / quizAnswers.length ) * 100);
             $msg.show().text("게임이 끝났습니다. 당신은"+ quizAnswers.length +"문제 중에 " + score +"개를 맞추었습니다. 당신의 점수는 "+ point +"점 입니다.");
-            
             $reStart.show();
             $startBtn.hide();
-        
         }
         function reStart(){
             timeRemaingin = 60;

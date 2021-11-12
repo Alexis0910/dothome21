@@ -207,6 +207,7 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
     background: #11e8bb;
     /* Old browsers */
     background: $gradient1;
+    position: relative;
 
     &.game {
         background: $gradient2;
@@ -288,33 +289,39 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
     @include positionCenter;
     bottom: 10px;
     top: auto;
+    width: 90%;
 
-    li {
-        list-style: none;
-        display: inline;
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            width: 100px;
-            height: 50px;
-            line-height: 50px;
-            border: 1px solid #fff;
-            display: inline-block;
-            border-radius: 50px;
-            font-size: 14px;
-            text-align: center;
-            margin: 4px;
-            font-family: $font-NEXON1;
-            box-shadow: inset 0 0 0 #fff;
-            transition: all 0.4s;
-
-            &:hover {
-                box-shadow: inset 0 -100px 0 #fff;
-                color: #6c4a70;
+    ul {
+        display: flex;
+        justify-content: center;
+        li {
+            list-style: none;
+            display: inline;
+    
+            a {
+                color: #fff;
+                text-decoration: none;
+                width: 100px;
+                height: 50px;
+                line-height: 50px;
+                border: 1px solid #fff;
+                display: inline-block;
+                border-radius: 50px;
+                font-size: 14px;
+                text-align: center;
+                margin: 4px;
+                font-family: $font-NEXON1;
+                box-shadow: inset 0 0 0 #fff;
+                transition: all 0.4s;
+    
+                &:hover {
+                    box-shadow: inset 0 -100px 0 #fff;
+                    color: #6c4a70;
+                }
             }
         }
     }
+
 }
 
 //info
@@ -708,7 +715,7 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
     #nav {
         position: absolute;
         left: 50%;
-        top: 80%;
+        top: 50%;
         transform: translate(-50%, -50%);
         font-size: 18vw;
 
