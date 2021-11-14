@@ -4,16 +4,32 @@
 }
 #wrap{
     width: 100%;
-    backgroun: url(/assets);
-    background-size: contain;
     color: #1f3d4d;
+}
+.noise {
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    opacity: 0.75;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(/portfolio/assets/img/noise-bg.jpg);
+    background-repeat: repeat;
+    background-position: top left;
+}
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 .container {
     max-width: 72%;
     margin: 0 auto;
 }
 #header{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     max-height: 110px;
     display: fixed;
     z-index: 1;
@@ -51,6 +67,7 @@
 #main{}
 #main .title{
     margin-top: 100px;
+    position: relative;
 }
 #main .title h1{
     margin: 0;
@@ -78,6 +95,20 @@
     line-height: 0.7;
     letter-spacing: 8.25px;
 }
+#main .title .spin {
+    display: block;
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    top:100%;
+    left:-85%;
+}
+#main .title .spin .first{
+    opacity: 0.5;
+    transform: translate(-50%, -50%) rotate(15deg);
+}
+#main .title .spin .second{}
+#main .title .spin .circleInner{}
 #section1{}
 #section2{}
 #section3{}
