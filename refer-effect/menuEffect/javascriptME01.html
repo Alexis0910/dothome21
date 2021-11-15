@@ -113,17 +113,11 @@
     <div class="info right">
         <ul>
             <li class="active"><a href="javascriptME01.html">1</a></li>
-            <li><a href="javascriptME02.html">2</a></li>
-            <li><a href="javascriptME03.html">3</a></li>
-            <li><a href="javascriptME04.html">4</a></li>
-            <li><a href="javascriptME05.html">5</a></li>
+
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
-            <li><a href="jqueryME02.html">2</a></li>
-            <li><a href="jqueryME03.html">3</a></li>
-            <li><a href="jqueryME04.html">4</a></li>
-            <li><a href="jqueryME05.html">5</a></li>
+
         </ul>
     </div>
 
@@ -289,6 +283,18 @@
                 tabCont[index].style.display = "block";
             });
         });
+
+
+
+        //소스보기 버튼실행
+        document.querySelector(".info button").addEventListener("click", function(){
+        document.querySelector("#modal").classList.remove("hide");
+        document.querySelector("#modal").classList.add("show");
+        });
+        document.querySelector(".modal-cont button").addEventListener("click", function(){
+            document.querySelector("#modal").classList.add("hide");
+        });
+
             //code tab menu javascript ver.
             const viewTitle = document.querySelectorAll(".view-title li");
             const viewCont = document.querySelectorAll(".view-cont > div");
@@ -306,5 +312,10 @@
                     viewCont[index].style.display = "block";
                 });
             });
+
+
+
+
+
     </script>
 </html>

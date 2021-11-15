@@ -21,7 +21,6 @@
 }
 #wrapper {
     width: 100vw;
-    height: 100vh;
     overflow: hidden;
 }
 .container {
@@ -64,7 +63,9 @@
     display: none;
 }
 .headerInner .hamburger span{}
-#main{}
+#main{
+    overflow: hidden;
+}
 #main .title{
     margin-top: 100px;
     position: relative;
@@ -109,6 +110,22 @@
 }
 #main .title .spin .second{}
 #main .title .spin .circleInner{}
+#main .image {
+    overflow: hidden;
+    display: flex;
+    gap: 15vw;
+    justify-content: space-between;
+}
+#main .image .mainPic{
+    width: 47vw;
+}
+#main .image .lake{
+    width: 20vw;
+    height: 27vw;
+    margin-right: 7vw;
+
+
+}
 #section1{}
 #section2{}
 #section3{}
