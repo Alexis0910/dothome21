@@ -20,18 +20,23 @@
     background-position: top left;
 }
 #wrapper {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 .container {
-    max-width: 72%;
+    max-width: 86%;
     margin: 0 auto;
 }
 #header{
-    /* border: 1px solid #000; */
+    margin: 0 auto;
     max-height: 110px;
-    display: fixed;
-    z-index: 1;
+    justify-content: space-between;
+    position: fixed; 
+    width: 100%;
+    left: 0%;
+    top:auto;
+    z-index: 5;
+    
 }
 #header .headerInner{
     display: flex;
@@ -63,69 +68,194 @@
     display: none;
 }
 .headerInner .hamburger span{}
-#main{
+
+#section1 .article1{
     overflow: hidden;
+    margin-bottom: 15vh;
 }
-#main .title{
+#section1 .article1 .dot {
+    width: 1vw;
+    height: 1vw;
+    background: #1f3d4d;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 3%;
+
+}
+#section1 .article1 .title{
     margin-top: 100px;
     position: relative;
 }
-#main .title h1{
+#section1 .article1 .title h1{
     margin: 0;
     padding: 0;
     display: grid;
 }
-#main .title h1 strong{
+#section1 .article1 .title h1 strong{
     padding: 0;
     display: inline-block;
 }
-#main .title h1 .middle{
+#section1 .article1 .title h1 .middle{
     display: inline-block;
     text-align:center;
 }
-#main .title h1 .right{
+#section1 .article1 .title h1 .right{
     padding: 0;
     display: inline-block;
     text-align: right;
 }
-#main .title h1 strong span{
+#section1 .article1 .title h1 strong span{
     padding: 0;
     margin: 0;
     font-family: 'Eros Romano';
-    font-size: 330px;
+    font-size: 18vw;
     line-height: 0.7;
     letter-spacing: 8.25px;
 }
-#main .title .spin {
-    display: block;
+#section1 .article1 .title .spin {
     position: absolute;
-    width: 30vw;
-    height: 30vw;
-    top:100%;
-    left:-85%;
+    width: 28vw;
+    height: 28vw;
+    top:28%;
+    left:55%;
 }
-#main .title .spin .first{
-    opacity: 0.5;
+#section1 .article1 .title .spin .first{
+    opacity: 0.12;
     transform: translate(-50%, -50%) rotate(15deg);
 }
-#main .title .spin .second{}
-#main .title .spin .circleInner{}
-#main .image {
+#section1 .article1 .title .spin .second{
+    opacity: 0.12;
+    transform: translate(-50%, -150%) rotate(30deg);
+
+}
+#section1 .article1 .title .spin .circleInner{
+    opacity: 0.7;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+    transform: translate(-21%, -3250%);
+
+}
+#section1 .article1 .image {
     overflow: hidden;
     display: flex;
     gap: 15vw;
     justify-content: space-between;
+    height: 130vh;
 }
-#main .image .mainPic{
+#section1 .article1 .image .mainPic{
     width: 47vw;
+    position: absolute;
+    z-index: -1;
+    top: 80%;
 }
-#main .image .lake{
-    width: 20vw;
-    height: 27vw;
+#section1 .article1 .image .lake{
+    width: 25vw;
+    height: 35vw;
     margin-right: 7vw;
-
+    position: absolute;
+    top: 150%;
+    right: 0;
+    
 
 }
-#section1{}
-#section2{}
-#section3{}
+#section1 .article1 .Cont1Desc {
+    overflow: hidden;
+}
+#section1 .article1 .Cont1Desc .leftCircle{
+    width: 35%;
+    margin: 0;
+    float: left;
+    margin-right: 10%;
+}
+#section1 .article1 .leftCircle img{
+}
+#section1 .article1 .mainDescEng {
+    float: left;
+    width: 55%;
+    margin-top: 5vh;
+}
+#section1 .article1 .mainDescEng h1{
+    font-family: 'Gallient Regular';
+    font-weight: normal;
+    font-size: 3.2vw;
+    letter-spacing: 5px;
+}
+#section1 .article1 .mainDescKr {
+    left: -50%;
+    top:-50%
+}
+#section1 .article1 .mainDescKr p{
+    text-align: right;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 0.8vw;
+    width: 38%;
+}
+#section1 .article2{
+    position: relative;
+    height: 200vh;
+    width: 100%;
+}
+#section1 .article2 .title{
+    display: flex;
+}
+#section1 .article2 .title h1{
+    font-family: 'Eros Romano';
+    font-size: 8vw;
+    width: 60%;
+    margin-left: 7%;
+    line-height: 1.1;
+    font-weight: normal;
+    z-index: 4;
+}
+#section1 .article2 .title .sydney {
+    position: absolute;
+    right: 0;
+    width: 55%;
+}
+#section1 .article2 .desc {
+    float: right;
+    width: 100%;
+    margin-right: 7%;
+    display: flex;
+    margin-top: 60vh;
+    gap: 13%;
+}
+#section1 .article2 .desc .empty {
+    position: relative;
+    width: 40%;
+    text-align: right;
+
+}
+#section1 .article2 .desc .empty span {
+    position: absolute;
+    padding-top: 40vh;
+    width: 80%;
+    text-align: right;
+    display: block;
+    float: right;
+    left: 40%;
+}
+#section1 .article2 .desc .right {
+    width: 50%;
+    font-family: 'Chosunilbo_myungjo';
+}
+#section1 .article2 .desc .right h2{
+    font-size: 2vw;
+    font-weight: 300;
+}
+#section1 .article2 .desc .right p{
+    margin: 5vh 0;
+    font-size: 1.3vw;
+    font-weight: 300;
+    line-height: 1.6;
+}
+#section1 .article2 .desc .right span {
+    font-family: 'Gallient Regular';
+    font-weight: normal;
+    letter-spacing: 2;
+    font-size: 1.3vw;
+}
+#section1 .article3{}
+#section1 .article4{}
