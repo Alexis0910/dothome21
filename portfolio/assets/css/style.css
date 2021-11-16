@@ -42,9 +42,11 @@
     display: flex;
     justify-content: space-between;
 }
-.headerInner .fade{}
-.headerInner .fade span{}
-.headerInner .fade span{}
+.headerInner .fade{
+    cursor: pointer;
+}
+.headerInner .fade span{
+}
 .headerInner .fade span div{
     display: inline;
     font-family: 'Eros Romano';
@@ -63,17 +65,34 @@
     font-size: 18px;
     font-weight: normal;
     margin-left: 30px;
+    position: relative;
+
 } 
+.headerInner #nav .fixed span::before{
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: -0.25em;
+    left:0;
+    width: 100%;
+    height: 1px;
+    background-color: #204050;
+    -webkit-transition: all 650ms cubic-bezier(0.135, 0.75, 0.32, 1);
+    -webkit-transform: scaleX(0);
+}
+.headerInner #nav .fixed span:hover::before {
+    -webkit-transform: scaleX(1);
+}
 .headerInner .hamburger{
     display: none;
 }
 .headerInner .hamburger span{}
 
-#section1 .article1{
+#About .article1{
     overflow: hidden;
     margin-bottom: 15vh;
 }
-#section1 .article1 .dot {
+#About .article1 .dot {
     width: 1vw;
     height: 1vw;
     background: #1f3d4d;
@@ -83,29 +102,29 @@
     left: 3%;
 
 }
-#section1 .article1 .title{
+#About .article1 .title{
     margin-top: 100px;
     position: relative;
 }
-#section1 .article1 .title h1{
+#About .article1 .title h1{
     margin: 0;
     padding: 0;
     display: grid;
 }
-#section1 .article1 .title h1 strong{
+#About .article1 .title h1 strong{
     padding: 0;
     display: inline-block;
 }
-#section1 .article1 .title h1 .middle{
+#About .article1 .title h1 .middle{
     display: inline-block;
     text-align:center;
 }
-#section1 .article1 .title h1 .right{
+#About .article1 .title h1 .right{
     padding: 0;
     display: inline-block;
     text-align: right;
 }
-#section1 .article1 .title h1 strong span{
+#About .article1 .title h1 strong span{
     padding: 0;
     margin: 0;
     font-family: 'Eros Romano';
@@ -113,23 +132,23 @@
     line-height: 0.7;
     letter-spacing: 8.25px;
 }
-#section1 .article1 .title .spin {
+#About .article1 .title .spin {
     position: absolute;
     width: 28vw;
     height: 28vw;
     top:28%;
     left:55%;
 }
-#section1 .article1 .title .spin .first{
+#About .article1 .title .spin .first{
     opacity: 0.12;
     transform: translate(-50%, -50%) rotate(15deg);
 }
-#section1 .article1 .title .spin .second{
+#About .article1 .title .spin .second{
     opacity: 0.12;
     transform: translate(-50%, -150%) rotate(30deg);
 
 }
-#section1 .article1 .title .spin .circleInner{
+#About .article1 .title .spin .circleInner{
     opacity: 0.7;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2vw;
@@ -137,20 +156,20 @@
     transform: translate(-21%, -3250%);
 
 }
-#section1 .article1 .image {
+#About .article1 .image {
     overflow: hidden;
     display: flex;
     gap: 15vw;
     justify-content: space-between;
     height: 130vh;
 }
-#section1 .article1 .image .mainPic{
+#About .article1 .image .mainPic{
     width: 47vw;
     position: absolute;
     z-index: -1;
     top: 80%;
 }
-#section1 .article1 .image .lake{
+#About .article1 .image .lake{
     width: 25vw;
     height: 35vw;
     margin-right: 7vw;
@@ -160,47 +179,47 @@
     
 
 }
-#section1 .article1 .Cont1Desc {
+#About .article1 .Cont1Desc {
     overflow: hidden;
 }
-#section1 .article1 .Cont1Desc .leftCircle{
+#About .article1 .Cont1Desc .leftCircle{
     width: 35%;
     margin: 0;
     float: left;
     margin-right: 10%;
 }
-#section1 .article1 .leftCircle img{
+#About .article1 .leftCircle img{
 }
-#section1 .article1 .mainDescEng {
+#About .article1 .mainDescEng {
     float: left;
     width: 55%;
     margin-top: 5vh;
 }
-#section1 .article1 .mainDescEng h1{
+#About .article1 .mainDescEng h1{
     font-family: 'Gallient Regular';
     font-weight: normal;
     font-size: 3.2vw;
     letter-spacing: 5px;
 }
-#section1 .article1 .mainDescKr {
+#About .article1 .mainDescKr {
     left: -50%;
     top:-50%
 }
-#section1 .article1 .mainDescKr p{
+#About .article1 .mainDescKr p{
     text-align: right;
     font-family: 'Chosunilbo_myungjo';
     font-size: 0.8vw;
     width: 38%;
 }
-#section1 .article2{
+#About .article2{
     position: relative;
     height: 200vh;
     width: 100%;
 }
-#section1 .article2 .title{
+#About .article2 .title{
     display: flex;
 }
-#section1 .article2 .title h1{
+#About .article2 .title h1{
     font-family: 'Eros Romano';
     font-size: 8vw;
     width: 60%;
@@ -209,12 +228,12 @@
     font-weight: normal;
     z-index: 4;
 }
-#section1 .article2 .title .sydney {
+#About .article2 .title .sydney {
     position: absolute;
     right: 0;
     width: 55%;
 }
-#section1 .article2 .desc {
+#About .article2 .desc {
     float: right;
     width: 100%;
     margin-right: 7%;
@@ -222,13 +241,13 @@
     margin-top: 60vh;
     gap: 13%;
 }
-#section1 .article2 .desc .empty {
+#About .article2 .desc .empty {
     position: relative;
     width: 40%;
     text-align: right;
 
 }
-#section1 .article2 .desc .empty span {
+#About .article2 .desc .empty span {
     position: absolute;
     padding-top: 40vh;
     width: 80%;
@@ -237,25 +256,100 @@
     float: right;
     left: 40%;
 }
-#section1 .article2 .desc .right {
+#About .article2 .desc .right {
     width: 50%;
     font-family: 'Chosunilbo_myungjo';
 }
-#section1 .article2 .desc .right h2{
+#About .article2 .desc .right h2{
     font-size: 2vw;
     font-weight: 300;
 }
-#section1 .article2 .desc .right p{
+#About .article2 .desc .right p{
     margin: 5vh 0;
     font-size: 1.3vw;
     font-weight: 300;
     line-height: 1.6;
 }
-#section1 .article2 .desc .right span {
+#About .article2 .desc .right span {
     font-family: 'Gallient Regular';
     font-weight: normal;
     letter-spacing: 2;
     font-size: 1.3vw;
 }
-#section1 .article3{}
-#section1 .article4{}
+#About .article3{
+    position: relative;
+    margin-top: 30vh;
+    height: 100vh;
+}
+#About .article3.transition {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#CFC9BB));
+    background-image: linear-gradient(to bottom, #fff 100%, #CFC9BB 100%);
+}
+#About .article3 .title{
+    position: relative;
+    text-align: center;
+    font-family: 'Eros Romano';
+    font-size: 13vw;
+    margin: 0 auto;
+    line-height: 0.8;
+
+}
+#About .article3 .title::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 10vw; height: 10vw;
+    background: url(/portfolio/assets/img/circle3.png)no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    top: 75%; left: 60%;
+    z-index: -1
+}
+#About .article3 .imgCircle{
+    display: block;
+    position: absolute;
+    width: 10vw; height:10vw;
+    border-radius: 50%;
+    z-index: -1;
+}
+#About .article3 .imgCircle.dot1{
+    background: url(/portfolio/assets/img/circle1.jpg);
+    background-size: cover;
+    top: -10%; left: 20%;
+
+}
+#About .article3 .imgCircle.dot2{
+    background: url(/portfolio/assets/img/circle2.png);
+    background-size: cover;
+    top: 19%; left: 80%;
+
+}
+/* #About .article3 .imgCircle.dot3{
+    background: url(/portfolio/assets/img/circle3.png);
+    top: 70%; left: 59%;
+    background-size: cover;
+
+} */
+#About .article4{
+    background-color: #CFC9BB;
+    padding: 20vh 0 30vh;
+}
+#About .article4 .moveWrap{
+    margin: 0 auto;
+    width: 40vw;
+}
+#About .article4 .moveWrap .mImg{}
+#About .article4 .moveWrap .mImg img{}
+#About .article4 .mText{}
+#About .article4 .mText p{}
+#About .article4 .scrollDown{}
+#About .article4 .scrollDown span{}
+#About .article4 .scrollDown span:after{
+    content: '';
+    display: block;
+    width: 1vw; height: 2vw;
+    background: url(/portfolio/assets/img/scrolldown.svg)no-repeat;
+    background-size: cover;
+}
