@@ -7,11 +7,12 @@
     color: #1f3d4d;
 }
 .noise {
+    mix-blend-mode:multiply;
     position: fixed;
-    z-index: -1;
+    z-index: 5;
     pointer-events: none;
     top: 0;
-    opacity: 0.75;
+    opacity: 0.85;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -27,6 +28,8 @@
     max-width: 86%;
     margin: 0 auto;
 }
+
+/* header */
 #header{
     margin: 0 auto;
     max-height: 110px;
@@ -88,6 +91,9 @@
 }
 .headerInner .hamburger span{}
 
+
+
+/* Section About  */
 #About .article1{
     overflow: hidden;
     margin-bottom: 15vh;
@@ -334,22 +340,149 @@
 } */
 #About .article4{
     background-color: #CFC9BB;
-    padding: 20vh 0 30vh;
+    padding: 20vh 0 15vh;
+    position: relative;
 }
 #About .article4 .moveWrap{
     margin: 0 auto;
     width: 40vw;
+    margin-bottom: 40vh;
+
 }
-#About .article4 .moveWrap .mImg{}
+#About .article4 .moveWrap .mImg{
+}
 #About .article4 .moveWrap .mImg img{}
-#About .article4 .mText{}
-#About .article4 .mText p{}
-#About .article4 .scrollDown{}
-#About .article4 .scrollDown span{}
+#About .article4 .mText{
+    justify-content: space-between;
+    font-family: 'Gallient Regular';
+    position: absolute;
+    display: flex;
+    font-size: 34vw;
+    top:30%;
+    left: 12%; 
+}
+#About .article4 .mText .left{
+    position: absolute;
+    top: -70%;
+    left: -20%;
+}
+#About .article4 .mText .right{
+    display: block;
+    position: relative;
+    left: 180%;
+
+}
+#About .article4 .scrollDown{
+    text-align: center;
+}
+#About .article4 .scrollDown .text {
+    font-family: 'Eros Romano';
+    margin-bottom: 5vh;
+}
+#About .article4 .scrollDown .text p{
+    line-height: 0.8;
+    font-size: 12vw;
+}
+#About .article4 .scrollDown span{
+    font-family: 'Montserrat';
+    font-size: 0.9vw;
+    text-align: center;
+    margin-top: 20vh;
+    display: inline-block;
+    margin: 0 auto;
+
+}
 #About .article4 .scrollDown span:after{
     content: '';
     display: block;
     width: 1vw; height: 2vw;
     background: url(/portfolio/assets/img/scrolldown.svg)no-repeat;
     background-size: cover;
+}
+
+/* section  Sites*/
+#Sites {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+}
+#Sites .wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    white-space: nowrap;
+    font-size: 0;
+    overflow:scroll;
+}
+
+#Sites .wrapper .obj {
+    position: relative;
+    height: 100vh;
+}
+
+#Sites .active .picture {
+    background: black;
+}
+
+#Sites .obj {
+    display: inline-block;
+    width: 50vw;
+    margin-left: 20vw;
+}
+
+#Sites .obj:nth-of-type(1) {
+    margin-left: 25vw;
+}
+
+#Sites .obj:nth-of-type(6) {
+    margin-right: 25vw;
+}
+
+
+#Sites .cover {
+    position: absolute;
+    width: 100%;
+    height: 35vw;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+#Sites .picture {
+    background-color: #212121;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+#Sites .picture .media {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+#Sites .title {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 18vw;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 4vw;
+    letter-spacing: 0.14vw;
+    color: #fff;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#Sites #obj_5 {
+    margin-right: 25vw;
 }
