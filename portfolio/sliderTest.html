@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        html,
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0px;
+            padding: 0;
+            background: black;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            white-space: nowrap;
+            font-size: 0;
+            overflow: scroll;
+        }
+
+        .wrapper .obj {
+            position: relative;
+            height: 100vh;
+        }
+
+        .active .picture {
+            background: black;
+        }
+
+        .obj {
+            display: inline-block;
+            width: 50vw;
+            margin-left: 20vw;
+        }
+
+        .obj:nth-of-type(1) {
+            margin-left: 25vw;
+        }
+
+        .obj:nth-of-type(6) {
+            margin-right: 25vw;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .obj {
+                width: 70vw !important;
+                margin-left: 15vw !important;
+            }
+        }
+
+        .cover {
+            position: absolute;
+            width: 100%;
+            height: 25vw;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .cover {
+                position: absolute;
+                width: 100%;
+                height: 80vw;
+                top: 50%;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+        }
+
+        .picture {
+            background-color: #212121;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: all 1s;
+        }
+
+        .picture .media {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .title {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 18vw;
+            font-family: Helvetica;
+            font-weight: bold;
+            font-size: 4vw;
+            letter-spacing: 0.14vw;
+            color: #fff;
+            text-decoration: none;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div id="obj_1" class="obj active">
+            <div class="cover" data-velocity="-10">
+                <div class="picture"><img
+                        src="https://images.unsplash.com/photo-1547356765-887c6ec834bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2720&q=80"
+                        class="media" /></div>
+                <a class="title parallax" data-velocity="-50" href="#">
+                    <div>Title</div>
+                </a>
+            </div>
+        </div>
+        <div id="obj_2" class="obj">
+            <div class="cover" data-velocity="-10">
+                <div class="picture"><img
+                        src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+                        class="media" /></div>
+                <a class="title parallax" data-velocity="-50" href="#">
+                    <div>Title </div>
+                </a>
+            </div>
+        </div>
+        <div id="obj_3" class="obj">
+            <div class="cover" data-velocity="-10">
+                <div class="picture"><img
+                        src="https://images.unsplash.com/photo-1546507257-0bddab98fe3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+                        class="media" /></div>
+                <a class="title parallax" data-velocity="-50" href="#">
+                    <div>Title</div>
+                </a>
+            </div>
+        </div>
+        <div id="obj_4" class="obj">
+            <div class="cover" data-velocity="-10">
+                <div class="picture"><img
+                        src="https://images.unsplash.com/photo-1546656651-e564d05a4740?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=581&q=80"
+                        class="media" /></div>
+                <a class="title parallax" data-velocity="-50" href="#">
+                    <div>Title</div>
+                </a>
+            </div>
+        </div>
+        <div id="obj_5" class="obj">
+            <div class="cover" data-velocity="-10">
+                <div class="picture"><img
+                        src="https://images.unsplash.com/photo-1546743991-422abed7a695?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                        class="media" /></div>
+                <a class="title parallax" data-velocity="-50" href="#">
+                    <div>Title</div>
+                </a>
+            </div>
+        </div>
+        <div id="obj_6" class="obj">
+            <div class="cover" data-velocity="-10">
+                <div class="picture"><img
+                        src="https://images.unsplash.com/photo-1545893835-abaa50cbe628?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2073&q=80"
+                        class="media" /></div>
+                <a class="title parallax" data-velocity="-50" href="#">
+                    <div>Title</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/utils/Draggable.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+    
+    <script>
+        var w_width = $(window).width();
+        var position_obj = [];
+
+        var half_w_width = w_width / 2;
+        $('.obj').each(function () {
+            position_obj.push($(this).offset().left);
+        });
+
+        Draggable.create(".wrapper", {
+            type: "scrollLeft",
+            edgeResistance: 0.9,
+            throwProps: !0,
+            maxDuration: 1.2,
+            minDuration: 1.2,
+            lockAxis: true,
+            throwProps: true,
+            onThrowUpdate: function () {
+                var wrapper_left = this.x * (-1) + half_w_width;
+
+                $(position_obj).each(function (i, val) {
+                    obj_c = i + 1;
+                    if (val < wrapper_left) {
+                        $('.obj').removeClass('active');
+                        $('#obj_' + obj_c).addClass('active');
+                    }
+                });
+            },
+            snap: function (e) {
+                var span_window_w = $(window).width();
+                return -Math.round(Math.round(e / (.3 * span_window_w)) * (.3 *
+                    span_window_w)) // This changes the threshold for dragging and snapping the obj's
+            },
+            onDragStart: function () {
+
+
+            },
+            onThrowComplete: function () {
+
+                TweenLite.set(".obj", {
+                    className: "+=loc"
+                })
+            }
+        }), TweenMax.set(".wrapper", {
+            overflow: "scroll",
+        }), $(".wrapper").scroll(function () {
+            $(".parallax").each(function () {
+                var leftOffset = $(this).offset().left;
+                var element_w = $(this).width();
+
+                leftOffset < w_width && leftOffset + element_w > 0 && TweenLite.to($(this), 1.2, {
+                    xPercent: (w_width - leftOffset) / w_width * $(this).attr("data-velocity"),
+                    overwrite: 0
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

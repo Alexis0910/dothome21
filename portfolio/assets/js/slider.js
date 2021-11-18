@@ -1,4 +1,5 @@
-var  w_width = $(window).width();
+
+var w_width = $(window).width();
 var position_obj = [];
 
 var half_w_width = w_width /2;

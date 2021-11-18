@@ -180,47 +180,53 @@
             <!-- //article4-->
         </section>
         <section id="Sites">
+            <div class="cursor">
+                <span>DRAG</span>
+            </div>
             <article class="article">
                 <div class="wrapper" id="wrapper">
                     <div id="obj_1" class="obj active">
                         <div class="cover" data-velocity="-10">
+
                             <div class="picture">
-                                <img src="/portfolio/assets/img/mockup1.jpg" class="media" /></div>
+                                <span class="desc">메가박스 웹 사이트 입니다. 이미지 슬라이더, 모달 등 다양한 스크립트를 활용하여  제작하였습니다. 
+여러가지 기기에서 반응할 수 있도록 웹 표준을 준수한 반응형으로 제작하였습니다.</span>
+                                <img src="assets\img\mockup1.jpg" class="media" /></div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div>Title</div>
+                                <div>MEGABOX</div>
                             </a>
                         </div>
                     </div>
                     <div id="obj_2" class="obj">
                         <div class="cover" data-velocity="-10">
                             <div class="picture">
-                                <img src="/portfolio/assets/img/mockup2.jpg" class="media" /></div>
+                                <img src="assets/img/mockup2.jpg" class="media" /></div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div>Title </div>
+                                <div>PHP CLASS</div>
                             </a>
                         </div>
                     </div>
                     <div id="obj_3" class="obj">
                         <div class="cover" data-velocity="-10">
-                            <div class="picture"><img src="/portfolio/assets/img/mockup3.jpg" class="media" /></div>
+                            <div class="picture"><img src="assets/img/mockup3.jpg" class="media" /></div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div>Title</div>
+                                <div>REACT</div>
                             </a>
                         </div>
                     </div>
                     <div id="obj_4" class="obj">
                         <div class="cover" data-velocity="-10">
-                            <div class="picture"><img src="/portfolio/assets/img/mockup4.jpg" class="media" /></div>
+                            <div class="picture"><img src="assets/img/mockup4.jpg" class="media" /></div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div>Title</div>
+                                <div>TEAM PROJECT D-SHARE</div>
                             </a>
                         </div>
                     </div>
                     <div id="obj_5" class="obj">
                         <div class="cover" data-velocity="-10">
-                            <div class="picture"><img src="/portfolio/assets/img/mockup5.jpg" class="media" /></div>
+                            <div class="picture"><img src="assets/img/mockup5.jpg" class="media" /></div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div>Title</div>
+                                <div>APPLE SITE</div>
                             </a>
                         </div>
                     </div>
@@ -231,82 +237,30 @@
 
     </main>
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/js/ajax.js"></script>
+    <script src="assets/js/jquery.js"></script> 
+    <!-- <script src="assets/js/ajax.js"></script> -->
     <!-- <script src="assets/js/imagesloaded.pkgd.min.js"></script> -->
     <!-- <script src="assets/js/locomotive-scroll.min.js"></script> -->
     <script src="assets/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/utils/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <!-- <script src="assets/js/SplitText.min.js"></script> -->
     <!-- <script src="assets/js/DrawSVGPlugin.min.js"></script> -->
     <!-- <script src="assets/js/lottie.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-    <!-- <script src="assets/js/slider.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/utils/Draggable.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/slider.js"></script>
     <script>
-        var w_width = $(window).width();
-        var position_obj = [];
+    const cursor = $(".cursor");
 
-        var half_w_width = w_width / 2;
-        $('.obj').each(function () {
-            position_obj.push($(this).offset().left);
-        });
-
-        Draggable.create(".wrapper", {
-            type: "scrollLeft",
-            edgeResistance: 0.9,
-            throwProps: !0,
-            maxDuration: 1.2,
-            minDuration: 1.2,
-            lockAxis: true,
-            throwProps: true,
-            onThrowUpdate: function () {
-                var wrapper_left = this.x * (-1) + half_w_width;
-
-                $(position_obj).each(function (i, val) {
-                    obj_c = i + 1;
-                    if (val < wrapper_left) {
-                        $('.obj').removeClass('active');
-                        $('#obj_' + obj_c).addClass('active');
-                    }
-                });
-            },
-            snap: function (e) {
-                var span_window_w = $(window).width();
-                return -Math.round(Math.round(e / (.3 * span_window_w)) * (.3 *
-                    span_window_w)) // This changes the threshold for dragging and snapping the obj's
-            },
-            onDragStart: function () {
-
-
-            },
-            onThrowComplete: function () {
-
-                TweenLite.set(".obj", {
-                    className: "+=loc"
-                })
-            }
-
-
-        }), TweenMax.set(".wrapper", {
-            overflow: "scroll",
-        }), $(".wrapper").scroll(function () {
-            $(".parallax").each(function () {
-                var leftOffset = $(this).offset().left;
-                var element_w = $(this).width();
-
-                leftOffset < w_width && leftOffset + element_w > 0 && TweenLite.to($(this), 1.2, {
-                    xPercent: (w_width - leftOffset) / w_width * $(this).attr("data-velocity"),
-                    overwrite: 0
-                })
-            })
-        })
+    $("#Sites").mousemove(function(e){
+        gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5})
+    });
     </script>
 </body>
 

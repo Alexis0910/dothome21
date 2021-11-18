@@ -9,7 +9,7 @@
 .noise {
     mix-blend-mode:multiply;
     position: fixed;
-    z-index: 5;
+    z-index: 1000;
     pointer-events: none;
     top: 0;
     opacity: 0.85;
@@ -408,6 +408,31 @@
     padding: 0;
     overflow: hidden;
 }
+#Sites .cursor {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+    width: 5vw; height: 5vw;
+    border-radius: 50%;
+    background: #c8a887;
+    margin: 0 auto;
+    transition: transform 0.6s ease-in-out,
+    opacity 0.2s ease-in-out;
+}
+#Sites .cursor span{
+    margin: 0 auto;
+    display: block;
+    color: #e2e2e2;
+    font-family: 'Montserrat';
+    font-size: 1vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 5vw;
+    letter-spacing: normal;
+    text-align: center;
+}
 #Sites .wrapper {
     position: relative;
     height: 100vh;
@@ -421,9 +446,11 @@
     position: relative;
     height: 100vh;
 }
-
+#Sites .wrapper .desc {
+    width: 50vw;
+}
 #Sites .active .picture {
-    background: black;
+    background: #fff;
 }
 
 #Sites .obj {
@@ -436,10 +463,12 @@
     margin-left: 25vw;
 }
 
-#Sites .obj:nth-of-type(6) {
+#Sites .obj:nth-of-type(5) {
     margin-right: 25vw;
 }
-
+/* #Sites obj_5 {
+    margin-right: 25vw;
+} */
 
 #Sites .cover {
     position: absolute;
@@ -454,7 +483,6 @@
 
 
 #Sites .picture {
-    background-color: #212121;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -474,7 +502,6 @@
     top: 0;
     left: 0;
     line-height: 18vw;
-    font-family: Helvetica;
     font-weight: bold;
     font-size: 4vw;
     letter-spacing: 0.14vw;
@@ -482,7 +509,4 @@
     text-decoration: none;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-}
-#Sites #obj_5 {
-    margin-right: 25vw;
 }
