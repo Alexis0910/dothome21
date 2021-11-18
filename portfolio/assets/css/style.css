@@ -473,7 +473,7 @@
 #Sites .cover {
     position: absolute;
     width: 100%;
-    height: 35vw;
+    height: 70vh;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -485,28 +485,38 @@
 #Sites .picture {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 90%;
     transition: all 1s;
+    display: flex;
+    flex-direction: column;
 }
-
+#Sites .picture .desc {
+    width: 100%;
+    height: 10%;
+    font-size: 0.7vw;
+    font-family: 'Chosunilbo_myungjo';
+    text-align: center;
+}
 #Sites .picture .media {
     width: 100%;
-    height: 100%;
+    height: 90%;
     -o-object-fit: cover;
     object-fit: cover;
 }
 
 #Sites .title {
+    height: 10%;
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 18vw;
-    font-weight: bold;
-    font-size: 4vw;
+    font-size: 3vw;
     letter-spacing: 0.14vw;
-    color: #fff;
     text-decoration: none;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    color: #1f3d4d;
+    font-family: 'Eros Romano';
+    position: absolute;
+    margin: 0 auto;
+    bottom: -10%;
+    left:40%;
+
 }
