@@ -520,3 +520,20 @@
     left:40%;
 
 }
+#Sites .sitesTitle {
+    position: relative;
+}
+#Sites .sitesTitle:before {
+    position: absolute;
+    display: inline-block;
+    content: '01';
+    font-size: 1vw;
+    width: 2vw; height: 2vw;
+    color: #1f3d4d;
+    left: 100%;
+    top:auto;
+
+}
+#Sites .sitesTitle:after {
+    position: absolute;
+}
