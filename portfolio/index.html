@@ -46,9 +46,9 @@
                         <div class="fixed">
                             <a href="#About"><span>ABOUT</span></a>
                             <a href="#Sites"><span>SITES</span></a>
-                            <a href=""><span>SCRIPTS</span></a>
-                            <a href=""><span>SKILLS</span></a>
-                            <a href=""><span>CONTACT</span></a>
+                            <a href="#Scripts"><span>SCRIPTS</span></a>
+                            <a href="#Skills"><span>SKILLS</span></a>
+                            <a href="#Contact"><span>CONTACT</span></a>
                         </div>
                     </nav>
                     <div class="hamburger">
@@ -193,7 +193,7 @@
                                 <img src="assets\img\mockup1.jpg" class="media" />
                             </div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div class="sites1Title">MEGABOX</div>
+                                <div class="sitesTitle">MEGABOX</div>
                             </a>
                         </div>
                     </div>
@@ -204,39 +204,42 @@
                                 <br>웹 표준에 준수하여 제작하였습니다.</div>
                                 <img src="assets/img/mockup2.jpg" class="media" /></div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div class="sites1Title">PHP CLASS</div>
+                                <div class="sitesTitle">PHP CLASS</div>
                             </a>
                         </div>
                     </div>
                     <div id="obj_3" class="obj">
                         <div class="cover" data-velocity="-10">
-                            <div class="desc">React를 사용하여 제작한 사이트 입니다. JSX, 렌더링, 컴퍼넌트 함수 , PROPS 매개변수 등
-                                <br>여러가지를 공부해보며  제작에 들어간 사이트 입니다.   </div>
-                            <div class="picture"><img src="assets/img/mockup3.jpg" class="media" /></div>
+                            <div class="picture">
+                                <div class="desc">React를 사용하여 제작한 사이트 입니다. JSX, 렌더링, 컴퍼넌트 함수 , PROPS 매개변수 등
+                                    <br>여러가지를 공부해보며  제작에 들어간 사이트 입니다.   </div>
+                                <img src="assets/img/mockup3.jpg" class="media" /></div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div class="sites1Title">REACT</div>
+                                <div class="sitesTitle">REACT</div>
                             </a>
                         </div>
                     </div>
                     <div id="obj_4" class="obj">
                         <div class="cover" data-velocity="-10">
-                            <div class="desc">드라이브 코스 공유 사이트 D-SHARE입니다. 사용자들끼리의 드라이브 코스 공유를 하는 사이트를 목표로 하여 제작 하였습니다. 
-                                <br>회원가입, 로그인, 게시판, 댓글, 코스공유, 정보 수정과 사용자가 직접 코스공유 게시글을 올리는 등 여러가지 기능 구현을 목표로 제작 하였습니다.
-                            </div>
-                            <div class="picture"><img src="assets/img/mockup4.jpg" class="media" /></div>
+                            <div class="picture">
+                                <div class="desc">드라이브 코스 공유 사이트 D-SHARE입니다. 사용자들끼리의 드라이브 코스 공유를 하는 사이트를 목표로 하여 제작 하였습니다. 
+                                    <br>회원가입, 로그인, 게시판, 댓글, 코스공유, 정보 수정과 사용자가 직접 코스공유 게시글을 올리는 등 여러가지 기능 구현을 목표로 제작 하였습니다.
+                                </div>
+                                <img src="assets/img/mockup4.jpg" class="media" /></div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div class="sites1Title">TEAM PROJECT D-SHARE</div>
+                                <div class="sitesTitle">TEAM PROJECT D-SHARE</div>
                             </a>
                         </div>
                     </div>
                     <div id="obj_5" class="obj">
                         <div class="cover" data-velocity="-10">
-                            <div class="desc">애플의 사이트에서 영감을 얻어 제작한 사이트입니다. 스크롤탑 값에 따라 애니메이션이 작동되도록 구현하였으며, 
-                                <br>다양한 브라우저와 기기를 반영해 반응형으로 만들어졌으며 웹 호환성을 준수하여 작업하였습니다. 
-                            </div>
-                            <div class="picture"><img src="assets/img/mockup5.jpg" class="media" /></div>
+                            <div class="picture">
+                                <div class="desc">애플의 사이트에서 영감을 얻어 제작한 사이트입니다. 스크롤탑 값에 따라 애니메이션이 작동되도록 구현하였으며, 
+                                    <br>다양한 브라우저와 기기를 반영해 반응형으로 만들어졌으며 웹 호환성을 준수하여 작업하였습니다. 
+                                </div>
+                                <img src="assets/img/mockup5.jpg" class="media" /></div>
                             <a class="title parallax" data-velocity="-50" href="#">
-                                <div class="sites1Title">APPLE SITE</div>
+                                <div class="sitesTitle">APPLE SITE</div>
                             </a>
                         </div>
                     </div>
@@ -244,7 +247,9 @@
                 </div>
             </article>
         </section>
+        <section id="Scripts">
 
+        </section>
     </main>
 
     <script src="assets/js/jquery.js"></script>
@@ -265,16 +270,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
     <script src="assets/js/slider.js"></script>
+    <script src="assets/js/smoothScroll.js"></script>
     <script>
         const cursor = $(".cursor");
 
         $("#Sites").mousemove(function (e) {
             gsap.to(cursor, {
                 duration: 0.3,
-                left: e.pageX - 5,
-                top: e.pageY - 5
+                left: e.pageX - 50,
+                top: e.pageY - 50
             })
         });
+        
     </script>
 </body>
 
