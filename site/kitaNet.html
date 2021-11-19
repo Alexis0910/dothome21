@@ -23,12 +23,49 @@
                         <img src="img/kitanet/logo.jpg" alt="kitalogo">
                     </div>
                     <div class="right">
-                        <a href="#"><span>무역통상정보</span></a> 
-                        <a href="#"><span>회원/업무지원</span></a>
-                        <a href="#"><span>무역통계</span></a> 
-                        <a href="#"><span>협회안내</span></a>
+                        <span>
+                            <a href="#">무역통상정보</a>
+                            <ul class="hidden">
+                                <a href="#"><li>1</li></a> 
+                                <a href="#"><li>2</li></a>
+                                <a href="#"><li>3</li></a>
+                                <a href="#"><li>4</li></a> 
+                                <a href="#"><li>5</li></a> 
+                            </ul>
+                        </span> 
+                        <span>
+                            <a href="#">회원/업무지원</a>
+                            <ul class="hidden">
+                                <a href="#"><li>1</li></a> 
+                                <a href="#"><li>2</li></a>
+                                <a href="#"><li>3</li></a>
+                                <a href="#"><li>4</li></a> 
+                                <a href="#"><li>5</li></a> 
+                            </ul>
+                        </span> 
+                        <span>
+                            <a href="#">무역통계</a>
+                            <ul class="hidden">
+                                <a href="#"><li>1</li></a> 
+                                <a href="#"><li>2</li></a>
+                                <a href="#"><li>3</li></a>
+                                <a href="#"><li>4</li></a> 
+                                <a href="#"><li>5</li></a> 
+                            </ul>
+                        </span> 
+                        <span>
+                            <a href="#">협회안내</a>
+                            <ul class="hidden">
+                                <a href="#"><li>1</li></a> 
+                                <a href="#"><li>2</li></a>
+                                <a href="#"><li>3</li></a>
+                                <a href="#"><li>4</li></a> 
+                                <a href="#"><li>5</li></a> 
+                            </ul>
+                        </span> 
                     </div>
                 </div>
+
             </div>
         </header>
         <!-- //header -->
@@ -197,7 +234,11 @@
                             <span>신문고</span>
                         </div>
                         <div class="familytab">
-                            <p>국내외지부</p>
+                            <select name="tab" id="tab">
+                                <option value="">국내외지부</option>
+                                <option value="">국내외지부</option>
+                                <option value="">국내외지부</option>
+                            </select>
                         </div>
                     </div>
                     <div class="bottom">
@@ -259,6 +300,14 @@
             $(".tab2").css("display","block");
             $(".first.menu01").removeClass("active");
             $(".second.menu01").addClass("active");
+        });
+
+        //header메뉴 sliderDowm
+        $(".headerInner .right span").mouseenter(function () {
+            $(this).find(".hidden a").stop().slideDown(200);
+        });
+        $(".headerInner .right span").mouseleave(function () {
+            $(this).find(".hidden a").stop().slideUp(200);
         });
     </script>
 </body>
