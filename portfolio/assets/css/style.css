@@ -415,6 +415,7 @@
     margin: 0px;
     padding: 0;
     overflow: hidden;
+    box-sizing: border-box;
 }
 #Sites .cursor {
     display: block;
@@ -447,7 +448,7 @@
     width: 100vw;
     white-space: nowrap;
     font-size: 0;
-    overflow:scroll;
+    overflow:hidden;
 }
 
 #Sites .wrapper .obj {
@@ -551,7 +552,38 @@
 
 /* Scripts */
 #Scripts{
+    padding: 15vh 0; 
     background-color: #CFC9BB;
     height: 200vh;
 }
-#Scripts{}
+#Scripts .article {}
+#Scripts .article .title{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 13vw;
+    font-family: 'Eros Romano';
+    line-height: 1;
+    display: flex;
+}
+#Scripts .article .title .left {
+    display: block;
+    font-weight: inherit;
+    padding: 0 10vw;
+    width: 30vw;
+    text-align: left;
+}
+#Scripts .article .title .right {
+    font-weight: inherit;
+    width: 30vw;
+    display: block;
+    text-align: right;
+    padding: 0 10vw;
+}
+#Scripts .article .title h2{
+    font-size: 13vw;
+    display: inline-block;
+    font-weight: inherit;
+    background-color: #1f3d4d;
+    color: #e2d2c2;
+    
+}
