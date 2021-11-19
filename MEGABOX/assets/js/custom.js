@@ -17,7 +17,7 @@
 
     //영화차트 이미지 슬라이드
     var mySwiper = new Swiper('.swiper-container2', {
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 24,
         //mousewheel : {
         //    invert: true,

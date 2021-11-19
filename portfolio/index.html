@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOEUN PARK PORTFOLIO</title>
     <!-- font preload -->
-    <link rel="preload" href="./assets/font/ErosRomanoRegular.eot" as="font" crossorigin="anonymous" />
+    <!-- <link rel="preload" href="./assets/font/ErosRomanoRegular.eot" as="font" crossorigin="anonymous" />
     <link rel="preload" href="./assets/font/ErosRomanoRegular.svg" as="font" crossorigin="anonymous" />
     <link rel="preload" href="./assets/font/ErosRomanoRegular.woff" as="font" crossorigin="anonymous" />
-    <link rel="preload" href="./assets/font/ErosRomanoRegular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/font/ErosRomanoRegular.woff2" as="font" crossorigin="anonymous" /> -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/font.css">
@@ -270,7 +270,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
     <script src="assets/js/slider.js"></script>
-    <script src="assets/js/smoothScroll.js"></script>
+    <!-- <script src="assets/js/smoothScroll.js"></script> -->
     <script>
         const cursor = $(".cursor");
 
@@ -282,6 +282,37 @@
             })
         });
         
+        
+    //영화차트 이미지 슬라이드
+    var mySwiper = new Swiper('.swiper-container2', {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        //mousewheel : {
+        //    invert: true,
+        //},
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        breakpoints: {
+            600: {
+                slidesPerView: 1.4,
+                spaceBetween: 24
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 24
+            }
+        }
+    });
+
     </script>
 </body>
 

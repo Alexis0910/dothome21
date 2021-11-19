@@ -1,0 +1,408 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.nanumgothic * {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+#wrap {
+    background-color: #fff;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+#header {
+    height: 90px;
+    /* border-bottom: 1px solid #000; */
+    background-color: #fff;
+}
+#header .headerInner {
+    box-sizing: border-box;
+    margin: 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+#header .headerInner .left {
+    width: 20%;
+    margin-top: 40px;
+}
+#header .headerInner .left img {
+    text-align: right;
+    width: 150px;
+    height: 30px;
+}
+#header .headerInner .right {
+    font-size: 14px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+#header .headerInner .right span {
+    padding-left: 20px;
+}
+#main {
+    width: 100%;
+    height: 400px;
+}
+#main .mainInner{}
+#main .mainInner {}
+.swiper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+}
+.swiper .swiper-wrapper {
+    
+}
+.swiper .swiper-wrapper .swiper-slide {
+    background-image: url(../img/kitanet/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+.swiper-button-prev {
+    width: 21px;
+    height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    color: #fff;
+    opacity: 0;
+
+}
+
+.swiper-button-next {
+    width: 21px;
+    height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translateY(-50%);
+    color: #fff;
+    opacity: 0;
+}
+#section {
+    background-color: #F3F7F8;
+    margin-top: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(199, 199, 199);
+
+}
+#section .sectionInner {
+    width: 100%;
+    /* height: 300px; */
+    padding-bottom: 30px;
+
+    
+}
+#section .sectionInner .title {
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 35px 0;
+    position: relative;
+}
+#section .sectionInner .title:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: url(../img/kitanet/plus.jpg)no-repeat;
+    background-size: cover;
+    left: 97%;
+    top: 41%;
+}
+#section .sectionInner .boxes {
+    display: flex;
+    gap: 25px;
+
+}
+#section .sectionInner .boxes .box{
+    padding: 20px 25px 40px;
+    background: #fff;
+    border: 1px solid rgb(201, 201, 201);
+
+}
+#section .sectionInner .boxes .box p{
+    display: inline-block;
+    color: #547388;
+    font-size: 8px;
+    border: 2px solid #547388;
+    border-radius: 5PX;
+    padding: 2px 8px;
+    margin-bottom: 10px;
+}
+#section .sectionInner .boxes .box h4{
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+#section .sectionInner .boxes .box span{
+    display: inline-block;
+    padding: 0 0 5px 70px;
+    font-size: 6px;
+    line-height: 1.8;
+}
+#section .sectionInner .boxes .box .business{
+    position: relative;
+}
+#section .sectionInner .boxes .box .business::before{
+    position: absolute;
+    content: '사업기간';
+    font-size: 4px;
+    color: #fff;
+    background-color: #6990D5;
+    padding: 0 3px;
+    border-radius: 2px;
+    left:0;
+}
+#section .sectionInner .boxes .box .gathering {
+    position: relative;
+}
+#section .sectionInner .boxes .box .gathering::before {
+    position: absolute;
+    content: '모집기간';
+    font-size: 4px;
+    color: #fff;
+    background-color: #6990D5;
+    padding: 0 3px;
+    border-radius: 2px;
+    left:0;
+}
+#article {}
+#article .articleInner {
+    background: #fff;
+    height: 500px;
+}
+#article .articleInner {
+    width: 100%;
+    margin: 40px 0 ;
+}
+#article .articleInner .top{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 25px;
+}
+#article .articleInner .top .menu{
+    width: 35%;
+    border: 1px solid rgb(212, 212, 212);
+    padding: 18px 25px;
+    box-sizing: border-box;
+}
+#article .articleInner .top .menu .title{
+    display: inline-flex;
+    text-align: left;
+    margin-bottom: 15px;
+}
+#article .articleInner .top .menu .title a{
+    padding: 0 23px 0 0;
+}
+#article .articleInner .top .menu .title a h1{
+    color: rgb(136, 136, 136);
+}
+#article .articleInner .top .menu.menu01 .title .first{
+    position: relative;
+}
+#article .articleInner .top .menu.menu01 .title .first::before{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 18px;
+    left: 79px;
+    top: 4px;
+    background-color: #000;
+
+}
+#article .articleInner .top .menu .title .second {
+    position: relative;
+}
+
+#article .articleInner .top .menu .title .second::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    left: 215px;
+    top: -2px;
+    background: url(../img/kitanet/plus.jpg)no-repeat;
+    background-size: cover;
+}
+#article .articleInner .top .menu .title a h1.active {
+    color: #000;
+}
+#article .articleInner .top .menu .tab {}
+#article .articleInner .top .menu .tab .desc{
+    padding-top: 15px;
+}
+#article .articleInner .top .menu .tab .desc li{
+    padding-bottom: 25px;
+}
+#article .articleInner .top .menu .tab .desc span{
+    font-size: 15px;
+}
+#article .articleInner .top .menu .tab .desc p{
+    color: rgb(136, 136, 136);
+    font-size: 12px;
+}
+#article .articleInner .top .menu .tab2{
+    display: none;
+}
+#article .articleInner .top .menu.menu02{
+    width: 63%;
+    border: 1px solid rgb(212, 212, 212);
+    padding: 18px 25px;
+    box-sizing: border-box;
+}
+#article .articleInner .top .menu.menu02 .title .second::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    left: 614px;
+    top: -2px;
+    background: url(../img/kitanet/plus.jpg)no-repeat;
+    background-size: cover;
+}
+#article .articleInner .top .menu.menu02 .desc{}
+#article .articleInner .top .menu.menu02 .desc li,
+#article .articleInner .top .menu.menu04 .desc li
+{
+    padding-bottom: 10px;
+}
+#article .articleInner .top .menu.menu02 .desc li em,
+#article .articleInner .top .menu.menu04 .desc li em {
+    display: inline-block;
+    color: #fff;
+    background: rgb(72, 112, 223);
+    width: 89px;
+    height: 20px;
+    text-align: center;
+    margin-right: 10px;
+    
+}
+#article .articleInner .top .menu.menu04 {
+    width: 63%;
+    border: 1px solid rgb(212, 212, 212);
+    padding: 18px 25px;
+    box-sizing: border-box;
+}
+#article .articleInner .top .menu.menu04 .title .second::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    left: 614px;
+    top: -2px;
+    background: url(../img/kitanet/plus.jpg)no-repeat;
+    background-size: cover;
+}
+#article .articleInner .top .menu.menu03 {
+    background: url(../img/kitanet/img01.jpg)no-repeat;
+    background-size: cover;
+}
+/* .top .menu.menu03 .seminor {
+
+}
+.top .menu.menu03 .seminor h1{}
+.top .menu.menu03 .seminor h2{}
+.top .}
+menu.menu03 .seminor p{} */
+#article .articleInner .top .menu.menu04 {}
+#article .articleInner .top .menu.menu04 .tab{
+    display: flex;
+    justify-content: space-between;
+}
+#article .articleInner .top .menu.menu04 .tab .desc li{
+    width: 80%;
+    overflow: hidden;
+}
+#article .articleInner .top .menu.menu04 .tab .desc.line {
+    position: relative;
+}
+#article .articleInner .top .menu.menu04 .tab .desc.line::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 90px;
+    background: rgb(212, 212, 212);
+    left: -36px;
+    top: 18px;
+}
+#article .articleInner .top .menu.menu04 .tab .desc li span{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#footer {
+    overflow: hidden;
+    background-color: #263F5E;
+    height: 250px;
+}
+.footerInner {
+    box-sizing: border-box;
+    color: rgb(146, 151, 168);
+}
+.footerInner .top{
+    padding: 25px 0;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 1px solid rgb(110, 116, 133);
+}
+.footerInner .top .left {
+    width: 50%;
+    display: flex;
+}
+.footerInner .top .left span {
+    display: inline-block;
+    border-right: 1px solid rgb(110, 116, 133);
+    padding-right: 10px;
+}
+.footerInner .top .left span:last-child {
+    border: none;
+}
+.footerInner .bottom{
+    box-sizing: border-box;
+    padding: 20px 0 ;
+    display: flex;
+    justify-content: space-between;
+
+}
+.footerInner .bottom .left{
+    display: flex;
+}
+
+.footerInner .bottom .footerlogo {
+    width: 150px;
+    height: 52px;
+    margin-right: 25px;
+}
+.footerInner .bottom div p{
+
+    display: inline-block;
+    padding: 0;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.footerInner .bottom .sns{
+    margin-top: 15px;
+
+}
+.footerInner .bottom .sns img{
+    width: 35px;
+}
+.footerInner .right{
+    color: #fff;
+}
