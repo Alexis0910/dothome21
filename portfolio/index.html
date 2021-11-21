@@ -291,17 +291,17 @@
                             <a class="codeView" href="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html" target="_blank"><div>CODE<br>VIEW</div></a>
                         </div>
                         <div class="refer refer02">
-                            <h1>01</h1>
+                            <h1>02</h1>
                             <div class="box">
-                                <iframe src="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <iframe src="https://alexis0910.github.io/dothome21/refer-effect/parallaxEffect/jqueryPE07.html" width="100%" height="100%" frameborder="0"></iframe>
                                 <div class="desc">
-                                    <div class="title">MOUSE Effect</div>
                                     <div class="whattosay">
-                                        마우스 방향에 따라 이미지를 반대방향으로 조금씩 움직이게 해주어 이미지에 이질감이 들도록 해 주었습니다. 좌표값을 가운데로 정렬한 후 이미지에게 style.transform으로 움직임을 주어 이질감을 주는것을 목표로 하여 제작하였습니다.
+                                        스크롤을 내릴때애 글자가 한자 한자씩 아래에서 위로 올라오게끔 구현하였습니다. 글자를 SPLIT으로 쪼개준 후 SETTIMEOUT으로 시간차를 주어 한자씩 CLASS가 붙어 시간이 지남에 따라 한 자씩 천천히 올라옵니다.
                                     </div>
+                                    <div class="title" style="text-align: right;">PARALLAX Effect</div>
                                 </div>
                             </div>
-                            <a class="codeView" href="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                            <a class="codeView" href="https://alexis0910.github.io/dothome21/refer-effect/parallaxEffect/jqueryPE07.html" target="_blank"><div>CODE<br>VIEW</div></a>
                         </div>
                         <div class="refer refer01">
                             <h1>03</h1>
@@ -316,9 +316,43 @@
                             </div>
                             <a class="codeView" href="https://alexis0910.github.io/dothome21/personal/calculator.html" target="_blank"><div>CODE<br>VIEW</div></a>
                         </div>
+                        <div class="refer refer02">
+                            <h1>04</h1>
+                            <div class="box">
+                                <iframe src="https://alexis0910.github.io/dothome21/personal/keyboardPiano.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <div class="desc">
+                                    <div class="whattosay">
+                                        각 건반에 데이터값을 활용하여 건반과 오디오 데이터 값을 일치시켜 맞는 키를 누르면 피아노를 치듯이 플레이가 가능하도록  제작 하였습니다. 키보드에 마우스를 가져다놓으면 HOVER효과로 누르는 키에대한 힌트를 얻을 수 있도록 잠시 보여지다가 사라집니다.      
+                                    </div>
+                                    <div class="title" style="text-align: right;">KEYBOARD PIANO</div>
+                                </div>
+                            </div>
+                            <a class="codeView" href="https://alexis0910.github.io/dothome21/personal/keyboardPiano.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                        </div>
+                        <div class="refer refer01">
+                            <h1>05</h1>
+                            <div class="box">
+                                <iframe src="https://alexis0910.github.io/dothome21/refer-effect/gameEffect/quiz/cardGame.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <div class="desc">
+                                    <div class="title">CARD FLIP GAME</div>
+                                    <div class="whattosay">
+                                        짝에맞는 카드를 찾아 뒤집는 게임을 제작하였습니다. 카드게임을 시작하기 전 자동으로 카드가 섞이고 한번 뒤집어 내용을 보여준 다음, 짝에맞는 카드를 뒤집을수 있는 기회를 5번을 준 후에 완성하지 못한다면 시도가 1번씩 올라가고 결과에 따라 알맞는 멘트가 마지막에 나타나게끔 구현하였습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView" href="https://alexis0910.github.io/dothome21/refer-effect/gameEffect/quiz/cardGame.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                        </div>
                     </div>
                 </div>
-
+            </article>
+            <article class="article3">
+                <div class="scrollDown">
+                    <div class="text">
+                        <p>AND<br> THERE ARE MY <br>SKILLS</p>
+                    </div>
+                    <span>scroll</span>
+                    <div class="pb20vh"></div>
+                </div>
             </article>
         </section>
     </main>
@@ -370,9 +404,9 @@
         });
         circleSpin
             .add("startFirstSpin")
-            .to(spinFirst, 2.0, {
+            .to(spinFirst, 1.0, {
                 rotation: "+=360_cw",
-                ease: Power4.easeIn
+                ease: Power2.easeIn
             }) // , ease: Back.easeOut.config(4)
 
             .to(spinFirst, 1.0, {
@@ -381,9 +415,9 @@
             .add("endFirstSpin")
         circleSpin2
             .add("startFirstSpin")
-            .to(spinSecond, 2.0, {
+            .to(spinSecond, 1.0, {
                 rotation: "+=360_cw",
-                ease: Power4.easeIn
+                ease: Power2.easeIn
             }) // , ease: Back.easeOut.config(4)
 
             .to(spinSecond, 1.0, {

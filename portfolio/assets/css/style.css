@@ -391,18 +391,18 @@
     left: 180%;
 
 }
-#About .article4 .scrollDown{
+.scrollDown{
     text-align: center;
 }
-#About .article4 .scrollDown .text {
+.scrollDown .text {
     font-family: 'Eros Romano';
     margin-bottom: 5vh;
 }
-#About .article4 .scrollDown .text p{
+.scrollDown .text p{
     line-height: 0.8;
     font-size: 12vw;
 }
-#About .article4 .scrollDown span{
+.scrollDown span{
     font-family: 'Montserrat';
     font-size: 0.9vw;
     text-align: center;
@@ -411,7 +411,7 @@
     margin: 0 auto;
 
 }
-#About .article4 .scrollDown span:after{
+.scrollDown span:after{
     content: '';
     display: block;
     width: 1vw; height: 2vw;
@@ -563,7 +563,7 @@
 
 /* Scripts */
 #Scripts{
-    padding: 15vh 0; 
+    padding: 15vh 0 0 0; 
     /* background-color: #CFC9BB; */
 }
 #Scripts .article.article1 {
@@ -641,7 +641,7 @@
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #Scripts .article2 {
-    height: 400vh;
+    height: 800vh;
 }
 #Scripts .article2 .scriptReferWrap {
 
@@ -650,8 +650,9 @@
     position: relative;
     align-items: right;
 }
-#Scripts .article2 .scriptReferWrap .refer.refer01 {
-    margin: 0 0 50vh 0;
+#Scripts .article2 .scriptReferWrap .refer.refer01,
+#Scripts .article2 .scriptReferWrap .refer.refer02 {
+    margin: 0 0 60vh 0;
 }
 #Scripts .article2 .scriptReferWrap .refer h1 {
     font-family: 'Theramy';
@@ -684,7 +685,7 @@
     font-family: 'Chosunilbo_myungjo';
     font-size: 0.8vw;
 }
-#Scripts .article2 .scriptReferWrap .refer .codeView {
+#Scripts .article2 .scriptReferWrap .refer01 .codeView {
     position: absolute;
     background: #c8a887;
     width: 9vw;
@@ -706,5 +707,42 @@
     margin-top: 3vw;
 }
 
+#Scripts .article2 .scriptReferWrap .refer02 h1 {
+    font-family: 'Theramy';
+    font-weight: normal;
+    font-size: 31vw;
+    color: #7A7A7A;
+    opacity: 0.2;
+    text-align: right;
+}
 
-#Scripts .article2 {}
+#Scripts .article2 .scriptReferWrap .refer02 .box {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 55%;
+    left: 0;
+}
+#Scripts .article2 .scriptReferWrap .refer02 .codeView {
+    position: absolute;
+    background: #c8a887;
+    width: 9vw;
+    height: 9vw;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 3vw;
+    font-family: 'Montserrat';
+    font-size: 1vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: italic;
+    letter-spacing: normal;
+    text-align: center;
+    top: 85%;
+    right: 15%;
+}
+
+
+#Scripts .article3 {
+    background: linear-gradient(to bottom, #fff, #CFC9BB);
+}
