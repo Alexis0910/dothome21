@@ -114,6 +114,7 @@
     position: fixed;
     top: 50%;
     left: 3%;
+    z-index: 10;
 
 }
 #About .article1 .title{
@@ -295,11 +296,8 @@
     margin-top: 30vh;
     height: 100vh;
 }
-#About .article3.transition {
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#CFC9BB));
-    background-image: linear-gradient(to bottom, #fff 100%, #CFC9BB 100%);
+#About .article3.gradient {
+    background: linear-gradient( to bottom,  #fff , #CFC9BB );
 }
 #About .article3 .title{
     position: relative;
@@ -308,6 +306,7 @@
     font-size: 13vw;
     margin: 0 auto;
     line-height: 0.8;
+    z-index: 3;
 
 }
 #About .article3 .title::after {
@@ -319,14 +318,14 @@
     background-size: cover;
     border-radius: 50%;
     top: 75%; left: 60%;
-    z-index: -1
+    z-index: -1;
 }
 #About .article3 .imgCircle{
     display: block;
     position: absolute;
     width: 10vw; height:10vw;
     border-radius: 50%;
-    z-index: -1;
+    z-index: 1;
 }
 #About .article3 .imgCircle.dot1{
     background: url(/portfolio/assets/img/circle1.jpg);
@@ -563,8 +562,8 @@
     font-size: 13vw;
     font-family: 'Eros Romano';
     line-height: 1;
-    display: flex;
 }
+
 #Scripts .article .title .left {
     display: block;
     font-weight: inherit;
@@ -572,18 +571,18 @@
     width: 30vw;
     text-align: left;
 }
-#Scripts .article .title .right {
-    font-weight: inherit;
-    width: 30vw;
-    display: block;
-    text-align: right;
-    padding: 0 10vw;
-}
-#Scripts .article .title h2{
+#Scripts .article .title .middle{
     font-size: 13vw;
     display: inline-block;
     font-weight: inherit;
     background-color: #1f3d4d;
     color: #e2d2c2;
     
+}
+#Scripts .article .title .right {
+    font-weight: inherit;
+    width: 30vw;
+    display: block;
+    text-align: right;
+    padding: 0 10vw;
 }

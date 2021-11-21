@@ -147,7 +147,7 @@
                 </div>
             </article>
             <!-- //article2-->
-            <article class="article3 transtion">
+            <article class="article3 gradient">
                 <div class="container">
                     <div class="title">
                         CODING IS A<BR>
@@ -257,8 +257,20 @@
             <article class="article article1">
                 <div class="title">
                     <h1 class="left">SCRIPTS</h1>
-                    <h2>&</h1>
+                    <h2 class="middle">&</h1>
                     <h1 class="right">EFFECTS</h1>
+                </div>
+                <div class="container">
+                    <div class="Cont1Desc">
+                        <div class="leftCircle">
+                            <img src="assets/img/wave-circle-simple.svg" alt="complexCircle">
+                        </div>
+                        <div class="mainDescEng">
+                            <h1>Various Scripts & Effects that I have been studing for Jquery and Javascript.
+                            </h1>
+                        </div>
+
+                    </div>
                 </div>
             </article>
         </section>
@@ -294,127 +306,127 @@
             })
         });
 
-        /**
-         * Basic Slider
-         */
-        class Slider {
-            constructor(el, opt = {}) {
+        // /**
+        //  * Basic Slider
+        //  */
+        // class Slider {
+        //     constructor(el, opt = {}) {
 
-                this.binds();
+        //         this.binds();
 
-                this.el = el || document.querySelector('.js-slider');
+        //         this.el = el || document.querySelector('.js-slider');
 
-                this.ui = {
-                    slides: [...this.el.querySelectorAll('.js-slider__image')],
-                    nextSlide: 0,
-                    prevSlide: 0
-                };
-                this.data = {
-                    running: false,
-                    current: 0,
-                    next: 0,
-                    last: 0,
-                    direction: 0,
-                    total: this.ui.slides.length - 1,
-                    speed: 1
-                };
+        //         this.ui = {
+        //             slides: [...this.el.querySelectorAll('.js-slider__image')],
+        //             nextSlide: 0,
+        //             prevSlide: 0
+        //         };
+        //         this.data = {
+        //             running: false,
+        //             current: 0,
+        //             next: 0,
+        //             last: 0,
+        //             direction: 0,
+        //             total: this.ui.slides.length - 1,
+        //             speed: 1
+        //         };
 
-                this.init();
-            }
+        //         this.init();
+        //     }
 
-            binds() {
-                ['prev', 'next'].
-                forEach(fn => this[fn] = this[fn].bind(this));
-            }
+        //     binds() {
+        //         ['prev', 'next'].
+        //         forEach(fn => this[fn] = this[fn].bind(this));
+        //     }
 
-            changeSlide(next, current, direcation) {
-                this.data.running = true;
+        //     changeSlide(next, current, direcation) {
+        //         this.data.running = true;
 
-                this.ui.nextSlide = this.ui.slides[next];
-                this.ui.currentSlide = this.ui.slides[current];
+        //         this.ui.nextSlide = this.ui.slides[next];
+        //         this.ui.currentSlide = this.ui.slides[current];
 
-                this.ui.nextSlideImg = this.ui.nextSlide.querySelector('.js-slider__img');
-                this.ui.currentSlideImg = this.ui.currentSlide.querySelector('.js-slider__img');
+        //         this.ui.nextSlideImg = this.ui.nextSlide.querySelector('.js-slider__img');
+        //         this.ui.currentSlideImg = this.ui.currentSlide.querySelector('.js-slider__img');
 
-                this.ui.nextSlide.classList.add('is-next');
-                this.ui.currentSlide.classList.add('is-active');
+        //         this.ui.nextSlide.classList.add('is-next');
+        //         this.ui.currentSlide.classList.add('is-active');
 
-                // Next
-                TweenMax.fromTo(this.ui.nextSlide, this.data.speed, {
-                    xPercent: this.data.direction == 'right' ? 100 : -100
-                }, {
-                    xPercent: 0,
-                    ease: Expo.easeInOut
-                });
+        //         // Next
+        //         TweenMax.fromTo(this.ui.nextSlide, this.data.speed, {
+        //             xPercent: this.data.direction == 'right' ? 100 : -100
+        //         }, {
+        //             xPercent: 0,
+        //             ease: Expo.easeInOut
+        //         });
 
-                TweenMax.fromTo(this.ui.nextSlideImg, this.data.speed, {
-                    scale: 1.25
-                }, {
-                    scale: 1,
-                    ease: Expo.easeInOut
-                });
+        //         TweenMax.fromTo(this.ui.nextSlideImg, this.data.speed, {
+        //             scale: 1.25
+        //         }, {
+        //             scale: 1,
+        //             ease: Expo.easeInOut
+        //         });
 
-                // Current
-                TweenMax.fromTo(this.ui.currentSlide, this.data.speed, {
-                    xPercent: 0
-                }, {
-                    xPercent: this.data.direction == 'right' ? -100 : 100,
-                    ease: Expo.easeInOut,
-                    onComplete: () => {
-                        this.ui.currentSlide.classList.remove('is-active');
-                        this.ui.nextSlide.classList.remove('is-next');
-                        this.ui.nextSlide.classList.add('is-active');
-                        this.data.current = this.data.next;
-                        this.data.running = false;
-                    }
-                });
+        //         // Current
+        //         TweenMax.fromTo(this.ui.currentSlide, this.data.speed, {
+        //             xPercent: 0
+        //         }, {
+        //             xPercent: this.data.direction == 'right' ? -100 : 100,
+        //             ease: Expo.easeInOut,
+        //             onComplete: () => {
+        //                 this.ui.currentSlide.classList.remove('is-active');
+        //                 this.ui.nextSlide.classList.remove('is-next');
+        //                 this.ui.nextSlide.classList.add('is-active');
+        //                 this.data.current = this.data.next;
+        //                 this.data.running = false;
+        //             }
+        //         });
 
 
-                TweenMax.fromTo(this.ui.currentSlideImg, this.data.speed, {
-                    scale: 1
-                }, {
-                    scale: 1.25,
-                    ease: Expo.easeInOut
-                });
+        //         TweenMax.fromTo(this.ui.currentSlideImg, this.data.speed, {
+        //             scale: 1
+        //         }, {
+        //             scale: 1.25,
+        //             ease: Expo.easeInOut
+        //         });
 
-            }
+        //     }
 
-            prev() {
-                if (this.data.running) return;
+        //     prev() {
+        //         if (this.data.running) return;
 
-                // Set Direction 'Left'
-                this.data.direction = 'left';
+        //         // Set Direction 'Left'
+        //         this.data.direction = 'left';
 
-                this.data.next = this.data.current == 0 ? this.data.total : this.data.current - 1;
-                this.changeSlide(this.data.next, this.data.current, this.data.direction);
+        //         this.data.next = this.data.current == 0 ? this.data.total : this.data.current - 1;
+        //         this.changeSlide(this.data.next, this.data.current, this.data.direction);
 
-                console.log('prev');
-            }
+        //         console.log('prev');
+        //     }
 
-            next() {
-                if (this.data.running) return;
+        //     next() {
+        //         if (this.data.running) return;
 
-                // Set Direction 'Right'
-                this.data.direction = 'right';
+        //         // Set Direction 'Right'
+        //         this.data.direction = 'right';
 
-                this.data.next = this.data.current == this.data.total ? 0 : this.data.current + 1;
-                this.changeSlide(this.data.next, this.data.current, this.data.direction);
+        //         this.data.next = this.data.current == this.data.total ? 0 : this.data.current + 1;
+        //         this.changeSlide(this.data.next, this.data.current, this.data.direction);
 
-                console.log('next');
-            }
+        //         console.log('next');
+        //     }
 
-            addEvents() {
-                this.ui.slides[0].classList.add('is-active');
+        //     addEvents() {
+        //         this.ui.slides[0].classList.add('is-active');
 
-                this.ui.btnNext.addEventListener('click', this.next);
-                this.ui.btnPrev.addEventListener('click', this.prev);
-            }
+        //         this.ui.btnNext.addEventListener('click', this.next);
+        //         this.ui.btnPrev.addEventListener('click', this.prev);
+        //     }
 
-            init() {
-                this.addEvents();
-            }
-        }
-        const slider = new Slider();
+        //     init() {
+        //         this.addEvents();
+        //     }
+        // }
+        // const slider = new Slider();
 
     </script>
 </body>
