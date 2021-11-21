@@ -15,12 +15,16 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <style>
+        #wrapper {
+            transform-style: preserve-3d;
+        }
+    </style>
 </head>
 
 <body id="wrap">
     <div class="noise"></div>
-    <main id="wrapper">
-        <header id="header">
+     <header id="header">
             <div class="container">
                 <div class="headerInner">
                     <div class="fade">
@@ -59,6 +63,8 @@
             </div>
         </header>
         <!-- //header-->
+    <main id="wrapper">
+       
         <section id="About">
             <article class="article1">
                 <div class="dot"></div>
@@ -253,6 +259,9 @@
                 </div>
             </article>
         </section>
+        <!-- Sites -->
+
+        <div id="transition"></div>
         <section id="Scripts">
             <article class="article article1">
                 <div class="title">
@@ -280,67 +289,100 @@
                         <div class="refer refer01">
                             <h1>01</h1>
                             <div class="box">
-                                <iframe src="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <iframe
+                                    src="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html"
+                                    width="100%" height="100%" frameborder="0"></iframe>
                                 <div class="desc">
                                     <div class="title">MOUSE Effect</div>
                                     <div class="whattosay">
-                                        마우스 방향에 따라 이미지를 반대방향으로 조금씩 움직이게 해주어 이미지에 이질감이 들도록 해 주었습니다. 좌표값을 가운데로 정렬한 후 이미지에게 style.transform으로 움직임을 주어 이질감을 주는것을 목표로 하여 제작하였습니다.
+                                        마우스 방향에 따라 이미지를 반대방향으로 조금씩 움직이게 해주어 이미지에 이질감이 들도록 해 주었습니다. 좌표값을 가운데로 정렬한 후 이미지에게
+                                        style.transform으로 움직임을 주어 이질감을 주는것을 목표로 하여 제작하였습니다.
                                     </div>
                                 </div>
                             </div>
-                            <a class="codeView" href="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                            <a class="codeView"
+                                href="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html"
+                                target="_blank">
+                                <div>CODE<br>VIEW</div>
+                            </a>
                         </div>
                         <div class="refer refer02">
                             <h1>02</h1>
                             <div class="box">
-                                <iframe src="https://alexis0910.github.io/dothome21/refer-effect/parallaxEffect/jqueryPE07.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <iframe
+                                    src="https://alexis0910.github.io/dothome21/refer-effect/parallaxEffect/jqueryPE07.html"
+                                    width="100%" height="100%" frameborder="0"></iframe>
                                 <div class="desc">
                                     <div class="whattosay">
-                                        스크롤을 내릴때애 글자가 한자 한자씩 아래에서 위로 올라오게끔 구현하였습니다. 글자를 SPLIT으로 쪼개준 후 SETTIMEOUT으로 시간차를 주어 한자씩 CLASS가 붙어 시간이 지남에 따라 한 자씩 천천히 올라옵니다.
+                                        스크롤을 내릴때애 글자가 한자 한자씩 아래에서 위로 올라오게끔 구현하였습니다. 글자를 SPLIT으로 쪼개준 후 SETTIMEOUT으로 시간차를
+                                        주어 한자씩 CLASS가 붙어 시간이 지남에 따라 한 자씩 천천히 올라옵니다.
                                     </div>
                                     <div class="title" style="text-align: right;">PARALLAX Effect</div>
                                 </div>
                             </div>
-                            <a class="codeView" href="https://alexis0910.github.io/dothome21/refer-effect/parallaxEffect/jqueryPE07.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                            <a class="codeView"
+                                href="https://alexis0910.github.io/dothome21/refer-effect/parallaxEffect/jqueryPE07.html"
+                                target="_blank">
+                                <div>CODE<br>VIEW</div>
+                            </a>
                         </div>
                         <div class="refer refer01">
                             <h1>03</h1>
                             <div class="box">
-                                <iframe src="https://alexis0910.github.io/dothome21/personal/calculator.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <iframe src="https://alexis0910.github.io/dothome21/personal/calculator.html"
+                                    width="100%" height="100%" frameborder="0"></iframe>
                                 <div class="desc">
                                     <div class="title">CALCULATOR</div>
                                     <div class="whattosay">
-                                        자바스크립트를 활용하여 실제 작동 가능한 계산기를 제작하였습니다.  SWITCH문을 활용해 더하기, 빼기, 나누기 곱하기 , 백분율, 새로고침 등이 작동하도록 구현하였습니다. 디자인은 뉴모피즘 스타일로 제작을 하여 군더더기 없는 깔끔한 디자인으로 보여지게끔 제작 하였습니다.
+                                        자바스크립트를 활용하여 실제 작동 가능한 계산기를 제작하였습니다. SWITCH문을 활용해 더하기, 빼기, 나누기 곱하기 , 백분율, 새로고침
+                                        등이 작동하도록 구현하였습니다. 디자인은 뉴모피즘 스타일로 제작을 하여 군더더기 없는 깔끔한 디자인으로 보여지게끔 제작 하였습니다.
                                     </div>
                                 </div>
                             </div>
-                            <a class="codeView" href="https://alexis0910.github.io/dothome21/personal/calculator.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                            <a class="codeView" href="https://alexis0910.github.io/dothome21/personal/calculator.html"
+                                target="_blank">
+                                <div>CODE<br>VIEW</div>
+                            </a>
                         </div>
                         <div class="refer refer02">
                             <h1>04</h1>
                             <div class="box">
-                                <iframe src="https://alexis0910.github.io/dothome21/personal/keyboardPiano.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <iframe src="https://alexis0910.github.io/dothome21/personal/keyboardPiano.html"
+                                    width="100%" height="100%" frameborder="0"></iframe>
                                 <div class="desc">
                                     <div class="whattosay">
-                                        각 건반에 데이터값을 활용하여 건반과 오디오 데이터 값을 일치시켜 맞는 키를 누르면 피아노를 치듯이 플레이가 가능하도록  제작 하였습니다. 키보드에 마우스를 가져다놓으면 HOVER효과로 누르는 키에대한 힌트를 얻을 수 있도록 잠시 보여지다가 사라집니다.      
+                                        각 건반에 데이터값을 활용하여 건반과 오디오 데이터 값을 일치시켜 맞는 키를 누르면 피아노를 치듯이 플레이가 가능하도록 제작 하였습니다.
+                                        키보드에 마우스를 가져다놓으면 HOVER효과로 누르는 키에대한 힌트를 얻을 수 있도록 잠시 보여지다가 사라집니다.
                                     </div>
                                     <div class="title" style="text-align: right;">KEYBOARD PIANO</div>
                                 </div>
                             </div>
-                            <a class="codeView" href="https://alexis0910.github.io/dothome21/personal/keyboardPiano.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                            <a class="codeView"
+                                href="https://alexis0910.github.io/dothome21/personal/keyboardPiano.html"
+                                target="_blank">
+                                <div>CODE<br>VIEW</div>
+                            </a>
                         </div>
                         <div class="refer refer01">
                             <h1>05</h1>
                             <div class="box">
-                                <iframe src="https://alexis0910.github.io/dothome21/refer-effect/gameEffect/quiz/cardGame.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <iframe
+                                    src="https://alexis0910.github.io/dothome21/refer-effect/gameEffect/quiz/cardGame.html"
+                                    width="100%" height="100%" frameborder="0"></iframe>
                                 <div class="desc">
                                     <div class="title">CARD FLIP GAME</div>
                                     <div class="whattosay">
-                                        짝에맞는 카드를 찾아 뒤집는 게임을 제작하였습니다. 카드게임을 시작하기 전 자동으로 카드가 섞이고 한번 뒤집어 내용을 보여준 다음, 짝에맞는 카드를 뒤집을수 있는 기회를 5번을 준 후에 완성하지 못한다면 시도가 1번씩 올라가고 결과에 따라 알맞는 멘트가 마지막에 나타나게끔 구현하였습니다.
+                                        짝에맞는 카드를 찾아 뒤집는 게임을 제작하였습니다. 카드게임을 시작하기 전 자동으로 카드가 섞이고 한번 뒤집어 내용을 보여준 다음, 짝에맞는
+                                        카드를 뒤집을수 있는 기회를 5번을 준 후에 완성하지 못한다면 시도가 1번씩 올라가고 결과에 따라 알맞는 멘트가 마지막에 나타나게끔
+                                        구현하였습니다.
                                     </div>
                                 </div>
                             </div>
-                            <a class="codeView" href="https://alexis0910.github.io/dothome21/refer-effect/gameEffect/quiz/cardGame.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                            <a class="codeView"
+                                href="https://alexis0910.github.io/dothome21/refer-effect/gameEffect/quiz/cardGame.html"
+                                target="_blank">
+                                <div>CODE<br>VIEW</div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -355,18 +397,34 @@
                 </div>
             </article>
         </section>
+        <!-- //scrips  -->
+        <section id="Skills">
+            <article class="article">
+                <div class="wrapper" id="wrapper">
+                    <div id="obj_1" class="obj active">
+
+                    </div>
+                    <div id="obj_2" class="obj">
+
+                    </div>
+                    <div id="obj_3" class="obj">
+
+                    </div>
+                </div>
+            </article>
+        </section>
+
+
+        </section>
     </main>
 
     <script src="assets/js/jquery.js"></script>
     <!-- <script src="assets/js/ajax.js"></script> -->
-    <!-- <script src="assets/js/imagesloaded.pkgd.min.js"></script> -->
-    <!-- <script src="assets/js/locomotive-scroll.min.js"></script> -->
     <script src="assets/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <!-- <script src="assets/js/SplitText.min.js"></script> -->
-    <!-- <script src="assets/js/DrawSVGPlugin.min.js"></script> -->
-    <!-- <script src="assets/js/lottie.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script> -->
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
@@ -375,7 +433,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script> -->
     <script src="assets/js/slider.js"></script>
-    <!-- <script src="assets/js/smoothScroll.js"></script> -->
+    <script src="assets/js/smoothScroll.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
     <script>
         const cursor = $(".cursor");
         const spinFirst = $(".first");
@@ -431,15 +490,10 @@
         });
 
         //2021 image perpective change
-        //여러가지 효과를 시간차를 내서 주기
         const perspectiveChange = $(".moveWrap .mImg")
         $(window).scroll(function () {
-            let scrollTop = $(window).scrollTop();
-
-
-            if(perspectiveChange.scrollTop == scrollTop ){
-
-            }
+            let scrollTop = $(window).scrollTop()
+            if (perspectiveChange.scrollTop == scrollTop) {}
             $(".moveWrap").each(function (index) {
                 if (scrollTop + $(window).height() >= $(this).offset().top) {
                     $(this).delay($(this).data("delay")).queue(function () {
@@ -448,6 +502,8 @@
                 }
             })
         });
+
+
     </script>
 </body>
 
