@@ -251,27 +251,74 @@
                     </div>
                 </div>
                 </div>
-                </article>
+            </article>
         </section>
         <section id="Scripts">
             <article class="article article1">
                 <div class="title">
                     <h1 class="left">SCRIPTS</h1>
                     <h2 class="middle">&</h1>
-                    <h1 class="right">EFFECTS</h1>
+                        <h1 class="right">EFFECTS</h1>
                 </div>
                 <div class="container">
                     <div class="Cont1Desc">
-                        <div class="leftCircle">
-                            <img src="assets/img/wave-circle-simple.svg" alt="complexCircle">
-                        </div>
                         <div class="mainDescEng">
+                            <h2></h2>
                             <h1>Various Scripts & Effects that I have been studing for Jquery and Javascript.
                             </h1>
                         </div>
-
+                        <div class="leftCircle">
+                            <img class="circle01" src="assets/img/wave-circle-simple.svg" alt="movingCircle">
+                            <img class="circle02" src="assets/img/wave-circle-simple.svg" alt="movingCircle">
+                        </div>
                     </div>
                 </div>
+            </article>
+            <article class="article article2">
+                <div class="container">
+                    <div class="scriptReferWrap">
+                        <div class="refer refer01">
+                            <h1>01</h1>
+                            <div class="box">
+                                <iframe src="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <div class="desc">
+                                    <div class="title">MOUSE Effect</div>
+                                    <div class="whattosay">
+                                        마우스 방향에 따라 이미지를 반대방향으로 조금씩 움직이게 해주어 이미지에 이질감이 들도록 해 주었습니다. 좌표값을 가운데로 정렬한 후 이미지에게 style.transform으로 움직임을 주어 이질감을 주는것을 목표로 하여 제작하였습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView" href="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                        </div>
+                        <div class="refer refer02">
+                            <h1>01</h1>
+                            <div class="box">
+                                <iframe src="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <div class="desc">
+                                    <div class="title">MOUSE Effect</div>
+                                    <div class="whattosay">
+                                        마우스 방향에 따라 이미지를 반대방향으로 조금씩 움직이게 해주어 이미지에 이질감이 들도록 해 주었습니다. 좌표값을 가운데로 정렬한 후 이미지에게 style.transform으로 움직임을 주어 이질감을 주는것을 목표로 하여 제작하였습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView" href="https://alexis0910.github.io/dothome21/refer-effect/mouseEffect/jqueryME05.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                        </div>
+                        <div class="refer refer01">
+                            <h1>03</h1>
+                            <div class="box">
+                                <iframe src="https://alexis0910.github.io/dothome21/personal/calculator.html" width="100%" height="100%" frameborder="0"></iframe>
+                                <div class="desc">
+                                    <div class="title">CALCULATOR</div>
+                                    <div class="whattosay">
+                                        자바스크립트를 활용하여 실제 작동 가능한 계산기를 제작하였습니다.  SWITCH문을 활용해 더하기, 빼기, 나누기 곱하기 , 백분율, 새로고침 등이 작동하도록 구현하였습니다. 디자인은 뉴모피즘 스타일로 제작을 하여 군더더기 없는 깔끔한 디자인으로 보여지게끔 제작 하였습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="codeView" href="https://alexis0910.github.io/dothome21/personal/calculator.html" target="_blank"><div>CODE<br>VIEW</div></a>
+                        </div>
+                    </div>
+                </div>
+
             </article>
         </section>
     </main>
@@ -297,6 +344,9 @@
     <!-- <script src="assets/js/smoothScroll.js"></script> -->
     <script>
         const cursor = $(".cursor");
+        const spinFirst = $(".first");
+        const spinSecond = $(".second");
+        const circleInner = $(".circleInner");
 
         $("#Sites").mousemove(function (e) {
             gsap.to(cursor, {
@@ -306,128 +356,64 @@
             })
         });
 
-        // /**
-        //  * Basic Slider
-        //  */
-        // class Slider {
-        //     constructor(el, opt = {}) {
+        //circle rotation 
+        var spin = document.querySelector(".spin");
+        var circleSpin = new TimelineMax({
+            delay: 1,
+            repeat: -1,
+            repeatDelay: 2
+        });
+        var circleSpin2 = new TimelineMax({
+            delay: 1,
+            repeat: -1,
+            repeatDelay: 2
+        });
+        circleSpin
+            .add("startFirstSpin")
+            .to(spinFirst, 2.0, {
+                rotation: "+=360_cw",
+                ease: Power4.easeIn
+            }) // , ease: Back.easeOut.config(4)
 
-        //         this.binds();
+            .to(spinFirst, 1.0, {
+                ease: Power2.easeIn
+            }, "startFirstSpin+=1.0")
+            .add("endFirstSpin")
+        circleSpin2
+            .add("startFirstSpin")
+            .to(spinSecond, 2.0, {
+                rotation: "+=360_cw",
+                ease: Power4.easeIn
+            }) // , ease: Back.easeOut.config(4)
 
-        //         this.el = el || document.querySelector('.js-slider');
+            .to(spinSecond, 1.0, {
+                ease: Power2.easeIn
+            }, "startFirstSpin+=1.0")
+            .add("endFirstSpin")
 
-        //         this.ui = {
-        //             slides: [...this.el.querySelectorAll('.js-slider__image')],
-        //             nextSlide: 0,
-        //             prevSlide: 0
-        //         };
-        //         this.data = {
-        //             running: false,
-        //             current: 0,
-        //             next: 0,
-        //             last: 0,
-        //             direction: 0,
-        //             total: this.ui.slides.length - 1,
-        //             speed: 1
-        //         };
+        $(circleInner).mouseenter(function () {
+            circleSpin.play();
+            circleSpin2.play();
+        });
 
-        //         this.init();
-        //     }
-
-        //     binds() {
-        //         ['prev', 'next'].
-        //         forEach(fn => this[fn] = this[fn].bind(this));
-        //     }
-
-        //     changeSlide(next, current, direcation) {
-        //         this.data.running = true;
-
-        //         this.ui.nextSlide = this.ui.slides[next];
-        //         this.ui.currentSlide = this.ui.slides[current];
-
-        //         this.ui.nextSlideImg = this.ui.nextSlide.querySelector('.js-slider__img');
-        //         this.ui.currentSlideImg = this.ui.currentSlide.querySelector('.js-slider__img');
-
-        //         this.ui.nextSlide.classList.add('is-next');
-        //         this.ui.currentSlide.classList.add('is-active');
-
-        //         // Next
-        //         TweenMax.fromTo(this.ui.nextSlide, this.data.speed, {
-        //             xPercent: this.data.direction == 'right' ? 100 : -100
-        //         }, {
-        //             xPercent: 0,
-        //             ease: Expo.easeInOut
-        //         });
-
-        //         TweenMax.fromTo(this.ui.nextSlideImg, this.data.speed, {
-        //             scale: 1.25
-        //         }, {
-        //             scale: 1,
-        //             ease: Expo.easeInOut
-        //         });
-
-        //         // Current
-        //         TweenMax.fromTo(this.ui.currentSlide, this.data.speed, {
-        //             xPercent: 0
-        //         }, {
-        //             xPercent: this.data.direction == 'right' ? -100 : 100,
-        //             ease: Expo.easeInOut,
-        //             onComplete: () => {
-        //                 this.ui.currentSlide.classList.remove('is-active');
-        //                 this.ui.nextSlide.classList.remove('is-next');
-        //                 this.ui.nextSlide.classList.add('is-active');
-        //                 this.data.current = this.data.next;
-        //                 this.data.running = false;
-        //             }
-        //         });
+        //2021 image perpective change
+        //여러가지 효과를 시간차를 내서 주기
+        const perspectiveChange = $(".moveWrap .mImg")
+        $(window).scroll(function () {
+            let scrollTop = $(window).scrollTop();
 
 
-        //         TweenMax.fromTo(this.ui.currentSlideImg, this.data.speed, {
-        //             scale: 1
-        //         }, {
-        //             scale: 1.25,
-        //             ease: Expo.easeInOut
-        //         });
+            if(perspectiveChange.scrollTop == scrollTop ){
 
-        //     }
-
-        //     prev() {
-        //         if (this.data.running) return;
-
-        //         // Set Direction 'Left'
-        //         this.data.direction = 'left';
-
-        //         this.data.next = this.data.current == 0 ? this.data.total : this.data.current - 1;
-        //         this.changeSlide(this.data.next, this.data.current, this.data.direction);
-
-        //         console.log('prev');
-        //     }
-
-        //     next() {
-        //         if (this.data.running) return;
-
-        //         // Set Direction 'Right'
-        //         this.data.direction = 'right';
-
-        //         this.data.next = this.data.current == this.data.total ? 0 : this.data.current + 1;
-        //         this.changeSlide(this.data.next, this.data.current, this.data.direction);
-
-        //         console.log('next');
-        //     }
-
-        //     addEvents() {
-        //         this.ui.slides[0].classList.add('is-active');
-
-        //         this.ui.btnNext.addEventListener('click', this.next);
-        //         this.ui.btnPrev.addEventListener('click', this.prev);
-        //     }
-
-        //     init() {
-        //         this.addEvents();
-        //     }
-        // }
-        // const slider = new Slider();
-
+            }
+            $(".moveWrap").each(function (index) {
+                if (scrollTop + $(window).height() >= $(this).offset().top) {
+                    $(this).delay($(this).data("delay")).queue(function () {
+                        $(this).addClass("show");
+                    });
+                }
+            })
+        });
     </script>
 </body>
 

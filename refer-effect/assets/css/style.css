@@ -402,6 +402,7 @@ img {
   border-bottom: 1px dashed #fff;
   display: inline-block;
   margin-bottom: 10px;
+  opacity: 0;
 }
 
 .info h1 a {
@@ -412,6 +413,7 @@ img {
 .info p {
   font-size: 16px;
   font-weight: 300;
+  opacity: 0;
 }
 
 .info li {
@@ -926,6 +928,7 @@ img {
   border-bottom: 1px dashed #fff;
   margin-bottom: 8px;
   font-weight: 400;
+  opacity: 0;
 }
 
 .paraInfo h1 a {
@@ -936,6 +939,7 @@ img {
 .paraInfo p {
   font-size: 14px;
   line-height: 1.8;
+  opacity: 0;
 }
 
 .paraCont {

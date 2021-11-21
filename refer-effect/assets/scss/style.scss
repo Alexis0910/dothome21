@@ -333,6 +333,7 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
     color: #fff;
     padding: 20px;
 
+
     &.right {
         left: auto;
         right: 0px;
@@ -358,6 +359,7 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
         border-bottom: 1px dashed #fff;
         display: inline-block;
         margin-bottom: 10px;
+         opacity: 0;
 
         a {
             color: #fff;
@@ -368,6 +370,7 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
     p {
         font-size: 16px;
         font-weight: 300;
+            opacity: 0;
     }
 
     li {
@@ -847,6 +850,8 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
         border-bottom: 1px dashed #fff;
         margin-bottom: 8px;
         font-weight: 400;
+        opacity: 0;
+
 
         a {
             color: #fff;
@@ -857,6 +862,7 @@ $gradient6: linear-gradient(to bottom, #fff08f 0%, #d299c2 100%);
     p {
         font-size: 14px;
         line-height: 1.8;
+        opacity: 0;
     }
 }
 
