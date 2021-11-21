@@ -17,10 +17,10 @@
 .noise {
     mix-blend-mode:multiply;
     position: fixed;
-    z-index: 1000;
+    z-index: 5000;
     pointer-events: none;
     top: 0;
-    opacity: 0.85;
+    opacity: 0.95;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -50,7 +50,7 @@
     width: 100%;
     left: 0%;
     top:auto;
-    z-index: 5000;
+    z-index: 500;
     
 }
 #header .headerInner{
@@ -423,7 +423,7 @@
     background-size: cover;
 }
 
-/* section  Sites*/
+/* Sites*/
 #Sites {
     width: 100vw;
     height: 100vh;
@@ -463,7 +463,6 @@
     width: 100vw;
     white-space: nowrap;
     font-size: 0;
-    overflow:hidden;
 }
 
 #Sites .wrapper .obj {
@@ -758,34 +757,227 @@
     margin: 0px;
     padding: 0;
     overflow: scroll;
-
 }
 
-
 #Skills .wrapper {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+    height: 100vh !important;
+    width: 600vw;
     white-space: nowrap;
     font-size: 0;
-    overflow: inherit;
+    display: flex;
+    overflow: scroll;
 }
 
 #Skills .wrapper .obj {
+    padding: 10vh 0 0 0;
     position: relative;
-    height: 100vh;
-}
-
-#Skills .wrapper .desc {
-    width: 50vw;
-}
-
-#Skills .active .picture {
-    background: #fff;
-}
-
-#Skills .obj {
+    height: 99vh;
     display: inline-block;
-    width: 50vw;
+    width: 140vw;
     margin-left: 20vw;
+    /* border: 1px solid #000; */
+    overflow: hidden;
+}
+#Skills .wrapper .obj h1 {
+    font-family: 'Gallient Regular';
+    font-size: 25vw;
+    color: #EEF0F1;
+    letter-spacing: 10vw;
+    font-weight: normal;
+}
+#Skills .wrapper .obj .skills {
+    justify-content: center;
+    left: 20vw;
+    position: absolute;
+    top:10%;
+    width: 40vw;
+    /* border: 1px solid #7A7A7A; */
+    display: block;
+    height: inherit;
+}
+#Skills .wrapper .obj .svg {
+    display: block;
+    text-align: center;
+}
+#Skills .wrapper .obj .svg img{
+    width: 27vw;
+    height: 27vw;
+}
+#Skills .wrapper .obj .skillsList{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+
+}
+#Skills .wrapper .obj .skillsList h3{
+    display: block;
+    text-align: center;
+    font-family: 'Eros Romano';
+    font-size: 10vw;
+    font-weight: normal;
+    padding: 0;
+    line-height: 0.7;
+
+}
+#Skills .wrapper .obj .skills p {
+    display: block;
+    margin-top: 20vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7vw;
+    text-align: center;
+}
+#Skills .wrapper .obj2 {
+    display:block;
+    width: 50vw;
+    height: 100vh;
+    background: url(../img/skillsbg01.svg)no-repeat;
+    background-size: cover;
+}
+#Skills .wrapper .obj3 {
+    width: 150vw;
+    background-color: #1F3D4D;
+    color: #fff;
+    padding: 20vh;
+    box-sizing: border-box;
+}
+#Skills .wrapper .obj3 .ability {
+    justify-content: space-between;
+    /* border: 1px solid #fff; */
+    display: inline-block;
+    
+}
+#Skills .wrapper .obj3 .ability .dot {
+    position: relative;
+    z-index: 10;
+}
+#Skills .wrapper .obj3 .ability .dot:after {
+    content: '';
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    background: #C8A887;
+    border-radius: 50%;
+    left: 6vw;
+    z-index: 0;
+    mix-blend-mode: exclusion;
+}
+#Skills .wrapper .obj3 .ability h2{
+    font-family: 'Eros Romano';
+    font-weight: normal;
+    font-size: 3vw;
+}
+#Skills .wrapper .obj3 .ability .abilityWrap{
+    display: inline-block;
+    width: 27vw;
+    height: 40vh;
+    white-space: pre-wrap;
+    margin-right: 5vw;
+}
+
+#Skills .wrapper .obj3 .ability .abilityWrap .desc {
+    display: block;
+    padding: 3vh 0;
+    box-sizing: border-box;
+    border-top: 1px solid #fff;
+    height: 15vh;
+}
+#Skills .wrapper .obj3 .ability .abilityWrap .desc.none {
+    border: none
+}
+#Skills .wrapper .obj3 .ability .abilityWrap .desc h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 1vw;
+    margin-bottom: 2vh;
+}
+#Skills .wrapper .obj3 .ability .abilityWrap .desc p{
+    font-family: 'Chosunilbo_myungjo';
+    font-weight: normal;
+    font-size: 0.6vw;
+
+}
+#Skills .wrapper .obj4 {
+    width: 40vw;
+    height: 100vh;
+    background: url(../img/skillsbg02.svg)no-repeat;
+    background-size: contain;
+}
+#Skills .wrapper .obj5 {
+    height: 100vh;
+    padding: 10vh 0;
+    position: relative;
+    width: 70vw;
+
+}
+#Skills .wrapper .obj5 .bigCircle {
+    position: relative;
+}
+#Skills .wrapper .obj5 .bigCircle img{
+    width: 40vw;
+    opacity: 0.2;
+}
+#Skills .wrapper .obj5 .bigCircle .layer{
+    position: absolute;
+    left:0;
+    transform: rotate(-20deg);
+}
+#Skills .wrapper .obj5 .thanks {
+    display: block;
+    position: absolute;
+    font-family: 'Gallient Regular';
+    top: 27%;
+    left: 11%;
+    line-height: 1.1;
+
+}
+#Skills .wrapper .obj5 .thanks span{
+    display: block;
+    font-weight: normal;
+    font-size: 5vw;
+}
+#Contact {
+    padding: 10vh 0 ;
+    width: 150vw;
+    background-color: #e0d6cb;
+}
+#Contact .personalinfo{
+    display: block;
+    width: 30vw;
+    box-sizing: border-box;
+    /* border: 1px solid #000 */
+}
+#Contact .personalinfo h4{
+    display: block;
+    font-size: 1vw;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    margin-bottom: 6vh;
+}
+#Contact .personalinfo img{
+    display: block;
+    width: 6.2vw; height: 6vw;
+    border-radius: 50%;
+    margin-bottom: 7vh;
+}
+#Contact .personalinfo span{
+    display: block;
+    font-family: 'Gallient Regular';
+    font-weight: normal;
+    font-size: 2vw;
+    letter-spacing: 8px;
+    line-height: 2;
+
+}
+#Contact .personalinfo p{
+    margin-top: 18vh;
+    display: block;
+    font-family: 'Montserrat';
+    font-size: 0.7vw;
+}
+#Contact .sendEmail{}
+#Contact .sendEmail .sendbtn{
+    display: block;
+}
+#Contact .sendEmail .sendform{
+    display: block;
 }

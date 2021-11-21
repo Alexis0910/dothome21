@@ -24,7 +24,7 @@
 /* 레이아웃 */
 #mNav {
     display: none;
-    position: absolute;
+    position: absolute; 
     top: 10px;
     right: 14px;
 }
@@ -1542,4 +1542,3 @@ body.modal_on {
     font-size: 14px;
     }
 }
-s
