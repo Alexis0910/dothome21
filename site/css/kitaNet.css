@@ -76,7 +76,7 @@
 
 #main {
     width: 100%;
-    height: 400px;
+    height: 500px;
 }
 #main .mainInner{}
 #main .mainInner {}
@@ -84,7 +84,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 500px;
+    height: 500px
 }
 .swiper .swiper-wrapper {
     
