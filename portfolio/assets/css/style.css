@@ -766,6 +766,8 @@
     font-size: 0;
     display: flex;
     overflow: scroll;
+    /* background-color: #1F3D4D; */
+
 }
 
 #Skills .wrapper .obj {
@@ -774,9 +776,10 @@
     height: 99vh;
     display: inline-block;
     width: 140vw;
-    margin-left: 20vw;
+    padding-left: 20vw;
     /* border: 1px solid #000; */
     overflow: hidden;
+    background-color: #fff;
 }
 #Skills .wrapper .obj h1 {
     font-family: 'Gallient Regular';
@@ -787,7 +790,7 @@
 }
 #Skills .wrapper .obj .skills {
     justify-content: center;
-    left: 20vw;
+    left: 38vw;
     position: absolute;
     top:10%;
     width: 40vw;
@@ -830,6 +833,7 @@
     display:block;
     width: 50vw;
     height: 100vh;
+    background-color: #fff;
     background: url(../img/skillsbg01.svg)no-repeat;
     background-size: cover;
 }
@@ -907,6 +911,7 @@
     padding: 10vh 0;
     position: relative;
     width: 70vw;
+    background-color: #fff;
 
 }
 #Skills .wrapper .obj5 .bigCircle {
@@ -936,9 +941,9 @@
     font-size: 5vw;
 }
 #Contact {
-    padding: 10vh 0 ;
+    padding: 15vh 0 ;
     width: 150vw;
-    background-color: #e0d6cb;
+    /* background-color: #e0d6cb; */
 }
 #Contact .personalinfo{
     display: block;
