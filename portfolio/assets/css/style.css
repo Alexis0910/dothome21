@@ -891,7 +891,7 @@
     display: inline-block;
     width: 27vw;
     height: 40vh;
-    white-space: pre-wrap;
+    white-space: initial;
     margin-right: 5vw;
 }
 
@@ -901,6 +901,9 @@
     box-sizing: border-box;
     border-top: 1px solid #fff;
     height: 15vh;
+}
+#Skills .wrapper .obj3 .ability .abilityWrap .desc2 {
+    display: table-cell;
 }
 #Skills .wrapper .obj3 .ability .abilityWrap .desc.none {
     border: none
@@ -1040,7 +1043,7 @@
     border-style: none;
     height: 3vh;
     display: block;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #1F3D4D;
     font-size: 1vw;
     font-weight: normal;
 }
@@ -1051,5 +1054,5 @@
     border-style: none;
     height: 10vh;
     display: block;
-    border:1px solid #000
+    border:1px solid #1F3D4D
 }
