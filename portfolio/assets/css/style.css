@@ -59,14 +59,21 @@
 }
 .headerInner .fade{
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 .headerInner .fade span{
-}
-.headerInner .fade span div{
     display: inline;
     font-family: 'Eros Romano';
-    font-size: 40px;
-    letter-spacing: -3px;
+    font-size: 2vw;
+    letter-spacing: 2px;
+}
+.headerInner .fade .title {
+    transform: translateX(-50%);
+    display: block;
+    float: left;
+    left: 50%;
+    position: relative;
 }
 .headerInner .fade .mr {
     margin-right: 15px;
@@ -143,13 +150,20 @@
     display: inline-block;
     text-align: right;
 }
-#About .article1 .title h1 strong span{
+#About .article1 .title h1 strong span {
     padding: 0;
     margin: 0;
     font-family: 'Eros Romano';
     font-size: 18vw;
     line-height: 0.7;
     letter-spacing: 8.25px;
+    transform: translateX(-50%);
+    position: relative;
+    /* transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01); */
+}
+
+#About .article1 .title h1 strong span.show {
+    transform: translateY();
 }
 #About .article1 .title .spin {
     position: absolute;
@@ -246,12 +260,15 @@
 }
 #About .article2 .title h1{
     font-family: 'Eros Romano';
-    font-size: 8vw;
+    font-size: 10.2vw;
     width: 60%;
     margin-left: 7%;
-    line-height: 1.1;
+    line-height: 0.75;
     font-weight: normal;
     z-index: 4;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    
 }
 #About .article2 .title .sydney {
     position: absolute;
@@ -761,11 +778,11 @@
 
 #Skills .wrapper {
     height: 100vh !important;
-    width: 600vw;
+    width: 500vw;
     white-space: nowrap;
     font-size: 0;
     display: flex;
-    overflow: scroll;
+    overflow: hidden;
     /* background-color: #1F3D4D; */
 
 }
@@ -910,7 +927,7 @@
     height: 100vh;
     padding: 10vh 0;
     position: relative;
-    width: 70vw;
+    width: 53vw;
     background-color: #fff;
 
 }
@@ -930,8 +947,8 @@
     display: block;
     position: absolute;
     font-family: 'Gallient Regular';
-    top: 27%;
-    left: 11%;
+    top: 29%;
+    left: 16%;
     line-height: 1.1;
 
 }
@@ -942,12 +959,14 @@
 }
 #Contact {
     padding: 15vh 0 ;
-    width: 150vw;
+    width: 103vw;
+    display: flex;
+    align-items: center;
     /* background-color: #e0d6cb; */
 }
 #Contact .personalinfo{
     display: block;
-    width: 30vw;
+    width: 37vw;
     box-sizing: border-box;
     /* border: 1px solid #000 */
 }
@@ -979,10 +998,58 @@
     font-family: 'Montserrat';
     font-size: 0.7vw;
 }
-#Contact .sendEmail{}
-#Contact .sendEmail .sendbtn{
+#Contact .sendEmail{
     display: block;
 }
-#Contact .sendEmail .sendform{
+#Contact .sendEmail .sendbtn{
+    margin: 9vh 0 0 5vw;
     display: block;
+    background-color: #EEF0F1;
+    border-radius: 50%;
+    padding: 1.5vw;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10vw;
+}
+#frm {
+    width: 50vw;
+}
+#Contact .sendEmail .sendbtn img {
+    width: 2.5vw; height: 2.5vw;
+    display: inline-block;
+}
+#Contact .sendEmail .sendform{
+    width: 30vw;
+    height: 70vh;
+    display: inline-block;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+}
+#Contact .sendEmail .sendform h4 {
+    box-sizing: border-box;
+    display: block;
+    font-size: 1vw;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    margin-bottom: 10vh;
+    font-size: 1vw;
+}
+.sendform .line{
+    width: 30vw;
+    list-style: none;
+    border-style: none;
+    height: 3vh;
+    display: block;
+    border-bottom: 1px solid #000;
+    font-size: 1vw;
+    font-weight: normal;
+}
+.sendform .square {
+    margin-top: 20vh;
+    width: 30vw;
+    list-style: none;
+    border-style: none;
+    height: 10vh;
+    display: block;
+    border:1px solid #000
 }
