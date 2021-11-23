@@ -17,45 +17,7 @@
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
-        /* #wrapper {
-            transform-style: preserve-3d;
-        }
 
-        #header {
-            z-index: 900;
-        }
-
-        #About {
-            z-index: 800;
-        }
-
-        #Sites {
-            z-index: 700;
-        }
-
-        #Scripts {
-            z-index: 600;
-        }
-
-        #Skills {
-            height: 100vh;
-            position: relative;
-            z-index: 500;
-        }
-
-        #Skills .article {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        #Skills .article .wrapper {
-            float: left;
-            width: 500vw;
-            height: 100vh;
-        } */
     </style>
 </head>
 
@@ -424,9 +386,9 @@
             </article>
         </section>
         <!-- //scrips  -->
-        <section id="Skills">
-            <article class="article">
-                <div class="wrapper" id="wrapper">
+        <section id="Skills" class="mySwiper2">
+            <article class="article swiper-wrapper">
+                <div class="wrapper swiper-slide2" id="wrapper">
                     <div class="obj">
                         <h1>Skills</h1>
                         <div class="skills">
@@ -506,7 +468,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="obj4"></div>
                     <div class="obj5">
@@ -515,7 +476,6 @@
                                 <img src="../portfolio/assets/img/wave-circle-simple.svg" alt=circle">
                                 <img class="layer" src="../portfolio/assets/img/wave-circle-simple.svg" alt=circle">
                             </div>
-
                             <div class="thanks">
                                 <span>THANKS</span>
                                 <span>FOR</span>
@@ -696,23 +656,33 @@
                 bottom: 0
             }, 0.1);
         }
-        //swiper
+        //Site swiper
         var swiper = new Swiper(".mySwiper", {
             cssMode: true,
-
         });
+
+        //Skills swiper
+        var swiper = new Swiper2(".mySwiper2", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            mousewheel: true,
+        });
+
 
         //가로모드
-        $(window).scroll(function () {
-            let scrollTop = $(window).scrollTop();
-            let goLeft = scrollTop - $("#Skills").offset().top;
+        // $(window).scroll(function () {
+        //     let scrollTop = $(window).scrollTop();
+        //     let goLeft = scrollTop - $("#Skills").offset().top;
 
-            if (scrollTop > $("#Skills").offset().top) {
-                $("#Skills .article").css("left", -goLeft);
-                //-scrollTop값을주면 아래로 내려오면서 스크롤탑이 변해서 가로모드가 이미 오른쪽으로 저 가있기때문에
-                //section3에왔을때 스크롤탑을 초기화해주기위해서 goLeft로 스크롤탑- 섹션3의오프셋값 빼서 0으로 만든담에 다시 스크롤탑값
-            }
-        });
+        //     if (scrollTop > $("#Skills").offset().top) {
+        //         $("#Skills .article").css("left", -goLeft);
+        //         //-scrollTop값을주면 아래로 내려오면서 스크롤탑이 변해서 가로모드가 이미 오른쪽으로 저 가있기때문에
+        //         //section3에왔을때 스크롤탑을 초기화해주기위해서 goLeft로 스크롤탑- 섹션3의오프셋값 빼서 0으로 만든담에 다시 스크롤탑값
+        //     }
+        //});
+
+        
     </script>
 </body>
 

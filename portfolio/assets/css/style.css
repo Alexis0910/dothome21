@@ -777,7 +777,7 @@
     height: 100vh;
     margin: 0px;
     padding: 0;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 #Skills .wrapper {
