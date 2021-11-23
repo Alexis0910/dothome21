@@ -15,40 +15,47 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/font.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
-        #wrapper {
+        /* #wrapper {
             transform-style: preserve-3d;
         }
 
-        #header{
+        #header {
             z-index: 900;
         }
-        #About{
+
+        #About {
             z-index: 800;
         }
-        #Sites{
+
+        #Sites {
             z-index: 700;
         }
-        #Scripts{
+
+        #Scripts {
             z-index: 600;
         }
-        #Skills{
+
+        #Skills {
             height: 100vh;
-            position:relative;
+            position: relative;
             z-index: 500;
         }
+
         #Skills .article {
             position: absolute;
-            left: 0; top: 0;
+            left: 0;
+            top: 0;
             width: 100vw;
             height: 100vh;
         }
+
         #Skills .article .wrapper {
             float: left;
             width: 500vw;
             height: 100vh;
-        }
+        } */
     </style>
 </head>
 
@@ -203,8 +210,8 @@
             <div class="cursor">
                 <span>DRAG</span>
             </div>
-            <article class="article swiper-container2">
-                <div class="wrapper swiper-wrapper" id="wrapper">
+            <article class="article mySwiper">
+                <div class="wrapper swiper-wrapper">
                     <div id="obj_1" class="obj swiper-slide">
                         <div class="cover" data-velocity="-10">
                             <div class="picture">
@@ -547,6 +554,7 @@
     </main>
 
     <script src="/portfolio/assets/js/jquery.js"></script>
+    <script src="/portfolio/assets/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
@@ -562,12 +570,9 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script> -->
-    <!-- <script src="/portfolio/assets/js/slider.js"></script> -->
-    <script src="/portfolio/assets/js/swiper.min.js"></script>
     <!-- <script src="/portfolio/assets/js/smoothScroll.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
     <script>
-
         //header Title moves
         const titleSpan = document.querySelectorAll("#About .article1 .title h1 strong span")
 
@@ -691,19 +696,23 @@
                 bottom: 0
             }, 0.1);
         }
+        //swiper
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+
+        });
 
         //가로모드
-        $(window).scroll(function(){
+        $(window).scroll(function () {
             let scrollTop = $(window).scrollTop();
             let goLeft = scrollTop - $("#Skills").offset().top;
 
-            if( scrollTop > $("#Skills").offset().top ){
+            if (scrollTop > $("#Skills").offset().top) {
                 $("#Skills .article").css("left", -goLeft);
                 //-scrollTop값을주면 아래로 내려오면서 스크롤탑이 변해서 가로모드가 이미 오른쪽으로 저 가있기때문에
                 //section3에왔을때 스크롤탑을 초기화해주기위해서 goLeft로 스크롤탑- 섹션3의오프셋값 빼서 0으로 만든담에 다시 스크롤탑값
             }
         });
-
     </script>
 </body>
 
