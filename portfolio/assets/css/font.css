@@ -9,7 +9,11 @@
     font-style: normal;
     font-display: swap;
 }
-
+@font-face {
+    font-family: 'Eros Romano';
+    src: url('../font/ErosRomano.ttf') format('truetype'),
+        url('../font/ErosRomano.otf') format('opentype'),
+}
 @font-face {
     font-family: 'Theramy';
     src: url('TheramyRegular.eot');

@@ -611,12 +611,13 @@
     margin: 0 auto;
     font-size: 13vw;
     font-family: 'Eros Romano';
-    line-height: 1;
 }
-
+#Scripts .article .title h1{
+    line-height: 0.2;
+}
 #Scripts .article .title .left {
     display: block;
-    font-weight: inherit;
+    font-weight:inherit;
     padding: 0 10vw;
     width: 30vw;
     text-align: left;
@@ -627,6 +628,7 @@
     font-weight: inherit;
     background-color: #1f3d4d;
     color: #e2d2c2;
+    line-height: 0.8;
     
 }
 #Scripts .article .title .right {
