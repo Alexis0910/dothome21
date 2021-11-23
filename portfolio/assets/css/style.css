@@ -13,6 +13,14 @@
     color: #1f3d4d;
     overscroll-behavior: none;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+#wrap::-webkit-scrollbar{
+    display: none;
+    /* Chrome, Safari, Opera*/
 }
 .noise {
     mix-blend-mode:multiply;
