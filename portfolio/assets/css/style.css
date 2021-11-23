@@ -243,7 +243,7 @@
     margin-top: 5vh;
 }
 #About .article1 .mainDescEng h1{
-    font-family: 'Gallient Regular';
+    font-family: 'Gallient Regular',sans-serif;
     font-weight: normal;
     font-size: 3.2vw;
     letter-spacing: 5px;
@@ -321,7 +321,9 @@
     line-height: 1.6;
 }
 #About .article2 .desc .right span {
-    font-family: 'Gallient Regular';
+    font-family: 'Gallient Regular',
+    sans-serif;
+    
     font-weight: normal;
     letter-spacing: 2;
     font-size: 1.3vw;
@@ -402,7 +404,8 @@
 }
 #About .article4 .mText{
     justify-content: space-between;
-    font-family: 'Gallient Regular';
+    font-family: 'Gallient Regular',
+    sans-serif;
     position: absolute;
     display: flex;
     font-size: 34vw;
@@ -640,7 +643,8 @@
 
 #Scripts .article1 .Cont1Desc .mainDescEng {
     opacity: 1;
-    font-family: 'Gallient Regular';
+    font-family: 'Gallient Regular',
+    sans-serif;
     font-size: 3vw;
     font-weight: normal;
     display: flex;
@@ -811,7 +815,8 @@
     background-color: #fff;
 }
 #Skills .wrapper .obj h1 {
-    font-family: 'Gallient Regular';
+    font-family: 'Gallient Regular',
+    sans-serif;
     font-size: 25vw;
     color: #EEF0F1;
     letter-spacing: 10vw;
@@ -961,7 +966,8 @@
 #Skills .wrapper .obj5 .thanks {
     display: block;
     position: absolute;
-    font-family: 'Gallient Regular';
+    font-family: 'Gallient Regular',
+    sans-serif;
     top: 29%;
     left: 16%;
     line-height: 1.1;
@@ -1000,7 +1006,8 @@
 }
 #Contact .personalinfo span{
     display: block;
-    font-family: 'Gallient Regular';
+    font-family: 'Gallient Regular',
+    sans-serif;
     font-weight: normal;
     font-size: 2vw;
     letter-spacing: 8px;
