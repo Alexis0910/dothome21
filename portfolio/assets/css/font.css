@@ -1,4 +1,13 @@
-/* @font-face {
+@font-face {
+    font-family: 'Eros Romano';
+    src: url('../font/ErosRomano.ttf') format('truetype'),
+        url('../font/ErosRomano.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Eros Romano';
     src: url('ErosRomanoRegular.eot');
     src: url('ErosRomanoRegular.eot?#iefix') format('embedded-opentype'),
@@ -8,15 +17,8 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-} */
-@font-face {
-    font-family: 'Eros Romano';
-    src: url('../font/ErosRomano.ttf') format('truetype'),
-        url('../font/ErosRomano.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
 }
+
 @font-face {
     font-family: 'Theramy';
     src: url('TheramyRegular.eot');
@@ -36,13 +38,13 @@
     font-weight: normal;
     font-style: normal;
 }
-/* @font-face {
+@font-face {
     font-family: 'Gallient Regular';
     font-style: normal;
     font-weight: normal;
     src: local('Gallient Regular'), url('GallientRegular-eZoMp.woff') format('woff');
-    /* unicode-range:U+00-7F;
-} */
+    /* unicode-range:U+00-7F; */
+}
 @font-face {
     font-family: 'Gallient Regular';
     src: url('../font/GallientRegular-eZoMp.ttf') format('truetype');
