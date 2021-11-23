@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Eros Romano';
     src: url('ErosRomanoRegular.eot');
     src: url('ErosRomanoRegular.eot?#iefix') format('embedded-opentype'),
@@ -8,11 +8,14 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 @font-face {
     font-family: 'Eros Romano';
     src: url('../font/ErosRomano.ttf') format('truetype'),
-        url('../font/ErosRomano.otf') format('opentype'),
+        url('../font/ErosRomano.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Theramy';
