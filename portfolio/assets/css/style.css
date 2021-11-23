@@ -24,7 +24,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url(/portfolio/assets/img/noise-bg.jpg);
+    background: url(../img/noise-bg.jpg);
     background-repeat: repeat;
     background-position: top left;
 }
