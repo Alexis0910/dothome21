@@ -8,6 +8,9 @@
 *::after {
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 #wrap{
     width: 100%;
     color: #1f3d4d;
@@ -441,7 +444,10 @@
     margin-top: 20vh;
     display: inline-block;
     margin: 0 auto;
-
+    transition: all 0.3s ease-in-out;
+}
+.scrollDown span:hover {
+    transform: translateY(30%);
 }
 .scrollDown span:after{
     content: '';
