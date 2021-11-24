@@ -10,6 +10,16 @@
 }
 html {
     scroll-behavior: smooth;
+} 
+.supah-scroll {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    will-change: transform;
+    overflow: hidden;
 }
 #wrap{
     width: 100%;
@@ -77,6 +87,7 @@ html {
     display: inline;
     font-family: 'Eros Romano';
     font-size: 2vw;
+    margin: 1vh 0 0 0;
     letter-spacing: 2px;
 }
 .headerInner .fade .title {
@@ -101,6 +112,7 @@ html {
     position: relative;
 
 } 
+
 .headerInner #nav .fixed span::before{
     content:'';
     display: block;
@@ -148,10 +160,7 @@ html {
     padding: 0;
     display: grid;
 }
-#About .article1 .title h1 strong{
-    padding: 0;
-    display: inline-block;
-}
+
 #About .article1 .title h1 .middle{
     display: inline-block;
     text-align:center;
@@ -161,22 +170,55 @@ html {
     display: inline-block;
     text-align: right;
 }
-#About .article1 .title h1 strong span {
+#About .article1 .title h1 strong {
     padding: 0;
     margin: 0;
     font-family: 'Eros Romano';
     font-size: 18vw;
-    line-height: 0.7;
+    line-height: 0.75;
     letter-spacing: 8.25px;
-    transform: translateX(-50%);
+    transform: translateX(0%);
     position: relative;
     /* transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01); */
 }
 
-#About .article1 .title h1 strong span.show {
-    transform: translateY();
+#About .article1 .title .svgWrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-10%, -80%);
+    width: 35vw;
+    height: 35vw;
 }
-#About .article1 .title .spin {
+#About .article1 .title .svgWrap svg {
+    width: 100%;
+    height: 100%;
+
+}
+#About .article1 .title .svgWrap svg path {
+    stroke:#294652;
+    animation: svg 2s infinite linear alternate;
+}
+#About .article1 .title .svgWrap .de {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -5%);
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    color: #294652;
+    font-size: 0.9vw;
+}
+@keyframes svg {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+/* #About .article1 .title .spin {
     position: absolute;
     width: 28vw;
     height: 28vw;
@@ -187,11 +229,13 @@ html {
     opacity: 0.12;
     transform: translate(-50%, -50%) rotate(15deg);
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: svg 2s infinite linear alternate;
 }
 #About .article1 .title .spin .second{
     opacity: 0.12;
     transform: translate(-50%, -150%) rotate(30deg);
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: svg 2s infinite linear alternate;
 }
 
 #About .article1 .title .spin .circleInner{
@@ -205,7 +249,8 @@ html {
 #About .article1 .title .spin .first.rotate
 #About .article1 .title .spin .second.rotate{
     transform: rotate(180deg);
-}
+} */
+
 #About .article1 .image {
     position: relative;
     display: flex;
@@ -224,7 +269,7 @@ html {
     height: 35vw;
     margin-right: 7vw;
     position: absolute;
-    top: 40%;
+    top: 25%;
     right:0;
     
 
