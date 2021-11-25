@@ -8,9 +8,9 @@
 *::after {
     box-sizing: border-box;
 }
-html {
+/* html {
     scroll-behavior: smooth;
-} 
+}  */
 .supah-scroll {
     position: fixed;
     z-index: 1;
@@ -24,16 +24,14 @@ html {
 #wrap{
     width: 100%;
     color: #1f3d4d;
+    overflow-x: hidden;
     overscroll-behavior: none;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
-    /* IE and Edge */
     scrollbar-width: none;
-    /* Firefox */
 }
 #wrap::-webkit-scrollbar{
     display: none;
-    /* Chrome, Safari, Opera*/
 }
 .noise {
     mix-blend-mode:multiply;
@@ -77,16 +75,19 @@ html {
 #header .headerInner{
     display: flex;
     justify-content: space-between;
+    margin: 0 1vw;
+
 }
 .headerInner .fade{
     cursor: pointer;
     display: flex;
     justify-content: space-between;
 }
-.headerInner .fade span{
-    display: inline;
-    font-family: 'Eros Romano';
-    font-size: 2vw;
+.headerInner span .fade {
+    display: inline-block;
+    /* font-family: 'Eros Romano'; */
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1.6vw;
     margin: 1vh 0 0 0;
     letter-spacing: 2px;
 }
@@ -97,23 +98,25 @@ html {
     left: 50%;
     position: relative;
 }
-.headerInner .fade .mr {
-    margin-right: 15px;
+
+.headerInner #nav{
+    
 }
-.headerInner #nav{}
-.headerInner #nav .fixed{}
-.headerInner #nav .fixed span{
+.headerInner #nav .fixed ul{
+    display: flex;
+}
+.headerInner #nav .fixed li{
     display: inline-block;
     margin-top:20px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: normal;
     margin-left: 30px;
     position: relative;
 
 } 
 
-.headerInner #nav .fixed span::before{
+.headerInner #nav .fixed li::before{
     content:'';
     display: block;
     position: absolute;
@@ -125,7 +128,7 @@ html {
     -webkit-transition: all 650ms cubic-bezier(0.135, 0.75, 0.32, 1);
     -webkit-transform: scaleX(0);
 }
-.headerInner #nav .fixed span:hover::before {
+.headerInner #nav .fixed li:hover::before {
     -webkit-transform: scaleX(1);
 }
 .headerInner .hamburger{
@@ -148,7 +151,7 @@ html {
     position: fixed;
     top: 50%;
     left: 3%;
-    z-index: 700;
+    z-index: 6000;
 
 }
 #About .article1 .title{
@@ -218,38 +221,6 @@ html {
         opacity: 0.7;
     }
 }
-/* #About .article1 .title .spin {
-    position: absolute;
-    width: 28vw;
-    height: 28vw;
-    top:28%;
-    left:55%;
-}
-#About .article1 .title .spin .first{
-    opacity: 0.12;
-    transform: translate(-50%, -50%) rotate(15deg);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation: svg 2s infinite linear alternate;
-}
-#About .article1 .title .spin .second{
-    opacity: 0.12;
-    transform: translate(-50%, -150%) rotate(30deg);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation: svg 2s infinite linear alternate;
-}
-
-#About .article1 .title .spin .circleInner{
-    opacity: 0.7;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2vw;
-    letter-spacing: 2px;
-    transform: translate(-21%, -3250%);
-}
-
-#About .article1 .title .spin .first.rotate
-#About .article1 .title .spin .second.rotate{
-    transform: rotate(180deg);
-} */
 
 #About .article1 .image {
     position: relative;
@@ -258,37 +229,117 @@ html {
     justify-content: space-between;
     height: 120vh;
 }
-#About .article1 .image .mainPic{
+.image .mainPicWRap {
     width: 47vw;
-    position: absolute;
+    overflow: hidden;
+    position: relative;
+    top: -10%;    
     z-index: -1;
-    top: -10%;
 }
-#About .article1 .image .lake{
+#About .article1 .image .mainPicWRap .mainPic {
+    position: absolute;
+    left: -10%;
+    top: -3%;
+    width: 110%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.image .mainLakeWRap {
     width: 25vw;
     height: 35vw;
     margin-right: 7vw;
-    position: absolute;
+    overflow: hidden;
+    position: relative;
     top: 25%;
-    right:0;
+    z-index: -1;
+
+}
+#About .article1 .image .mainLakeWRap .lake {
+    position: absolute;
+    left: -10%;
+    top: -3%;
+    width: 110%;
+    background-size: cover;
+    background-repeat: no-repeat;
     
 
 }
 #About .article1 .Cont1Desc {
     overflow: hidden;
+    position: relative;
+    height: 100vh;
 }
-#About .article1 .Cont1Desc .leftCircle{
-    width: 35%;
-    margin: 0;
-    float: left;
+#About .article1 .Cont1Desc .svgWrap2 {
+    position: absolute;
+    /* left: 50%;
+    top: 50%;*/
+    /* transform: rotate(-100deg); */
+    width: 35vw;
+    height: 35vw;
     margin-right: 10%;
 }
-#About .article1 .leftCircle img{
+/* #About .article1 .Cont1Desc .svgWrap2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-10%, -80%);
+    width: 35vw;
+    height: 35vw;
+} */
+#About .article1 .Cont1Desc .svgWrap2 svg {
+    width: 100%;
+    height: 100%;
+
 }
-#About .article1 .mainDescEng {
-    float: left;
+#About .article1 .Cont1Desc .svgWrap2 svg path {
+    stroke:#294652;
+    animation: svg 2s infinite linear alternate;
+}
+#About .article1 .Cont1Desc .svgWrap2 .de {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -5%);
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    color: #294652;
+    font-size: 0.9vw;
+}
+#About .article1 .title .svgWrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-10%, -80%);
+    width: 35vw;
+    height: 35vw;
+}
+#About .article1 .title .svgWrap svg {
+    width: 100%;
+    height: 100%;
+
+}
+#About .article1 .title .svgWrap svg path {
+    stroke:#294652;
+    animation: svg 2s infinite linear alternate;
+}
+#About .article1 .title .svgWrap .de {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -5%);
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    color: #294652;
+    font-size: 0.9vw;
+}
+#About .article1 .Cont1Desc .mainDescEng {
+    position: absolute;
+    display: block;
     width: 55%;
+    height: 50vh;
     margin-top: 5vh;
+    right:0;
 }
 #About .article1 .mainDescEng h1{
     font-family: 'Gallient Regular',sans-serif;
@@ -297,24 +348,29 @@ html {
     letter-spacing: 5px;
 }
 #About .article1 .mainDescKr {
-    left: -50%;
-    top:-50%
+    position: absolute;
+    display: block;
+    top:85%;
+    left:7%;
+    width: 40%;
 }
 #About .article1 .mainDescKr p{
     text-align: right;
     font-family: 'Chosunilbo_myungjo';
     font-size: 0.8vw;
-    width: 38%;
 }
 #About .article2{
     position: relative;
     height: 200vh;
     width: 100%;
+    display: block;
 }
 #About .article2 .title{
-    display: flex;
+    position: relative;
+    display: block;
 }
 #About .article2 .title h1{
+    position: absolute;
     font-family: 'Eros Romano';
     font-size: 10.2vw;
     width: 60%;
@@ -326,22 +382,35 @@ html {
     text-transform: uppercase;
     
 }
-#About .article2 .title .sydney {
+#About .article2 .title .sydneyWRap {
+    width: 55vw;
     position: absolute;
+    /* overflow: hidden; */
     right: 0;
-    width: 55%;
+    top: -10%;
+    z-index: -1;
+
+}
+#About .article2 .title .sydneyWRap .sydney {
+    position: absolute;
+    left: -10%;
+    top: -3%;
+    width: 110%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #About .article2 .desc {
-    float: right;
+    position: absolute;
     width: 100%;
     margin-right: 7%;
-    display: flex;
+    display: inline-flex;
     margin-top: 60vh;
     gap: 13%;
+    top:40%;
 }
 #About .article2 .desc .empty {
     position: relative;
-    width: 40%;
+    width: 32%;
     text-align: right;
 
 }
@@ -368,10 +437,9 @@ html {
     font-weight: 300;
     line-height: 1.6;
 }
-#About .article2 .desc .right span {
+#About .article2 .desc .right h2 span {
     font-family: 'Gallient Regular',
     sans-serif;
-    
     font-weight: normal;
     letter-spacing: 2;
     font-size: 1.3vw;
@@ -434,21 +502,31 @@ html {
     background-color: #CFC9BB;
     padding: 20vh 0 15vh;
     position: relative;
+    top:-1px;
 }
+
 #About .article4 .moveWrap{
+    height: 100vh;
     margin: 0 auto;
     width: 40vw;
     margin-bottom: 40vh;
+    overflow: hidden;
 }
-#About .article4 .moveWrap .mImg{
-    transform: perspective(600px);
+#About .article4 .moveImage {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
     transform-style: preserve-3d;
     will-change: transform;
     transition: all 0.2s;
-    
+}
+#About .article4 .moveWrap .mImg{
+    width: 40vw;
+    position: relative;
 }
 #About .article4 .moveWrap .mImg img{
-
+    width: 100%;
 }
 #About .article4 .mText{
     justify-content: space-between;
@@ -473,6 +551,9 @@ html {
 }
 .scrollDown{
     text-align: center;
+}
+.scrollDown.pt30 {
+    padding-top: 30vh;
 }
 .scrollDown .text {
     font-family: 'Eros Romano';
@@ -655,13 +736,15 @@ html {
 #Scripts .article.article1 {
     height: 170vh;
     background: linear-gradient(to top, #fff, #CFC9BB);
-
+    padding-top: 10%;
 }
 #Scripts .article .title{
-    text-align: center;
     margin: 0 auto;
     font-size: 13vw;
     font-family: 'Eros Romano';
+    justify-content: space-between;
+    display: gird;
+
 }
 #Scripts .article .title h1{
     line-height: 0.2;
@@ -669,17 +752,20 @@ html {
 #Scripts .article .title .left {
     display: block;
     font-weight:inherit;
-    padding: 0 10vw;
+    padding: 0 25vw;
     width: 30vw;
     text-align: left;
 }
 #Scripts .article .title .middle{
+    text-align: center;
     font-size: 13vw;
     display: inline-block;
     font-weight: inherit;
     background-color: #1f3d4d;
     color: #e2d2c2;
     line-height: 0.8;
+    margin-left: 40vw;
+    padding:0 5vw;
     
 }
 #Scripts .article .title .right {
@@ -687,7 +773,7 @@ html {
     width: 30vw;
     display: block;
     text-align: right;
-    padding: 0 10vw;
+    padding: 0 25vw;
 }
 #Scripts .article1 .Cont1Desc{
     position: relative;
@@ -701,7 +787,7 @@ html {
     font-size: 3vw;
     font-weight: normal;
     display: flex;
-    margin-top: 30vh;
+    margin-top: 40vh;
 }
 #Scripts .article1 .Cont1Desc .mainDescEng h2 {
     width: 40%;
@@ -711,30 +797,26 @@ html {
     text-align: left;
     font-weight: 100;
 }
-#Scripts .article1 .Cont1Desc .leftCircle {
+#Scripts .article1 .Cont1Desc .svgWrap3 {
     position: absolute;
-    width: 20vw;
-    height: 20vw;
-    top: 0%;
-    left: 40%;
+    width: 22vw;
+    height: 22vw;
+    top: -60%;
+    left: 25%;
 }
-#Scripts .article1 .Cont1Desc .leftCircle .circle01 {
-    opacity: 0.12;
-    transform: translate(-50%, -50%) rotate(15deg);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+#Scripts .article1 .Cont1Desc .svgWrap3 svg {
+    width: 100%;
+    height: 100%;
 }
 
-#Scripts .article1 .Cont1Desc .leftCircle .circle02 {
-    opacity: 0.12;
-    transform: translate(-50%, -150%) rotate(30deg);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+#Scripts .article1 .Cont1Desc .svgWrap3 svg path {
+    stroke:#294652;
+    animation: svg 2s infinite linear alternate;
 }
 #Scripts .article2 {
     height: 800vh;
 }
-#Scripts .article2 .scriptReferWrap {
 
-}
 #Scripts .article2 .scriptReferWrap .refer{
     position: relative;
     align-items: right;
@@ -743,13 +825,25 @@ html {
 #Scripts .article2 .scriptReferWrap .refer.refer02 {
     margin: 0 0 60vh 0;
 }
-#Scripts .article2 .scriptReferWrap .refer h1 {
+
+#Scripts .article2 .scriptReferWrap .refer01 h1 {
     font-family: 'Theramy';
     font-weight: normal;
     font-size: 31vw;
     color: #7A7A7A;
     opacity: 0.2;
+    display: block;
+    /* transform: translateX(-50%);
+    left:0; */
 }
+/* #Scripts .article2 .scriptReferWrap .refer01 {
+    position: relative;
+}
+
+#Scripts .article2 .scriptReferWrap .refer01 h1 {
+    position: absolute;
+    top:30%
+} */
 #Scripts .article2 .scriptReferWrap .refer .box{
     position: absolute;
     height: 80%;
@@ -838,36 +932,35 @@ html {
 
 /* section  skills*/
 #Skills {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0;
-    overflow: auto;
-}
-
-#Skills .wrapper {
     height: 100vh;
-    width: 500vw;
-    white-space: nowrap;
-    font-size: 0;
-    display: flex;
-    overflow: hidden;
-    /* background-color: #1F3D4D; */
-
+    width: 1000vw;
+    position: relative;
+    overflow: scroll;
 }
 
-#Skills .wrapper .obj {
+#Skills .Skillswrapper {
+    /* height: 100vh;
+    width: 500vw;
+    white-space: nowrap; */
+    display: inline-flex;
+    /* z-index: 0; */
+    /* overflow: hidden; */
+    /* backgound-color: #1F3D4D; */
+}
+
+#Skills .Skillswrapper .obj {
     padding: 10vh 0 0 0;
     position: relative;
-    height: 99vh;
-    display: inline-block;
+    /* height: 99vh;
+    display: inline-block; */
     width: 140vw;
     padding-left: 20vw;
     /* border: 1px solid #000; */
-    overflow: hidden;
     background-color: #fff;
 }
-#Skills .wrapper .obj h1 {
+#Skills .Skillswrapper .obj h1 {
+    position: absolute;
+    left: 80%;
     font-family: 'Gallient Regular',
     sans-serif;
     font-size: 25vw;
@@ -875,7 +968,7 @@ html {
     letter-spacing: 10vw;
     font-weight: normal;
 }
-#Skills .wrapper .obj .skills {
+#Skills .Skillswrapper .obj .skills {
     justify-content: center;
     left: 38vw;
     position: absolute;
@@ -885,21 +978,21 @@ html {
     display: block;
     height: inherit;
 }
-#Skills .wrapper .obj .svg {
+#Skills .Skillswrapper .obj .svg {
     display: block;
     text-align: center;
 }
-#Skills .wrapper .obj .svg img{
+#Skills .Skillswrapper .obj .svg img{
     width: 27vw;
     height: 27vw;
 }
-#Skills .wrapper .obj .skillsList{
+#Skills .Skillswrapper .obj .skillsList{
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
 
 }
-#Skills .wrapper .obj .skillsList h3{
+#Skills .Skillswrapper .obj .skillsList h3{
     display: block;
     text-align: center;
     font-family: 'Eros Romano';
@@ -909,39 +1002,39 @@ html {
     line-height: 0.7;
 
 }
-#Skills .wrapper .obj .skills p {
+#Skills .Skillswrapper .obj .skills p {
     display: block;
     margin-top: 20vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.7vw;
     text-align: center;
 }
-#Skills .wrapper .obj2 {
-    display:block;
+#Skills .Skillswrapper .obj2 {
+    /* display:block;
+    height: 100vh; */
     width: 50vw;
-    height: 100vh;
     background-color: #fff;
     background: url(../img/skillsbg01.svg)no-repeat;
     background-size: cover;
 }
-#Skills .wrapper .obj3 {
+#Skills .Skillswrapper .obj3 {
     width: 150vw;
     background-color: #1F3D4D;
     color: #fff;
     padding: 20vh;
     box-sizing: border-box;
 }
-#Skills .wrapper .obj3 .ability {
+#Skills .Skillswrapper .obj3 .ability {
     justify-content: space-between;
     /* border: 1px solid #fff; */
     display: inline-block;
     
 }
-#Skills .wrapper .obj3 .ability .dot {
+#Skills .Skillswrapper .obj3 .ability .dot {
     position: relative;
     z-index: 10;
 }
-#Skills .wrapper .obj3 .ability .dot:after {
+#Skills .Skillswrapper .obj3 .ability .dot:after {
     content: '';
     width: 4vw;
     height: 4vw;
@@ -952,12 +1045,12 @@ html {
     z-index: 0;
     mix-blend-mode: exclusion;
 }
-#Skills .wrapper .obj3 .ability h2{
+#Skills .Skillswrapper .obj3 .ability h2{
     font-family: 'Eros Romano';
     font-weight: normal;
     font-size: 3vw;
 }
-#Skills .wrapper .obj3 .ability .abilityWrap{
+#Skills .Skillswrapper .obj3 .ability .abilityWrap{
     display: inline-block;
     width: 27vw;
     height: 40vh;
@@ -965,68 +1058,67 @@ html {
     margin-right: 5vw;
 }
 
-#Skills .wrapper .obj3 .ability .abilityWrap .desc {
+#Skills .Skillswrapper .obj3 .ability .abilityWrap .desc {
     display: block;
     padding: 3vh 0;
     box-sizing: border-box;
     border-top: 1px solid #fff;
     height: 15vh;
 }
-#Skills .wrapper .obj3 .ability .abilityWrap .desc2 {
+#Skills .Skillswrapper .obj3 .ability .abilityWrap .desc2 {
     display: table-cell;
 }
-#Skills .wrapper .obj3 .ability .abilityWrap .desc.none {
+#Skills .Skillswrapper .obj3 .ability .abilityWrap .desc.none {
     border: none
 }
-#Skills .wrapper .obj3 .ability .abilityWrap .desc h3{
+#Skills .Skillswrapper .obj3 .ability .abilityWrap .desc h3{
     font-family: 'Montserrat';
     font-weight: bold;
     font-size: 1vw;
     margin-bottom: 2vh;
 }
-#Skills .wrapper .obj3 .ability .abilityWrap .desc p{
+#Skills .Skillswrapper .obj3 .ability .abilityWrap .desc p{
     font-family: 'Chosunilbo_myungjo';
     font-weight: normal;
     font-size: 0.6vw;
 
 }
-#Skills .wrapper .obj4 {
+#Skills .Skillswrapper .obj4 {
     width: 40vw;
-    height: 100vh;
+    /* height: 100vh; */
     background: url(../img/skillsbg02.svg)no-repeat;
     background-size: contain;
 }
-#Skills .wrapper .obj5 {
-    height: 100vh;
+#Skills .Skillswrapper .obj5 {
+    /* height: 100vh; */
     padding: 10vh 0;
     position: relative;
     width: 53vw;
     background-color: #fff;
 
 }
-#Skills .wrapper .obj5 .bigCircle {
+#Skills .Skillswrapper .obj5 .bigCircle {
     position: relative;
 }
-#Skills .wrapper .obj5 .bigCircle img{
+#Skills .Skillswrapper .obj5 .bigCircle img{
     width: 40vw;
     opacity: 0.2;
 }
-#Skills .wrapper .obj5 .bigCircle .layer{
+#Skills .Skillswrapper .obj5 .bigCircle .layer{
     position: absolute;
     left:0;
     transform: rotate(-20deg);
 }
-#Skills .wrapper .obj5 .thanks {
+#Skills .Skillswrapper .obj5 .thanks {
     display: block;
     position: absolute;
-    font-family: 'Gallient Regular',
-    sans-serif;
+    font-family: 'Gallient Regular',sans-serif;
     top: 29%;
     left: 16%;
     line-height: 1.1;
 
 }
-#Skills .wrapper .obj5 .thanks span{
+#Skills .Skillswrapper .obj5 .thanks span{
     display: block;
     font-weight: normal;
     font-size: 5vw;
@@ -1127,4 +1219,146 @@ html {
     height: 10vh;
     display: block;
     border:1px solid #1F3D4D
+}
+@media(max-width:600px){
+    #header {
+        max-height: 80px;
+    }
+    #nav{
+        display: none;
+    }
+    /* .hamburger {
+        display: inline-block;
+        border: 1px solid #000;
+        width: 50px;
+        height: 60px;
+    }
+    .hamburger span {
+        display: inline-block;
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: #000;
+    } */
+    .headerInner span .fade {
+        margin: 2vw 0 0 2vw;
+        font-size: 3.5vw;
+    }
+    #About .article1 .image {
+        height: 40vh;
+        gap:5vw
+
+    }
+    .image .mainPicWRap {
+        width: 55vw;
+        top:-3%;
+    }
+    .image .mainLakeWRap {
+        margin-right: 4vw;
+        width: 35vw;
+        height: 53vh;
+        top: 23%;
+    }
+    .title .svgWrap .de {
+        font-size: 0.4vw;
+    }
+    #About .article1 .Cont1Desc {
+        height: 38vh;
+    }
+    #About .article1 .title .svgWrap .de {
+        display: none;
+    } 
+    .svgWrap2 .de {
+        display: none;
+    }
+    #About .article1 .mainDescEng {
+        right: 10%;
+    }
+    #About .article1 .mainDescEng h1 {
+        letter-spacing: 2px;
+        font-size: 2.5vw;
+    }
+    #About .article1 .mainDescKr {
+        top: 59%;
+        width: 60%;
+    }
+    #About .article1 .mainDescKr p {
+        font-size: 7px;
+    }
+    #About .article2 {
+        height: 70vh;
+    }
+    #About .article2 .title h1 {
+        font-size: 8.2vw;
+        line-height: 0.9;
+        width: 30%;
+    }
+    #About .article2 .desc {
+        top: -38%;
+    }
+    #About .article2 .title .sydneyWRap {
+        width: 64vw;
+    }
+    #About .article2 .desc .empty {
+        width: 17%;
+    }
+    #About .article2 .desc .right {
+        width: 63%;
+    }
+    #About .article2 .desc .right h2 {
+        font-size: 3.2vw;
+        font-weight: 500;
+    }
+    #About .article2 .desc .empty span {
+        display: none;
+    }
+    #About .article3 .imgCircle.dot1 {
+        top: -2%;
+    }
+    #About .article3 .imgCircle.dot2{
+        top:5%;
+    }
+    #About .article3 {
+        height: 30vh;
+    }
+    #About .article4{
+        padding: 0;
+    }
+    #About .article4 .moveWrap {
+        height: 8vh;
+    }
+    #About .article4 .mText {
+        font-size: 38vw;
+    }
+    #About .article4 .moveWrap .mImg {
+        width: 51vw;
+    }
+    #About .article4 .mText .right {
+        margin-top: 3vh;
+    }
+    .scrollDown.pt30 {
+        padding-top: 25vh;
+        padding-bottom: 5vh;
+    }
+    .scrollDown span:after {
+        width: 4vw;
+        height: 8vw;
+    }
+    #Sites .cursor {
+        display: none;
+        
+    }
+    #Sites .cover {
+        width: 80%;
+        transform:translate(-18%, -50%);
+    }
+    #Sites .picture .desc{
+        height: 13vh;
+    }
+    #Sites .title{
+        font-size: 7vw;
+    }
+    #Sites .wrapper .sitesTitle:before {
+        display: none;
+    }
 }
