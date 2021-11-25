@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'Eros Romano';
-    src: url('ErosRomanoRegular.eot');
-    src: url('ErosRomanoRegular.eot?#iefix') format('embedded-opentype'),
-        url('ErosRomanoRegular.woff2') format('woff2'),
-        url('ErosRomanoRegular.woff') format('woff'),
-        url('ErosRomanoRegular.svg#ErosRomanoRegular') format('svg');
+    src: url('../font/ErosRomanoRegular.eot');
+    src: url('../font/ErosRomanoRegular.eot?#iefix') format('embedded-opentype'),
+        url('../font/ErosRomanoRegular.woff2') format('woff2'),
+        url('../font/ErosRomanoRegular.woff') format('woff'),
+        url('../font/ErosRomanoRegular.svg#ErosRomanoRegular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-
+/* 
 @font-face {
     font-family: 'Eros Romano2';
     src: url('../font/ErosRomano.ttf') format('truetype'),
@@ -17,15 +17,15 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 @font-face {
     font-family: 'Theramy';
-    src: url('TheramyRegular.eot');
-    src: url('TheramyRegular.eot?#iefix') format('embedded-opentype'),
-        url('TheramyRegular.woff2') format('woff2'),
-        url('TheramyRegular.woff') format('woff'),
-        url('TheramyRegular.svg#TheramyRegular') format('svg');
+    src: url('../font/TheramyRegular.eot');
+    src: url('../font/TheramyRegular.eot?#iefix') format('embedded-opentype'),
+        url('../font/TheramyRegular.woff2') format('woff2'),
+        url('../font/TheramyRegular.woff') format('woff'),
+        url('../font/TheramyRegular.svg#TheramyRegular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
