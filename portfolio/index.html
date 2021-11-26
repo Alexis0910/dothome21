@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
-
-
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
     </style>
 </head>
@@ -37,11 +35,11 @@
             <span><a href="#" class="fade">PORTFOLIO</a></span>
             <nav id="nav">
                 <ul class="fixed">
-                    <li><a href="#About">ABOUT</li></a>
-                    <li><a href="#Sites">SITES</li></a>
-                    <li><a href="#Sites">SCRIPTS</li></a>
-                    <li><a href="#Skills">SKILLS</li></a>
-                    <li><a href="#Contact">CONTACT</li></a>
+                    <li><a href="#About" data-target="About">ABOUT</li></a>
+                    <li><a href="#Sites" data-target="Sites">SITES</li></a>
+                    <li><a href="#Scripts" data-target="Scripts">SCRIPTS</li></a>
+                    <li><a href="#Skills" data-target="Skills">SKILLS</li></a>
+                    <li><a href="#Contact" data-target="Contact">CONTACT</li></a>
                 </ul>
             </nav>
             <div class="hamburger">
@@ -134,10 +132,11 @@
             <article class="article3 gradient">
                 <div class="container">
                     <div class="title">
-                        CODING IS A<BR>
-                        CONNECTION<BR>
-                        TO EVERYTHING<BR>
-                        REAL</div>
+                        <p class="moveleft">CODING IS A</p>
+                        <p>CONNECTION</p>
+                        <p>TO EVERYTHING</p>
+                        <p class="moveright">REAL</p>
+                    </div>
                     <div class="imgCircle dot1"></div>
                     <div class="imgCircle dot2"></div>
                     <div class="imgCircle dot3"></div>
@@ -220,7 +219,8 @@
                                 </div>
                                 <img src="assets/img/mockup4.jpg" class="media" />
                             </div>
-                            <a class="title parallax" data-velocity="-50" href="#" target="_blank">
+                            <a class="title parallax" data-velocity="-50"
+                                href="http://dshareadmin.dothome.co.kr/index.html" target="_blank">
                                 <div class="sitesTitle">TEAM PROJECT D-SHARE</div>
                             </a>
                         </div>
@@ -523,11 +523,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
     <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script> -->
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 
     <script>
+
+
+        // gsap.registerPlugin(ScrollTrigger);
+
+        // let sections = gsap.utils.toArray(".scrolling");
+        // gsap.to(sections, {
+        //     xPercent: -100 * (sections.length - 1),
+        //     ease: "none",
+        //     scrollTrigger: {
+        //         trigger: "#Skills",
+        //         pin: true,
+        //         // markers: true,
+        //         // start: 'center center',
+        //         scrub: 1,
+        //         snap: 1 / (sections.length - 1),
+        //         end: () => "+=" + document.querySelector("#Skills").offsetWidth
+        //     }
+        // });
+
+
 
         select = e => document.querySelector(e);
         selectAll = e => document.querySelectorAll(e);
@@ -578,6 +597,29 @@
 
 
         });
+        $(".moveImage").mousemove(function (e) {
+            let pageX = e.pageX;
+            let pageY = e.pageY;
+            let standardX = $(window).width() / 2 - pageX;
+            let standardY = $(window).height() / 2 - pageY;
+
+            let maxX = Math.max(-100, Math.min(100, standardX));
+            let maxY = Math.max(-100, Math.min(100, standardY));
+
+            let angleX = maxX * 0.1;
+            let angleY = maxY * 0.1;
+
+            // let softX = 0;
+            // let softY = 0;
+            // softX += (angleX - softX) * 0.6;
+            // softY += (angleY - softY) * 0.6;
+
+            //이미지
+            $(".moveImage").css({
+                "transform": "translate(-50%, -50%) perspective(500px) rotateX(" + angleY +
+                    "deg) rotateY(" + -angleX + "deg)"
+            });
+        });
 
         //header & title moving
         let headerTitle = $(".headerInner .fade .title")
@@ -610,18 +652,6 @@
                 bottom: 0
             }, 0.1);
         }
-        // gsap 쓰기 전 타이틀 글자 하나하나 나타나주기
-        //const titleSpan = document.querySelectorAll("#About .article1 .title h1 strong")
-        //function scrollProgress() {
-        //     let scrollTop = (document.documentElement.scrollTop || window.scrollY || window.pageYOffset) + window
-        //         .innerHeight / 2;
-
-        //     //forEach문
-        //     titleSpan.forEach(function (item) {
-        //         scrollTop > item.offsetTop ? item.classList.add("show") : item.classList.remove("show");
-        //     });
-        // }
-
 
         const cursor = $(".cursor");
         const cursor2 = $(".cursor2");
@@ -721,6 +751,8 @@
                 this.sydney = document.querySelector(".sydney");
                 this.mainDescEng = document.querySelector(".mainDescEng h1");
                 this.skills = document.querySelector(".Skillswrapper .obj h1");
+                this.moveleft = document.querySelector(".article3 .title .moveleft");
+                this.moveright = document.querySelector(".article3 .title .moveright");
                 this.refer01h = document.querySelector(".refer.refer01 h1");
 
                 this.events()
@@ -765,8 +797,10 @@
                 this.lake.style.transform = `translate3d(0,${this.scrollY/15}px,0)`
                 this.sydney.style.transform = `translate3d(0,${-this.scrollY/15}px,0)`
                 this.mainDescEng.style.transform = `translate3d(${this.scrollY/25}px,0,0)`
-                this.scriptLeft.style.transform = `translate3d(${-this.scrollY/30}px,0,)`
+                this.scriptLeft.style.transform = `translate3d(${-this.scrollY/30}px,0,0)`
                 this.scriptRight.style.transform = `translate3d(${this.scrollY/30}px,0,0)`
+                this.moveleft.style.transform = `translate3d(${-this.scrollY/30}px,0,0)`
+                this.moveright.style.transform = `translate3d(${this.scrollY/20}px,0,0)`
                 this.raf = requestAnimationFrame(this.animate.bind(this))
             }
 
@@ -790,8 +824,18 @@
 
         const supahscroll = new SupahScroll({
             el: '#wrapper',
-            speed: 0.05
+            speed: 0.03
         })
+
+        $(function () {
+            $("#Skills").mousewheel(function (event, delta) {
+                var scroll_distance = delta * 1
+                this.animate(function(){
+                    left: "-=" + scroll_distance + "px"
+                });
+                event.preventDefault();
+            });
+        });
     </script>
 </body>
 
