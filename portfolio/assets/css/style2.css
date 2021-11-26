@@ -1286,7 +1286,7 @@ body::-webkit-scrollbar {
 
 #Contact {
     padding: 15vh 0;
-    width: 103vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     /* background-color: #e0d6cb; */
