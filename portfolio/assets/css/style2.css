@@ -1068,12 +1068,12 @@ body::-webkit-scrollbar {
     width: 520vw;
     position: relative;
     overflow-y: hidden;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 #Skills .Skillswrapper {
     height: 100vh;
-    width: 620vw;
+    width: 520vw;
     white-space: nowrap;
     display: inline-flex;
     /* z-index: 0; */
@@ -1289,6 +1289,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     /* background-color: #e0d6cb; */
+    box-sizing: border-box;
 }
 
 #Contact .personalinfo {
