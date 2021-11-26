@@ -123,9 +123,6 @@
                         <p>기억속 어린시절 저를 생각하면 아는것은 포토샵 조금밖에 없던 때가 있었습니다. 학급 운영위원도 아니였는데 카페 메인화면을 만들고 싶다는 생각이 저에겐 있었고, 그때
                             당시 유명한 카페에서 img, BR등의 태그를 쓰는방법을 혼자 공부하며 어떻게든 메인화면을 완성했던 기억이 있습니다. 많은 시간이 흘렀지만 그 경험이 저에게 웹 개발
                             공부를 하고싶다는 씨앗이 되었고, 다시 한번 공부를 해보자 하며 실천하게 되는 원동력이 되었습니다.</p>
-                        <span>WHEN I WAS YOUNGER, BACK THEN I MADE WEB BOARD FOR CLASS WITHOUT ANY KNOWLEDGE.
-                            THIS GAVE ME A POWERFUL MOTIVATION FOR ME STUDING WEB DEVELOPMENT NOW.
-                        </span>
                     </div>
                 </div>
             </article>
@@ -504,11 +501,12 @@
                             <div class="sendform">
                                 <h4>send letter</h4>
                                 <div><br /><input class="line" type="text" name="id" value="You Email"></div>
-                                <input class="square" type="text" name="text" value=""></div>
+                                <input class="square" type="text" name="text" value="">
                             </div>
                         </div>
-                    </form>
                 </div>
+                </form>
+            </div>
             </div>
             <!-- //Contact -->
         </section>
@@ -529,11 +527,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 
     <script>
+        //가로모드 scroll gsap
         gsap.registerPlugin(ScrollTrigger);
         let Skills = document.getElementById("Skills");
-        let ABout = document.getElementById("ABout");
-        let Scripts = document.getElementById("Scripts");
-
 
         gsap.to(Skills, {
             x: () => -(Skills.scrollWidth - document.documentElement.clientWidth) + "px",
@@ -548,6 +544,8 @@
         })
 
 
+
+        
         select = e => document.querySelector(e);
         selectAll = e => document.querySelectorAll(e);
 
@@ -569,6 +567,7 @@
         //window scroll function ** 
         $(window).scroll(function () {
             let scrollTop = $(window).scrollTop();
+
             //gsap
             $("#About .article1 .title h1").each(function (index) {
                 if ($(window).scrollTop() >= $(this).offset().top) {
@@ -689,6 +688,7 @@
                 this.speed = this.opt.speed ? this.opt.speed : 0.1
                 this.init()
             }
+            
 
             init() {
                 this.scrollY = 0
@@ -784,12 +784,13 @@
         })
         */
 
-        $(document).ready(function () {
-            "use strict";
 
+        $(document).ready(function () {
+            animate();
+
+            "use strict";
             // Set height Header Equal Window Height
             $('.header').height($(window).height());
-
             // Trigger Nice Scroll
             $('body').niceScroll({
                 // cursorcolor: '#24b662',
@@ -804,8 +805,8 @@
                     scrollTop: $('#' + $(this).data('target')).offset().top
                 }, 1000);
             });
-
         });
+        
     </script>
 </body>
 

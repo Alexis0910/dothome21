@@ -16,7 +16,7 @@
 /* html {
     scroll-behavior: smooth;
 }  */
-.supah-scroll {
+/* .supah-scroll {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -25,7 +25,7 @@
     height: auto;
     will-change: transform;
     overflow: hidden;
-}
+} */
 
 body {
     width: 100%;
@@ -389,7 +389,7 @@ body::-webkit-scrollbar {
 #About .article1 .mainDescEng h1 {
     font-family: 'Gallient Regular', sans-serif;
     font-weight: normal;
-    font-size: 3.2vw;
+    font-size: 2.8vw;
     letter-spacing: 5px;
 }
 
@@ -475,17 +475,23 @@ body::-webkit-scrollbar {
     text-align: right;
     display: block;
     float: right;
-    left: 40%;
+    left: 43%;
+    top:5%
 }
 
 #About .article2 .desc .right {
-    width: 50%;
+    display: inline-block;
+    margin-top: 10vh;
+    transform: translateX(-7%);
+    width: 60%;
     font-family: 'Chosunilbo_myungjo';
 }
 
 #About .article2 .desc .right h2 {
     font-size: 2vw;
     font-weight: 300;
+
+
 }
 
 #About .article2 .desc .right p {
@@ -1160,7 +1166,7 @@ body::-webkit-scrollbar {
 } */
 
 #Skills .Skillswrapper .obj3 {
-    width: 230vw;
+    width: 240vw;
     background: url(../img/bgfull.svg)no-repeat;
     background-size: cover;
     color: #fff;
@@ -1248,6 +1254,7 @@ body::-webkit-scrollbar {
 
 #Skills .Skillswrapper .obj5 {
     /* height: 100vh; */
+    margin-left: 40vh;
     padding: 10vh 0;
     position: relative;
     width: 53vw;
@@ -1409,7 +1416,12 @@ body::-webkit-scrollbar {
     #nav {
         display: none;
     }
-
+    .container {
+        max-width: 90%;
+    }
+    #About .article1 .dot {
+        display: none;
+    }
     /* .hamburger {
         display: inline-block;
         border: 1px solid #000;
@@ -1483,15 +1495,15 @@ body::-webkit-scrollbar {
         height: 70vh;
     }
 
+    #About .article2 .desc {
+        top: -20%;
+    }
     #About .article2 .title h1 {
         font-size: 8.2vw;
         line-height: 0.9;
         width: 30%;
     }
 
-    #About .article2 .desc {
-        top: -38%;
-    }
 
     #About .article2 .title .sydneyWRap {
         width: 64vw;
@@ -1506,6 +1518,8 @@ body::-webkit-scrollbar {
     }
 
     #About .article2 .desc .right h2 {
+        display: inline-block;
+        top:60%;
         font-size: 3.2vw;
         font-weight: 500;
     }
@@ -1573,8 +1587,69 @@ body::-webkit-scrollbar {
     #Sites .title {
         font-size: 7vw;
     }
-
+    #Scripts .article1 .Cont1Desc .mainDescEng h1 {
+        height: 90%;
+    }
     #Sites .wrapper .sitesTitle:before {
+        display: none;
+    }
+    #Scripts {
+        padding-left: -3vh 0 0 0 ;
+    }
+
+    #Scripts .article.article1 {
+        height: 70vh;
+    }
+    #Scripts .article2 {
+        height: 350vh;
+    }
+    #Scripts .article2 .scriptReferWrap .refer.refer01,
+    #Scripts .article2 .scriptReferWrap .refer.refer02
+     {
+        margin: 0 0 45vh 0;
+    }
+    #Scripts .article2 .scriptReferWrap .refer02 h1 {
+        margin: 0 0 0.67em 0;
+    }
+    #Scripts .article2 .scriptReferWrap .refer.refer02 .desc {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+    #Scripts .article2 .scriptReferWrap .refer.refer02 .desc .tite {
+        text-align: right;
+    }
+
+    #Scripts .article2 .scriptReferWrap .refer .box {
+        width: 100%;
+        height: 100%;
+    }
+    #Scripts .article2 .scriptReferWrap .refer {
+        margin: 0 0 10vh 0;
+    }
+    #Scripts .article2 .scriptReferWrap .refer .desc{
+        display: block;
+    }
+    #Scripts .article2 .scriptReferWrap .refer .desc .whattosay {
+        text-align: left;
+        width: 100%;
+    }
+    #Scripts .article2 .scriptReferWrap .refer .desc .title{
+        width: 100%;
+        font-size: 8vw;
+    }
+    #Skills {
+        height: 60vh !important;
+    }
+    #Contact {
+        display: inline-block;
+        padding-left: 30vw;
+    }
+    .pin-spacer {
         display: none;
     }
 }
