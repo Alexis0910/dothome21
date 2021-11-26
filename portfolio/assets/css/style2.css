@@ -1065,7 +1065,7 @@ body::-webkit-scrollbar {
 /* section  skills*/
 #Skills {
     height: 100vh;
-    width: 520vw;
+    width: 550vw;
     position: relative;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -1073,7 +1073,7 @@ body::-webkit-scrollbar {
 
 #Skills .Skillswrapper {
     height: 100vh;
-    width: 520vw;
+    width: 550vw;
     white-space: nowrap;
     display: inline-flex;
     /* z-index: 0; */
@@ -1152,23 +1152,26 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
-#Skills .Skillswrapper .obj2 {
-    /* display:block;
-    height: 100vh; */
+/* #Skills .Skillswrapper .obj2 {
     width: 50vw;
     background-color: #fff;
     background: url(../img/skillsbg01.svg)no-repeat;
     background-size: cover;
-}
+} */
 
 #Skills .Skillswrapper .obj3 {
-    width: 150vw;
-    background-color: #1F3D4D;
+    width: 230vw;
+    background: url(../img/bgfull.svg)no-repeat;
+    background-size: cover;
     color: #fff;
     padding: 20vh;
     box-sizing: border-box;
 }
+#Skills .Skillswrapper .obj3 .ability:first-child{
+    padding-left: 50vw;
+    box-sizing: border-box;
 
+}
 #Skills .Skillswrapper .obj3 .ability {
     justify-content: space-between;
     /* border: 1px solid #fff; */
@@ -1237,12 +1240,11 @@ body::-webkit-scrollbar {
 
 }
 
-#Skills .Skillswrapper .obj4 {
+/* #Skills .Skillswrapper .obj4 {
     width: 40vw;
-    /* height: 100vh; */
     background: url(../img/skillsbg02.svg)no-repeat;
     background-size: contain;
-}
+} */
 
 #Skills .Skillswrapper .obj5 {
     /* height: 100vh; */
@@ -1285,8 +1287,9 @@ body::-webkit-scrollbar {
 }
 
 #Contact {
+    margin-left:7vw;
     padding: 15vh 0;
-    width: 100vw;
+    width: 98vw;
     display: flex;
     align-items: center;
     /* background-color: #e0d6cb; */
