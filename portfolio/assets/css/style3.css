@@ -197,7 +197,7 @@ body::-webkit-scrollbar {
     text-align: right;
 }
 
-#About .article1 .title h1 strong{
+#About .article1 .title h1 strong {
     padding: 0;
     margin: 0;
     font-family: 'Eros Romano';
@@ -208,9 +208,11 @@ body::-webkit-scrollbar {
     position: relative;
     /* transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01); */
 }
+
 #About .article1 .title h1 strong span {
     font-weight: normal;
 }
+
 #About .article1 .title .svgWrap {
     position: absolute;
     left: 50%;
@@ -476,7 +478,7 @@ body::-webkit-scrollbar {
     display: block;
     float: right;
     left: 43%;
-    top:5%
+    top: 5%
 }
 
 #About .article2 .desc .right {
@@ -871,7 +873,7 @@ body::-webkit-scrollbar {
     width: 30vw;
     text-align: left;
     transform: translateX(-30%);
-    margin:0;
+    margin: 0;
     margin-bottom: 3vh;
 }
 
@@ -885,7 +887,7 @@ body::-webkit-scrollbar {
     line-height: 0.8;
     margin-left: 40vw;
     padding: 0 5vw;
-    
+
 
 }
 
@@ -896,7 +898,7 @@ body::-webkit-scrollbar {
     text-align: right;
     padding: 0 25vw;
     transform: translateX(30%);
-    margin:0;
+    margin: 0;
 
 }
 
@@ -1102,7 +1104,7 @@ body::-webkit-scrollbar {
 #Skills .Skillswrapper .obj h1 {
     position: absolute;
     left: 10%;
-    top:-20%;
+    top: -20%;
     font-family: 'Gallient Regular',
         sans-serif;
     font-size: 25vw;
@@ -1173,11 +1175,13 @@ body::-webkit-scrollbar {
     padding: 20vh;
     box-sizing: border-box;
 }
-#Skills .Skillswrapper .obj3 .ability:first-child{
+
+#Skills .Skillswrapper .obj3 .ability:first-child {
     padding-left: 50vw;
     box-sizing: border-box;
 
 }
+
 #Skills .Skillswrapper .obj3 .ability {
     justify-content: space-between;
     /* border: 1px solid #fff; */
@@ -1223,7 +1227,12 @@ body::-webkit-scrollbar {
     border-top: 1px solid #fff;
     height: 15vh;
 }
-
+#Skills .Skillswrapper .obj3 .ability .abilityWrap .desc .hover a{
+    transition: all 0.2s;
+}
+#Skills .Skillswrapper .obj3 .ability .abilityWrap .desc .hover a:hover {
+    color: #ffc793;
+}
 #Skills .Skillswrapper .obj3 .ability .abilityWrap .desc2 {
     display: block;
 }
@@ -1295,7 +1304,7 @@ body::-webkit-scrollbar {
 }
 
 #Contact {
-    margin-left:7vw;
+    margin-left: 7vw;
     padding: 15vh 0;
     width: 98vw;
     display: flex;
@@ -1337,9 +1346,11 @@ body::-webkit-scrollbar {
     line-height: 2;
 
 }
+
 #Contact .personalinfo .insta {
     position: relative;
 }
+
 #Contact .personalinfo p {
     margin-top: 18vh;
     display: block;
@@ -1420,12 +1431,15 @@ body::-webkit-scrollbar {
     #nav {
         display: none;
     }
+
     .container {
         max-width: 90%;
     }
+
     #About .article1 .dot {
         display: none;
     }
+
     /* .hamburger {
         display: inline-block;
         border: 1px solid #000;
@@ -1502,6 +1516,7 @@ body::-webkit-scrollbar {
     #About .article2 .desc {
         top: -20%;
     }
+
     #About .article2 .title h1 {
         font-size: 8.2vw;
         line-height: 0.9;
@@ -1523,7 +1538,7 @@ body::-webkit-scrollbar {
 
     #About .article2 .desc .right h2 {
         display: inline-block;
-        top:60%;
+        top: 60%;
         font-size: 3.2vw;
         font-weight: 500;
     }
@@ -1568,9 +1583,11 @@ body::-webkit-scrollbar {
         padding-top: 25vh;
         padding-bottom: 5vh;
     }
+
     .scrollDown span {
         font-size: 3vw;
     }
+
     .scrollDown span:after {
         width: 4vw;
         height: 8vw;
@@ -1594,35 +1611,42 @@ body::-webkit-scrollbar {
     #Sites .title {
         font-size: 7vw;
     }
+
     #Scripts .article1 .Cont1Desc .mainDescEng h1 {
         height: 90%;
     }
+
     #Sites .wrapper .sitesTitle:before {
         display: none;
     }
+
     #Scripts {
-        padding-left: -3vh 0 0 0 ;
+        padding-left: -3vh 0 0 0;
     }
 
     #Scripts .article.article1 {
         height: 70vh;
     }
+
     #Scripts .article2 {
         height: 350vh;
     }
+
     #Scripts .article2 .scriptReferWrap .refer.refer01,
-    #Scripts .article2 .scriptReferWrap .refer.refer02
-     {
+    #Scripts .article2 .scriptReferWrap .refer.refer02 {
         margin: 0 0 33vh 0;
     }
+
     #Scripts .article2 .scriptReferWrap .refer02 h1 {
         margin: 0 0 0.67em 0;
     }
+
     #Scripts .article2 .scriptReferWrap .refer01 .codeView,
     #Scripts .article2 .scriptReferWrap .refer02 .codeView {
         position: inherit;
         visibility: hidden;
     }
+
     #Scripts .article2 .scriptReferWrap .refer.refer02 .desc {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1632,6 +1656,7 @@ body::-webkit-scrollbar {
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
     }
+
     #Scripts .article2 .scriptReferWrap .refer.refer02 .desc .tite {
         text-align: right;
     }
@@ -1639,94 +1664,118 @@ body::-webkit-scrollbar {
     #Scripts .article2 .scriptReferWrap .refer .box {
         width: 100%;
         height: 100%;
-        top:31%
+        top: 31%
     }
+
     #Scripts .article2 .scriptReferWrap .refer {
         margin: 0 0 10vh 0;
     }
-    #Scripts .article2 .scriptReferWrap .refer .desc{
+
+    #Scripts .article2 .scriptReferWrap .refer .desc {
         display: block;
     }
+
     #Scripts .article2 .scriptReferWrap .refer .desc .whattosay {
         text-align: left;
         width: 100%;
         font-size: 2.3vw;
     }
-    #Scripts .article2 .scriptReferWrap .refer .desc .title{
+
+    #Scripts .article2 .scriptReferWrap .refer .desc .title {
         width: 100%;
         font-size: 8vw;
     }
+
     #Skills {
         height: 60vh !important;
     }
+
     #Contact {
         display: inline-block;
         padding-left: 30vw;
     }
 
-    .article3 .scrollDown{
+    .article3 .scrollDown {
         transform: translateY(30%);
     }
+
     #Skills {
         height: 100vh !important;
         background-color: aqua;
     }
+
     #Skills .Skillswrapper .obj {
         top: 26%;
         width: 214vw;
     }
-    #Skills .Skillswrapper .obj h1{
+
+    #Skills .Skillswrapper .obj h1 {
         top: -1%;
         font-size: 30vw;
-        letter-spacing : 13vw;
-        left:5%;
+        letter-spacing: 13vw;
+        left: 5%;
     }
+
     #Skills .Skillswrapper .obj3 {
         height: 100vh;
         width: 500vw;
     }
+
     #Skills .Skillswrapper {
-        width:880vw;
+        width: 880vw;
     }
-    #Skills .Skillswrapper .obj .skills{
-        left:53vw;
-        top:4%
+
+    #Skills .Skillswrapper .obj .skills {
+        left: 53vw;
+        top: 4%
     }
+
     #Skills .Skillswrapper .obj .skills p {
         margin-top: 13vh;
         font-size: 2vw;
     }
-    #Skills .Skillswrapper .obj .skillsList h3{
+
+    #Skills .Skillswrapper .obj .skillsList h3 {
         font-size: 18vw;
     }
+
     #Skills .Skillswrapper .obj .svg img {
         height: 39vw;
         width: 39vw;
     }
+
     #Skills .Skillswrapper .obj3 .ability .abilityWrap {
         width: 75vw;
     }
+
     #Skills .Skillswrapper .obj3 .ability:first-child {
         padding-left: 112vw;
         padding-top: 0;
     }
+
     #Skills .Skillswrapper .obj3 .ability .abilityWrap .desc {
         height: 22vh;
     }
+
     #Skills .Skillswrapper .obj3 .ability .abilityWrap .desc p {
         font-size: 1.5vw;
     }
+
     #Contact {
         background-color: red;
     }
+
     #Skills .Skillswrapper .obj5 {
         width: 200vw;
     }
+
     #Skills .Skillswrapper .obj3 .ability h2 {
         font-size: 10vw;
     }
+
     #Skills .Skillswrapper .obj3 .ability .dot:after {
-        width: 10vw; height: 10vw;
+        width: 10vw;
+        height: 10vw;
         left: 19vw;
     }
 }
