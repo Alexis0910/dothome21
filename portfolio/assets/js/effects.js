@@ -26,33 +26,31 @@ $(".splice").each(function (index) {
 if ($(window).scrollTop() >= $(".splice").offset().top) {
     gsap.to(this, { //먼저 각  섹션을찾고 그안의 desc span을 find해라
         duration: 0.5,
-        stagger: 0.02, //시간차를 주는 gsap기능(이러면 show붙여서 시간차setTimeout 이런거 할 필요가없지)
-        y: 0, //위에 css에서 translateY를 100을주고 여기서는 심플하게 y라고 하고 0 하면 애니메이션 차이
+        opacity: 1,
+        stagger: 0.1, //시간차를 주는 gsap기능(이러면 show붙여서 시간차setTimeout 이런거 할 필요가없지)
+        y: (0),
         ease: "power4.out",
     });
 }
 
-//window scroll function ** 
-$(window).scroll(function () {
-    let scrollTop = $(window).scrollTop();
+// //window scroll function ** 
+// $(window).scroll(function () {
+//     let scrollTop = $(window).scrollTop();
 
-    const mainPic = document.querySelector(".image .mainPic");
-    const lake = document.querySelector(".image .lake");
+//     const mainPic = document.querySelector(".image .mainPic");
+//     const lake = document.querySelector(".image .lake");
 
-    //gsap
-    $("#About .article1 .title h1").each(function (index) {
-        if ($(window).scrollTop() >= $(this).offset().top) {
-            gsap.to($(this).find("strong span"), { //먼저 각  섹션을찾고 그안의 desc span을 find해라
-                duration: 0.1,
-                opacity: 1,
-                stagger: 0.05, //시간차를 주는 gsap기능(이러면 show붙여서 시간차setTimeout 이런거 할 필요가없지)
-                y: 0, //위에 css에서 translateY를 100을주고 여기서는 심플하게 y라고 하고 0 하면 애니메이션 차이
-                ease: "power4.out",
-                rotation: 0,
-                scale: 1
-            });
-        }
-    });
-
-
-});
+//     //gsap
+//     $("#About .article1 .title h1").each(function (index) {
+//         if ($(window).scrollTop() >= $(this).offset().top) {
+//             gsap.to($(this).find("strong span"), { //먼저 각  섹션을찾고 그안의 desc span을 find해라
+//                 duration: 0.1,
+//                 opacity: 1,
+//                 stagger: 0.05, //시간차를 주는 gsap기능(이러면 show붙여서 시간차setTimeout 이런거 할 필요가없지)
+//                 y: 0, //위에 css에서 translateY를 100을주고 여기서는 심플하게 y라고 하고 0 하면 애니메이션 차이
+//                 ease: "power4.out",
+//                 rotation: 0,
+//                 scale: 1
+//             });
+//         }
+//     });
