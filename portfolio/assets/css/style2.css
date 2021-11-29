@@ -1225,11 +1225,12 @@ body::-webkit-scrollbar {
 }
 
 #Skills .Skillswrapper .obj3 .ability .abilityWrap .desc2 {
-    display: table-cell;
+    display: block;
 }
 
 #Skills .Skillswrapper .obj3 .ability .abilityWrap .desc.none {
-    border: none
+    border: none;
+    visibility: hidden;
 }
 
 #Skills .Skillswrapper .obj3 .ability .abilityWrap .desc h3 {
@@ -1669,18 +1670,60 @@ body::-webkit-scrollbar {
     }
     #Skills .Skillswrapper .obj {
         top: 26%;
+        width: 214vw;
     }
     #Skills .Skillswrapper .obj h1{
-        top: 6%;
+        top: -1%;
+        font-size: 30vw;
+        letter-spacing : 13vw;
+        left:5%;
     }
-    #Skills .Skillswrapper .scrolling {
+    #Skills .Skillswrapper .obj3 {
         height: 100vh;
+        width: 500vw;
     }
     #Skills .Skillswrapper {
-        width:580vw;
+        width:880vw;
+    }
+    #Skills .Skillswrapper .obj .skills{
+        left:53vw;
+        top:4%
     }
     #Skills .Skillswrapper .obj .skills p {
         margin-top: 13vh;
         font-size: 2vw;
+    }
+    #Skills .Skillswrapper .obj .skillsList h3{
+        font-size: 18vw;
+    }
+    #Skills .Skillswrapper .obj .svg img {
+        height: 39vw;
+        width: 39vw;
+    }
+    #Skills .Skillswrapper .obj3 .ability .abilityWrap {
+        width: 75vw;
+    }
+    #Skills .Skillswrapper .obj3 .ability:first-child {
+        padding-left: 112vw;
+        padding-top: 0;
+    }
+    #Skills .Skillswrapper .obj3 .ability .abilityWrap .desc {
+        height: 22vh;
+    }
+    #Skills .Skillswrapper .obj3 .ability .abilityWrap .desc p {
+        font-size: 1.5vw;
+    }
+    #Contact {
+        background-color: red;
+    }
+    #Skills .Skillswrapper .obj5 {
+        width: 200vw;
+    }
+    #Skills .Skillswrapper .obj3 .ability h2 {
+        font-size: 10vw;
+    }
+    #Skills .Skillswrapper .obj3 .ability .dot:after {
+        width: 10vw; height: 10vw;
+        left: 19vw;
     }
 }
