@@ -1132,6 +1132,7 @@ img {
   background: #fff;
   color: #000;
 }
+
 @media (max-width: 550px) {
   .info {
     display: none;
@@ -1139,14 +1140,32 @@ img {
   .paranav {
     display: none;
   }
-
   .paraScroll {
     display: none;
+  }
+  .paraFooter .footerinfo li {
+    display: inline;
+    list-style: none;
+  }
+  body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, button, figure, figcaption {
+    margin: 0;
+    padding: 0;
+  }
+  user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  user agent stylesheet
+ul {
+    list-style-type: disc;
   }
   .paraFooter .footerinfo h2 {
     font-size: 1vw;
   }
-
   .paraFooter .footerinfo ul li a {
     font-size: 1vw;
     width: 15px;
@@ -1154,3 +1173,4 @@ img {
     line-height: 19px;
   }
 }
+/*# sourceMappingURL=style.css.map */
