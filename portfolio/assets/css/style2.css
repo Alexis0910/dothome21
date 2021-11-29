@@ -1659,10 +1659,28 @@ body::-webkit-scrollbar {
         display: inline-block;
         padding-left: 30vw;
     }
-    .pin-spacer {
-        display: none;
-    }
+
     .article3 .scrollDown{
         transform: translateY(30%);
+    }
+    #Skills {
+        height: 100vh !important;
+        background-color: aqua;
+    }
+    #Skills .Skillswrapper .obj {
+        top: 26%;
+    }
+    #Skills .Skillswrapper .obj h1{
+        top: 6%;
+    }
+    #Skills .Skillswrapper .scrolling {
+        height: 100vh;
+    }
+    #Skills .Skillswrapper {
+        width:580vw;
+    }
+    #Skills .Skillswrapper .obj .skills p {
+        margin-top: 13vh;
+        font-size: 2vw;
     }
 }
