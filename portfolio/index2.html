@@ -569,6 +569,10 @@
         //window scroll function ** 
         $(window).scroll(function () {
             let scrollTop = $(window).scrollTop();
+
+            const mainPic = document.querySelector(".image .mainPic");
+            const lake = document.querySelector(".image .lake");
+
             //gsap
             $("#About .article1 .title h1").each(function (index) {
                 if ($(window).scrollTop() >= $(this).offset().top) {
