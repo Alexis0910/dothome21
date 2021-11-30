@@ -35,9 +35,21 @@ if ($(window).scrollTop() >= $(".splice").offset().top) {
 // //window scroll function ** 
 $(window).scroll(function () {
     let wScroll = $(window).scrollTop();
-    console.log(wScroll);
-    // const mainPic = document.querySelector(".image .mainPic");
+    // console.log(wScroll);
+    const mainPic = document.querySelector(".image .mainPic");
     // const lake = document.querySelector(".image .lake");
+    
+    
+    //이미지 이질감
+    if(wScroll >= $("#About .article1 .image").offset().top){
+        // mainPic.style.transform = `translate3d(0,${wScroll/7}px,0)`
+        // gsap.to(mainPic, { 
+        // delay: 0.5,
+        // y:(0),
+        // ease: "power4.out",
+        // // yoyo:true
+        // });
+    }
 
     //#about art2 list down to up
     if (wScroll >= $(".divide").offset().top * 0.8) {
@@ -55,15 +67,15 @@ $(window).scroll(function () {
             x: (0),
             opacity: 1,
             ease: Power4.easeOut,
-            delay:0.3
+            duration:0.1
         });
     }
 
     //#about art4 mypro up to down
-    if (wScroll >= $("#About .article4 .scrollDown .text").offset().top*0.9) {
-        const load1 = document.querySelector("load1");
-        const load2 = document.querySelector("load2");
-        const load3 = document.querySelector("load3");
+    if (wScroll >= $("#About .article4").offset().top*0.9) {
+        // const load1 = document.querySelector("load1");
+        // const load2 = document.querySelector("load2");
+        // const load3 = document.querySelector("load3");
 
         // var t2 = new TimelineLite()
         // t2.staggerTo([load1, load2, load3], 1, {
@@ -85,4 +97,67 @@ $(window).scroll(function () {
             y: (0), opacity: 1, ease: Power4.easeOut, delay:0.1,
         });
     }
+
+    // if (wScroll >= $("#Scripts .article1").offset().top*0.9) {
+    //     // const scriptLoad1 = document.querySelector("left.list-descT");
+    //     // const scriptLoad2 = document.querySelector("middle.list-descT");
+    //     // const scriptLoad3 = document.querySelector("right.list-descT");
+    //     TweenMax.to("#Scripts .article1 .title .list-descL .scriptLoad1", 1, {
+    //         y: (0), opacity: 1, ease: Power4.easeOut, delay:0.3,
+    //     });
+    //     TweenMax.to("#Scripts .article1 .title .list-descL .scriptLoad2", 1, {
+    //         y: (0), opacity: 1, ease: Power4.easeOut, delay:0.7,
+    //     });
+    //     TweenMax.to("#Scripts .article1 .title .list-descL .scriptLoad3",1, {
+    //         y: (0), opacity: 1, ease: Power4.easeOut, delay:1,
+    //     });
+    // }
+
 });
+
+// 이미지
+        const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.9
+        };
+
+
+let revealCallback = (entries, self) => {
+        entries.forEach((entry, index) => {
+
+            let container = entry.target;
+            let span = document.querySelectorAll("#Scripts .article1 .title .list-descL span");
+            const easeInOut = "power1.in";
+            const revealAnim = gsap.timeline({ ease: easeInOut,
+                scrollTrigger: {
+                    trigger: container,
+                    start: "top center",
+                    toggleActions: "play none none reverse"
+                }
+            });
+            if (entry.isIntersecting) {
+                            console.log(entry.target);
+                revealAnim.set(span, {
+                    opacity: 0,
+                });
+                revealAnim.to("#Scripts .article1 .title .list-descL .scriptLoad1", 1, {
+                    x: (0), opacity: 1, ease: Power4.easeOut, delay:0.3,
+                })
+                .to("#Scripts .article1 .title .list-descL .scriptLoad2", 1, {
+                    x: (0), opacity: 1, ease: Power4.easeOut, delay:0.7,
+                })
+                .to("#Scripts .article1 .title .list-descL .scriptLoad3",1, {
+                    x: (0), opacity: 1, ease: Power4.easeOut, delay:1,
+                });
+                self.unobserve(entry.target);
+            }
+        });
+    };
+
+    let revealObserver = new IntersectionObserver(revealCallback, options);
+
+    document.querySelectorAll(".article .title .list-descL").forEach((title) => {
+                revealObserver.observe(title);
+                console.log(1);
+    })

@@ -159,8 +159,7 @@ body::-webkit-scrollbar {
 .divide {}
 
 .list-desc,
-.list-descR
- {
+.list-descR {
     overflow: hidden;
 }
 
@@ -174,7 +173,16 @@ body::-webkit-scrollbar {
     opacity: 1;
     transform: translateX(800px);
 }
-
+.list-descL span {
+    display: block;
+    opacity: 1;
+    /* transform: translateX(-800px); */
+}
+.list-descT span {
+    display: block;
+    opacity: 1;
+    transform: translateY(-500px);
+}
 /* Section About  */
 #About .article1 {
     overflow: hidden;
@@ -290,8 +298,8 @@ body::-webkit-scrollbar {
 
 #About .article1 .image .mainPicWRap .mainPic {
     position: absolute;
-    left: -10%;
-    top: -3%;
+    left: -5%;
+    top: -5%;
     width: 110%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -873,44 +881,45 @@ body::-webkit-scrollbar {
 
 #Scripts .article .title {
     margin: 0 auto;
-    font-size: 8vw;
+    font-size: 13vw;
     font-family: 'Eros Romano';
     justify-content: space-between;
-    display: inline;
-
-}
-
-#Scripts .article .title h1 {
-    line-height: 0.5;
-}
-
-#Scripts .article .title .left {
     display: block;
-    font-weight: inherit;
-    padding: 0 25vw;
-    width: 30vw;
-    text-align: left;
-    transform: translateX(-30%);
-    margin: 0;
-    margin-bottom: 3vh;
+
 }
 
-#Scripts .article .title .middle {
+#Scripts .article .title p {
+    line-height: 0.8;
+
+}
+
+#Scripts .article .title .left span {
+    display: block;
+    font-weight: normal;
+    padding: 0 25vw;
+    /* width: 30vw; */
+    text-align: left;
+    transform: translateX(-10%);
+    margin: 0;
+}
+#Scripts .article .title .middle{
     text-align: center;
+    display: block;
+}
+#Scripts .article .title .middle span {
+    text-align: left;
     font-size: 13vw;
-    display: inline-block;
-    font-weight: inherit;
+    text-align: center;
+    display: inline;
+    font-weight: normal;
     background-color: #1f3d4d;
     color: #e2d2c2;
-    line-height: 0.8;
-    margin-left: 40vw;
     padding: 0 5vw;
-
 
 }
 
-#Scripts .article .title .right {
-    font-weight: inherit;
+#Scripts .article .title .right span{
+    font-weight: normal;
     width: 30vw;
     display: block;
     text-align: right;
