@@ -155,7 +155,25 @@ body::-webkit-scrollbar {
 
 .headerInner .hamburger span {}
 
+/* 글자 effect */
+.divide {}
 
+.list-desc,
+.list-descR
+ {
+    overflow: hidden;
+}
+
+.list-desc span {
+    display: block;
+    opacity: 1;
+    transform: translateY(500px);
+}
+.list-descR span {
+    display: block;
+    opacity: 1;
+    transform: translateX(800px);
+}
 
 /* Section About  */
 #About .article1 {
@@ -175,29 +193,29 @@ body::-webkit-scrollbar {
 
 }
 
-#About .article1 .title {
+#About .article1 .maintitle {
     margin-top: 100px;
     position: relative;
 }
 
-#About .article1 .title h1 {
+#About .article1 .maintitle h1 {
     margin: 0;
     padding: 0;
     display: grid;
 }
 
-#About .article1 .title h1 .middle {
+#About .article1 .maintitle h1 .middle {
     display: inline-block;
     text-align: center;
 }
 
-#About .article1 .title h1 .right {
+#About .article1 .maintitle h1 .right {
     padding: 0;
     display: inline-block;
     text-align: right;
 }
 
-#About .article1 .title h1 strong {
+#About .article1 .maintitle h1 strong {
     padding: 0;
     margin: 0;
     font-family: 'Eros Romano';
@@ -209,11 +227,11 @@ body::-webkit-scrollbar {
     /* transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01); */
 }
 
-#About .article1 .title h1 strong span {
+#About .article1 .maintitle h1 strong span {
     font-weight: normal;
 }
 
-#About .article1 .title .svgWrap {
+#About .article1 .maintitle .svgWrap {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -222,18 +240,18 @@ body::-webkit-scrollbar {
     height: 35vw;
 }
 
-#About .article1 .title .svgWrap svg {
+#About .article1 .maintitle .svgWrap svg {
     width: 100%;
     height: 100%;
 
 }
 
-#About .article1 .title .svgWrap svg path {
+#About .article1 .maintitle .svgWrap svg path {
     stroke: #294652;
     animation: svg 2s infinite linear alternate;
 }
 
-#About .article1 .title .svgWrap .de {
+#About .article1 .maintitle .svgWrap .de {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -648,12 +666,12 @@ body::-webkit-scrollbar {
     margin-bottom: 5vh;
 }
 
-.scrollDown .text p {
+.scrollDown .text p span {
     line-height: 0.8;
     font-size: 12vw;
 }
 
-.scrollDown span {
+.scrollDown .scroll {
     font-family: 'Montserrat';
     font-size: 0.9vw;
     text-align: center;
@@ -663,11 +681,11 @@ body::-webkit-scrollbar {
     transition: all 0.3s ease-in-out;
 }
 
-.scrollDown span:hover {
+.scrollDown .scroll:hover {
     transform: translateY(30%);
 }
 
-.scrollDown span:after {
+.scrollDown .scroll:after {
     content: '';
     display: block;
     width: 1vw;
@@ -1566,15 +1584,12 @@ body::-webkit-scrollbar {
     #About .article4 .moveWrap {
         height: 8vh;
     }
-
-    #About .article4 .mText {
-        font-size: 38vw;
-    }
-
     #About .article4 .moveWrap .mImg {
         width: 51vw;
     }
-
+    #About .article4 .mText p span {
+        font-size: 38vw;
+    }
     #About .article4 .mText .right {
         margin-top: 3vh;
     }
@@ -1583,12 +1598,12 @@ body::-webkit-scrollbar {
         padding-top: 25vh;
         padding-bottom: 5vh;
     }
-
-    .scrollDown span {
-        font-size: 3vw;
+    .scrollDown.pt30 .text{}
+    .scrollDown.pt30 .text .list-desc span{
+        font-size: 38vw;
     }
 
-    .scrollDown span:after {
+    .scrollDown.pt30 .text .scroll:after {
         width: 4vw;
         height: 8vw;
     }
@@ -1778,3 +1793,4 @@ body::-webkit-scrollbar {
         left: 19vw;
     }
 }
+

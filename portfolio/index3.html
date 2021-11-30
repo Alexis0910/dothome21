@@ -29,7 +29,7 @@
         /* splice */
         .splice {
             /* opacity: 0; */
-            transform: translateY(300px);
+            /* transform: translateY(300px); */
         }
         
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
@@ -60,7 +60,7 @@
         <section id="About">
             <article class="article1">
                 <div class="dot"></div>
-                <div class="title">
+                <div class="maintitle">
                     <h1>
                         <strong class="left splice">SOEUN</strong>
                         <strong class="middle splice">FRONTEND</strong>
@@ -106,7 +106,7 @@
                                 developer and trying my best.</h1>
                         </div>
                         <div class="mainDescKr">
-                            <p>시각패키지 디자인과를 전공하였습니다. 졸업후에는 디자인 직종이 아닌 서비스직에서 근무하였습니다. 캐나다 밴쿠버로 워킹홀리데이를 1년 다녀온 후 잊을수 없는
+                        <p>시각패키지 디자인과를 전공하였습니다. 졸업후에는 디자인 직종이 아닌 서비스직에서 근무하였습니다. 캐나다 밴쿠버로 워킹홀리데이를 1년 다녀온 후 잊을수 없는
                                 경험을 더 겪어보고 싶어서 2년더 지내고 돌아오게 되었습니다. 지금 현재, 개발자가 되기위한 새로운 도전을 위해 최선을 다하는 중 입니다.</p>
                         </div>
                     </div>
@@ -115,7 +115,23 @@
             <!-- //article1-->
             <article class="article2">
                 <div class="title">
-                    <h1 class="splice">I <br>DREAMED <br>OF LIVING<br> LIFE WITH <br>PASSION</h1>
+                    <h1 class="divide"> 
+                        <p class="list-desc">
+                            <span>I</span> 
+                        </p>
+                        <p class="list-desc">
+                            <span> DREAMED</span>
+                        </p>
+                        <p class="list-desc">
+                            <span>OF LIVING</span>
+                        </p>
+                        <p class="list-desc">
+                            <span> LIFE WITH</span>
+                        </p>
+                        <p class="list-desc">
+                            <span>PASSION</span>
+                        </p>
+                    </h1>
                     <div class="sydneyWRap"> <img class="sydney" src="assets/img/sydney.jpg" alt="sydney"></div>
                 </div>
                 <div class="desc">
@@ -156,16 +172,30 @@
                             <div class="mImg"><img src="assets/img/patience.jpg" alt="patience"></div>
                         </div>
                     </div>
-                    <div class=mText>
-                        <p class="left splice">20</p>
-                        <p class="right splice">21</p>
+                    <div class="mText">
+                        <p class="left list-descR">
+                            <span>20</span> 
+                        </p>
+                        <p class="right list-descR">
+                            <span>21</span>
+                        </p>
                     </div>
                 </div>
                 <div class="scrollDown pt30">
                     <div class="text">
-                        <p>MY PROJECTS<br> BASED ON <br>SITES</p>
+                        <p class="list-desc">
+                            <span class="load1">MY PROJECTS</span> 
+                        </p>
+                        <p class="list-desc">
+                            <span class="load2"> BASED ON </span> 
+                        </p>
+                        <p class="list-desc">
+                            <span class="load3"> SITES </span> 
+                        </p>
                     </div>
-                    <span>scroll</span>
+                    <p class="list-desc">
+                        <span class="scroll">scroll</span>
+                    </p>
                 </div>
             </article>
             <!-- //article4-->
@@ -256,9 +286,9 @@
         <section id="Scripts">
             <article class="article article1">
                 <div class="title">
-                    <h1 class="left splice">SCRIPTS</h1>
-                    <h2 class="middle splice">&</h1>
-                        <h1 class="right splice">EFFECTS</h1>
+                    <h1 class="left">SCRIPTS</h1>
+                    <h2 class="middle">&</h1>
+                        <h1 class="right">EFFECTS</h1>
                 </div>
                 <div class="container">
                     <div class="Cont1Desc">
@@ -611,7 +641,7 @@
             //     opacity: 1,
             //     bottom: 0
             // }, 0.2);
-            title1.staggerFromTo($(".title span"), 0.5, {
+            title1.staggerFromTo($(".maintitle span"), 0.5, {
                 ease: Back.easeOut.config(1.7),
                 opacity: 0,
                 bottom: -80
