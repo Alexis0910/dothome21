@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ko</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    section {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .slide{
+        margin: 0 auto;
+        width: 1200px;
+        height: 300px;
+        position: relative;
+    }
+    .slide .slide_all{
+        width: 1000px;
+        display: inline-block;
+    }
+    .slide .slide_all li{
+        width: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .slide .slide_all li a img{
+        width: 1000px;
+        height: 300px;
+    }
+
+    .slide2{
+        margin: 0 auto;
+        width: 1200px;
+        height: 300px;
+        position: relative;
+    }
+    .slide2 .slide_all{
+        width: 1000px;
+        display: inline-block;
+    }
+    .slide2 .slide_all li{
+        width: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .slide2 .slide_all li a img{
+        width: 1000px;
+        height: 300px;
+    }
+
+    .slide3{
+        margin: 0 auto;
+        width: 1200px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+    .slide3 .slide_all{
+        width: 1000px;
+        display: inline-block;
+    }
+    .slide3 .slide_all li{
+        width: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .slide3 .slide_all li a img{
+        width: 1000px;
+        height: 300px;
+    }
+</style>
+<body>
+    <section>
+        <div class="slide">
+            <ul class="slide_all">
+                <li><a href="#"><img src="img/test-slider1.png" alt="슬라이드이미지1"></a></li>
+                <li><a href="#"><img src="img/test-slider2.png" alt="슬라이드이미지2"></a></li>
+                <li><a href="#"><img src="img/test-slider3.png" alt="슬라이드이미지3"></a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="slide2">
+            <ul class="slide_all">
+                <li><a href="#"><img src="img/test-slider2.png" alt="슬라이드이미지2"></a></li>
+                <li><a href="#"><img src="img/test-slider3.png" alt="슬라이드이미지3"></a></li>
+                <li><a href="#"><img src="img/test-slider1.png" alt="슬라이드이미지1"></a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="slide3">
+            <ul class="slide_all">
+                <li><a href="#"><img src="img/test-slider1.png" alt="슬라이드이미지1"></a></li>
+                <li><a href="#"><img src="img/test-slider2.png" alt="슬라이드이미지2"></a></li>
+                <li><a href="#"><img src="img/test-slider3.png" alt="슬라이드이미지3"></a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+    //fade해서 서서히 바뀌는것
+    $(".slide ul.slide_all li").eq(0).siblings().hide();
+    var slideI=0;
+    setInterval(function(){
+        if(slideI<2){
+            slideI++;
+        } else {
+            slideI =0;
+        }
+        $(".slide ul.slide_all li").eq(slideI).siblings().fadeOut(500);
+        $(".slide ul.slide_all li").eq(slideI).fadeIn(500);
+    }, 3000);
+
+    //2번째 좌에서 우로
+    $(".slide2 ul.slide_all li").eq(0).siblings().css("left", "-1500px")
+    var slideA=0;
+    setInterval(function(){
+        if(slideA<2){
+            slideA++;
+        } else {
+            slideA =0;
+        }
+        $(".slide2 ul.slide_all li").eq(slideA).siblings().animate({left:"-1500px"},500);
+        $(".slide2 ul.slide_all li").eq(slideA).animate({left:"0"},500);
+    }, 3000);
+
+    //위애러 아래 
+    $(".slide3 ul.slide_all li").eq(0).siblings().css("top", "-350px")
+    var slideB=0;
+    setInterval(function(){
+        if(slideB<2){
+            slideB++;
+        } else {
+            slideB =0;
+        }
+        $(".slide3 ul.slide_all li").eq(slideB).siblings().animate({top:"-350px"},500);
+        $(".slide3 ul.slide_all li").eq(slideB).animate({top:"0"},500);
+    }, 3000);
+</script>
+</html>

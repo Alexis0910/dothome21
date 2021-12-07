@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerTab</title>
+    <style>
+        ul,li,ol,a {
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+        .content {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            border:1px solid #000;
+            position: relative;
+        }
+        .noticeS {
+            margin: 0 auto;
+            padding: 0;
+            width: 90%;
+            height: 90%;
+            border:1px solid #fff;
+            margin-top: 5%;
+        }
+        .noticeS h3 {
+            width: 100px;
+            height: 30px;
+            background: rgb(90, 52, 52);
+            color: #fff;
+            line-height: 30px;
+            font-size: 18px;
+            position: absolute;
+            top: 0; left: 30px;
+            cursor: pointer;
+        }
+        .noticeS h3.on {
+            background: black;
+        }
+        .noticeS h3.move {
+            left: 130px;
+        }
+        .noticeS ul {
+            display:none;
+        }
+        .noticeS ul.on {
+            display: block;
+            padding-top: 30px;
+        }
+        .noticeS ul.notice {
+            border: 1px solid #fff;
+            width: 90%;
+            height: 28px;
+            position: relative;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+        .noticeS ul.notice li{
+            width: 100%;
+        }
+        .noticeS ul.notice li a{
+            width: 100%;
+            
+            float: left;
+        }
+        .noticeS ul.notice li a span {
+            float: right;
+        }
+        .noticeS ul.gal {
+            width: 100%;
+
+        }
+        .noticeS ul.gal img{
+            width: 100px;
+        }
+        .modal {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background: rgba(0,0,0,0.3);
+            display: none;
+        }
+        .modal .modal_inner{
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: #fff;
+            text-align: center;
+            font-size: 18px;
+        }
+        .modal .modal_inner button{
+            margin: 20px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .modal .modal_inner .desc{
+            margin-top: 50px;
+        }
+        .modal .modal_inner .desc h1{}
+    </style>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal_inner">
+            <button>닫기</button>
+            <div class="desc">
+            <h1>신규회원 대상 이벤트 안내</h1>
+                여러분을위해 노력하는 ㅅ핑몰디이 되겟습ㄴ다ㅏ 감사함다.
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <section class="noticeS">
+            <h3 class="on">공지사항</h3>
+            <ul class="notice on">
+                <li><a href="#">3월 재입고
+                    <span>2012.02.03</span></a></li>
+                <li><a href="#">4월 재입고
+                    <span>2012.02.03</span></a></li>
+                <li><a href="#">5월 재입고
+                    <span>2012.02.03</span></a></li>
+                <li><a href="#">6월 재입고
+                    <span>2012.02.03</span></a></li>
+                <li><a href="#">7월 재입고
+                    <span>2012.02.03</span></a></li>
+            </ul>
+            <h3 class="move">갤러리</h3>
+            <ul class="gal">
+                <li><a href="#"><img src="img/card01.jpg" alt="탭메뉴내이미지"></a></li>
+                <li><a href="#"><img src="img/card02.jpg" alt="탭메뉴내이미지"></a></li>
+                <li><a href="#"><img src="img/card03.jpg" alt="탭메뉴내이미지"></a></li>
+            </ul>
+        </section>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $("h3").click(function(){
+            $(this).addClass("on").siblings().removeClass("on");
+            $(this).next("ul").addClass("on")
+        });
+
+        $(".noticeS ul.notice li").eq(0).click(function(){
+            $(".modal").fadeIn();
+        });
+        $("button").click(function(){
+            $(".modal").fadeOut();
+        });
+    </script>
+</body>
+</html>
