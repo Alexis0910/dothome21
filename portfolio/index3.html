@@ -200,8 +200,7 @@
                     <div id="obj_1" class="obj swiper-slide">
                         <div class="cover" data-velocity="-10">
                             <div class="picture">
-                                <div class="desc">메가박스 웹 사이트 입니다. 이미지 슬라이더, 모달 등 다양한 스크립트를 활용하여 제작하였습니다.
-                                    <br>여러가지 기기에서 반응할 수 있도록 웹 표준을 준수한 반응형으로 제작하였습니다.</div>
+                                <div class="desc">메가박스 웹 사이트 입니다. 이미지 슬라이더, 모달 등 다양한 스크립트를 활용하여 제작하였습니다.<br>여러가지 기기에서 반응할 수 있도록 웹 표준을 준수한 반응형으로 제작하였습니다.</div>
                                 <img src="assets\img\mockup1.jpg" class="media" />
                             </div>
                             <a class="title parallax" data-velocity="-50"
@@ -213,8 +212,7 @@
                     <div id="obj_2" class="obj swiper-slide">
                         <div class="cover" data-velocity="-10">
                             <div class="picture">
-                                <div class="desc">MYSQL, PHP를 공부해보며 회원가입과 로그인, 게시판 만들기와 댓글달기 등을 구현한 PHP사이트 입니다.
-                                    <br>웹 표준에 준수하여 제작하였습니다.</div>
+                                <div class="desc">MYSQL, PHP를 공부해보며 회원가입과 로그인, 게시판 만들기와 댓글달기 등을 구현한 PHP사이트 입니다.<br>웹 표준에 준수하여 제작하였습니다.</div>
                                 <img src="assets/img/mockup2.jpg" class="media" />
                             </div>
                             <a class="title parallax" data-velocity="-50"
@@ -226,8 +224,7 @@
                     <div id="obj_3" class="obj swiper-slide">
                         <div class="cover" data-velocity="-10">
                             <div class="picture">
-                                <div class="desc">React를 사용하여 제작한 사이트 입니다. JSX, 렌더링, 컴퍼넌트 함수 , PROPS 매개변수 등
-                                    <br>여러가지를 공부해보며 제작에 들어간 사이트 입니다. </div>
+                                <div class="desc">React를 사용하여 제작한 사이트 입니다. JSX, 렌더링, 컴퍼넌트 함수 , PROPS 매개변수 등<br>여러가지를 공부해보며 제작에 들어간 사이트 입니다. </div>
                                 <img src="assets/img/mockup3.jpg" class="media" />
                             </div>
                             <a class="title parallax" data-velocity="-50" href="https://alexisreact.web.app/"
@@ -239,10 +236,7 @@
                     <div id="obj_4" class="obj swiper-slide">
                         <div class="cover" data-velocity="-10">
                             <div class="picture">
-                                <div class="desc">드라이브 코스 공유 사이트 D-SHARE입니다. 사용자들끼리의 드라이브 코스 공유를 하는 사이트를 목표로 하여 제작
-                                    하였습니다.
-                                    <br>회원가입, 로그인, 게시판, 댓글, 코스공유, 정보 수정과 사용자가 직접 코스공유 게시글을 올리는 등 여러가지 기능 구현을 목표로 제작
-                                    하였습니다.
+                                <div class="desc">드라이브 코스 공유 사이트 D-SHARE입니다. 사용자들끼리의 드라이브 코스 공유를 하는 사이트를 목표로 하여 제작 하였습니다.<br>회원가입, 로그인, 게시판, 댓글, 코스공유, 정보 수정과 사용자가 직접 코스공유 게시글을 올리는 등 여러가지 기능 구현을 목표로 제작 하였습니다.
                                 </div>
                                 <img src="assets/img/mockup4.jpg" class="media" />
                             </div>
@@ -255,8 +249,7 @@
                     <div id="obj_5" class="obj swiper-slide">
                         <div class="cover" data-velocity="-10">
                             <div class="picture">
-                                <div class="desc">애플의 사이트에서 영감을 얻어 제작한 사이트입니다. 스크롤탑 값에 따라 애니메이션이 작동되도록 구현하였으며,
-                                    <br>다양한 브라우저와 기기를 반영해 반응형으로 만들어졌으며 웹 호환성을 준수하여 작업하였습니다.
+                                <div class="desc">애플의 사이트에서 영감을 얻어 제작한 사이트입니다. 스크롤탑 값에 따라 애니메이션이 작동되도록 구현하였으며,<br>다양한 브라우저와 기기를 반영해 반응형으로 만들어졌으며 웹 호환성을 준수하여 작업하였습니다.
                                 </div>
                                 <img src="assets/img/mockup5.jpg" class="media" />
                             </div>
@@ -416,7 +409,7 @@
                     <div class="text">
                         <p>AND<br> THERE ARE MY <br>SKILLS</p>
                     </div>
-                    <span>scroll</span>
+                    <span class="scroll">scroll</span>
                     <div class="pb20vh"></div>
                 </div>
             </article>
@@ -674,98 +667,6 @@
             mousewheel: true,
         });
 
-        /*
-        //smooth scroll & init 
-        class SupahScroll {
-            constructor(options) {
-                this.opt = options || {}
-                this.el = this.opt.el ? this.opt.el : '.supah-scroll'
-                this.speed = this.opt.speed ? this.opt.speed : 0.1
-                this.init()
-            }
-            init() {
-                this.scrollY = 0
-                this.supahScroll = document.querySelectorAll(this.el)[0]
-                this.supahScroll.classList.add('supah-scroll')
-                this.svgWrap = document.querySelector(".svgWrap");
-                this.svgWrap2 = document.querySelector(".svgWrap2 svg");
-                this.svgWrap3 = document.querySelector(".svgWrap3");
-                this.middle = document.querySelector(".title h1 .middle");
-                this.left = document.querySelector(".title h1 .left");
-                this.right = document.querySelector(".title h1 .right");
-                this.scriptLeft = document.querySelector(".title h1.left");
-                this.scriptRight = document.querySelector(".title h1.right");
-                this.mainPic = document.querySelector(".image .mainPic");
-                this.lake = document.querySelector(".image .lake");
-                this.sydney = document.querySelector(".sydney");
-                this.mainDescEng = document.querySelector(".mainDescEng h1");
-                this.skills = document.querySelector(".Skillswrapper .obj h1");
-                this.moveleft = document.querySelector(".article3 .title .moveleft");
-                this.moveright = document.querySelector(".article3 .title .moveright");
-                this.refer01h = document.querySelector(".refer.refer01 h1");
-                this.events()
-                this.update()
-                this.animate()
-            }
-            update() {
-                if (this.supahScroll === null) return
-                document.body.style.height = `${this.supahScroll.getBoundingClientRect().height}px`
-            }
-            pause() {
-                document.body.style.overflow = 'hidden'
-                cancelAnimationFrame(this.raf)
-            }
-            play() {
-                document.body.style.overflow = 'inherit'
-                this.raf = requestAnimationFrame(this.animate.bind(this))
-            }
-            destroy() {
-                this.supahScroll.classList.remove('supah-scroll')
-                this.supahScroll.style.transform = 'none'
-                document.body.style.overflow = 'inherit'
-                window.removeEventListener('resize', this.update)
-                cancelAnimationFrame(this.raf)
-                delete this.supahScroll
-            }
-            animate() {
-                this.scrollY += (window.scrollY - this.scrollY) * this.speed
-                this.supahScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
-                this.svgWrap.style.transform = `translate(-10%, -80%) rotate(${this.scrollY/10}deg)`
-                this.svgWrap2.style.transform = `rotate(${this.scrollY/30}deg)`
-                this.svgWrap3.style.transform = `rotate(${this.scrollY/30}deg)`
-                // this.left.style.transform = `translate3d(${this.scrollY/10}px,0,0)`
-                this.middle.style.transform = `translate3d(${-this.scrollY/12}px,0,0)`
-                this.skills.style.transform = `translate3d(${-this.scrollY/10}px,0,0)`
-                this.mainPic.style.transform = `translate3d(0,${-this.scrollY/15}px,0)`
-                this.lake.style.transform = `translate3d(0,${this.scrollY/15}px,0)`
-                this.sydney.style.transform = `translate3d(0,${-this.scrollY/15}px,0)`
-                this.mainDescEng.style.transform = `translate3d(${this.scrollY/25}px,0,0)`
-                this.scriptLeft.style.transform = `translate3d(${-this.scrollY/30}px,0,0)`
-                this.scriptRight.style.transform = `translate3d(${this.scrollY/30}px,0,0)`
-                this.moveleft.style.transform = `translate3d(${-this.scrollY/30}px,0,0)`
-                this.moveright.style.transform = `translate3d(${this.scrollY/20}px,0,0)`
-                this.raf = requestAnimationFrame(this.animate.bind(this))
-            }
-            scrollTo(y) {
-                window.scrollTo(0, y)
-            }
-            staticScrollTo(y) {
-                cancelAnimationFrame(this.raf)
-                this.scrollY = y
-                window.scrollTo(0, y)
-                this.supahScroll.style.transform = `translate3d(0,${-y}px,0)`
-                this.play()
-            }
-            events() {
-                window.addEventListener('load', this.update.bind(this))
-                window.addEventListener('resize', this.update.bind(this))
-            }
-        }
-        const supahscroll = new SupahScroll({
-            el: '#wrapper',
-            speed: 0.03
-        })
-        */
 
         $(document).ready(function () {
             "use strict";
@@ -777,7 +678,7 @@
             // $('body').niceScroll({
             // });
 
-            // Smooth Scroll
+            // Smooth Scroll only for click header menu
             $('nav ul li a').click(function (e) {
                 e.preventDefault();
                 $('html, body').animate({

@@ -13,20 +13,9 @@
     box-sizing: border-box;
 }
 
-/* html {
+html {
     scroll-behavior: smooth;
-}  */
-/* .supah-scroll {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    will-change: transform;
-    overflow: hidden;
-} */
-
+} 
 body {
     width: 100%;
     color: #1f3d4d;
@@ -673,7 +662,10 @@ body::-webkit-scrollbar {
     font-family: 'Eros Romano';
     margin-bottom: 5vh;
 }
-
+.scrollDown .text p{
+    line-height: 0.8;
+    font-size: 12vw;
+}
 .scrollDown .text p span {
     line-height: 0.8;
     font-size: 12vw;
@@ -1609,14 +1601,17 @@ body::-webkit-scrollbar {
     }
     .scrollDown.pt30 .text{}
     .scrollDown.pt30 .text .list-desc span{
-        font-size: 38vw;
+        font-size: 16vw;
     }
 
-    .scrollDown.pt30 .text .scroll:after {
+    .scrollDown .text .scroll:after {
         width: 4vw;
         height: 8vw;
     }
-
+    .scrollDown .scroll:after{
+        width: 3vw;
+        height: 6vw;
+    }
     #Sites .cursor {
         display: none;
 
@@ -1630,8 +1625,19 @@ body::-webkit-scrollbar {
     #Sites .picture .desc {
         height: 13vh;
         font-size: 2vw;
+        white-space: pre-wrap;
+        transform: translateY(10vw);
+        text-align: left;
     }
-
+    #Sites .picture .desc br {
+        display: none;
+    }
+    #Sites .picture .media{
+        transform: translateY(10vw);
+    }
+    #Sites .wrapper .sitesTitle{
+        transform: translateY(10vw);
+    }
     #Sites .title {
         font-size: 7vw;
     }
@@ -1651,7 +1657,9 @@ body::-webkit-scrollbar {
     #Scripts .article.article1 {
         height: 70vh;
     }
-
+    #Scripts .article .title span {
+        font-size: 20vw;
+    }
     #Scripts .article2 {
         height: 350vh;
     }
@@ -1709,9 +1717,15 @@ body::-webkit-scrollbar {
         width: 100%;
         font-size: 8vw;
     }
-
+    #Scripts .article3 {
+        height: 100vh;
+    }
+    #Scripts .article3 .scrollDown {
+        transform: translateY(150%)
+    }
     #Skills {
         height: 60vh !important;
+        width: 2000vw;
     }
 
     #Contact {
@@ -1729,7 +1743,7 @@ body::-webkit-scrollbar {
 
     #Skills .Skillswrapper .obj {
         top: 26%;
-        width: 214vw;
+        width: 1165vw;
     }
 
     #Skills .Skillswrapper .obj h1 {
@@ -1767,6 +1781,9 @@ body::-webkit-scrollbar {
         width: 39vw;
     }
 
+    #Skills .Skillswrapper .obj3{
+        width: 493vw;
+    }
     #Skills .Skillswrapper .obj3 .ability .abilityWrap {
         width: 75vw;
     }
@@ -1800,6 +1817,9 @@ body::-webkit-scrollbar {
         width: 10vw;
         height: 10vw;
         left: 19vw;
+    }
+    #Skills .Skillswrapper .obj5 .bigCircle img{
+        width: 100vw;
     }
 }
 
