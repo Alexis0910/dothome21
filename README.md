@@ -1,6 +1,6 @@
 안녕하세요 개발자를 꿈꾸는 박소은입니다 ❣
 
-### 닷홈메인 <a href="https://alexis0910.github.io/dothome21/">바로가기</a>
+### 닷홈메인 <a href="https://alexis0910.github.io/dothome21/" target="_blank">바로가기</a>
 
 ### 포르폴리오 ~ing <a href="https://alexis0910.github.io/dothome21/portfolio/index3.html">바로가기</a>
 
