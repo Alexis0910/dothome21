@@ -1,6 +1,16 @@
-#스마트웹 2021
+안녕하세요 개발자를 꿈꾸는 박소은입니다 ❣
 
-메인 <a href="https://alexis0910.github.io/dothome21/">바로가기</a>
+### 닷홈메인 <a href="https://alexis0910.github.io/dothome21/">바로가기</a>
+
+### 포르폴리오 ~ing <a href="https://alexis0910.github.io/dothome21/portfolio/index3.html">바로가기</a>
+
+### 프로젝트 D-SHARE <a href="http://dshareadmin.dothome.co.kr/index.html">바로가기</a>
+
+### 메가박스 사이트 <a href="http://soeunpark1211.dothome.co.kr/MEGABOX/index22.html">바로가기</a>
+
+### Vue 제작 <a href="https://alexis-vue.web.app/">바로가기</a>
+
+### React 제작 <a href="https://alexisreact.web.app/">바로가기</a>
 
 ### 자바스크립트 <a href="https://alexis0910.github.io/dothome21/refer-javascript/index.html">바로가기</a>
 
