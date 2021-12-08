@@ -12,6 +12,10 @@
 
 ### React 제작 <a href="https://alexisreact.web.app/" target='_blank' >바로가기</a>
 
+### 사이트 레이아웃<a href="https://alexis0910.github.io/dothome21/site/index.html" target='_blank' >바로가기</a>
+
+### 게임 Effect<a href="https://alexis0910.github.io/dothome21/refer-effect/gameEffect/index.html" target='_blank' >바로가기</a>
+
 ### 자바스크립트 <a href="https://alexis0910.github.io/dothome21/refer-javascript/index.html" target='_blank' >바로가기</a>
 
 ### 제이쿼리 <a href="https://alexis0910.github.io/dothome21/refer-jquery/index.html" target='_blank' >바로가기</a>
