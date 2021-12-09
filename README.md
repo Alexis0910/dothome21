@@ -8,6 +8,8 @@
 
 ### 메가박스 사이트 <a href="http://soeunpark1211.dothome.co.kr/MEGABOX/index22.html" target='_blank' >바로가기</a>
 
+### Vue 영화사이트 제작 <a href="https://vuemovie-project.web.app/" target='_blank' >바로가기</a>
+
 ### Vue 제작 <a href="https://alexis-vue.web.app/" target='_blank' >바로가기</a>
 
 ### React 제작 <a href="https://alexisreact.web.app/" target='_blank' >바로가기</a>
