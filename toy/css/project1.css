@@ -1,0 +1,100 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.container {
+    width: 1130px;
+    margin: 0 auto;
+
+}
+body{
+    background-color: #EEEEEE;
+} 
+#header {
+    margin: 10vh 0 5vh 0;
+    /* background-color: #fff; */
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+#wrap {
+    
+}
+#buttons {
+    font-size: 16px;
+    display: flex;
+    margin-left: auto;
+}
+.add {
+    color: #69D1A2;
+    padding: 8px 26px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 8px;
+    margin-right: 10px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+}
+.delete {
+    color: #ED7470;
+    padding: 8px 26px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: inline-block;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+}
+#main {}
+#lists {
+    margin-top: 16px;
+    display: flex;
+    gap: 40px;
+}
+.list {
+    width: 350px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.list .inside .titleBox {
+    opacity: 50%;
+    font-size: 22px;
+}
+.titleBox .title {
+    width: 310px;
+    margin: 40px 20px 10px;
+}
+.date {
+    padding: 0 20px 20px 20px;
+    color: #CCCCCC;
+}
+.list .inside {
+    padding: 20px 20px 0;
+    border-top: 1px solid #E7E7E7;
+}
+.inside .todoBox{
+    display: inline-block;
+}
+.inside .todoBox .check {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    background-color: #CCCCCC;
+}
+.inside .todo{
+    color: #CCCCCC;
+    border: none;
+    padding: 0;
+}
+.addOrClose {
+    position: absolute;
+    left: 150px;
+    bottom: -24px;
+    width: 48px; height: 48px;
+    background-color: #69D1A2;
+    border-radius: 48px;
+
+}

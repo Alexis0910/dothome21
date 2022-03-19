@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/project1.css">
+
+</head>
+<body>
+    <div class="container">
+        <div id="wrap">
+            <header id="header">
+                <h1>TO DO LIST</h1>
+            </header>
+            <!-- //header -->
+            <nav id="buttons">
+                <div class="add">
+                    추가
+                </div>
+                <div class="delete">
+                    삭제
+                </div>
+            </nav>
+            <main id="main">
+                <section id="lists">
+                    <form class="list">
+                        <div class="titleBox">
+                            <label for="title"></label>
+                            <input type="text" class="title" id="title" vonfocus="this.value=''; return true" value="제목을 입력하세요">
+                        </div>
+                            <div class="date">
+                                <h3>date</h3>
+                            </div>
+                            <div class="inside">
+                                <div class="todoBox">
+                                    <div class="check"></div>
+                                    <label for="todo"></label>
+                                    <input type="text" class="todo" id="todo" value="할 일을 적어봅시다.">
+                                </div>
+                                
+                            </div>
+                        <div class="addOrClose">
+                            <!-- <input type="submit"> -->
+                        </div>
+                    </form>
+
+                </section>
+            </main>
+            <!-- //main -->
+            
+        </div>
+    </div>
+</body>
+</html>
