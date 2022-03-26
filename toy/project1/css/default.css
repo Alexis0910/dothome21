@@ -41,6 +41,14 @@ input[type="text"], input[type="password"], input.text, select, textarea {transi
 input[type="text"]:hover, input[type="password"]:hover, input.text:hover, select:hover, textarea:hover {transition:all 0.3s; border-color:#222;}
 input[type="text"]:focus, input[type="password"]:focus, input.text:focus, select:focus, textarea:focus {transition:all 0.3s; border-color:#222; box-shadow:3px 3px 0px rgba(0,0,0,0.15); color:#222; outline: none;}
 input[type="text"].error, input[type="password"].error, input.text.error, select.error, textarea.error {border-color:#e60039;}
+input[type="text"]:focus
+	{
+	transition: all 0.3s;
+	border: none;
+	box-shadow: none;
+	color: #222;
+	outline: none;
+}
 textarea {resize:none;}
 ::-ms-clear, ::-ms-reveal {display: none;}
 input::placeholder {color:#ccc;}
@@ -55,3 +63,54 @@ input::placeholder {color:#ccc;}
 .addBtn:hover {background-color: var(--green); color: #fff;}
 .delBtn {background-color: #fff; color: var(--red);}
 .delBtn:hover {background-color: var(--red); color: #fff;}
+
+/* Scroll Style */
+::-webkit-scrollbar {
+	width: 10px;
+	/* 세로축 스크롤바 길이 */
+	height: 20px;
+	/* 가로축 스크롤바 길이 */
+	margin-right: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar-button {
+	background-color: #F5F5F5;
+	width: 20px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-button:start {
+	background-color: rgb(255, 255, 255);
+	/* Top, Left 방향의 이동버튼 */
+}
+
+::-webkit-scrollbar-button:end {
+	background-color: #F5F5F5;
+	/* Bottom, Right 방향의 이동버튼 */
+}
+
+::-webkit-scrollbar-button:vertical:increment {}
+
+::-webkit-scrollbar-button:vertical:decrement {}
+
+::-webkit-scrollbar-corner {
+	background-color: #F5F5F5;
+	/* 우측 하단의 코너 부분 */
+}
+
+::-webkit-resizer {
+	background-color: #F5F5F5;
+}
