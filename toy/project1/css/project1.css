@@ -134,7 +134,7 @@ body{
     width: 24px;
     height: 24px;
     border-radius: 24px;
-    background: url(../emptycircle.svg)no-repeat;
+    background: url("../emptycircle.svg") no-repeat;
     /* margin: 0px 15px 0 0 ; */
     cursor: pointer;
 }
@@ -144,7 +144,7 @@ body{
     width: 24px;
     height: 24px;
     border-radius: 24px;
-    background: url(../checked.svg)no-repeat;
+    background: url("../checked.svg") no-repeat;
     /* margin: 0px 15px 0 0; */
     cursor: pointer;
 }
@@ -180,7 +180,7 @@ body{
 }
 .listToDo .trash.active{
     width: 26px; height: 26px;
-    background: url(../trash.svg)no-repeat;
+    background: url("../trash.svg") no-repeat;
     cursor: pointer;
 }
 .addOrClose {
@@ -189,8 +189,10 @@ body{
     left: 150px;
     bottom: -24px;
     width: 48px; height: 48px;
-    background: url(../plusbutton.svg)no-repeat;
+    background: url("../plusbutton.svg") no-repeat;
     border-radius: 48px;
+    transition: 0.2s ease;
+
 }
 .addOrClose.xbutton {
     cursor: pointer;
@@ -199,7 +201,7 @@ body{
     bottom: -24px;
     width: 48px;
     height: 48px;
-    background: url(../xbutton.svg)no-repeat;
+    background: url("../xbutton.svg") no-repeat;
     border-radius: 48px;
 }
 .writing {
@@ -249,15 +251,16 @@ body{
         height: 150px;
     }
     .addOrClose{
+        position: relative;
+        left: 44%;
+        top:-17%;
+    }
+    .addOrClose.xbutton{
         position: absolute;
         left: 44%;
+        top:84%;
     }
-    /* .xbutton {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-    } */
+
     .writing {
         display: none;
         width: 100%;
