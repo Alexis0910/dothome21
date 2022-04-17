@@ -2,6 +2,7 @@ let addOrClose = document.querySelectorAll(".addOrClose");
 let xbutton = document.querySelectorAll(".xbutton");
 let trash = document.querySelectorAll(".trash");
 let list = document.querySelectorAll(".list");
+let listActive = document.querySelectorAll(".list.active");
 let listToDo = document.querySelectorAll("#lists .listToDo");
 let add = document.querySelector(".add");
 // let delete = document.querySelector(".delete");
@@ -39,38 +40,37 @@ document.querySelector(".delete").addEventListener("click", function(){
             element.classList.toggle("active")
         });
     });
-})
+});
 
-//addOrClose xbutton toggle + writting popup
-addOrClose.forEach(function(el, index){
+//선택된 addOrClose xbutton toggle + writting popup
+document.querySelectorAll(".addOrClose").forEach(function(el, index){
     el.addEventListener("click",function(){
-        this.classList.toggle("xbutton")
-        writing.forEach(function(el){
-            el.classList.toggle("active")
-        })
-    })
-    
+        this.classList.toggle("xbutton");
+        document.querySelectorAll(".writing").forEach(li => {
+        });
+        this.parentNode.querySelector(".writing").classList.toggle("active");
+        //previousSibling, nextSibling 다 실패해서 parentNode로 해결
+    });
 });
 
 // list 에 맞는 trash버튼 나타남
-listToDo.forEach(function(element, index){
-    element.addEventListener("mouseenter", function(){
-        trash.forEach(function(el){
-            el.classList.toggle("active")
+document.querySelectorAll(".listToDo").forEach((el, index)=>{
+    el.addEventListener("mouseenter", function(){
+        document.querySelectorAll(".trash").forEach(li =>{
         });
-    })
-})
-document.querySelector(".list")
+        this.previousElementSibling.querySelector(".trash").classList.toggle("active")
+    });
+});
 
 
 // 버튼 클릭시 check->checked로 변환
-check.forEach(function(el, index){
+document.querySelectorAll(".check").forEach((el, index)=>{
     el.addEventListener("click", function(){
-        check.forEach(function(el){
-            el.classList.toggle("active")
+        this.classList.toggle("active");
+        
+        document.querySelectorAll(".todo").forEach((el,li)=>{
         });
-        todo.forEach(function(el){
-            el.classList.toggle("active")
-        })
-    })
-})
+        this.parentNode.querySelector(".todo").classList.toggle("active");
+    });
+});
+
